@@ -1,0 +1,12 @@
+{
+  "name": "Right Turn Oval",
+  "type": "oval_right_pg",
+  "map": "SSCSSCS", 
+  "lane_width": 20.0,
+  "lane_num": 1,
+  "start_seed": 1234,
+  "description": "A true oval: straight → right curve → straight → right curve → straight (built via PGBlocks at runtime).",
+  "target_lap_time": 25.0,
+  "lap_distance": 1000,
+  "out_of_road_penalty": 0
+}

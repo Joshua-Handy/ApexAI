@@ -1,0 +1,11 @@
+{
+  "name": "Custom Speedway",
+  "type": "oval",
+  "map": "SSSSSSCCCCSSSSSSCCCC",
+  "lane_width": 4.0,
+  "lane_num": 1,
+  "start_seed": 1234,
+  "description": "A long high-speed oval (single lane) designed for solo car racing.",
+  "target_lap_time": 35.0,
+  "lap_distance": 1600
+}
