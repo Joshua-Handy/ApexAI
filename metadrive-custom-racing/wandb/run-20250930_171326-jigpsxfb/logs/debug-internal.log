@@ -1,0 +1,24 @@
+{"time":"2025-09-30T17:13:29.8165036-05:00","level":"INFO","msg":"stream: starting","core version":"0.22.1"}
+{"time":"2025-09-30T17:13:31.2893069-05:00","level":"INFO","msg":"stream: created new stream","id":"jigpsxfb"}
+{"time":"2025-09-30T17:13:31.2910143-05:00","level":"INFO","msg":"handler: started","stream_id":"jigpsxfb"}
+{"time":"2025-09-30T17:13:31.3116243-05:00","level":"INFO","msg":"stream: started","id":"jigpsxfb"}
+{"time":"2025-09-30T17:13:31.3116243-05:00","level":"INFO","msg":"writer: started","stream_id":"jigpsxfb"}
+{"time":"2025-09-30T17:13:31.3116243-05:00","level":"INFO","msg":"sender: started","stream_id":"jigpsxfb"}
+{"time":"2025-09-30T17:13:31.5976445-05:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-09-30T17:14:24.9267916-05:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2025-09-30T17:14:24.9270997-05:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"C:\\\\Users\\\\balde\\\\OneDrive\\\\Documents\\\\SeniorProject\\\\metadrive-custom-racing\\\\results\\\\tensorboard\\\\PPO_17\")","namespace":""}
+{"time":"2025-09-30T17:14:24.9396716-05:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results\\tensorboard\\PPO_17\\events.out.tfevents.1759270454.Balde.26520.0","runPath":"results/tensorboard/PPO_17/events.out.tfevents.1759270454.Balde.26520.0"}
+{"time":"2025-09-30T17:14:24.9570433-05:00","level":"ERROR","msg":"tensorboard: error creating symlink","target":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results\\tensorboard\\PPO_17\\events.out.tfevents.1759270454.Balde.26520.0","symlink":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\wandb\\run-20250930_171326-jigpsxfb\\files\\results\\tensorboard\\PPO_17\\events.out.tfevents.1759270454.Balde.26520.0","error":"symlink C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results\\tensorboard\\PPO_17\\events.out.tfevents.1759270454.Balde.26520.0 C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\wandb\\run-20250930_171326-jigpsxfb\\files\\results\\tensorboard\\PPO_17\\events.out.tfevents.1759270454.Balde.26520.0: A required privilege is not held by the client."}
+{"time":"2025-09-30T17:16:20.2685247-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":163}
+{"time":"2025-09-30T17:16:20.2876692-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":5}
+{"time":"2025-09-30T17:18:15.4510963-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":347}
+{"time":"2025-09-30T17:18:15.4510963-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-09-30T17:19:25.5491634-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":483}
+{"time":"2025-09-30T17:19:25.5497135-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":5}
+{"time":"2025-09-30T17:20:10.70908-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":573}
+{"time":"2025-09-30T17:20:10.7116021-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-09-30T17:21:22.0431112-05:00","level":"INFO","msg":"stream: closing","id":"jigpsxfb"}
+{"time":"2025-09-30T17:21:22.7716638-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-09-30T17:21:23.1698136-05:00","level":"INFO","msg":"handler: closed","stream_id":"jigpsxfb"}
+{"time":"2025-09-30T17:21:23.1703948-05:00","level":"INFO","msg":"sender: closed","stream_id":"jigpsxfb"}
+{"time":"2025-09-30T17:21:23.1703948-05:00","level":"INFO","msg":"stream: closed","id":"jigpsxfb"}

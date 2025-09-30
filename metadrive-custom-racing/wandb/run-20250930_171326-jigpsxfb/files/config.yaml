@@ -1,0 +1,209 @@
+_current_progress_remaining:
+    value: 1
+_custom_logger:
+    value: "False"
+_episode_num:
+    value: 0
+_last_episode_starts:
+    value: '[ True  True  True  True]'
+_last_obs:
+    value: |-
+        [[0.00242782 0.00242782 0.00223569 ... 0.00353516 0.00353516 0.00353516]
+         [0.00242782 0.00242782 0.00223569 ... 0.00353516 0.00353516 0.00353516]
+         [0.00242782 0.00242782 0.00223569 ... 0.00353516 0.00353516 0.00353516]
+         [0.00242782 0.00242782 0.00223569 ... 0.00353516 0.00353516 0.00353516]]
+_last_original_obs:
+    value: |-
+        [[0.5555556 0.5555556 0.5       ... 1.        1.        1.       ]
+         [0.5555556 0.5555556 0.5       ... 1.        1.        1.       ]
+         [0.5555556 0.5555556 0.5       ... 1.        1.        1.       ]
+         [0.5555556 0.5555556 0.5       ... 1.        1.        1.       ]]
+_logger:
+    value: <stable_baselines3.common.logger.Logger object at 0x000001BD4BDFF0E0>
+_n_updates:
+    value: 0
+_num_timesteps_at_start:
+    value: 0
+_stats_window_size:
+    value: 100
+_total_timesteps:
+    value: 500000
+_vec_normalize_env:
+    value: <stable_baselines3.common.vec_env.vec_normalize.VecNormalize object at 0x000001BD44F1F0E0>
+_wandb:
+    value:
+        cli_version: 0.22.1
+        code_path: code/metadrive-custom-racing/examples/train_sb3.py
+        e:
+            lhtf6mznnvz8lo1yqzt1mlhg8xs53cue:
+                args:
+                    - --track
+                    - right_oval
+                    - --timesteps
+                    - "500000"
+                    - --num-envs
+                    - "4"
+                    - --vecnorm
+                    - --wandb
+                    - --wandb-project
+                    - metadrive-racing
+                    - --wandb-name
+                    - right_oval_v1
+                    - --checkpoint-freq
+                    - "25000"
+                    - --no-eval
+                codePath: metadrive-custom-racing\examples\train_sb3.py
+                codePathLocal: examples\train_sb3.py
+                cpu_count: 4
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "253615927296"
+                        used: "238268215296"
+                email: Baldemarguajardo20@gmail.com
+                executable: C:\Python313\python.exe
+                git:
+                    commit: 5bd089920a51856b4808d86accd3cf98cd4f4cb6
+                    remote: https://github.com/Joshua-Handy/ApexAI.git
+                host: Balde
+                memory:
+                    total: "17005838336"
+                os: Windows-11-10.0.26100-SP0
+                program: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_sb3.py
+                python: CPython 3.13.1
+                root: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing
+                startedAt: "2025-09-30T22:13:26.245382Z"
+                writerId: lhtf6mznnvz8lo1yqzt1mlhg8xs53cue
+        m: []
+        python_version: 3.13.1
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 1
+                - 13
+                - 16
+                - 22
+                - 35
+                - 61
+            "4": 3.13.1
+            "5": 0.22.1
+            "8":
+                - 3
+            "12": 0.22.1
+            "13": windows-amd64
+action_noise:
+    value: None
+action_space:
+    value: Box(-1.0, 1.0, (2,), float32)
+algo:
+    value: PPO
+algorithm:
+    value: PPO
+batch_size:
+    value: 64
+checkpoint_freq:
+    value: 25000
+clip_range:
+    value: 0.2
+clip_range_vf:
+    value: None
+device:
+    value: cpu
+ent_coef:
+    value: 0
+env:
+    value: <stable_baselines3.common.vec_env.vec_normalize.VecNormalize object at 0x000001BD44F1F0E0>
+ep_info_buffer:
+    value: deque([], maxlen=100)
+ep_success_buffer:
+    value: deque([], maxlen=100)
+eval_freq:
+    value: 5000
+gae_lambda:
+    value: 0.95
+gamma:
+    value: 0.99
+learning_rate:
+    value: 0.0003
+lr_schedule:
+    value: FloatSchedule(ConstantSchedule(val=0.0003))
+max_grad_norm:
+    value: 0.5
+n_envs:
+    value: 4
+n_epochs:
+    value: 10
+n_steps:
+    value: 2048
+normalize_advantage:
+    value: "True"
+num_envs:
+    value: 4
+num_timesteps:
+    value: 0
+observation_space:
+    value: Box(-0.0, 1.0, (259,), float32)
+policy:
+    value: |-
+        ActorCriticPolicy(
+          (features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (pi_features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (vf_features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (mlp_extractor): MlpExtractor(
+            (policy_net): Sequential(
+              (0): Linear(in_features=259, out_features=64, bias=True)
+              (1): Tanh()
+              (2): Linear(in_features=64, out_features=64, bias=True)
+              (3): Tanh()
+            )
+            (value_net): Sequential(
+              (0): Linear(in_features=259, out_features=64, bias=True)
+              (1): Tanh()
+              (2): Linear(in_features=64, out_features=64, bias=True)
+              (3): Tanh()
+            )
+          )
+          (action_net): Linear(in_features=64, out_features=2, bias=True)
+          (value_net): Linear(in_features=64, out_features=1, bias=True)
+        )
+policy_class:
+    value: <class 'stable_baselines3.common.policies.ActorCriticPolicy'>
+policy_kwargs:
+    value: '{}'
+rollout_buffer:
+    value: <stable_baselines3.common.buffers.RolloutBuffer object at 0x000001BD44F1F8C0>
+rollout_buffer_class:
+    value: <class 'stable_baselines3.common.buffers.RolloutBuffer'>
+rollout_buffer_kwargs:
+    value: '{}'
+sde_sample_freq:
+    value: -1
+seed:
+    value: 0
+start_time:
+    value: 1759270453504377700
+target_kl:
+    value: None
+tensorboard_log:
+    value: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\..\results\tensorboard
+timesteps:
+    value: 500000
+track:
+    value: right_oval
+use_sde:
+    value: "False"
+vecnorm:
+    value: true
+verbose:
+    value: 1
+vf_coef:
+    value: 0.5
