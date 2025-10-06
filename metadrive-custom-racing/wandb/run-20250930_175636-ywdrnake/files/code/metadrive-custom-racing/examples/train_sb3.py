@@ -255,7 +255,7 @@ def main():
     if wandb_run and WANDB_AVAILABLE:
         wandb_callback = WandbCallback(
             gradient_save_freq=1000,
-            model_save_path=None,  # Disable automatic model saving to avoid symlink issues
+            model_save_path=f"models/{wandb_run.id}",
             verbose=2,
         )
         racing_callback = RacingMetricsCallback(verbose=1)
@@ -283,15 +283,10 @@ def main():
     
     # Finish wandb run
     if wandb_run:
-        # Log final model as artifact (copy instead of symlink to avoid Windows permission issues)
-        try:
-            artifact = wandb.Artifact(f"ppo_{args.track}_model", type="model")
-            artifact.add_file(save_path, name="model.zip")
-            wandb_run.log_artifact(artifact)
-            print(f"Model uploaded to wandb as artifact: ppo_{args.track}_model")
-        except Exception as e:
-            print(f"Warning: Failed to upload model artifact to wandb: {e}")
-        
+        # Log final model as artifact
+        artifact = wandb.Artifact(f"ppo_{args.track}_model", type="model")
+        artifact.add_file(save_path)
+        wandb_run.log_artifact(artifact)
         wandb.finish()
         print("Weights & Biases run completed")
 

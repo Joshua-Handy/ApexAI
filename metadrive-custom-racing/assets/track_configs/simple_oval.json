@@ -1,0 +1,11 @@
+{
+  "name": "Right Turn Oval (Simple)",
+  "map": "CRCRCRCRCS", 
+  "lane_width": 20.0,
+  "lane_num": 1,
+  "start_seed": 1234,
+  "description": "A simple oval track using standard MetaDrive map generation.",
+  "target_lap_time": 25.0,
+  "lap_distance": 1000,
+  "out_of_road_penalty": 0
+}

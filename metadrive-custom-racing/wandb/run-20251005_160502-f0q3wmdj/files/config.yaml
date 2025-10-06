@@ -1,0 +1,84 @@
+_wandb:
+    value:
+        cli_version: 0.22.1
+        e:
+            vhe5bl4jea6wd99drb7kzgykxolbfu5y:
+                args:
+                    - --track
+                    - right_oval
+                    - --num-agents
+                    - "4"
+                    - --timesteps
+                    - "500000"
+                    - --num-envs
+                    - "4"
+                    - --vecnorm
+                    - --wandb
+                    - --wandb-project
+                    - metadrive-competitive
+                    - --wandb-name
+                    - 4_car_right_oval_v1
+                    - --checkpoint-freq
+                    - "25000"
+                    - --eval-freq
+                    - "50000"
+                codePath: metadrive-custom-racing\examples\train_competitive.py
+                codePathLocal: examples\train_competitive.py
+                cpu_count: 4
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "253615927296"
+                        used: "237844029440"
+                email: Baldemarguajardo20@gmail.com
+                executable: C:\Python313\python.exe
+                git:
+                    commit: 3fdb714cd9d76a880f21b141cec3cca2f7670b1d
+                    remote: https://github.com/Joshua-Handy/ApexAI.git
+                host: Balde
+                memory:
+                    total: "17005576192"
+                os: Windows-11-10.0.26100-SP0
+                program: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_competitive.py
+                python: CPython 3.13.1
+                root: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing
+                startedAt: "2025-10-05T21:05:02.888978Z"
+                writerId: vhe5bl4jea6wd99drb7kzgykxolbfu5y
+        m: []
+        python_version: 3.13.1
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 2
+                - 13
+                - 15
+                - 16
+            "4": 3.13.1
+            "5": 0.22.1
+            "8":
+                - 3
+            "12": 0.22.1
+            "13": windows-amd64
+algorithm:
+    value: PPO
+approach:
+    value: competitive_single_agents
+checkpoint_freq:
+    value: 25000
+eval_freq:
+    value: 50000
+learning_rate:
+    value: 0.0003
+num_agents:
+    value: 4
+num_envs:
+    value: 4
+total_timesteps:
+    value: 500000
+track:
+    value: right_oval
+vecnormalize:
+    value: true

@@ -1,0 +1,38 @@
+✅ Weights & Biases initialized: https://wandb.ai/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-multi-agent/runs/8o9x1xd0
+🏁 Creating 4 multi-agent environments with 4 agents each...
+[38;20m[INFO] Environment: MultiAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 1000[0m
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_multi_agent.py", line 290, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_multi_agent.py", line 164, in main
+    vec_env = DummyVecEnv(env_fns)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                            ~~^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_multi_agent.py", line 78, in _init
+    env = create_multi_agent_racing_environment(
+        track_name=track_name,
+    ...<2 lines>...
+        start_seed=seed
+    )
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\..\src\environments\multi_agent_racing.py", line 78, in create_multi_agent_racing_environment
+    env = MultiAgentOvalEnv({
+        'num_agents': num_agents,
+    ...<31 lines>...
+        }
+    })
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\..\src\environments\multi_agent_racing.py", line 24, in __init__
+    super().__init__(config)
+    ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\metadrive_env.py", line 108, in __init__
+    super(MetaDriveEnv, self).__init__(config)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py", line 303, in __init__
+    assert self.num_agents == 1
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError

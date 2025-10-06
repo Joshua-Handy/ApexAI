@@ -1,0 +1,48 @@
+{
+  "os": "Windows-11-10.0.26100-SP0",
+  "python": "CPython 3.13.1",
+  "startedAt": "2025-10-05T20:58:59.012795Z",
+  "args": [
+    "--track",
+    "right_oval",
+    "--num-agents",
+    "4",
+    "--timesteps",
+    "500000",
+    "--num-envs",
+    "4",
+    "--vecnorm",
+    "--wandb",
+    "--wandb-project",
+    "metadrive-multi-agent",
+    "--wandb-name",
+    "4_car_right_oval_v1",
+    "--checkpoint-freq",
+    "25000",
+    "--eval-freq",
+    "50000"
+  ],
+  "program": "C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\train_multi_agent.py",
+  "codePath": "metadrive-custom-racing\\examples\\train_multi_agent.py",
+  "codePathLocal": "examples\\train_multi_agent.py",
+  "git": {
+    "remote": "https://github.com/Joshua-Handy/ApexAI.git",
+    "commit": "3fdb714cd9d76a880f21b141cec3cca2f7670b1d"
+  },
+  "email": "Baldemarguajardo20@gmail.com",
+  "root": "C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing",
+  "host": "Balde",
+  "executable": "C:\\Python313\\python.exe",
+  "cpu_count": 4,
+  "cpu_count_logical": 8,
+  "disk": {
+    "/": {
+      "total": "253615927296",
+      "used": "237836554240"
+    }
+  },
+  "memory": {
+    "total": "17005576192"
+  },
+  "writerId": "kf6qyh6cbv5tf4p71lhyo8zzrdya3q4k"
+}
