@@ -1,0 +1,28 @@
+Weights & Biases run: test_aggressive_training
+[38;20m[INFO] Environment: SingleAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 1000[0m
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_sb3.py", line 323, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_sb3.py", line 190, in main
+    vec_env = DummyVecEnv([make_env(args.track, seed=args.seed, personality=args.personality)])
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                            ~~^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_sb3.py", line 99, in _init
+    env = _ResetNoKwargs(base)
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_sb3.py", line 83, in __init__
+    super().__init__(env)
+    ~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\gymnasium\core.py", line 313, in __init__
+    assert isinstance(
+           ~~~~~~~~~~^
+        env, Env
+        ^^^^^^^^
+    ), f"Expected env to be a `gymnasium.Env` but got {type(env)}"
+    ^
+AssertionError: Expected env to be a `gymnasium.Env` but got <class 'environments.personality_racing_env.PersonalityRacingEnv'>

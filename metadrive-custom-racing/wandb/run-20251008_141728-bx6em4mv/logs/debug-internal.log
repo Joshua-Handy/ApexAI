@@ -1,0 +1,27 @@
+{"time":"2025-10-08T14:17:30.7835199-05:00","level":"INFO","msg":"stream: starting","core version":"0.22.1"}
+{"time":"2025-10-08T14:17:31.2725175-05:00","level":"INFO","msg":"stream: created new stream","id":"bx6em4mv"}
+{"time":"2025-10-08T14:17:31.2725175-05:00","level":"INFO","msg":"handler: started","stream_id":"bx6em4mv"}
+{"time":"2025-10-08T14:17:31.2749512-05:00","level":"INFO","msg":"stream: started","id":"bx6em4mv"}
+{"time":"2025-10-08T14:17:31.2749512-05:00","level":"INFO","msg":"writer: started","stream_id":"bx6em4mv"}
+{"time":"2025-10-08T14:17:31.2749512-05:00","level":"INFO","msg":"sender: started","stream_id":"bx6em4mv"}
+{"time":"2025-10-08T14:17:31.4909495-05:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-10-08T14:17:44.7196825-05:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2025-10-08T14:17:44.7196825-05:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"C:\\\\Users\\\\balde\\\\OneDrive\\\\Documents\\\\SeniorProject\\\\metadrive-custom-racing\\\\results_agent_1\\\\tensorboard\\\\PPO_8\")","namespace":""}
+{"time":"2025-10-08T14:17:44.7201853-05:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results_agent_1\\tensorboard\\PPO_8\\events.out.tfevents.1759951054.Balde.19172.0","runPath":"results_agent_1/tensorboard/PPO_8/events.out.tfevents.1759951054.Balde.19172.0"}
+{"time":"2025-10-08T14:17:44.7243854-05:00","level":"ERROR","msg":"tensorboard: error creating symlink","target":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results_agent_1\\tensorboard\\PPO_8\\events.out.tfevents.1759951054.Balde.19172.0","symlink":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\wandb\\run-20251008_141728-bx6em4mv\\files\\results_agent_1\\tensorboard\\PPO_8\\events.out.tfevents.1759951054.Balde.19172.0","error":"symlink C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results_agent_1\\tensorboard\\PPO_8\\events.out.tfevents.1759951054.Balde.19172.0 C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\wandb\\run-20251008_141728-bx6em4mv\\files\\results_agent_1\\tensorboard\\PPO_8\\events.out.tfevents.1759951054.Balde.19172.0: A required privilege is not held by the client."}
+{"time":"2025-10-08T14:17:59.7586814-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":79}
+{"time":"2025-10-08T14:17:59.7594794-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-10-08T14:18:44.8211616-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":289}
+{"time":"2025-10-08T14:18:44.8216677-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-10-08T14:19:14.9499062-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":415}
+{"time":"2025-10-08T14:19:14.9508441-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-10-08T14:20:10.0065072-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":655}
+{"time":"2025-10-08T14:20:10.0070139-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-10-08T14:20:25.0221435-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":742}
+{"time":"2025-10-08T14:20:25.0226485-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-10-08T14:20:35.5077348-05:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact ppo_right_oval_model","runtime_seconds":0.4671423},{"desc":"updating run metadata","runtime_seconds":0.0043081}],"total_operations":2}}
+{"time":"2025-10-08T14:20:37.0345924-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-08T14:20:37.5655001-05:00","level":"INFO","msg":"stream: closing","id":"bx6em4mv"}
+{"time":"2025-10-08T14:20:37.5655001-05:00","level":"INFO","msg":"handler: closed","stream_id":"bx6em4mv"}
+{"time":"2025-10-08T14:20:37.5665243-05:00","level":"INFO","msg":"sender: closed","stream_id":"bx6em4mv"}
+{"time":"2025-10-08T14:20:37.5665243-05:00","level":"INFO","msg":"stream: closed","id":"bx6em4mv"}

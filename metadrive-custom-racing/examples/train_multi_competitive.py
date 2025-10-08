@@ -36,12 +36,21 @@ def signal_handler(sig, frame):
     sys.exit(0)
 
 def run_training_agent(agent_id: int, args: argparse.Namespace) -> int:
-    """Run training for a single agent."""
+    """Run training for a single agent with personality-specific configuration."""
     # Create unique results directory for this agent
     agent_results_dir = f"results_agent_{agent_id}"
     os.makedirs(agent_results_dir, exist_ok=True)
     
-    # Construct the training command
+    # Define selected hybrid personality mapping (4 chosen personalities)
+    personalities = [
+        "cautious_speedster",     # High speed, but careful driving
+        "balanced_racer",         # Medium speed, balanced approach
+        "aggressive_speedster",   # High speed, risky driving  
+        "conservative_cruiser",   # Low speed, very safe driving
+    ]
+    personality = personalities[agent_id] if agent_id < len(personalities) else "balanced_racer"
+    
+    # Construct the training command with personality
     cmd = [
         sys.executable, 
         "examples/train_sb3.py",
@@ -50,6 +59,7 @@ def run_training_agent(agent_id: int, args: argparse.Namespace) -> int:
         "--learning-rate", str(args.learning_rate),
         "--checkpoint-freq", str(args.checkpoint_freq),
         "--results-dir", agent_results_dir,  # Use agent-specific results dir
+        "--personality", personality,  # Add personality parameter
     ]
     
     # Add optional flags
@@ -62,13 +72,15 @@ def run_training_agent(agent_id: int, args: argparse.Namespace) -> int:
     
     # Add wandb if enabled
     if args.wandb:
+        # Create descriptive names for each agent
+        personalities = ["aggressive", "conservative", "speed_demon", "balanced"]
+        personality = personalities[agent_id] if agent_id < len(personalities) else f"agent_{agent_id}"
+        
         cmd.extend([
             "--wandb",
             "--wandb-project", args.wandb_project,
-            "--wandb-name", f"{args.wandb_name}_agent_{agent_id}",
+            "--wandb-name", f"{args.wandb_name}_{personality}",
         ])
-        if args.wandb_tags:
-            cmd.extend(["--wandb-tags"] + args.wandb_tags + [f"agent_{agent_id}"])
     
     print(f"🚀 Starting Agent {agent_id} training...")
     print(f"   Command: {' '.join(cmd)}")
@@ -168,8 +180,6 @@ def main():
                        help='W&B project name')
     parser.add_argument('--wandb-name', type=str, default=None,
                        help='W&B run name base (agent ID will be appended)')
-    parser.add_argument('--wandb-tags', nargs='+', default=[],
-                       help='W&B tags for the runs')
     
     # Execution options
     parser.add_argument('--parallel', action='store_true', default=True,
@@ -185,7 +195,8 @@ def main():
     
     # Set default wandb name if not provided
     if args.wandb and args.wandb_name is None:
-        args.wandb_name = f"competitive_{args.track}_{args.num_agents}agents_{int(time.time())}"
+        timestamp = int(time.time())
+        args.wandb_name = f"racing_{args.track}_{timestamp}"
     
     print("🏁 Multi-Agent Competitive Training Launcher")
     print("=" * 60)

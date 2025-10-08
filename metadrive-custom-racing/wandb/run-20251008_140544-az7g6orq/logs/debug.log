@@ -1,0 +1,31 @@
+2025-10-08 14:05:44,324 INFO    MainThread:9800 [wandb_setup.py:_flush():81] Current SDK version is 0.22.1
+2025-10-08 14:05:44,325 INFO    MainThread:9800 [wandb_setup.py:_flush():81] Configure stats pid to 9800
+2025-10-08 14:05:44,326 INFO    MainThread:9800 [wandb_setup.py:_flush():81] Loading settings from C:\Users\balde\.config\wandb\settings
+2025-10-08 14:05:44,327 INFO    MainThread:9800 [wandb_setup.py:_flush():81] Loading settings from C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\wandb\settings
+2025-10-08 14:05:44,327 INFO    MainThread:9800 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-10-08 14:05:44,328 INFO    MainThread:9800 [wandb_init.py:setup_run_log_directory():705] Logging user logs to C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\wandb\run-20251008_140544-az7g6orq\logs\debug.log
+2025-10-08 14:05:44,330 INFO    MainThread:9800 [wandb_init.py:setup_run_log_directory():706] Logging internal logs to C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\wandb\run-20251008_140544-az7g6orq\logs\debug-internal.log
+2025-10-08 14:05:44,351 INFO    MainThread:9800 [wandb_init.py:init():832] calling init triggers
+2025-10-08 14:05:44,352 INFO    MainThread:9800 [wandb_init.py:init():837] wandb.init called with sweep_config: {}
+config: {'algorithm': 'PPO', 'track': 'right_oval', 'timesteps': 500000, 'num_envs': 1, 'learning_rate': 0.0003, 'batch_size': 256, 'n_steps': 4096, 'gamma': 0.99, 'gae_lambda': 0.95, 'clip_range': 0.2, 'vecnorm': False, 'seed': 0, 'eval_freq': 5000, 'checkpoint_freq': 25000, '_wandb': {'code_path': 'code/metadrive-custom-racing/examples/train_sb3.py'}}
+2025-10-08 14:05:44,352 INFO    MainThread:9800 [wandb_init.py:init():880] starting backend
+2025-10-08 14:05:44,358 WARNING MainThread:9800 [wandb_init.py:init():1591] [no run ID] interrupted
+Traceback (most recent call last):
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_init.py", line 1582, in init
+    run = wi.init(run_settings, run_config, run_printer)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_init.py", line 882, in init
+    service = self._wl.ensure_service()
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_setup.py", line 399, in ensure_service
+    from wandb.sdk.lib.service import service_connection
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\service\service_connection.py", line 11, in <module>
+    from wandb.sdk.interface.interface_sock import InterfaceSock
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+  File "<frozen importlib._bootstrap_external>", line 1559, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 1533, in _get_spec
+  File "<frozen importlib._bootstrap_external>", line 1665, in find_spec
+  File "<frozen importlib._bootstrap_external>", line 166, in _path_isfile
+  File "<frozen importlib._bootstrap_external>", line 158, in _path_is_mode_type
+  File "<frozen importlib._bootstrap_external>", line 152, in _path_stat
+KeyboardInterrupt

@@ -1,0 +1,17 @@
+{"time":"2025-10-08T14:47:00.1331973-05:00","level":"INFO","msg":"stream: starting","core version":"0.22.1"}
+{"time":"2025-10-08T14:47:00.6016144-05:00","level":"INFO","msg":"stream: created new stream","id":"7dp9f5o1"}
+{"time":"2025-10-08T14:47:00.6016144-05:00","level":"INFO","msg":"handler: started","stream_id":"7dp9f5o1"}
+{"time":"2025-10-08T14:47:00.603812-05:00","level":"INFO","msg":"stream: started","id":"7dp9f5o1"}
+{"time":"2025-10-08T14:47:00.603812-05:00","level":"INFO","msg":"writer: started","stream_id":"7dp9f5o1"}
+{"time":"2025-10-08T14:47:00.603812-05:00","level":"INFO","msg":"sender: started","stream_id":"7dp9f5o1"}
+{"time":"2025-10-08T14:47:00.820733-05:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-10-08T14:47:12.8686871-05:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2025-10-08T14:47:12.8686871-05:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"C:\\\\Users\\\\balde\\\\OneDrive\\\\Documents\\\\SeniorProject\\\\metadrive-custom-racing\\\\results_agent_2\\\\tensorboard\\\\PPO_6\")","namespace":""}
+{"time":"2025-10-08T14:47:12.8697406-05:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results_agent_2\\tensorboard\\PPO_6\\events.out.tfevents.1759952822.Balde.26048.0","runPath":"results_agent_2/tensorboard/PPO_6/events.out.tfevents.1759952822.Balde.26048.0"}
+{"time":"2025-10-08T14:47:12.8809098-05:00","level":"ERROR","msg":"tensorboard: error creating symlink","target":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results_agent_2\\tensorboard\\PPO_6\\events.out.tfevents.1759952822.Balde.26048.0","symlink":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\wandb\\run-20251008_144657-7dp9f5o1\\files\\results_agent_2\\tensorboard\\PPO_6\\events.out.tfevents.1759952822.Balde.26048.0","error":"symlink C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results_agent_2\\tensorboard\\PPO_6\\events.out.tfevents.1759952822.Balde.26048.0 C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\wandb\\run-20251008_144657-7dp9f5o1\\files\\results_agent_2\\tensorboard\\PPO_6\\events.out.tfevents.1759952822.Balde.26048.0: A required privilege is not held by the client."}
+{"time":"2025-10-08T14:47:15.1566205-05:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact ppo_right_oval_model","runtime_seconds":0.5218704},{"desc":"updating run metadata","runtime_seconds":0.0041979}],"total_operations":2}}
+{"time":"2025-10-08T14:47:16.4540233-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-08T14:47:16.8002357-05:00","level":"INFO","msg":"stream: closing","id":"7dp9f5o1"}
+{"time":"2025-10-08T14:47:16.8002357-05:00","level":"INFO","msg":"handler: closed","stream_id":"7dp9f5o1"}
+{"time":"2025-10-08T14:47:16.8007474-05:00","level":"INFO","msg":"sender: closed","stream_id":"7dp9f5o1"}
+{"time":"2025-10-08T14:47:16.8007474-05:00","level":"INFO","msg":"stream: closed","id":"7dp9f5o1"}

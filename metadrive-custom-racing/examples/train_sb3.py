@@ -7,6 +7,7 @@ import sys
 import argparse
 from typing import Callable
 import gymnasium as gym
+import torch as th
 
 # Add src to path
 ROOT = os.path.dirname(os.path.dirname(__file__))
@@ -31,6 +32,7 @@ except ImportError:
     WANDB_AVAILABLE = False
 
 from environments.single_car_racing import create_racing_environment
+from environments.personality_racing_env import create_personality_racing_environment
 
 
 class RacingMetricsCallback(BaseCallback):
@@ -85,9 +87,15 @@ class _ResetNoKwargs(gym.Wrapper):
         return self.env.reset()
 
 
-def make_env(track_name: str = 'custom_speedway', seed: int | None = None) -> Callable[[], object]:
+def make_env(track_name: str = 'custom_speedway', seed: int | None = None, personality: str = 'balanced') -> Callable[[], object]:
     def _init():
-        base = create_racing_environment(track_name, use_render=False, start_seed=seed)
+        # Use personality-aware environment for better training diversity
+        base = create_personality_racing_environment(
+            track_name=track_name, 
+            personality=personality,
+            use_render=False, 
+            start_seed=seed
+        )
         env = _ResetNoKwargs(base)
         env = Monitor(env)
         return env
@@ -98,6 +106,11 @@ def main():
     parser = argparse.ArgumentParser(description='Train PPO on MetaDrive custom racing.')
     # Paths and track
     parser.add_argument('--track', type=str, default='custom_speedway', help='Track name (from assets/track_configs)')
+    parser.add_argument('--personality', type=str, default='balanced_racer', 
+                       choices=['conservative_cruiser', 'aggressive_speedster', 'balanced_racer', 'cautious_speedster', 
+                               'aggressive_cruiser', 'speed_demon', 'conservative_speedster', 'wild_racer',
+                               'aggressive', 'conservative', 'balanced'],  # Legacy support
+                       help='Agent hybrid personality for reward shaping')
     parser.add_argument('--results-dir', type=str, default=None, help='Directory to save models/logs (default: ../results)')
     parser.add_argument('--tb-subdir', type=str, default='tensorboard', help='TensorBoard subdirectory name')
 
@@ -106,10 +119,10 @@ def main():
     parser.add_argument('--seed', type=int, default=0, help='Random seed')
     parser.add_argument('--num-envs', type=int, default=1, help='Number of parallel envs (>=2 uses SubprocVecEnv)')
 
-    # PPO hyperparameters
+    # PPO hyperparameters - Enhanced for racing
     parser.add_argument('--learning-rate', type=float, default=3e-4)
-    parser.add_argument('--batch-size', type=int, default=64)
-    parser.add_argument('--n-steps', type=int, default=2048)
+    parser.add_argument('--batch-size', type=int, default=256)      # Larger batches for stability
+    parser.add_argument('--n-steps', type=int, default=4096)       # More steps per update
     parser.add_argument('--gamma', type=float, default=0.99)
     parser.add_argument('--gae-lambda', type=float, default=0.95)
     parser.add_argument('--clip-range', type=float, default=0.2)
@@ -171,12 +184,12 @@ def main():
     os.makedirs(results_dir, exist_ok=True)
     os.makedirs(tb_log, exist_ok=True)
 
-    # Vectorized env
+    # Vectorized env with personality-aware environments
     if args.num_envs > 1:
-        env_fns = [make_env(args.track, seed=args.seed + i) for i in range(args.num_envs)]
+        env_fns = [make_env(args.track, seed=args.seed + i, personality=args.personality) for i in range(args.num_envs)]
         vec_env = SubprocVecEnv(env_fns)
     else:
-        vec_env = DummyVecEnv([make_env(args.track, seed=args.seed)])
+        vec_env = DummyVecEnv([make_env(args.track, seed=args.seed, personality=args.personality)])
 
     # Optional normalization
     if args.vecnorm:
@@ -233,6 +246,7 @@ def main():
                 except Exception as e:
                     print('Warning: failed to load VecNormalize stats:', e)
     else:
+        # Enhanced PPO parameters for better racing AI
         model = PPO(
             'MlpPolicy',
             vec_env,
@@ -245,6 +259,17 @@ def main():
             gae_lambda=args.gae_lambda,
             clip_range=args.clip_range,
             seed=args.seed,
+            # Additional parameters for better racing performance
+            ent_coef=0.01,        # Encourage exploration
+            vf_coef=0.5,          # Value function coefficient
+            max_grad_norm=0.5,    # Gradient clipping for stability
+            n_epochs=15,          # More epochs for better learning
+            target_kl=0.01,       # Conservative policy updates
+            policy_kwargs=dict(
+                net_arch=[256, 256, 128],  # Larger network for complex racing decisions
+                activation_fn=th.nn.ReLU,
+                ortho_init=True,
+            )
         )
 
     callbacks = [checkpoint_callback]

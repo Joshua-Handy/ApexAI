@@ -1,0 +1,41 @@
+{
+  "os": "Windows-11-10.0.26100-SP0",
+  "python": "CPython 3.13.1",
+  "startedAt": "2025-10-08T19:44:19.353688Z",
+  "args": [
+    "--track",
+    "right_oval",
+    "--timesteps",
+    "1000",
+    "--personality",
+    "aggressive",
+    "--wandb",
+    "--wandb-project",
+    "MetaDrive_Racing_Test",
+    "--wandb-name",
+    "test_aggressive_training"
+  ],
+  "program": "C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\train_sb3.py",
+  "codePath": "metadrive-custom-racing\\examples\\train_sb3.py",
+  "codePathLocal": "examples\\train_sb3.py",
+  "git": {
+    "remote": "https://github.com/Joshua-Handy/ApexAI.git",
+    "commit": "0ac4bbf737884ae1baa112c22e80950bc6f37c7a"
+  },
+  "email": "Baldemarguajardo20@gmail.com",
+  "root": "C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing",
+  "host": "Balde",
+  "executable": "C:\\Python313\\python.exe",
+  "cpu_count": 4,
+  "cpu_count_logical": 8,
+  "disk": {
+    "/": {
+      "total": "253615927296",
+      "used": "242481815552"
+    }
+  },
+  "memory": {
+    "total": "17005576192"
+  },
+  "writerId": "ztehlbeadeh2hzptkdki8br41zvzt6tt"
+}

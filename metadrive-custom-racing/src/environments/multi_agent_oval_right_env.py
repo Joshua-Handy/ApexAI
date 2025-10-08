@@ -44,7 +44,7 @@ class MultiAgentOvalMap(PGMap):
         parent_node_path, physics_world = self.engine.worldNP, self.engine.physics_world
         assert len(self.road_network.graph) == 0, "Map is not empty; create a fresh map to build the oval"
 
-        lane_num = self.config.get("lane_num", 1)
+        lane_num = self.config.get("lane_num", 1)  # Default to single lane
         lane_width = self.config.get("lane_width", 20.0)  # Match config file lane width
 
         # Start with spawn block

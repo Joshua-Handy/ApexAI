@@ -1,0 +1,23 @@
+{"time":"2025-10-08T14:23:56.593142-05:00","level":"INFO","msg":"stream: starting","core version":"0.22.1"}
+{"time":"2025-10-08T14:23:57.040334-05:00","level":"INFO","msg":"stream: created new stream","id":"mv3lgg9t"}
+{"time":"2025-10-08T14:23:57.0409317-05:00","level":"INFO","msg":"handler: started","stream_id":"mv3lgg9t"}
+{"time":"2025-10-08T14:23:57.0445212-05:00","level":"INFO","msg":"stream: started","id":"mv3lgg9t"}
+{"time":"2025-10-08T14:23:57.0445212-05:00","level":"INFO","msg":"writer: started","stream_id":"mv3lgg9t"}
+{"time":"2025-10-08T14:23:57.0451373-05:00","level":"INFO","msg":"sender: started","stream_id":"mv3lgg9t"}
+{"time":"2025-10-08T14:23:57.2187982-05:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-10-08T14:24:09.3034041-05:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2025-10-08T14:24:09.3034041-05:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"C:\\\\Users\\\\balde\\\\OneDrive\\\\Documents\\\\SeniorProject\\\\metadrive-custom-racing\\\\results_agent_3\\\\tensorboard\\\\PPO_5\")","namespace":""}
+{"time":"2025-10-08T14:24:09.30391-05:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results_agent_3\\tensorboard\\PPO_5\\events.out.tfevents.1759951439.Balde.9632.0","runPath":"results_agent_3/tensorboard/PPO_5/events.out.tfevents.1759951439.Balde.9632.0"}
+{"time":"2025-10-08T14:24:09.3127036-05:00","level":"ERROR","msg":"tensorboard: error creating symlink","target":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results_agent_3\\tensorboard\\PPO_5\\events.out.tfevents.1759951439.Balde.9632.0","symlink":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\wandb\\run-20251008_142353-mv3lgg9t\\files\\results_agent_3\\tensorboard\\PPO_5\\events.out.tfevents.1759951439.Balde.9632.0","error":"symlink C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results_agent_3\\tensorboard\\PPO_5\\events.out.tfevents.1759951439.Balde.9632.0 C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\wandb\\run-20251008_142353-mv3lgg9t\\files\\results_agent_3\\tensorboard\\PPO_5\\events.out.tfevents.1759951439.Balde.9632.0: A required privilege is not held by the client."}
+{"time":"2025-10-08T14:24:19.3324292-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":79}
+{"time":"2025-10-08T14:24:19.3345879-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-10-08T14:24:44.3779756-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":231}
+{"time":"2025-10-08T14:24:44.3779756-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-10-08T14:25:04.4211432-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":353}
+{"time":"2025-10-08T14:25:04.4226996-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":3}
+{"time":"2025-10-08T14:26:13.0175878-05:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact ppo_right_oval_model","runtime_seconds":0.8670343,"subtasks":[{"desc":"model.zip","runtime_seconds":0.0418464,"progress":"64.0KB/3.8MB"}]},{"desc":"uploading history steps 141-155, summary, console lines 430-515","runtime_seconds":0.4046985},{"desc":"updating run metadata","runtime_seconds":0.002128}],"total_operations":3}}
+{"time":"2025-10-08T14:26:15.3235379-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-08T14:26:15.8542087-05:00","level":"INFO","msg":"stream: closing","id":"mv3lgg9t"}
+{"time":"2025-10-08T14:26:15.8547678-05:00","level":"INFO","msg":"handler: closed","stream_id":"mv3lgg9t"}
+{"time":"2025-10-08T14:26:15.8553277-05:00","level":"INFO","msg":"sender: closed","stream_id":"mv3lgg9t"}
+{"time":"2025-10-08T14:26:15.8553277-05:00","level":"INFO","msg":"stream: closed","id":"mv3lgg9t"}

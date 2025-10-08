@@ -1,0 +1,85 @@
+_wandb:
+    value:
+        cli_version: 0.22.1
+        code_path: code/metadrive-custom-racing/examples/train_sb3.py
+        e:
+            ipd6ktc1bthyy9njneihy7wt3ax7p634:
+                args:
+                    - --track
+                    - right_oval
+                    - --timesteps
+                    - "1000"
+                    - --personality
+                    - aggressive
+                    - --wandb
+                    - --wandb-project
+                    - MetaDrive_Racing_Test
+                    - --wandb-name
+                    - test_aggressive_training
+                codePath: metadrive-custom-racing\examples\train_sb3.py
+                codePathLocal: examples\train_sb3.py
+                cpu_count: 4
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "253615927296"
+                        used: "242478411776"
+                email: Baldemarguajardo20@gmail.com
+                executable: C:\Python313\python.exe
+                git:
+                    commit: 0ac4bbf737884ae1baa112c22e80950bc6f37c7a
+                    remote: https://github.com/Joshua-Handy/ApexAI.git
+                host: Balde
+                memory:
+                    total: "17005576192"
+                os: Windows-11-10.0.26100-SP0
+                program: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_sb3.py
+                python: CPython 3.13.1
+                root: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing
+                startedAt: "2025-10-08T19:42:57.753441Z"
+                writerId: ipd6ktc1bthyy9njneihy7wt3ax7p634
+        m: []
+        python_version: 3.13.1
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 13
+                - 16
+                - 35
+            "4": 3.13.1
+            "5": 0.22.1
+            "8":
+                - 3
+            "12": 0.22.1
+            "13": windows-amd64
+algorithm:
+    value: PPO
+batch_size:
+    value: 256
+checkpoint_freq:
+    value: 5000
+clip_range:
+    value: 0.2
+eval_freq:
+    value: 5000
+gae_lambda:
+    value: 0.95
+gamma:
+    value: 0.99
+learning_rate:
+    value: 0.0003
+n_steps:
+    value: 4096
+num_envs:
+    value: 1
+seed:
+    value: 0
+timesteps:
+    value: 1000
+track:
+    value: right_oval
+vecnorm:
+    value: false
