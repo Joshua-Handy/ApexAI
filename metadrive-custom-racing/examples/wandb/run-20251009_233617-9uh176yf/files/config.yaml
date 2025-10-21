@@ -1,0 +1,60 @@
+_wandb:
+    value:
+        cli_version: 0.22.1
+        e:
+            gnij8m2jbex361mwx8vv7jwqn7y12fd1:
+                args:
+                    - --agents
+                    - "4"
+                    - --timesteps
+                    - "500000"
+                    - --results-dir
+                    - coordinated_racing_models
+                    - --wandb
+                codePath: metadrive-custom-racing\examples\train_coordinated_multi_agent.py
+                codePathLocal: train_coordinated_multi_agent.py
+                cpu_count: 4
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "253615927296"
+                        used: "248014065664"
+                email: Baldemarguajardo20@gmail.com
+                executable: C:\Python313\python.exe
+                git:
+                    commit: daebfe8509d3e35876a686714ec1093bfa985ba6
+                    remote: https://github.com/Joshua-Handy/ApexAI.git
+                host: Balde
+                memory:
+                    total: "17005576192"
+                os: Windows-11-10.0.26100-SP0
+                program: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_coordinated_multi_agent.py
+                python: CPython 3.13.1
+                root: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples
+                startedAt: "2025-10-10T04:36:17.974029Z"
+                writerId: gnij8m2jbex361mwx8vv7jwqn7y12fd1
+        m: []
+        python_version: 3.13.1
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.13.1
+            "5": 0.22.1
+            "8":
+                - 3
+            "12": 0.22.1
+            "13": windows-amd64
+algorithm:
+    value: Coordinated PPO
+num_agents:
+    value: 4
+timesteps:
+    value: 500000
+track:
+    value: right_oval

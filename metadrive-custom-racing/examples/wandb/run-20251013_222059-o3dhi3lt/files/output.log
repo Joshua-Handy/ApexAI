@@ -1,0 +1,520 @@
+[38;20m[INFO] Environment: MultiAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 8000[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+🏁 Using custom right-turn oval track!
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+🏎️  Training agents: ['agent0', 'agent1', 'agent2', 'agent3']
+🏎️  Setting up agent0...
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+🏎️  Setting up agent1...
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+🏎️  Setting up agent2...
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+🏎️  Setting up agent3...
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+
+🚀 Starting coordinated training...
+💡 Agents will train in coordination with shared experience!
+🎯 Using EXACT SAME config as successful single-agent training!
+   - Conservative learning rate: 5e-6
+   - Horizon: 8000 steps
+   - Success reward: 30.0
+
+
+🏁 Training Round 1/5
+--------------------------------------------------
+🏎️  Training agent0 (Round 1)...
+   📊 Starting training with detailed progress tracking...
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+Logging to coordinated_v2_dynamic\tensorboard_agent0\PPO_0
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 2,048
+         Episode: 1 | Reward: 3.5 | Length: 361
+         Mean (10ep): Reward 3.5 | Length 361.0 | Best: 3.5
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 3.55     |
+|    episode_length   | 361      |
+|    episode_reward   | 3.55     |
+|    mean_reward_10ep | 3.55     |
+| rollout/            |          |
+|    ep_len_mean      | 370      |
+|    ep_rew_mean      | 2.6      |
+| time/               |          |
+|    fps              | 115      |
+|    iterations       | 1        |
+|    time_elapsed     | 17       |
+|    total_timesteps  | 2048     |
+----------------------------------
+      👥 agent0 - Timesteps: 4,096
+         Episode: 2 | Reward: 3.5 | Length: 361
+         Mean (10ep): Reward 3.5 | Length 361.0 | Best: 3.5
+-------------------------------------------
+| agent0/                 |               |
+|    best_mean_reward     | 3.55          |
+|    episode_length       | 361           |
+|    episode_reward       | 3.55          |
+|    mean_reward_10ep     | 3.55          |
+| rollout/                |               |
+|    ep_len_mean          | 370           |
+|    ep_rew_mean          | 2.6           |
+| time/                   |               |
+|    fps                  | 151           |
+|    iterations           | 2             |
+|    time_elapsed         | 27            |
+|    total_timesteps      | 4096          |
+| train/                  |               |
+|    approx_kl            | 0.00028561152 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.2           |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.0081       |
+|    learning_rate        | 5e-06         |
+|    loss                 | 0.385         |
+|    n_updates            | 10            |
+|    policy_gradient_loss | -0.000765     |
+|    std                  | 1             |
+|    value_loss           | 4.41          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 6,144
+         Episode: 3 | Reward: 175.8 | Length: 3745
+         Mean (10ep): Reward 61.0 | Length 1489.0 | Best: 61.0
+------------------------------------------
+| agent0/                 |              |
+|    best_mean_reward     | 61           |
+|    episode_length       | 3745         |
+|    episode_reward       | 176          |
+|    mean_reward_10ep     | 61           |
+| rollout/                |              |
+|    ep_len_mean          | 1.04e+03     |
+|    ep_rew_mean          | 37.2         |
+| time/                   |              |
+|    fps                  | 168          |
+|    iterations           | 3            |
+|    time_elapsed         | 36           |
+|    total_timesteps      | 6144         |
+| train/                  |              |
+|    approx_kl            | 0.0042233984 |
+|    clip_fraction        | 0.00459      |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | -0.0541      |
+|    learning_rate        | 5e-06        |
+|    loss                 | -0.00924     |
+|    n_updates            | 20           |
+|    policy_gradient_loss | -0.0105      |
+|    std                  | 1            |
+|    value_loss           | 0.18         |
+------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 8,192
+         Episode: 4 | Reward: 41.7 | Length: 943
+         Mean (10ep): Reward 56.1 | Length 1352.5 | Best: 61.0
+------------------------------------------
+| agent0/                 |              |
+|    best_mean_reward     | 61           |
+|    episode_length       | 943          |
+|    episode_reward       | 41.7         |
+|    mean_reward_10ep     | 56.1         |
+| rollout/                |              |
+|    ep_len_mean          | 1.03e+03     |
+|    ep_rew_mean          | 38           |
+| time/                   |              |
+|    fps                  | 168          |
+|    iterations           | 4            |
+|    time_elapsed         | 48           |
+|    total_timesteps      | 8192         |
+| train/                  |              |
+|    approx_kl            | 0.0020071217 |
+|    clip_fraction        | 0.000293     |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | -0.0509      |
+|    learning_rate        | 5e-06        |
+|    loss                 | 0.0511       |
+|    n_updates            | 30           |
+|    policy_gradient_loss | -0.0057      |
+|    std                  | 1            |
+|    value_loss           | 0.578        |
+------------------------------------------
+      👥 agent0 - Timesteps: 10,240
+         Episode: 5 | Reward: 41.7 | Length: 943
+         Mean (10ep): Reward 53.3 | Length 1270.6 | Best: 61.0
+------------------------------------------
+| agent0/                 |              |
+|    best_mean_reward     | 61           |
+|    episode_length       | 943          |
+|    episode_reward       | 41.7         |
+|    mean_reward_10ep     | 53.3         |
+| rollout/                |              |
+|    ep_len_mean          | 1.03e+03     |
+|    ep_rew_mean          | 38           |
+| time/                   |              |
+|    fps                  | 155          |
+|    iterations           | 5            |
+|    time_elapsed         | 65           |
+|    total_timesteps      | 10240        |
+| train/                  |              |
+|    approx_kl            | 0.0007726089 |
+|    clip_fraction        | 4.88e-05     |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | 0.0284       |
+|    learning_rate        | 5e-06        |
+|    loss                 | 0.344        |
+|    n_updates            | 40           |
+|    policy_gradient_loss | -0.00266     |
+|    std                  | 1            |
+|    value_loss           | 1.93         |
+------------------------------------------
+      👥 agent0 - Timesteps: 12,288
+         Episode: 6 | Reward: 41.7 | Length: 943
+         Mean (10ep): Reward 51.3 | Length 1216.0 | Best: 61.0
+-----------------------------------------
+| agent0/                 |             |
+|    best_mean_reward     | 61          |
+|    episode_length       | 943         |
+|    episode_reward       | 41.7        |
+|    mean_reward_10ep     | 51.3        |
+| rollout/                |             |
+|    ep_len_mean          | 1.03e+03    |
+|    ep_rew_mean          | 38          |
+| time/                   |             |
+|    fps                  | 153         |
+|    iterations           | 6           |
+|    time_elapsed         | 79          |
+|    total_timesteps      | 12288       |
+| train/                  |             |
+|    approx_kl            | 0.003528797 |
+|    clip_fraction        | 0.0022      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.84       |
+|    explained_variance   | -0.00923    |
+|    learning_rate        | 5e-06       |
+|    loss                 | 0.135       |
+|    n_updates            | 50          |
+|    policy_gradient_loss | -0.00919    |
+|    std                  | 1           |
+|    value_loss           | 0.506       |
+-----------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 14,336
+         Episode: 7 | Reward: 659.2 | Length: 7803
+         Mean (10ep): Reward 138.2 | Length 2157.0 | Best: 138.2
+-----------------------------------------
+| agent0/                 |             |
+|    best_mean_reward     | 138         |
+|    episode_length       | 7803        |
+|    episode_reward       | 659         |
+|    mean_reward_10ep     | 138         |
+| rollout/                |             |
+|    ep_len_mean          | 2e+03       |
+|    ep_rew_mean          | 127         |
+| time/                   |             |
+|    fps                  | 160         |
+|    iterations           | 7           |
+|    time_elapsed         | 89          |
+|    total_timesteps      | 14336       |
+| train/                  |             |
+|    approx_kl            | 0.002165283 |
+|    clip_fraction        | 0.000439    |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.84       |
+|    explained_variance   | -0.00897    |
+|    learning_rate        | 5e-06       |
+|    loss                 | 0.313       |
+|    n_updates            | 60          |
+|    policy_gradient_loss | -0.00774    |
+|    std                  | 1           |
+|    value_loss           | 0.961       |
+-----------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 16,384
+         Episode: 8 | Reward: 2.9 | Length: 129
+         Mean (10ep): Reward 121.3 | Length 1903.5 | Best: 138.2
+-----------------------------------------
+| agent0/                 |             |
+|    best_mean_reward     | 138         |
+|    episode_length       | 129         |
+|    episode_reward       | 2.92        |
+|    mean_reward_10ep     | 121         |
+| rollout/                |             |
+|    ep_len_mean          | 1.81e+03    |
+|    ep_rew_mean          | 129         |
+| time/                   |             |
+|    fps                  | 164         |
+|    iterations           | 8           |
+|    time_elapsed         | 99          |
+|    total_timesteps      | 16384       |
+| train/                  |             |
+|    approx_kl            | 0.002443366 |
+|    clip_fraction        | 0.000635    |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.84       |
+|    explained_variance   | 0.0291      |
+|    learning_rate        | 5e-06       |
+|    loss                 | 0.312       |
+|    n_updates            | 70          |
+|    policy_gradient_loss | -0.00726    |
+|    std                  | 1           |
+|    value_loss           | 1.17        |
+-----------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 18,432
+         Episode: 9 | Reward: -1.7 | Length: 151
+         Mean (10ep): Reward 107.6 | Length 1708.8 | Best: 138.2
+------------------------------------------
+| agent0/                 |              |
+|    best_mean_reward     | 138          |
+|    episode_length       | 151          |
+|    episode_reward       | -1.73        |
+|    mean_reward_10ep     | 108          |
+| rollout/                |              |
+|    ep_len_mean          | 1.16e+03     |
+|    ep_rew_mean          | 78.8         |
+| time/                   |              |
+|    fps                  | 160          |
+|    iterations           | 9            |
+|    time_elapsed         | 114          |
+|    total_timesteps      | 18432        |
+| train/                  |              |
+|    approx_kl            | 0.0006078518 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | 0.0452       |
+|    learning_rate        | 5e-06        |
+|    loss                 | 0.926        |
+|    n_updates            | 80           |
+|    policy_gradient_loss | -0.00235     |
+|    std                  | 1            |
+|    value_loss           | 3.99         |
+------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 20,480
+         Episode: 10 | Reward: 97.7 | Length: 799
+         Mean (10ep): Reward 106.6 | Length 1617.8 | Best: 138.2
+------------------------------------------
+| agent0/                 |              |
+|    best_mean_reward     | 138          |
+|    episode_length       | 799          |
+|    episode_reward       | 97.7         |
+|    mean_reward_10ep     | 107          |
+| rollout/                |              |
+|    ep_len_mean          | 979          |
+|    ep_rew_mean          | 70.2         |
+| time/                   |              |
+|    fps                  | 152          |
+|    iterations           | 10           |
+|    time_elapsed         | 133          |
+|    total_timesteps      | 20480        |
+| train/                  |              |
+|    approx_kl            | 0.0002933604 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | 0.0481       |
+|    learning_rate        | 5e-06        |
+|    loss                 | 4.22         |
+|    n_updates            | 90           |
+|    policy_gradient_loss | -0.000462    |
+|    std                  | 1            |
+|    value_loss           | 9.84         |
+------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 22,528
+         Episode: 11 | Reward: 109.4 | Length: 602
+         Mean (10ep): Reward 117.2 | Length 1641.9 | Best: 138.2
+------------------------------------------
+| agent0/                 |              |
+|    best_mean_reward     | 138          |
+|    episode_length       | 602          |
+|    episode_reward       | 109          |
+|    mean_reward_10ep     | 117          |
+| rollout/                |              |
+|    ep_len_mean          | 896          |
+|    ep_rew_mean          | 70.7         |
+| time/                   |              |
+|    fps                  | 151          |
+|    iterations           | 11           |
+|    time_elapsed         | 149          |
+|    total_timesteps      | 22528        |
+| train/                  |              |
+|    approx_kl            | 0.0007593315 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | 0.0563       |
+|    learning_rate        | 5e-06        |
+|    loss                 | 4.6          |
+|    n_updates            | 100          |
+|    policy_gradient_loss | -0.00144     |
+|    std                  | 1            |
+|    value_loss           | 6.16         |
+------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 24,576
+         Episode: 12 | Reward: -2.6 | Length: 75
+         Mean (10ep): Reward 116.6 | Length 1613.3 | Best: 138.2
+-------------------------------------------
+| agent0/                 |               |
+|    best_mean_reward     | 138           |
+|    episode_length       | 75            |
+|    episode_reward       | -2.64         |
+|    mean_reward_10ep     | 117           |
+| rollout/                |               |
+|    ep_len_mean          | 838           |
+|    ep_rew_mean          | 67.6          |
+| time/                   |               |
+|    fps                  | 153           |
+|    iterations           | 12            |
+|    time_elapsed         | 159           |
+|    total_timesteps      | 24576         |
+| train/                  |               |
+|    approx_kl            | 0.00064268266 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.2           |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.0721        |
+|    learning_rate        | 5e-06         |
+|    loss                 | 2             |
+|    n_updates            | 110           |
+|    policy_gradient_loss | -0.00202      |
+|    std                  | 1             |
+|    value_loss           | 6.12          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 26,624
+         Episode: 13 | Reward: 217.5 | Length: 1406
+         Mean (10ep): Reward 120.7 | Length 1379.4 | Best: 138.2
+------------------------------------------
+| agent0/                 |              |
+|    best_mean_reward     | 138          |
+|    episode_length       | 1406         |
+|    episode_reward       | 218          |
+|    mean_reward_10ep     | 121          |
+| rollout/                |              |
+|    ep_len_mean          | 858          |
+|    ep_rew_mean          | 72.8         |
+| time/                   |              |
+|    fps                  | 156          |
+|    iterations           | 13           |
+|    time_elapsed         | 170          |
+|    total_timesteps      | 26624        |
+| train/                  |              |
+|    approx_kl            | 0.0006445475 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | 0.0589       |
+|    learning_rate        | 5e-06        |
+|    loss                 | 1.34         |
+|    n_updates            | 120          |
+|    policy_gradient_loss | -0.0018      |
+|    std                  | 1            |
+|    value_loss           | 5.89         |
+------------------------------------------
+
+❌ Training failed: [WinError 1314] A required privilege is not held by the client: 'C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\coordinated_v2_dynamic\\wandb_agent0\\model.zip' -> 'C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\wandb\\run-20251013_222059-o3dhi3lt\\files\\model.zip'
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_coordinated_multi_agent.py", line 511, in train_coordinated_multi_agent_racing
+    model.learn(
+    ~~~~~~~~~~~^
+        total_timesteps=steps_per_agent,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        reset_num_timesteps=False,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        callback=callbacks[agent_id],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ~~~~~~~~~~~~~^
+        total_timesteps=total_timesteps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        progress_bar=progress_bar,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 339, in learn
+    callback.on_training_end()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\callbacks.py", line 117, in on_training_end
+    self._on_training_end()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\callbacks.py", line 232, in _on_training_end
+    callback.on_training_end()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\callbacks.py", line 117, in on_training_end
+    self._on_training_end()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\integration\sb3\sb3.py", line 141, in _on_training_end
+    self.save_model()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\integration\sb3\sb3.py", line 145, in save_model
+    wandb.save(self.path, base_path=self.model_save_path)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 444, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 2126, in save
+    return self._save(
+           ~~~~~~~~~~^
+        resolved_glob_path,
+        ^^^^^^^^^^^^^^^^^^^
+        resolved_base_path,
+        ^^^^^^^^^^^^^^^^^^^
+        policy,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 2185, in _save
+    target_path.symlink_to(source_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Python313\Lib\pathlib\_local.py", line 789, in symlink_to
+    os.symlink(target, self, target_is_directory)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 1314] A required privilege is not held by the client: 'C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\coordinated_v2_dynamic\\wandb_agent0\\model.zip' -> 'C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\wandb\\run-20251013_222059-o3dhi3lt\\files\\model.zip'
+✅ agent0 final model saved: coordinated_v2_dynamic\final_models\agent0_final.zip
+✅ agent1 final model saved: coordinated_v2_dynamic\final_models\agent1_final.zip
+✅ agent2 final model saved: coordinated_v2_dynamic\final_models\agent2_final.zip
+✅ agent3 final model saved: coordinated_v2_dynamic\final_models\agent3_final.zip

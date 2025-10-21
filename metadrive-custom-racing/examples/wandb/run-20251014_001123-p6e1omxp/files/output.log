@@ -1,0 +1,872 @@
+[38;20m[INFO] Environment: MultiAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 8000[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+🏁 Using custom right-turn oval track!
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+🏎️  Training agents: ['agent0', 'agent1', 'agent2', 'agent3']
+🏎️  Setting up agent0...
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+🏎️  Setting up agent1...
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+🏎️  Setting up agent2...
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+🏎️  Setting up agent3...
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+
+🚀 Starting coordinated training...
+💡 Using HYPER-CONSERVATIVE training to prevent ANY performance degradation!
+🎯 Key changes from your degrading training:
+   - Learning rate: 2e-7 (was 5e-6) - 25x more conservative
+   - Batch size: 16 (was 64) - 4x smaller for maximum stability
+   - Clip range: 0.05 (was 0.2) - Prevent ANY large policy changes
+   - Training steps: 20 tiny rounds instead of 10 small
+   - Early stopping: Halt immediately if ANY degradation (patience=2)
+   - Max grad norm: 0.05 - Extremely conservative gradient clipping
+
+
+🏁 Training Round 1/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 1)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+Logging to coordinated_4agent_hyper_conservative\tensorboard_agent0\PPO_0
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 512
+         Episode: 1 | Reward: -1.9 | Length: 359
+         Mean (10ep): Reward -1.9 | Length 359.0 | Best: -1.9
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | -1.85    |
+|    episode_length   | 359      |
+|    episode_reward   | -1.85    |
+|    mean_reward_10ep | -1.85    |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 359      |
+|    ep_rew_mean     | -1.85    |
+| time/              |          |
+|    fps             | 229      |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 512      |
+---------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 1,024
+         Episode: 2 | Reward: 6.3 | Length: 512
+         Mean (10ep): Reward 2.2 | Length 435.5 | Best: 2.2
+-------------------------------------------
+| agent0/                 |               |
+|    best_mean_reward     | 2.23          |
+|    episode_length       | 512           |
+|    episode_reward       | 6.31          |
+|    mean_reward_10ep     | 2.23          |
+| train/                  |               |
+|    approx_kl            | 2.2142194e-07 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.0251        |
+|    learning_rate        | 2e-07         |
+|    loss                 | 1.35          |
+|    n_updates            | 10            |
+|    policy_gradient_loss | -3.44e-05     |
+|    std                  | 1             |
+|    value_loss           | 3.46          |
+-------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 436      |
+|    ep_rew_mean     | 2.23     |
+| time/              |          |
+|    fps             | 191      |
+|    iterations      | 2        |
+|    time_elapsed    | 5        |
+|    total_timesteps | 1024     |
+---------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 1,536
+         Episode: 3 | Reward: -0.2 | Length: 336
+         Mean (10ep): Reward 1.4 | Length 402.3 | Best: 2.2
+-------------------------------------------
+| agent0/                 |               |
+|    best_mean_reward     | 2.23          |
+|    episode_length       | 336           |
+|    episode_reward       | -0.165        |
+|    mean_reward_10ep     | 1.43          |
+| train/                  |               |
+|    approx_kl            | 2.4936162e-07 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.0523       |
+|    learning_rate        | 2e-07         |
+|    loss                 | 0.0688        |
+|    n_updates            | 20            |
+|    policy_gradient_loss | -3.56e-05     |
+|    std                  | 1             |
+|    value_loss           | 3.87          |
+-------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 402      |
+|    ep_rew_mean     | 1.43     |
+| time/              |          |
+|    fps             | 187      |
+|    iterations      | 3        |
+|    time_elapsed    | 8        |
+|    total_timesteps | 1536     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 1.4 avg reward
+   📈 Shared experiences: 1,536
+
+🏎️  Training agent1 (Round 1)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+Logging to coordinated_4agent_hyper_conservative\tensorboard_agent1\PPO_0
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent1 - Timesteps: 512
+         Episode: 1 | Reward: -2.6 | Length: 280
+         Mean (10ep): Reward -2.6 | Length 280.0 | Best: -2.6
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | -2.65    |
+|    episode_length   | 280      |
+|    episode_reward   | -2.65    |
+|    mean_reward_10ep | -2.65    |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 280      |
+|    ep_rew_mean     | -2.65    |
+| time/              |          |
+|    fps             | 236      |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 512      |
+---------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent1 - Timesteps: 1,024
+         Episode: 2 | Reward: -3.0 | Length: 245
+         Mean (10ep): Reward -2.8 | Length 262.5 | Best: -2.6
+------------------------------------------
+| agent1/                 |              |
+|    best_mean_reward     | -2.65        |
+|    episode_length       | 245          |
+|    episode_reward       | -2.96        |
+|    mean_reward_10ep     | -2.8         |
+| train/                  |              |
+|    approx_kl            | 3.570458e-07 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.05         |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | -0.0116      |
+|    learning_rate        | 2e-07        |
+|    loss                 | 0.256        |
+|    n_updates            | 10           |
+|    policy_gradient_loss | -4.41e-05    |
+|    std                  | 1            |
+|    value_loss           | 4.36         |
+------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 298      |
+|    ep_rew_mean     | -1.49    |
+| time/              |          |
+|    fps             | 187      |
+|    iterations      | 2        |
+|    time_elapsed    | 5        |
+|    total_timesteps | 1024     |
+---------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent1 - Timesteps: 1,536
+         Episode: 3 | Reward: -2.4 | Length: 290
+         Mean (10ep): Reward -2.7 | Length 271.7 | Best: -2.6
+-------------------------------------------
+| agent1/                 |               |
+|    best_mean_reward     | -2.65         |
+|    episode_length       | 290           |
+|    episode_reward       | -2.39         |
+|    mean_reward_10ep     | -2.67         |
+| train/                  |               |
+|    approx_kl            | 2.2631139e-07 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.0527        |
+|    learning_rate        | 2e-07         |
+|    loss                 | 1.28          |
+|    n_updates            | 20            |
+|    policy_gradient_loss | -2.79e-05     |
+|    std                  | 1             |
+|    value_loss           | 7.36          |
+-------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 296      |
+|    ep_rew_mean     | -1.71    |
+| time/              |          |
+|    fps             | 183      |
+|    iterations      | 3        |
+|    time_elapsed    | 8        |
+|    total_timesteps | 1536     |
+---------------------------------
+[34m[1mwandb[0m: [33mWARNING[0m Tried to log to step 512 that is less than the current step 1536. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[34m[1mwandb[0m: [33mWARNING[0m Tried to log to step 1024 that is less than the current step 1536. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 1.4 avg reward
+      2. agent1: -1.7 avg reward
+   📈 Shared experiences: 3,072
+
+🏎️  Training agent2 (Round 1)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+Logging to coordinated_4agent_hyper_conservative\tensorboard_agent2\PPO_0
+----------------------------
+| time/              |     |
+|    fps             | 250 |
+|    iterations      | 1   |
+|    time_elapsed    | 2   |
+|    total_timesteps | 512 |
+----------------------------
+-------------------------------------------
+| time/                   |               |
+|    fps                  | 206           |
+|    iterations           | 2             |
+|    time_elapsed         | 4             |
+|    total_timesteps      | 1024          |
+| train/                  |               |
+|    approx_kl            | 1.5849946e-06 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.00242      |
+|    learning_rate        | 2e-07         |
+|    loss                 | 0.026         |
+|    n_updates            | 10            |
+|    policy_gradient_loss | -0.000204     |
+|    std                  | 1             |
+|    value_loss           | 0.544         |
+-------------------------------------------
+-------------------------------------------
+| time/                   |               |
+|    fps                  | 193           |
+|    iterations           | 3             |
+|    time_elapsed         | 7             |
+|    total_timesteps      | 1536          |
+| train/                  |               |
+|    approx_kl            | 1.2561213e-06 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.0134        |
+|    learning_rate        | 2e-07         |
+|    loss                 | 0.0693        |
+|    n_updates            | 20            |
+|    policy_gradient_loss | -0.00016      |
+|    std                  | 1             |
+|    value_loss           | 0.822         |
+-------------------------------------------
+   ✅ agent2 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 1.4 avg reward
+      2. agent1: -1.7 avg reward
+   📈 Shared experiences: 4,608
+
+🏎️  Training agent3 (Round 1)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+Logging to coordinated_4agent_hyper_conservative\tensorboard_agent3\PPO_0
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent3 - Timesteps: 512
+         Episode: 1 | Reward: -0.3 | Length: 346
+         Mean (10ep): Reward -0.3 | Length 346.0 | Best: -0.3
+----------------------------------
+| agent3/             |          |
+|    best_mean_reward | -0.264   |
+|    episode_length   | 346      |
+|    episode_reward   | -0.264   |
+|    mean_reward_10ep | -0.264   |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 346      |
+|    ep_rew_mean     | -0.264   |
+| time/              |          |
+|    fps             | 232      |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 512      |
+---------------------------------
+      👥 agent3 - Timesteps: 1,024
+         Episode: 2 | Reward: -0.3 | Length: 346
+         Mean (10ep): Reward -0.3 | Length 346.0 | Best: -0.3
+-------------------------------------------
+| agent3/                 |               |
+|    best_mean_reward     | -0.264        |
+|    episode_length       | 346           |
+|    episode_reward       | -0.264        |
+|    mean_reward_10ep     | -0.264        |
+| train/                  |               |
+|    approx_kl            | 3.7020072e-07 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.007         |
+|    learning_rate        | 2e-07         |
+|    loss                 | 0.259         |
+|    n_updates            | 10            |
+|    policy_gradient_loss | -4.42e-05     |
+|    std                  | 1             |
+|    value_loss           | 3.88          |
+-------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 346      |
+|    ep_rew_mean     | -0.264   |
+| time/              |          |
+|    fps             | 200      |
+|    iterations      | 2        |
+|    time_elapsed    | 5        |
+|    total_timesteps | 1024     |
+---------------------------------
+      👥 agent3 - Timesteps: 1,536
+         Episode: 3 | Reward: -0.3 | Length: 346
+         Mean (10ep): Reward -0.3 | Length 346.0 | Best: -0.3
+-------------------------------------------
+| agent3/                 |               |
+|    best_mean_reward     | -0.264        |
+|    episode_length       | 346           |
+|    episode_reward       | -0.264        |
+|    mean_reward_10ep     | -0.264        |
+| train/                  |               |
+|    approx_kl            | 1.6471604e-06 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.00751       |
+|    learning_rate        | 2e-07         |
+|    loss                 | 0.0327        |
+|    n_updates            | 20            |
+|    policy_gradient_loss | -0.000235     |
+|    std                  | 1             |
+|    value_loss           | 0.512         |
+-------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 346      |
+|    ep_rew_mean     | -0.264   |
+| time/              |          |
+|    fps             | 190      |
+|    iterations      | 3        |
+|    time_elapsed    | 8        |
+|    total_timesteps | 1536     |
+---------------------------------
+   ✅ agent3 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 1.4 avg reward
+      2. agent3: -0.3 avg reward
+      3. agent1: -1.7 avg reward
+   📈 Shared experiences: 6,144
+
+✅ Round 1 complete. Checkpoints saved to coordinated_4agent_hyper_conservative\round_1
+
+🏁 Training Round 2/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 2)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to coordinated_4agent_hyper_conservative\tensorboard_agent0\PPO_0
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 2,048
+         Episode: 4 | Reward: 15.0 | Length: 733
+         Mean (10ep): Reward 4.8 | Length 485.0 | Best: 4.8
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 4.81     |
+|    episode_length   | 733      |
+|    episode_reward   | 15       |
+|    mean_reward_10ep | 4.81     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 485      |
+|    ep_rew_mean     | 4.81     |
+| time/              |          |
+|    fps             | 242      |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 2048     |
+---------------------------------
+      👥 agent0 - Timesteps: 2,560
+         Episode: 5 | Reward: 15.0 | Length: 733
+         Mean (10ep): Reward 6.8 | Length 534.6 | Best: 6.8
+-------------------------------------------
+| agent0/                 |               |
+|    best_mean_reward     | 6.84          |
+|    episode_length       | 733           |
+|    episode_reward       | 15            |
+|    mean_reward_10ep     | 6.84          |
+| train/                  |               |
+|    approx_kl            | 1.0244548e-07 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.0348        |
+|    learning_rate        | 2e-07         |
+|    loss                 | 0.0694        |
+|    n_updates            | 40            |
+|    policy_gradient_loss | -1.76e-05     |
+|    std                  | 1             |
+|    value_loss           | 3.46          |
+-------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 485      |
+|    ep_rew_mean     | 4.81     |
+| time/              |          |
+|    fps             | 207      |
+|    iterations      | 2        |
+|    time_elapsed    | 4        |
+|    total_timesteps | 2560     |
+---------------------------------
+      👥 agent0 - Timesteps: 3,072
+         Episode: 6 | Reward: 15.0 | Length: 733
+         Mean (10ep): Reward 8.2 | Length 567.7 | Best: 8.2
+-------------------------------------------
+| agent0/                 |               |
+|    best_mean_reward     | 8.19          |
+|    episode_length       | 733           |
+|    episode_reward       | 15            |
+|    mean_reward_10ep     | 8.19          |
+| train/                  |               |
+|    approx_kl            | 1.3771933e-06 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.0561       |
+|    learning_rate        | 2e-07         |
+|    loss                 | 0.0702        |
+|    n_updates            | 50            |
+|    policy_gradient_loss | -0.000202     |
+|    std                  | 1             |
+|    value_loss           | 0.763         |
+-------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 485      |
+|    ep_rew_mean     | 4.81     |
+| time/              |          |
+|    fps             | 193      |
+|    iterations      | 3        |
+|    time_elapsed    | 7        |
+|    total_timesteps | 3072     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 4.8 avg reward
+      2. agent3: -0.3 avg reward
+      3. agent1: -1.7 avg reward
+   📈 Shared experiences: 7,680
+
+🏎️  Training agent1 (Round 2)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to coordinated_4agent_hyper_conservative\tensorboard_agent1\PPO_0
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent1 - Timesteps: 2,048
+         Episode: 4 | Reward: 16.8 | Length: 669
+         Mean (10ep): Reward 2.2 | Length 371.0 | Best: 2.2
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | 2.2      |
+|    episode_length   | 669      |
+|    episode_reward   | 16.8     |
+|    mean_reward_10ep | 2.2      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 371      |
+|    ep_rew_mean     | 1.99     |
+| time/              |          |
+|    fps             | 243      |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 2048     |
+---------------------------------
+[34m[1mwandb[0m: [33mWARNING[0m Tried to log to step 2048 that is less than the current step 3072. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent1 - Timesteps: 2,560
+         Episode: 5 | Reward: 4.7 | Length: 570
+         Mean (10ep): Reward 2.7 | Length 410.8 | Best: 2.7
+-------------------------------------------
+| agent1/                 |               |
+|    best_mean_reward     | 2.71          |
+|    episode_length       | 570           |
+|    episode_reward       | 4.74          |
+|    mean_reward_10ep     | 2.71          |
+| train/                  |               |
+|    approx_kl            | 2.7939677e-07 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.0545        |
+|    learning_rate        | 2e-07         |
+|    loss                 | 0.129         |
+|    n_updates            | 40            |
+|    policy_gradient_loss | -3.74e-05     |
+|    std                  | 1             |
+|    value_loss           | 4.08          |
+-------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 404      |
+|    ep_rew_mean     | 2.45     |
+| time/              |          |
+|    fps             | 185      |
+|    iterations      | 2        |
+|    time_elapsed    | 5        |
+|    total_timesteps | 2560     |
+---------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent1 - Timesteps: 3,072
+         Episode: 6 | Reward: 4.4 | Length: 490
+         Mean (10ep): Reward 3.0 | Length 424.0 | Best: 3.0
+-------------------------------------------
+| agent1/                 |               |
+|    best_mean_reward     | 2.99          |
+|    episode_length       | 490           |
+|    episode_reward       | 4.37          |
+|    mean_reward_10ep     | 2.99          |
+| train/                  |               |
+|    approx_kl            | 3.5762787e-07 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.0171       |
+|    learning_rate        | 2e-07         |
+|    loss                 | 1.52          |
+|    n_updates            | 50            |
+|    policy_gradient_loss | -4.52e-05     |
+|    std                  | 1             |
+|    value_loss           | 3.99          |
+-------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 416      |
+|    ep_rew_mean     | 2.72     |
+| time/              |          |
+|    fps             | 177      |
+|    iterations      | 3        |
+|    time_elapsed    | 8        |
+|    total_timesteps | 3072     |
+---------------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 4.8 avg reward
+      2. agent1: 2.7 avg reward
+      3. agent3: -0.3 avg reward
+   📈 Shared experiences: 9,216
+
+🏎️  Training agent2 (Round 2)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to coordinated_4agent_hyper_conservative\tensorboard_agent2\PPO_0
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent2 - Timesteps: 2,048
+         Episode: 1 | Reward: 69.6 | Length: 1889
+         Mean (10ep): Reward 69.6 | Length 1889.0 | Best: 69.6
+----------------------------------
+| agent2/             |          |
+|    best_mean_reward | 69.6     |
+|    episode_length   | 1889     |
+|    episode_reward   | 69.6     |
+|    mean_reward_10ep | 69.6     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1.89e+03 |
+|    ep_rew_mean     | 69.6     |
+| time/              |          |
+|    fps             | 234      |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 2048     |
+---------------------------------
+[34m[1mwandb[0m: [33mWARNING[0m Tried to log to step 2560 that is less than the current step 3072. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+      👥 agent2 - Timesteps: 2,560
+         Episode: 2 | Reward: 69.6 | Length: 1889
+         Mean (10ep): Reward 69.6 | Length 1889.0 | Best: 69.6
+------------------------------------------
+| agent2/                 |              |
+|    best_mean_reward     | 69.6         |
+|    episode_length       | 1889         |
+|    episode_reward       | 69.6         |
+|    mean_reward_10ep     | 69.6         |
+| train/                  |              |
+|    approx_kl            | 5.781185e-07 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.05         |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | -0.017       |
+|    learning_rate        | 2e-07        |
+|    loss                 | 1.44         |
+|    n_updates            | 40           |
+|    policy_gradient_loss | -6.29e-05    |
+|    std                  | 1            |
+|    value_loss           | 4.2          |
+------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1.89e+03 |
+|    ep_rew_mean     | 69.6     |
+| time/              |          |
+|    fps             | 197      |
+|    iterations      | 2        |
+|    time_elapsed    | 5        |
+|    total_timesteps | 2560     |
+---------------------------------
+      👥 agent2 - Timesteps: 3,072
+         Episode: 3 | Reward: 69.6 | Length: 1889
+         Mean (10ep): Reward 69.6 | Length 1889.0 | Best: 69.6
+-------------------------------------------
+| agent2/                 |               |
+|    best_mean_reward     | 69.6          |
+|    episode_length       | 1889          |
+|    episode_reward       | 69.6          |
+|    mean_reward_10ep     | 69.6          |
+| train/                  |               |
+|    approx_kl            | 1.1030352e-06 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.0346       |
+|    learning_rate        | 2e-07         |
+|    loss                 | 0.0573        |
+|    n_updates            | 50            |
+|    policy_gradient_loss | -0.000136     |
+|    std                  | 1             |
+|    value_loss           | 0.323         |
+-------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1.89e+03 |
+|    ep_rew_mean     | 69.6     |
+| time/              |          |
+|    fps             | 192      |
+|    iterations      | 3        |
+|    time_elapsed    | 7        |
+|    total_timesteps | 3072     |
+---------------------------------
+   ✅ agent2 training completed for this round!
+   🏆 Current Rankings:
+      1. agent2: 69.6 avg reward
+      2. agent0: 4.8 avg reward
+      3. agent1: 2.7 avg reward
+      4. agent3: -0.3 avg reward
+   📈 Shared experiences: 10,752
+
+🏎️  Training agent3 (Round 2)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to coordinated_4agent_hyper_conservative\tensorboard_agent3\PPO_0
+      👥 agent3 - Timesteps: 2,048
+         Episode: 4 | Reward: -0.3 | Length: 346
+         Mean (10ep): Reward -0.3 | Length 346.0 | Best: -0.3
+----------------------------------
+| agent3/             |          |
+|    best_mean_reward | -0.264   |
+|    episode_length   | 346      |
+|    episode_reward   | -0.264   |
+|    mean_reward_10ep | -0.264   |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 346      |
+|    ep_rew_mean     | -0.264   |
+| time/              |          |
+|    fps             | 263      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 2048     |
+---------------------------------
+      👥 agent3 - Timesteps: 2,560
+         Episode: 5 | Reward: -0.3 | Length: 346
+         Mean (10ep): Reward -0.3 | Length 346.0 | Best: -0.3
+-------------------------------------------
+| agent3/                 |               |
+|    best_mean_reward     | -0.264        |
+|    episode_length       | 346           |
+|    episode_reward       | -0.264        |
+|    mean_reward_10ep     | -0.264        |
+| train/                  |               |
+|    approx_kl            | 1.5064143e-06 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.125         |
+|    learning_rate        | 2e-07         |
+|    loss                 | 0.032         |
+|    n_updates            | 40            |
+|    policy_gradient_loss | -0.000216     |
+|    std                  | 1             |
+|    value_loss           | 0.496         |
+-------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 346      |
+|    ep_rew_mean     | -0.264   |
+| time/              |          |
+|    fps             | 211      |
+|    iterations      | 2        |
+|    time_elapsed    | 4        |
+|    total_timesteps | 2560     |
+---------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent3 - Timesteps: 3,072
+         Episode: 6 | Reward: 99.9 | Length: 2697
+         Mean (10ep): Reward 16.4 | Length 737.8 | Best: 16.4
+-------------------------------------------
+| agent3/                 |               |
+|    best_mean_reward     | 16.4          |
+|    episode_length       | 2697          |
+|    episode_reward       | 99.9          |
+|    mean_reward_10ep     | 16.4          |
+| train/                  |               |
+|    approx_kl            | 9.1746915e-07 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.025         |
+|    learning_rate        | 2e-07         |
+|    loss                 | 0.0818        |
+|    n_updates            | 50            |
+|    policy_gradient_loss | -0.000142     |
+|    std                  | 1             |
+|    value_loss           | 0.702         |
+-------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1.52e+03 |
+|    ep_rew_mean     | 49.8     |
+| time/              |          |
+|    fps             | 197      |
+|    iterations      | 3        |
+|    time_elapsed    | 7        |
+|    total_timesteps | 3072     |
+---------------------------------
+   ✅ agent3 training completed for this round!
+   🏆 Current Rankings:
+      1. agent2: 69.6 avg reward
+      2. agent3: 49.8 avg reward
+      3. agent0: 4.8 avg reward
+      4. agent1: 2.7 avg reward
+   📈 Shared experiences: 12,288
+
+✅ Round 2 complete. Checkpoints saved to coordinated_4agent_hyper_conservative\round_2
+
+🏁 Training Round 3/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 3)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to coordinated_4agent_hyper_conservative\tensorboard_agent0\PPO_0
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 3,584
+         Episode: 7 | Reward: 43.0 | Length: 1463
+         Mean (10ep): Reward 13.2 | Length 695.6 | Best: 13.2
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 13.2     |
+|    episode_length   | 1463     |
+|    episode_reward   | 43       |
+|    mean_reward_10ep | 13.2     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 681      |
+|    ep_rew_mean     | 12.4     |
+| time/              |          |
+|    fps             | 231      |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 3584     |
+---------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 4,096
+         Episode: 8 | Reward: 5.9 | Length: 444
+         Mean (10ep): Reward 12.2 | Length 664.1 | Best: 13.2
+-------------------------------------------
+| agent0/                 |               |
+|    best_mean_reward     | 13.2          |
+|    episode_length       | 444           |
+|    episode_reward       | 5.89          |
+|    mean_reward_10ep     | 12.2          |
+| train/                  |               |
+|    approx_kl            | 1.2118835e-07 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.0491       |
+|    learning_rate        | 2e-07         |
+|    loss                 | 0.0873        |
+|    n_updates            | 70            |
+|    policy_gradient_loss | -2.08e-05     |
+|    std                  | 1             |
+|    value_loss           | 3.97          |
+-------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 585      |
+|    ep_rew_mean     | 9.75     |
+| time/              |          |
+|    fps             | 188      |
+|    iterations      | 2        |
+|    time_elapsed    | 5        |
+|    total_timesteps | 4096     |
+---------------------------------
+
+🛑 Training interrupted by user
+✅ agent0 final model saved: coordinated_4agent_hyper_conservative\final_models\agent0_final.zip
+✅ agent1 final model saved: coordinated_4agent_hyper_conservative\final_models\agent1_final.zip
+✅ agent2 final model saved: coordinated_4agent_hyper_conservative\final_models\agent2_final.zip
+✅ agent3 final model saved: coordinated_4agent_hyper_conservative\final_models\agent3_final.zip
+Exception ignored in: <function WeakSet.__init__.<locals>._remove at 0x0000023477BB6980>
+Traceback (most recent call last):
+  File "C:\Python313\Lib\_weakrefset.py", line 39, in _remove
+    def _remove(item, selfref=ref(self)):
+KeyboardInterrupt:
+
+🛑 Training interrupted by user

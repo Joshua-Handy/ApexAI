@@ -1,0 +1,123 @@
+[38;20m[INFO] Environment: MultiAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 2000[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+Using custom right-turn oval track!
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1[0m
+Multi-Agent Racing Environment Created!
+   Agents: 4
+   Curriculum: SAFETY
+   Observation space: (107,)
+   Action space: Box(-1.0, 1.0, (2,), float32)
+Environment created successfully!
+   Current phase: SAFETY
+PPO model created with shared policy.
+
+Starting fast-safe training in final phase...
+
+[TS=2,048] [agent=agent0] [phase=safety] [progress=10.0%] [ep_r=202.9] [ep_l=44] [recent10_r=202.9] [recent10_l=44.0]
+         🎯 agent0 new best performance: 207.2
+[TS=4,096] [agent=agent0] [phase=safety] [progress=20.0%] [ep_r=202.4] [ep_l=46] [recent10_r=202.4] [recent10_l=46.0]
+         ⚠️  agent0 no improvement for 1/10 checks
+[TS=6,144] [agent=agent0] [phase=safety] [progress=30.0%] [ep_r=206.3] [ep_l=47] [recent10_r=206.3] [recent10_l=47.0]
+         ⚠️  agent0 no improvement for 2/10 checks
+[TS=8,192] [agent=agent0] [phase=safety] [progress=40.0%] [ep_r=208.3] [ep_l=44] [recent10_r=208.3] [recent10_l=44.0]
+         ⚠️  agent0 no improvement for 3/10 checks
+[TS=10,240] [agent=agent0] [phase=safety] [progress=50.0%] [ep_r=207.1] [ep_l=40] [recent10_r=207.1] [recent10_l=40.0]
+         ⚠️  agent0 no improvement for 4/10 checks
+[TS=12,288] [agent=agent0] [phase=safety] [progress=60.0%] [ep_r=197.4] [ep_l=42] [recent10_r=197.4] [recent10_l=42.0]
+         ⚠️  agent0 no improvement for 5/10 checks
+[TS=14,336] [agent=agent0] [phase=safety] [progress=70.0%] [ep_r=202.1] [ep_l=45] [recent10_r=202.1] [recent10_l=45.0]
+         ⚠️  agent0 no improvement for 6/10 checks
+[TS=16,384] [agent=agent0] [phase=safety] [progress=80.0%] [ep_r=203.2] [ep_l=39] [recent10_r=203.2] [recent10_l=39.0]
+         ⚠️  agent0 no improvement for 7/10 checks
+[TS=18,432] [agent=agent0] [phase=safety] [progress=90.0%] [ep_r=198.5] [ep_l=39] [recent10_r=198.5] [recent10_l=39.0]
+         ⚠️  agent0 no improvement for 8/10 checks
+[TS=20,480] [agent=agent0] [phase=safety] [progress=100.0%] [ep_r=207.1] [ep_l=40] [recent10_r=203.5] [recent10_l=42.6]
+         ⚠️  agent0 no improvement for 9/10 checks
+
+CURRICULUM PHASE ADVANCEMENT!
+   Advanced to Phase 2: CONTROL
+   Goal: Improve steering precision and consistency
+[38;20m[INFO] Environment: MultiAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 2500[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+Using custom right-turn oval track!
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1[0m
+[TS=22,528] [agent=agent0] [phase=control] [progress=73.3%] [ep_r=212.1] [ep_l=39] [recent10_r=204.5] [recent10_l=42.1]
+         ⚠️  agent0 no improvement for 10/10 checks
+         🛑 agent0 early stopping - performance not improving
+[TS=24,576] [agent=agent0] [phase=control] [progress=80.0%] [ep_r=197.4] [ep_l=36] [recent10_r=203.9] [recent10_l=41.1]
+         ⚠️  agent0 no improvement for 11/10 checks
+         🛑 agent0 early stopping - performance not improving
+[TS=26,624] [agent=agent0] [phase=control] [progress=86.7%] [ep_r=207.1] [ep_l=42] [recent10_r=204.0] [recent10_l=40.6]
+         ⚠️  agent0 no improvement for 12/10 checks
+         🛑 agent0 early stopping - performance not improving
+[TS=28,672] [agent=agent0] [phase=control] [progress=93.3%] [ep_r=209.9] [ep_l=40] [recent10_r=204.2] [recent10_l=40.2]
+         ⚠️  agent0 no improvement for 13/10 checks
+         🛑 agent0 early stopping - performance not improving
+[TS=30,720] [agent=agent0] [phase=control] [progress=100.0%] [ep_r=198.6] [ep_l=35] [recent10_r=203.3] [recent10_l=39.7]
+         ⚠️  agent0 no improvement for 14/10 checks
+         🛑 agent0 early stopping - performance not improving
+
+CURRICULUM PHASE ADVANCEMENT!
+   Advanced to Phase 3: SPEED
+   Goal: Learn efficient racing lines and speed management
+[38;20m[INFO] Environment: MultiAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 3000[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+Using custom right-turn oval track!
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1[0m
+[TS=32,768] [agent=agent0] [phase=speed] [progress=80.0%] [ep_r=220.1] [ep_l=35] [recent10_r=205.6] [recent10_l=39.0]
+         ⚠️  agent0 no improvement for 15/10 checks
+         🛑 agent0 early stopping - performance not improving
+[TS=34,816] [agent=agent0] [phase=speed] [progress=85.0%] [ep_r=200.7] [ep_l=38] [recent10_r=205.5] [recent10_l=38.3]
+         ⚠️  agent0 no improvement for 16/10 checks
+         🛑 agent0 early stopping - performance not improving
+[TS=36,864] [agent=agent0] [phase=speed] [progress=90.0%] [ep_r=208.0] [ep_l=35] [recent10_r=206.0] [recent10_l=37.9]
+         ⚠️  agent0 no improvement for 17/10 checks
+         🛑 agent0 early stopping - performance not improving
+[TS=38,912] [agent=agent0] [phase=speed] [progress=95.0%] [ep_r=203.5] [ep_l=40] [recent10_r=206.4] [recent10_l=38.0]
+         ⚠️  agent0 no improvement for 18/10 checks
+         🛑 agent0 early stopping - performance not improving
+[TS=40,960] [agent=agent0] [phase=speed] [progress=100.0%] [ep_r=208.5] [ep_l=41] [recent10_r=206.6] [recent10_l=38.1]
+         ⚠️  agent0 no improvement for 19/10 checks
+         🛑 agent0 early stopping - performance not improving
+
+CURRICULUM PHASE ADVANCEMENT!
+   Advanced to Phase 4: RACING
+   Goal: Full competition with overtaking and positioning
+[38;20m[INFO] Environment: MultiAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 4000[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+Using custom right-turn oval track!
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1[0m
+[TS=43,008] [agent=agent0] [phase=racing] [progress=100.0%] [ep_r=218.1] [ep_l=45] [recent10_r=207.2] [recent10_l=38.7]
+         ⚠️  agent0 no improvement for 20/10 checks
+         🛑 agent0 early stopping - performance not improving
+[TS=45,056] [agent=agent0] [phase=racing] [progress=100.0%] [ep_r=205.1] [ep_l=38] [recent10_r=208.0] [recent10_l=38.9]
+         ⚠️  agent0 no improvement for 21/10 checks
+         🛑 agent0 early stopping - performance not improving
+
+Training interrupted by user
+
+Training interrupted by user

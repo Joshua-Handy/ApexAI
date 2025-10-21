@@ -1,0 +1,916 @@
+Weights & Biases run: Balanced_Bob_CRASH_FIX_TRAINING
+[38;20m[INFO] Environment: SingleAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 1000[0m
+Resuming from model: examples/results_agent_1/checkpoint_right_oval_500000_steps.zip
+Updating hyperparameters for resumed model:
+  Learning rate: 5e-06
+  Batch size: 64
+  Clip range: 0.05
+🔧 Setting learning rate via SB3 method: 5e-06
+✅ All optimizers updated with learning rate: 5e-06
+✅ Rollout buffer reset for resumed training
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+Logging to results_agent_1\tensorboard\PPO_10
+[34m[1mwandb[0m: [33mWARNING[0m Step cannot be set when using tensorboard syncing. Please use `run.define_metric(...)` to define a custom metric to log your step values.
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 140      |
+|    ep_rew_mean     | 73.2     |
+| time/              |          |
+|    fps             | 120      |
+|    iterations      | 1        |
+|    time_elapsed    | 8        |
+|    total_timesteps | 501024   |
+---------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 140           |
+|    ep_rew_mean          | 73.2          |
+| time/                   |               |
+|    fps                  | 124           |
+|    iterations           | 2             |
+|    time_elapsed         | 16            |
+|    total_timesteps      | 502048        |
+| train/                  |               |
+|    approx_kl            | 0.00016194448 |
+|    clip_fraction        | 0.00391       |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.132        |
+|    learning_rate        | 5e-06         |
+|    loss                 | 6.63          |
+|    n_updates            | 270           |
+|    policy_gradient_loss | -0.00128      |
+|    std                  | 1             |
+|    value_loss           | 15.9          |
+-------------------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 140           |
+|    ep_rew_mean          | 73.2          |
+| time/                   |               |
+|    fps                  | 140           |
+|    iterations           | 3             |
+|    time_elapsed         | 21            |
+|    total_timesteps      | 503072        |
+| train/                  |               |
+|    approx_kl            | 2.9029092e-05 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.135         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 5.52          |
+|    n_updates            | 285           |
+|    policy_gradient_loss | -0.000359     |
+|    std                  | 1             |
+|    value_loss           | 13.3          |
+-------------------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 140           |
+|    ep_rew_mean          | 73.2          |
+| time/                   |               |
+|    fps                  | 148           |
+|    iterations           | 4             |
+|    time_elapsed         | 27            |
+|    total_timesteps      | 504096        |
+| train/                  |               |
+|    approx_kl            | 0.00014379236 |
+|    clip_fraction        | 0.0117        |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.0443       |
+|    learning_rate        | 5e-06         |
+|    loss                 | 5.4           |
+|    n_updates            | 300           |
+|    policy_gradient_loss | -0.000948     |
+|    std                  | 1             |
+|    value_loss           | 14.3          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 190           |
+|    ep_rew_mean          | 78.7          |
+| time/                   |               |
+|    fps                  | 146           |
+|    iterations           | 5             |
+|    time_elapsed         | 35            |
+|    total_timesteps      | 505120        |
+| train/                  |               |
+|    approx_kl            | 0.00026777812 |
+|    clip_fraction        | 0.00638       |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.393         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 2.38          |
+|    n_updates            | 315           |
+|    policy_gradient_loss | -0.00174      |
+|    std                  | 1             |
+|    value_loss           | 9.71          |
+-------------------------------------------
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 190          |
+|    ep_rew_mean          | 78.7         |
+| time/                   |              |
+|    fps                  | 147          |
+|    iterations           | 6            |
+|    time_elapsed         | 41           |
+|    total_timesteps      | 506144       |
+| train/                  |              |
+|    approx_kl            | 8.829858e-05 |
+|    clip_fraction        | 0.00013      |
+|    clip_range           | 0.05         |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | 0.238        |
+|    learning_rate        | 5e-06        |
+|    loss                 | 3.02         |
+|    n_updates            | 330          |
+|    policy_gradient_loss | -0.000786    |
+|    std                  | 1            |
+|    value_loss           | 9.94         |
+------------------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 190           |
+|    ep_rew_mean          | 78.7          |
+| time/                   |               |
+|    fps                  | 149           |
+|    iterations           | 7             |
+|    time_elapsed         | 47            |
+|    total_timesteps      | 507168        |
+| train/                  |               |
+|    approx_kl            | 0.00027602963 |
+|    clip_fraction        | 0.00671       |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.395         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 2.93          |
+|    n_updates            | 345           |
+|    policy_gradient_loss | -0.00132      |
+|    std                  | 1             |
+|    value_loss           | 12            |
+-------------------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 190           |
+|    ep_rew_mean          | 78.7          |
+| time/                   |               |
+|    fps                  | 144           |
+|    iterations           | 8             |
+|    time_elapsed         | 56            |
+|    total_timesteps      | 508192        |
+| train/                  |               |
+|    approx_kl            | 0.00017334067 |
+|    clip_fraction        | 0.00189       |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.206         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 2.78          |
+|    n_updates            | 360           |
+|    policy_gradient_loss | -0.00102      |
+|    std                  | 1             |
+|    value_loss           | 9.89          |
+-------------------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 190           |
+|    ep_rew_mean          | 78.7          |
+| time/                   |               |
+|    fps                  | 132           |
+|    iterations           | 9             |
+|    time_elapsed         | 69            |
+|    total_timesteps      | 509216        |
+| train/                  |               |
+|    approx_kl            | 0.00032577472 |
+|    clip_fraction        | 0.00775       |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.114        |
+|    learning_rate        | 5e-06         |
+|    loss                 | 0.731         |
+|    n_updates            | 375           |
+|    policy_gradient_loss | -0.00142      |
+|    std                  | 1             |
+|    value_loss           | 6.45          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 239           |
+|    ep_rew_mean          | 84.6          |
+| time/                   |               |
+|    fps                  | 130           |
+|    iterations           | 10            |
+|    time_elapsed         | 78            |
+|    total_timesteps      | 510240        |
+| train/                  |               |
+|    approx_kl            | 0.00044556468 |
+|    clip_fraction        | 0.014         |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -1.86         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 0.61          |
+|    n_updates            | 390           |
+|    policy_gradient_loss | -0.00197      |
+|    std                  | 1             |
+|    value_loss           | 5.15          |
+-------------------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 239           |
+|    ep_rew_mean          | 84.6          |
+| time/                   |               |
+|    fps                  | 121           |
+|    iterations           | 11            |
+|    time_elapsed         | 93            |
+|    total_timesteps      | 511264        |
+| train/                  |               |
+|    approx_kl            | 0.00038760697 |
+|    clip_fraction        | 0.027         |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.507         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 5.62          |
+|    n_updates            | 405           |
+|    policy_gradient_loss | -0.00146      |
+|    std                  | 1             |
+|    value_loss           | 8.69          |
+-------------------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 239           |
+|    ep_rew_mean          | 84.6          |
+| time/                   |               |
+|    fps                  | 114           |
+|    iterations           | 12            |
+|    time_elapsed         | 107           |
+|    total_timesteps      | 512288        |
+| train/                  |               |
+|    approx_kl            | 0.00012400764 |
+|    clip_fraction        | 0.000781      |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -1.07         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 2.66          |
+|    n_updates            | 420           |
+|    policy_gradient_loss | -0.000915     |
+|    std                  | 1             |
+|    value_loss           | 10.4          |
+-------------------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 239           |
+|    ep_rew_mean          | 84.6          |
+| time/                   |               |
+|    fps                  | 109           |
+|    iterations           | 13            |
+|    time_elapsed         | 121           |
+|    total_timesteps      | 513312        |
+| train/                  |               |
+|    approx_kl            | 0.00015262194 |
+|    clip_fraction        | 0.000391      |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.353        |
+|    learning_rate        | 5e-06         |
+|    loss                 | 2.11          |
+|    n_updates            | 435           |
+|    policy_gradient_loss | -0.00115      |
+|    std                  | 1             |
+|    value_loss           | 7.66          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 274           |
+|    ep_rew_mean          | 88.8          |
+| time/                   |               |
+|    fps                  | 105           |
+|    iterations           | 14            |
+|    time_elapsed         | 135           |
+|    total_timesteps      | 514336        |
+| train/                  |               |
+|    approx_kl            | 0.00047217333 |
+|    clip_fraction        | 0.0298        |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -1.86         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 1.02          |
+|    n_updates            | 450           |
+|    policy_gradient_loss | -0.00188      |
+|    std                  | 1             |
+|    value_loss           | 4.3           |
+-------------------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 274           |
+|    ep_rew_mean          | 88.8          |
+| time/                   |               |
+|    fps                  | 101           |
+|    iterations           | 15            |
+|    time_elapsed         | 150           |
+|    total_timesteps      | 515360        |
+| train/                  |               |
+|    approx_kl            | 0.00014082517 |
+|    clip_fraction        | 0.000716      |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.368        |
+|    learning_rate        | 5e-06         |
+|    loss                 | 4.11          |
+|    n_updates            | 465           |
+|    policy_gradient_loss | -0.000608     |
+|    std                  | 1             |
+|    value_loss           | 7.84          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 293           |
+|    ep_rew_mean          | 91.2          |
+| time/                   |               |
+|    fps                  | 99            |
+|    iterations           | 16            |
+|    time_elapsed         | 164           |
+|    total_timesteps      | 516384        |
+| train/                  |               |
+|    approx_kl            | 0.00048758695 |
+|    clip_fraction        | 0.0185        |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -1.23         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 0.615         |
+|    n_updates            | 480           |
+|    policy_gradient_loss | -0.00239      |
+|    std                  | 1             |
+|    value_loss           | 4.63          |
+-------------------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 293           |
+|    ep_rew_mean          | 91.2          |
+| time/                   |               |
+|    fps                  | 101           |
+|    iterations           | 17            |
+|    time_elapsed         | 171           |
+|    total_timesteps      | 517408        |
+| train/                  |               |
+|    approx_kl            | 0.00038825307 |
+|    clip_fraction        | 0.0221        |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.523        |
+|    learning_rate        | 5e-06         |
+|    loss                 | 1.1           |
+|    n_updates            | 495           |
+|    policy_gradient_loss | -0.00191      |
+|    std                  | 1             |
+|    value_loss           | 6.62          |
+-------------------------------------------
+-----------------------------------------
+| rollout/                |             |
+|    ep_len_mean          | 293         |
+|    ep_rew_mean          | 91.2        |
+| time/                   |             |
+|    fps                  | 103         |
+|    iterations           | 18          |
+|    time_elapsed         | 178         |
+|    total_timesteps      | 518432      |
+| train/                  |             |
+|    approx_kl            | 0.000255147 |
+|    clip_fraction        | 0.0043      |
+|    clip_range           | 0.05        |
+|    entropy_loss         | -2.84       |
+|    explained_variance   | -1.14       |
+|    learning_rate        | 5e-06       |
+|    loss                 | 2.31        |
+|    n_updates            | 510         |
+|    policy_gradient_loss | -0.000946   |
+|    std                  | 1           |
+|    value_loss           | 4.38        |
+-----------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 326           |
+|    ep_rew_mean          | 95.5          |
+| time/                   |               |
+|    fps                  | 105           |
+|    iterations           | 19            |
+|    time_elapsed         | 185           |
+|    total_timesteps      | 519456        |
+| train/                  |               |
+|    approx_kl            | 0.00042249216 |
+|    clip_fraction        | 0.054         |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.695        |
+|    learning_rate        | 5e-06         |
+|    loss                 | 0.676         |
+|    n_updates            | 525           |
+|    policy_gradient_loss | -0.00203      |
+|    std                  | 1             |
+|    value_loss           | 3.49          |
+-------------------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 326           |
+|    ep_rew_mean          | 95.5          |
+| time/                   |               |
+|    fps                  | 106           |
+|    iterations           | 20            |
+|    time_elapsed         | 192           |
+|    total_timesteps      | 520480        |
+| train/                  |               |
+|    approx_kl            | 0.00011423085 |
+|    clip_fraction        | 0.0013        |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.0148       |
+|    learning_rate        | 5e-06         |
+|    loss                 | 10.8          |
+|    n_updates            | 540           |
+|    policy_gradient_loss | -0.000258     |
+|    std                  | 1             |
+|    value_loss           | 18.7          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 345           |
+|    ep_rew_mean          | 97.9          |
+| time/                   |               |
+|    fps                  | 107           |
+|    iterations           | 21            |
+|    time_elapsed         | 199           |
+|    total_timesteps      | 521504        |
+| train/                  |               |
+|    approx_kl            | 0.00038116914 |
+|    clip_fraction        | 0.018         |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.428         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 0.667         |
+|    n_updates            | 555           |
+|    policy_gradient_loss | -0.00129      |
+|    std                  | 1             |
+|    value_loss           | 3.78          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 361          |
+|    ep_rew_mean          | 100          |
+| time/                   |              |
+|    fps                  | 108          |
+|    iterations           | 22           |
+|    time_elapsed         | 208          |
+|    total_timesteps      | 522528       |
+| train/                  |              |
+|    approx_kl            | 8.221366e-06 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.05         |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | -0.181       |
+|    learning_rate        | 5e-06        |
+|    loss                 | 10.9         |
+|    n_updates            | 570          |
+|    policy_gradient_loss | -0.00019     |
+|    std                  | 1            |
+|    value_loss           | 20.6         |
+------------------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 361           |
+|    ep_rew_mean          | 100           |
+| time/                   |               |
+|    fps                  | 109           |
+|    iterations           | 23            |
+|    time_elapsed         | 215           |
+|    total_timesteps      | 523552        |
+| train/                  |               |
+|    approx_kl            | 6.3195825e-05 |
+|    clip_fraction        | 0.000326      |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.593        |
+|    learning_rate        | 5e-06         |
+|    loss                 | 1.62          |
+|    n_updates            | 585           |
+|    policy_gradient_loss | -0.000383     |
+|    std                  | 1             |
+|    value_loss           | 17.7          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 376           |
+|    ep_rew_mean          | 102           |
+| time/                   |               |
+|    fps                  | 109           |
+|    iterations           | 24            |
+|    time_elapsed         | 223           |
+|    total_timesteps      | 524576        |
+| train/                  |               |
+|    approx_kl            | 0.00038679183 |
+|    clip_fraction        | 0.0376        |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.332        |
+|    learning_rate        | 5e-06         |
+|    loss                 | 0.566         |
+|    n_updates            | 600           |
+|    policy_gradient_loss | -0.00165      |
+|    std                  | 1             |
+|    value_loss           | 2.08          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 387          |
+|    ep_rew_mean          | 104          |
+| time/                   |              |
+|    fps                  | 111          |
+|    iterations           | 25           |
+|    time_elapsed         | 230          |
+|    total_timesteps      | 525600       |
+| train/                  |              |
+|    approx_kl            | 3.463053e-05 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.05         |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | -0.903       |
+|    learning_rate        | 5e-06        |
+|    loss                 | 6.98         |
+|    n_updates            | 615          |
+|    policy_gradient_loss | -0.000312    |
+|    std                  | 1            |
+|    value_loss           | 17.5         |
+------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 399           |
+|    ep_rew_mean          | 106           |
+| time/                   |               |
+|    fps                  | 112           |
+|    iterations           | 26            |
+|    time_elapsed         | 237           |
+|    total_timesteps      | 526624        |
+| train/                  |               |
+|    approx_kl            | 0.00015193532 |
+|    clip_fraction        | 0.00306       |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.284        |
+|    learning_rate        | 5e-06         |
+|    loss                 | 3.4           |
+|    n_updates            | 630           |
+|    policy_gradient_loss | -0.000932     |
+|    std                  | 1             |
+|    value_loss           | 11.8          |
+-------------------------------------------
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 399          |
+|    ep_rew_mean          | 106          |
+| time/                   |              |
+|    fps                  | 113          |
+|    iterations           | 27           |
+|    time_elapsed         | 243          |
+|    total_timesteps      | 527648       |
+| train/                  |              |
+|    approx_kl            | 8.967443e-05 |
+|    clip_fraction        | 0.00547      |
+|    clip_range           | 0.05         |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | -0.294       |
+|    learning_rate        | 5e-06        |
+|    loss                 | 2.53         |
+|    n_updates            | 645          |
+|    policy_gradient_loss | -0.000731    |
+|    std                  | 1            |
+|    value_loss           | 12.3         |
+------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 417          |
+|    ep_rew_mean          | 108          |
+| time/                   |              |
+|    fps                  | 114          |
+|    iterations           | 28           |
+|    time_elapsed         | 250          |
+|    total_timesteps      | 528672       |
+| train/                  |              |
+|    approx_kl            | 0.0002538197 |
+|    clip_fraction        | 0.0125       |
+|    clip_range           | 0.05         |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | -0.204       |
+|    learning_rate        | 5e-06        |
+|    loss                 | 1.08         |
+|    n_updates            | 660          |
+|    policy_gradient_loss | -0.00121     |
+|    std                  | 1            |
+|    value_loss           | 2.69         |
+------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 421           |
+|    ep_rew_mean          | 108           |
+| time/                   |               |
+|    fps                  | 115           |
+|    iterations           | 29            |
+|    time_elapsed         | 257           |
+|    total_timesteps      | 529696        |
+| train/                  |               |
+|    approx_kl            | 0.00015712372 |
+|    clip_fraction        | 0.00547       |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.142        |
+|    learning_rate        | 5e-06         |
+|    loss                 | 9.2           |
+|    n_updates            | 675           |
+|    policy_gradient_loss | -0.00123      |
+|    std                  | 1             |
+|    value_loss           | 25.9          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 433           |
+|    ep_rew_mean          | 110           |
+| time/                   |               |
+|    fps                  | 115           |
+|    iterations           | 30            |
+|    time_elapsed         | 265           |
+|    total_timesteps      | 530720        |
+| train/                  |               |
+|    approx_kl            | 0.00015094003 |
+|    clip_fraction        | 0.00716       |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.46         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 9.15          |
+|    n_updates            | 690           |
+|    policy_gradient_loss | -0.00107      |
+|    std                  | 1             |
+|    value_loss           | 13.8          |
+-------------------------------------------
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 433          |
+|    ep_rew_mean          | 110          |
+| time/                   |              |
+|    fps                  | 117          |
+|    iterations           | 31           |
+|    time_elapsed         | 270          |
+|    total_timesteps      | 531744       |
+| train/                  |              |
+|    approx_kl            | 0.0002790428 |
+|    clip_fraction        | 0.0128       |
+|    clip_range           | 0.05         |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | 0.563        |
+|    learning_rate        | 5e-06        |
+|    loss                 | 2.58         |
+|    n_updates            | 705          |
+|    policy_gradient_loss | -0.00188     |
+|    std                  | 1            |
+|    value_loss           | 8.43         |
+------------------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 433           |
+|    ep_rew_mean          | 110           |
+| time/                   |               |
+|    fps                  | 117           |
+|    iterations           | 32            |
+|    time_elapsed         | 278           |
+|    total_timesteps      | 532768        |
+| train/                  |               |
+|    approx_kl            | 0.00031215505 |
+|    clip_fraction        | 0.0179        |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.586         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 1.07          |
+|    n_updates            | 720           |
+|    policy_gradient_loss | -0.00112      |
+|    std                  | 1             |
+|    value_loss           | 2.37          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 466           |
+|    ep_rew_mean          | 115           |
+| time/                   |               |
+|    fps                  | 118           |
+|    iterations           | 33            |
+|    time_elapsed         | 285           |
+|    total_timesteps      | 533792        |
+| train/                  |               |
+|    approx_kl            | 0.00029346795 |
+|    clip_fraction        | 0.0229        |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -1.98         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 0.449         |
+|    n_updates            | 735           |
+|    policy_gradient_loss | -0.00106      |
+|    std                  | 1             |
+|    value_loss           | 2.13          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 474           |
+|    ep_rew_mean          | 116           |
+| time/                   |               |
+|    fps                  | 118           |
+|    iterations           | 34            |
+|    time_elapsed         | 293           |
+|    total_timesteps      | 534816        |
+| train/                  |               |
+|    approx_kl            | 0.00027845928 |
+|    clip_fraction        | 0.00996       |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.348        |
+|    learning_rate        | 5e-06         |
+|    loss                 | 7.33          |
+|    n_updates            | 750           |
+|    policy_gradient_loss | -0.000928     |
+|    std                  | 1             |
+|    value_loss           | 15.8          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 481           |
+|    ep_rew_mean          | 117           |
+| time/                   |               |
+|    fps                  | 119           |
+|    iterations           | 35            |
+|    time_elapsed         | 300           |
+|    total_timesteps      | 535840        |
+| train/                  |               |
+|    approx_kl            | 0.00016469648 |
+|    clip_fraction        | 0.00495       |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | -0.141        |
+|    learning_rate        | 5e-06         |
+|    loss                 | 9.02          |
+|    n_updates            | 765           |
+|    policy_gradient_loss | -0.000641     |
+|    std                  | 1             |
+|    value_loss           | 13.2          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 487           |
+|    ep_rew_mean          | 118           |
+| time/                   |               |
+|    fps                  | 119           |
+|    iterations           | 36            |
+|    time_elapsed         | 307           |
+|    total_timesteps      | 536864        |
+| train/                  |               |
+|    approx_kl            | 0.00018361432 |
+|    clip_fraction        | 0.0056        |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.108         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 6.07          |
+|    n_updates            | 780           |
+|    policy_gradient_loss | -0.000549     |
+|    std                  | 1             |
+|    value_loss           | 13.3          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 498           |
+|    ep_rew_mean          | 120           |
+| time/                   |               |
+|    fps                  | 120           |
+|    iterations           | 37            |
+|    time_elapsed         | 314           |
+|    total_timesteps      | 537888        |
+| train/                  |               |
+|    approx_kl            | 0.00017206854 |
+|    clip_fraction        | 0.00221       |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.554         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 1.76          |
+|    n_updates            | 795           |
+|    policy_gradient_loss | -0.000516     |
+|    std                  | 1             |
+|    value_loss           | 8.58          |
+-------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 512           |
+|    ep_rew_mean          | 122           |
+| time/                   |               |
+|    fps                  | 121           |
+|    iterations           | 38            |
+|    time_elapsed         | 321           |
+|    total_timesteps      | 538912        |
+| train/                  |               |
+|    approx_kl            | 0.00011298212 |
+|    clip_fraction        | 0.00124       |
+|    clip_range           | 0.05          |
+|    entropy_loss         | -2.84         |
+|    explained_variance   | 0.493         |
+|    learning_rate        | 5e-06         |
+|    loss                 | 2.16          |
+|    n_updates            | 810           |
+|    policy_gradient_loss | -0.000685     |
+|    std                  | 1             |
+|    value_loss           | 8.44          |
+-------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_sb3.py", line 371, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_sb3.py", line 337, in main
+    model.learn(total_timesteps=args.timesteps, callback=callbacks, reset_num_timesteps=reset_steps)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ~~~~~~~~~~~~~^
+        total_timesteps=total_timesteps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        progress_bar=progress_bar,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 337, in learn
+    self.train()
+    ~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\ppo\ppo.py", line 275, in train
+    loss.backward()
+    ~~~~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\torch\_tensor.py", line 626, in backward
+    torch.autograd.backward(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        self, gradient, retain_graph, create_graph, inputs=inputs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\torch\autograd\__init__.py", line 347, in backward
+    _engine_run_backward(
+    ~~~~~~~~~~~~~~~~~~~~^
+        tensors,
+        ^^^^^^^^
+    ...<5 lines>...
+        accumulate_grad=True,
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\torch\autograd\graph.py", line 823, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        t_outputs, *args, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )  # Calls into the C++ engine to run the backward pass
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\integration\torch\wandb_torch.py", line 276, in <lambda>
+    handle = var.register_hook(lambda grad: _callback(grad, log_track))
+
+KeyboardInterrupt

@@ -1,0 +1,32 @@
+[38;20m[INFO] Environment: MultiAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 8000[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+🏁 Using custom right-turn oval track!
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+🏎️  Training agents: ['agent0', 'agent1']
+🏎️  Setting up agent0...
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+
+❌ Training failed: Can't instantiate abstract class EarlyStoppingCallback without an implementation for abstract method '_on_step'
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_coordinated_multi_agent.py", line 668, in main
+    train_coordinated_multi_agent_racing(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        num_agents=args.agents,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        use_wandb=args.wandb
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_coordinated_multi_agent.py", line 521, in train_coordinated_multi_agent_racing
+    early_stopping_callback = EarlyStoppingCallback(agent_id, patience=2, min_improvement=0.1, verbose=1)
+TypeError: Can't instantiate abstract class EarlyStoppingCallback without an implementation for abstract method '_on_step'

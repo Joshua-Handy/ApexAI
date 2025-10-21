@@ -1,0 +1,35 @@
+[38;20m[INFO] Environment: MultiAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 2000[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+🏁 Using custom right-turn oval track!
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1[0m
+
+❌ Training failed: 'MultiAgentOvalMapManager' object has no attribute 'vehicles'
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\curriculum_multi_agent_racing.py", line 794, in main
+    train_multi_agent_racing(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        num_agents=args.agents,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        use_wandb=args.wandb
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\curriculum_multi_agent_racing.py", line 664, in train_multi_agent_racing
+    racing_env = MultiAgentRacingEnvironment(num_agents, curriculum_manager)
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\curriculum_multi_agent_racing.py", line 274, in __init__
+    reset_result = self.base_env.reset()
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py", line 532, in reset
+    reset_info = self.engine.reset()
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\engine\base_engine.py", line 365, in reset
+    new_step_infos = manager.reset()
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\..\src\environments\multi_agent_oval_right_env.py", line 103, in reset
+    for agent_id, vehicle in self.vehicles.items():
+                             ^^^^^^^^^^^^^
+AttributeError: 'MultiAgentOvalMapManager' object has no attribute 'vehicles'

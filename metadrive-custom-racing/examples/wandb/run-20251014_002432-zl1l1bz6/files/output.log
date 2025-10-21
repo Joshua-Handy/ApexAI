@@ -1,0 +1,33 @@
+⚠️  Custom environment failed: "'{'max_speed'}' does not exist in existing config. Please use config.update(...) to update the config. Existing keys: dict_keys(['vehicle_model', 'enable_reverse', 'show_navi_mark', 'show_dest_mark', 'show_line_to_dest', 'show_line_to_navi_mark', 'show_navigation_arrow', 'use_special_color', 'no_wheel_friction', 'image_source', 'navigation_module', 'spawn_lane_index', 'destination', 'spawn_longitude', 'spawn_lateral', 'spawn_position_heading', 'spawn_velocity', 'spawn_velocity_car_frame', 'overtake_stat', 'random_color', 'width', 'length', 'height', 'mass', 'scale', 'top_down_width', 'top_down_length', 'lidar', 'side_detector', 'lane_line_detector', 'show_lidar', 'show_side_detector', 'show_lane_line_detector', 'light', '_specified_spawn_lane', '_specified_destination'])."
+
+❌ Training failed: "'{'max_speed'}' does not exist in existing config. Please use config.update(...) to update the config. Existing keys: dict_keys(['vehicle_model', 'enable_reverse', 'show_navi_mark', 'show_dest_mark', 'show_line_to_dest', 'show_line_to_navi_mark', 'show_navigation_arrow', 'use_special_color', 'no_wheel_friction', 'image_source', 'navigation_module', 'spawn_lane_index', 'destination', 'spawn_longitude', 'spawn_lateral', 'spawn_position_heading', 'spawn_velocity', 'spawn_velocity_car_frame', 'overtake_stat', 'random_color', 'width', 'length', 'height', 'mass', 'scale', 'top_down_width', 'top_down_length', 'lidar', 'side_detector', 'lane_line_detector', 'show_lidar', 'show_side_detector', 'show_lane_line_detector', 'light', '_specified_spawn_lane', '_specified_destination'])."
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_coordinated_multi_agent.py", line 681, in main
+    train_coordinated_multi_agent_racing(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        num_agents=args.agents,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        use_wandb=args.wandb
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_coordinated_multi_agent.py", line 477, in train_coordinated_multi_agent_racing
+    base_env = create_coordinated_multi_agent_environment(num_agents, track)
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_coordinated_multi_agent.py", line 430, in create_coordinated_multi_agent_environment
+    env = MultiAgentMetaDrive(config)
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\metadrive_env.py", line 108, in __init__
+    super(MetaDriveEnv, self).__init__(config)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py", line 293, in __init__
+    merged_config = self.default_config().update(config, False, ["agent_configs", "sensors"])
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\utils\config.py", line 157, in update
+    success = self._update_dict_item(k, v, allow_add_new_key)
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\utils\config.py", line 179, in _update_dict_item
+    self[k].update(v, allow_add_new_key=allow_overwrite)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\utils\config.py", line 143, in update
+    raise KeyError(
+    ...<4 lines>...
+    )
+KeyError: "'{'max_speed'}' does not exist in existing config. Please use config.update(...) to update the config. Existing keys: dict_keys(['vehicle_model', 'enable_reverse', 'show_navi_mark', 'show_dest_mark', 'show_line_to_dest', 'show_line_to_navi_mark', 'show_navigation_arrow', 'use_special_color', 'no_wheel_friction', 'image_source', 'navigation_module', 'spawn_lane_index', 'destination', 'spawn_longitude', 'spawn_lateral', 'spawn_position_heading', 'spawn_velocity', 'spawn_velocity_car_frame', 'overtake_stat', 'random_color', 'width', 'length', 'height', 'mass', 'scale', 'top_down_width', 'top_down_length', 'lidar', 'side_detector', 'lane_line_detector', 'show_lidar', 'show_side_detector', 'show_lane_line_detector', 'light', '_specified_spawn_lane', '_specified_destination'])."

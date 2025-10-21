@@ -1,0 +1,106 @@
+2025-10-14 00:03:02,419 INFO    MainThread:18384 [wandb_setup.py:_flush():81] Current SDK version is 0.22.1
+2025-10-14 00:03:02,420 INFO    MainThread:18384 [wandb_setup.py:_flush():81] Configure stats pid to 18384
+2025-10-14 00:03:02,420 INFO    MainThread:18384 [wandb_setup.py:_flush():81] Loading settings from C:\Users\balde\.config\wandb\settings
+2025-10-14 00:03:02,420 INFO    MainThread:18384 [wandb_setup.py:_flush():81] Loading settings from C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\wandb\settings
+2025-10-14 00:03:02,420 INFO    MainThread:18384 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-10-14 00:03:02,420 INFO    MainThread:18384 [wandb_init.py:setup_run_log_directory():705] Logging user logs to C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\wandb\run-20251014_000302-lrgp1fzm\logs\debug.log
+2025-10-14 00:03:02,426 INFO    MainThread:18384 [wandb_init.py:setup_run_log_directory():706] Logging internal logs to C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\wandb\run-20251014_000302-lrgp1fzm\logs\debug-internal.log
+2025-10-14 00:03:02,427 INFO    MainThread:18384 [wandb_init.py:init():832] calling init triggers
+2025-10-14 00:03:02,427 INFO    MainThread:18384 [wandb_init.py:init():837] wandb.init called with sweep_config: {}
+config: {'num_agents': 2, 'track': 'right_oval', 'timesteps': 5000, 'algorithm': 'Coordinated PPO', '_wandb': {}}
+2025-10-14 00:03:02,427 INFO    MainThread:18384 [wandb_init.py:init():880] starting backend
+2025-10-14 00:03:04,708 INFO    MainThread:18384 [wandb_init.py:init():883] sending inform_init request
+2025-10-14 00:03:04,980 INFO    MainThread:18384 [wandb_init.py:init():891] backend started and connected
+2025-10-14 00:03:04,983 INFO    MainThread:18384 [wandb_init.py:init():961] updated telemetry
+2025-10-14 00:03:05,061 INFO    MainThread:18384 [wandb_init.py:init():985] communicating run to backend with 90.0 second timeout
+2025-10-14 00:03:05,588 INFO    MainThread:18384 [wandb_init.py:init():1036] starting run threads in backend
+2025-10-14 00:03:05,775 INFO    MainThread:18384 [wandb_run.py:_console_start():2506] atexit reg
+2025-10-14 00:03:05,775 INFO    MainThread:18384 [wandb_run.py:_redirect():2354] redirect: wrap_raw
+2025-10-14 00:03:05,776 INFO    MainThread:18384 [wandb_run.py:_redirect():2423] Wrapping output streams.
+2025-10-14 00:03:05,776 INFO    MainThread:18384 [wandb_run.py:_redirect():2446] Redirects installed.
+2025-10-14 00:03:05,780 INFO    MainThread:18384 [wandb_init.py:init():1076] run started, returning control to user process
+2025-10-14 00:03:08,113 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:08,114 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {'algo': 'PPO', 'policy_class': "<class 'stable_baselines3.common.policies.ActorCriticPolicy'>", 'device': 'cpu', 'verbose': 1, 'policy_kwargs': '{}', 'num_timesteps': 0, '_total_timesteps': 125, '_num_timesteps_at_start': 0, 'seed': 'None', 'action_noise': 'None', 'start_time': 1760418187982903700, 'learning_rate': 2e-07, 'tensorboard_log': 'test_hyper_conservative\\tensorboard_agent0', '_last_obs': '[[0.81002474 0.85664195 0.4662349  0.01234568 0.5        0.5\n  0.5        0.         0.40676555 0.8407243  0.134067   1.\n  1.         0.8333333  0.71113354 0.04676426 0.         0.5\n  0.5        0.15078257 0.15135843 1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         0.15310867\n  0.15135838]]', '_last_episode_starts': '[ True]', '_last_original_obs': 'None', '_episode_num': 0, 'use_sde': 'False', 'sde_sample_freq': -1, '_current_progress_remaining': 1.0, '_stats_window_size': 100, 'ep_info_buffer': 'deque([], maxlen=100)', 'ep_success_buffer': 'deque([], maxlen=100)', '_n_updates': 0, '_custom_logger': 'False', 'env': '<stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x000002CC7616CAD0>', '_vec_normalize_env': 'None', 'observation_space': 'Box(-0.0, 1.0, (91,), float32)', 'action_space': 'Box(-1.0, 1.0, (2,), float32)', 'n_envs': 1, 'n_steps': 512, 'gamma': 0.99, 'gae_lambda': 0.95, 'ent_coef': 0.0001, 'vf_coef': 0.1, 'max_grad_norm': 0.05, 'rollout_buffer_class': "<class 'stable_baselines3.common.buffers.RolloutBuffer'>", 'rollout_buffer_kwargs': '{}', 'batch_size': 16, 'n_epochs': 10, 'clip_range': 'FloatSchedule(ConstantSchedule(val=0.05))', 'clip_range_vf': 'None', 'normalize_advantage': 'True', 'target_kl': 'None', 'lr_schedule': 'FloatSchedule(ConstantSchedule(val=2e-07))', 'rollout_buffer': '<stable_baselines3.common.buffers.RolloutBuffer object at 0x000002CC7616CEC0>', 'policy': 'ActorCriticPolicy(\n  (features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (pi_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (vf_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (mlp_extractor): MlpExtractor(\n    (policy_net): Sequential(\n      (0): Linear(in_features=91, out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n    )\n    (value_net): Sequential(\n      (0): Linear(in_features=91, out_features=64, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=64, out_features=64, bias=True)\n      (3): Tanh()\n    )\n  )\n  (action_net): Linear(in_features=64, out_features=2, bias=True)\n  (value_net): Linear(in_features=64, out_features=1, bias=True)\n)', '_logger': '<stable_baselines3.common.logger.Logger object at 0x000002CC79A85A90>'}
+2025-10-14 00:03:10,679 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:10,679 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:12,959 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:12,959 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:15,100 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:15,100 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:17,308 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:17,308 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:19,635 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:19,635 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:21,840 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:21,840 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:24,003 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:24,004 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:26,069 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:26,070 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:28,362 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:28,363 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:30,541 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:30,541 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:32,790 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:32,790 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:35,185 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:35,185 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:37,709 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:37,710 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:40,212 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:40,212 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:42,494 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:42,494 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:44,736 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:44,737 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:46,956 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:46,956 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:49,320 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:49,320 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:51,602 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:51,602 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:54,234 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:54,234 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:57,283 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:57,283 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:03:59,591 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:03:59,591 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:01,925 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:01,926 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:04,166 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:04,167 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:06,524 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:06,525 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:08,823 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:08,823 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:11,152 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:11,152 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:13,965 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:13,966 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:16,707 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:16,708 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:20,903 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:20,903 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:25,507 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:25,507 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:30,131 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:30,131 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:34,787 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:34,787 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:39,380 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:39,381 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:43,561 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:43,561 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:47,169 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:47,170 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:49,471 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:49,472 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:51,761 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:51,761 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:54,205 INFO    MainThread:18384 [wandb_watch.py:_watch():68] Watching
+2025-10-14 00:04:54,206 INFO    MainThread:18384 [wandb_run.py:_config_callback():1392] config_cb None None {}
+2025-10-14 00:04:56,981 INFO    MainThread:18384 [wandb_run.py:_finish():2272] finishing run baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-coordinated-multi-agent-racing/lrgp1fzm
+2025-10-14 00:04:56,982 INFO    MainThread:18384 [wandb_run.py:_atexit_cleanup():2471] got exitcode: 0
+2025-10-14 00:04:56,982 INFO    MainThread:18384 [wandb_run.py:_restore():2453] restore
+2025-10-14 00:04:56,982 INFO    MainThread:18384 [wandb_run.py:_restore():2459] restore done
+2025-10-14 00:04:59,312 INFO    MainThread:18384 [wandb_run.py:_footer_sync_info():3869] logging synced files

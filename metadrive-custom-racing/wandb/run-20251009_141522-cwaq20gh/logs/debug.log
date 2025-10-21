@@ -1,0 +1,114 @@
+2025-10-09 14:15:22,815 INFO    MainThread:16480 [wandb_setup.py:_flush():81] Current SDK version is 0.22.1
+2025-10-09 14:15:22,816 INFO    MainThread:16480 [wandb_setup.py:_flush():81] Configure stats pid to 16480
+2025-10-09 14:15:22,817 INFO    MainThread:16480 [wandb_setup.py:_flush():81] Loading settings from C:\Users\balde\.config\wandb\settings
+2025-10-09 14:15:22,817 INFO    MainThread:16480 [wandb_setup.py:_flush():81] Loading settings from C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\wandb\settings
+2025-10-09 14:15:22,817 INFO    MainThread:16480 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-10-09 14:15:22,818 INFO    MainThread:16480 [wandb_init.py:setup_run_log_directory():705] Logging user logs to C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\wandb\run-20251009_141522-cwaq20gh\logs\debug.log
+2025-10-09 14:15:22,819 INFO    MainThread:16480 [wandb_init.py:setup_run_log_directory():706] Logging internal logs to C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\wandb\run-20251009_141522-cwaq20gh\logs\debug-internal.log
+2025-10-09 14:15:22,847 INFO    MainThread:16480 [wandb_init.py:init():832] calling init triggers
+2025-10-09 14:15:22,847 INFO    MainThread:16480 [wandb_init.py:init():837] wandb.init called with sweep_config: {}
+config: {'algorithm': 'PPO', 'track': 'right_oval', 'timesteps': 200000, 'num_envs': 1, 'learning_rate': 5e-06, 'batch_size': 64, 'n_steps': 1024, 'gamma': 0.995, 'gae_lambda': 0.98, 'clip_range': 0.05, 'vecnorm': True, 'seed': 0, 'eval_freq': 5000, 'checkpoint_freq': 10000, '_wandb': {'code_path': 'code/metadrive-custom-racing/examples/train_sb3.py'}}
+2025-10-09 14:15:22,848 INFO    MainThread:16480 [wandb_init.py:init():880] starting backend
+2025-10-09 14:15:25,154 INFO    MainThread:16480 [wandb_init.py:init():883] sending inform_init request
+2025-10-09 14:15:25,978 INFO    MainThread:16480 [wandb_init.py:init():891] backend started and connected
+2025-10-09 14:15:25,981 INFO    MainThread:16480 [wandb_init.py:init():961] updated telemetry
+2025-10-09 14:15:26,080 INFO    MainThread:16480 [wandb_init.py:init():985] communicating run to backend with 90.0 second timeout
+2025-10-09 14:15:26,974 INFO    MainThread:16480 [wandb_init.py:init():1036] starting run threads in backend
+2025-10-09 14:15:27,381 INFO    MainThread:16480 [wandb_run.py:_console_start():2506] atexit reg
+2025-10-09 14:15:27,382 INFO    MainThread:16480 [wandb_run.py:_redirect():2354] redirect: wrap_raw
+2025-10-09 14:15:27,382 INFO    MainThread:16480 [wandb_run.py:_redirect():2423] Wrapping output streams.
+2025-10-09 14:15:27,382 INFO    MainThread:16480 [wandb_run.py:_redirect():2446] Redirects installed.
+2025-10-09 14:15:27,405 INFO    MainThread:16480 [wandb_init.py:init():1076] run started, returning control to user process
+2025-10-09 14:15:30,813 INFO    MainThread:16480 [wandb_run.py:_tensorboard_callback():1601] tensorboard callback: results_agent_1\tensorboard\PPO_10, True
+2025-10-09 14:15:30,828 INFO    MainThread:16480 [wandb_watch.py:_watch():68] Watching
+2025-10-09 14:15:30,829 INFO    MainThread:16480 [wandb_run.py:_config_callback():1392] config_cb None None {'algo': 'PPO', 'policy_class': "<class 'stable_baselines3.common.policies.ActorCriticPolicy'>", 'device': 'cpu', 'verbose': 1, 'policy_kwargs': "{'net_arch': [256, 256, 128], 'activation_fn': <class 'torch.nn.modules.activation.ReLU'>, 'ortho_init': True}", 'num_timesteps': 500000, '_total_timesteps': 700000, '_num_timesteps_at_start': 500000, 'action_noise': 'None', 'start_time': 1760037330475503900, 'tensorboard_log': 'results_agent_1\\tensorboard', '_last_obs': '[[0.00485606 0.00485606 0.00447178 0.00012344 0.00447178 0.00447178\n  0.00447178 0.         0.00447178 0.00481882 0.00447178 0.\n  0.00447178 0.00447178 0.00599962 0.00447178 0.         0.00447178\n  0.00447178 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071 0.00707071 0.00707071 0.00707071 0.00707071 0.00707071\n  0.00707071]]', '_last_episode_starts': '[ True]', '_last_original_obs': '[[0.5555556  0.5555556  0.5        0.01234568 0.5        0.5\n  0.5        0.         0.5        0.55       0.5        0.\n  0.5        0.5        0.75       0.5        0.         0.5\n  0.5        1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.        ]]', '_episode_num': 0, 'use_sde': 'False', 'sde_sample_freq': -1, '_current_progress_remaining': 0.0005760000000000209, '_stats_window_size': 100, 'ep_info_buffer': "deque([{'r': 15.501546, 'l': 43, 't': 1906.041107}, {'r': 18.300286, 'l': 52, 't': 1906.253301}, {'r': 23.294511, 'l': 62, 't': 1906.461128}, {'r': 22.372639, 'l': 63, 't': 1906.673623}, {'r': 27.26986, 'l': 73, 't': 1906.90527}, {'r': 32.879992, 'l': 78, 't': 1907.14088}, {'r': 20.530294, 'l': 63, 't': 1907.379152}, {'r': 31.365178, 'l': 75, 't': 1907.612787}, {'r': 26.256744, 'l': 67, 't': 1907.888114}, {'r': 22.926537, 'l': 65, 't': 1908.156753}, {'r': 17.257868, 'l': 51, 't': 1908.391372}, {'r': 41.921466, 'l': 86, 't': 1908.691685}, {'r': 26.220175, 'l': 68, 't': 1908.924539}, {'r': 26.078003, 'l': 73, 't': 1909.157763}, {'r': 19.054368, 'l': 56, 't': 1909.374938}, {'r': 28.796369, 'l': 79, 't': 1909.629523}, {'r': 16.975107, 'l': 52, 't': 1909.844259}, {'r': 26.923174, 'l': 64, 't': 1910.075713}, {'r': 70.366857, 'l': 144, 't': 1910.423862}, {'r': 31.313949, 'l': 74, 't': 1910.649802}, {'r': 22.636736, 'l': 71, 't': 1910.883359}, {'r': 18.875898, 'l': 51, 't': 1911.085968}, {'r': 17.189823, 'l': 46, 't': 1911.37029}, {'r': 37.36218, 'l': 87, 't': 1911.634651}, {'r': 92.80953, 'l': 150, 't': 1912.007154}, {'r': 21.691146, 'l': 62, 't': 1912.22205}, {'r': 76.321019, 'l': 144, 't': 1912.569652}, {'r': 16.587824, 'l': 45, 't': 1912.750756}, {'r': 213.948477, 'l': 339, 't': 1913.452125}, {'r': 50.88307, 'l': 114, 't': 1913.785934}, {'r': 188.460663, 'l': 393, 't': 1914.582901}, {'r': 31.025003, 'l': 67, 't': 1914.787286}, {'r': 34.594333, 'l': 96, 't': 1915.074748}, {'r': 15.780848, 'l': 48, 't': 1915.292946}, {'r': 31.894912, 'l': 72, 't': 1915.540692}, {'r': 28.18493, 'l': 64, 't': 1915.761287}, {'r': 21.794934, 'l': 55, 't': 1915.979332}, {'r': 74.95857, 'l': 134, 't': 1916.301888}, {'r': 77.883387, 'l': 145, 't': 1916.649019}, {'r': 45.374287, 'l': 108, 't': 1916.974548}, {'r': 102.299024, 'l': 206, 't': 1917.44977}, {'r': 125.78417, 'l': 243, 't': 1918.095153}, {'r': 49.722146, 'l': 128, 't': 1918.500788}, {'r': 100.490716, 'l': 196, 't': 1918.973095}, {'r': 118.228737, 'l': 221, 't': 1919.524339}, {'r': 41.825661, 'l': 94, 't': 1919.79234}, {'r': 28.508661, 'l': 77, 't': 1920.032075}, {'r': 136.361547, 'l': 263, 't': 1920.618691}, {'r': 30.847228, 'l': 85, 't': 1920.874901}, {'r': 85.877195, 'l': 159, 't': 1921.243411}, {'r': 55.903075, 'l': 118, 't': 1921.56005}, {'r': 16.698103, 'l': 42, 't': 1921.753448}, {'r': 179.503271, 'l': 332, 't': 1922.517805}, {'r': 73.631067, 'l': 159, 't': 1922.900338}, {'r': 92.243223, 'l': 168, 't': 1923.320112}, {'r': 368.139827, 'l': 566, 't': 1924.361947}, {'r': 184.091907, 'l': 309, 't': 1925.011389}, {'r': 19.918211, 'l': 49, 't': 1925.205843}, {'r': 33.21011, 'l': 83, 't': 1925.457716}, {'r': 67.457609, 'l': 124, 't': 1925.79971}, {'r': 78.383073, 'l': 156, 't': 1926.155128}, {'r': 342.188618, 'l': 512, 't': 1927.123674}, {'r': 143.677351, 'l': 254, 't': 1927.694808}, {'r': 57.365276, 'l': 103, 't': 1928.021627}, {'r': 73.98942, 'l': 154, 't': 1928.474278}, {'r': 164.055673, 'l': 281, 't': 1929.117732}, {'r': 205.746389, 'l': 344, 't': 1929.842319}, {'r': 156.209117, 'l': 261, 't': 1930.398161}, {'r': 112.827775, 'l': 188, 't': 1930.842609}, {'r': 91.168586, 'l': 174, 't': 1931.349758}, {'r': 31.243285, 'l': 85, 't': 1931.634627}, {'r': 98.280568, 'l': 182, 't': 1932.069218}, {'r': 158.418969, 'l': 258, 't': 1932.680468}, {'r': 51.196692, 'l': 132, 't': 1933.028227}, {'r': 63.685357, 'l': 150, 't': 1933.400471}, {'r': 52.772433, 'l': 104, 't': 1933.691604}, {'r': 88.906505, 'l': 158, 't': 1934.131318}, {'r': 78.290688, 'l': 158, 't': 1934.598092}, {'r': 75.926932, 'l': 135, 't': 1934.960857}, {'r': 100.944333, 'l': 186, 't': 1935.433408}, {'r': 34.423505, 'l': 81, 't': 1935.696817}, {'r': 62.734662, 'l': 120, 't': 1936.024738}, {'r': 22.425599, 'l': 70, 't': 1936.273127}, {'r': 26.615521, 'l': 72, 't': 1936.503767}, {'r': 107.603464, 'l': 195, 't': 1936.972969}, {'r': 17.915495, 'l': 46, 't': 1937.168906}, {'r': 20.416453, 'l': 54, 't': 1937.389874}, {'r': 60.155258, 'l': 117, 't': 1937.707326}, {'r': 30.569961, 'l': 75, 't': 1938.022372}, {'r': 371.562426, 'l': 513, 't': 1939.231786}, {'r': 26.250456, 'l': 67, 't': 1939.474662}, {'r': 64.403705, 'l': 138, 't': 1939.827201}, {'r': 51.673488, 'l': 128, 't': 1940.161891}, {'r': 22.340792, 'l': 66, 't': 1940.403128}, {'r': 68.906847, 'l': 148, 't': 1940.792012}, {'r': 253.923471, 'l': 359, 't': 1941.51632}, {'r': 51.430969, 'l': 109, 't': 1941.82741}, {'r': 89.975055, 'l': 145, 't': 1942.192257}, {'r': 115.863335, 'l': 184, 't': 1943.024459}, {'r': 22.565035, 'l': 69, 't': 1943.248116}], maxlen=100)", 'ep_success_buffer': 'deque([], maxlen=100)', '_n_updates': 255, '_custom_logger': 'False', 'env': '<stable_baselines3.common.vec_env.vec_normalize.VecNormalize object at 0x0000023005F93380>', '_vec_normalize_env': '<stable_baselines3.common.vec_env.vec_normalize.VecNormalize object at 0x0000023005F93380>', 'observation_space': 'Box(-0.0, 1.0, (259,), float32)', 'action_space': 'Box(-1.0, 1.0, (2,), float32)', 'n_envs': 1, 'ent_coef': 0.01, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'rollout_buffer_class': "<class 'stable_baselines3.common.buffers.RolloutBuffer'>", 'rollout_buffer_kwargs': '{}', 'n_epochs': 15, 'clip_range_vf': 'None', 'normalize_advantage': 'True', 'target_kl': 0.01, 'lr_schedule': 'FloatSchedule(ConstantSchedule(val=5e-06))', 'rollout_buffer': '<stable_baselines3.common.buffers.RolloutBuffer object at 0x0000023000016490>', 'policy': 'ActorCriticPolicy(\n  (features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (pi_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (vf_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (mlp_extractor): MlpExtractor(\n    (policy_net): Sequential(\n      (0): Linear(in_features=259, out_features=256, bias=True)\n      (1): ReLU()\n      (2): Linear(in_features=256, out_features=256, bias=True)\n      (3): ReLU()\n      (4): Linear(in_features=256, out_features=128, bias=True)\n      (5): ReLU()\n    )\n    (value_net): Sequential(\n      (0): Linear(in_features=259, out_features=256, bias=True)\n      (1): ReLU()\n      (2): Linear(in_features=256, out_features=256, bias=True)\n      (3): ReLU()\n      (4): Linear(in_features=256, out_features=128, bias=True)\n      (5): ReLU()\n    )\n  )\n  (action_net): Linear(in_features=128, out_features=2, bias=True)\n  (value_net): Linear(in_features=128, out_features=1, bias=True)\n)', '_logger': '<stable_baselines3.common.logger.Logger object at 0x0000023006ECF620>'}
+2025-10-09 14:20:54,360 INFO    wandb-AsyncioManager-main:16480 [service_client.py:_forward_responses():80] Reached EOF.
+2025-10-09 14:20:54,360 INFO    wandb-AsyncioManager-main:16480 [mailbox.py:close():137] Closing mailbox, abandoning 1 handles.
+2025-10-09 14:20:57,146 ERROR   MainThread:16480 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\redirect.py", line 662, in _on_write
+    cb(written_data)
+    ~~^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 2433, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 1595, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\interface\interface.py", line 802, in publish_output_raw
+    self._publish_output_raw(o)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\interface\interface_shared.py", line 37, in _publish_output_raw
+    self._publish(rec)
+    ~~~~~~~~~~~~~^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\interface\interface_sock.py", line 43, in _publish
+    self._asyncer.run(lambda: self._client.publish(request))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\asyncio_manager.py", line 136, in run
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\asyncio_manager.py", line 219, in _wrap
+    return await fn()
+           ^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Python313\Lib\asyncio\streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "C:\Python313\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-10-09 14:20:57,155 ERROR   MainThread:16480 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\redirect.py", line 662, in _on_write
+    cb(written_data)
+    ~~^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 2433, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 1595, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\interface\interface.py", line 802, in publish_output_raw
+    self._publish_output_raw(o)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\interface\interface_shared.py", line 37, in _publish_output_raw
+    self._publish(rec)
+    ~~~~~~~~~~~~~^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\interface\interface_sock.py", line 43, in _publish
+    self._asyncer.run(lambda: self._client.publish(request))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\asyncio_manager.py", line 136, in run
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\concurrent\futures\_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\asyncio_manager.py", line 219, in _wrap
+    return await fn()
+           ^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Python313\Lib\asyncio\streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "C:\Python313\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost

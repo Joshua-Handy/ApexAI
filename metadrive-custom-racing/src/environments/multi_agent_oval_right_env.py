@@ -92,7 +92,9 @@ class MultiAgentOvalMapManager(PGMapManager):
     def reset(self):
         config = self.engine.global_config
         if len(self.spawned_objects) == 0:
-            _map = self.spawn_object(MultiAgentOvalMap, map_config=config["map_config"], random_seed=None)
+            # Make a plain dict copy of map_config to avoid Config update restrictions
+            map_config = dict(config.get("map_config", {}))
+            _map = self.spawn_object(MultiAgentOvalMap, map_config=map_config, random_seed=None)
         else:
             assert len(self.spawned_objects) == 1, "Expected exactly one map in this manager"
             _map = list(self.spawned_objects.values())[0]
@@ -102,47 +104,110 @@ class MultiAgentOvalMapManager(PGMapManager):
 class MultiAgentOvalEnv(MultiAgentMetaDrive):
     """Multi-agent MetaDrive environment that uses MultiAgentOvalMapManager to build a right-only oval."""
 
+    def __init__(self, config=None):
+        super().__init__(config)
+
     def setup_engine(self):
+        """Ensure our custom map manager is registered with the engine so the custom
+        MultiAgentOvalMap (which builds the oval in _generate) is used instead of
+        the default PGMap/BIG generator.
+        """
+        # Let the base class register default managers first (traffic, etc.)
         super().setup_engine()
-        # Replace the default PGMapManager with our fixed oval builder
+        # Overwrite the default map manager with our custom one
         self.engine.update_manager("map_manager", MultiAgentOvalMapManager())
 
-    def _is_lap_done(self):
-        # Ignore lap completion: always return False
-        return False
+    def step(self, actions):
+        try:
+            if hasattr(self, 'agent_manager'):
+                self.agent_manager.set_allow_respawn(False)
+        except Exception:
+            pass
 
-    def _get_success_reward(self):
-        # Ignore lap completion reward
-        return 0.0
-    
-    def _is_arrive_destination(self, vehicle):
-        # Ignore destination arrival - always return False
-        return False
+        observations, rewards, terminateds, truncateds, infos = super().step(actions)
+
+        try:
+            for agent_id, vehicle in self.agents.items():
+                agent_info = infos.get(agent_id, {})
+                wl = getattr(vehicle, 'on_white_continuous_line', False)
+                yl = getattr(vehicle, 'on_yellow_continuous_line', False)
+                bl = getattr(vehicle, 'on_broken_line', False)
+                agent_info['white_line_collision'] = bool(wl)
+                agent_info['yellow_line_collision'] = bool(yl)
+                agent_info['broken_line_collision'] = bool(bl)
+                agent_info['lane_line_collision'] = bool(wl or yl or bl)
+                agent_info['crashed'] = bool(getattr(vehicle, 'crash_vehicle', False) or getattr(vehicle, 'crash_object', False)
+                                             or getattr(vehicle, 'crash_building', False) or getattr(vehicle, 'crash_sidewalk', False)
+                                             or getattr(vehicle, 'crash_human', False))
+                try:
+                    heading = getattr(vehicle, 'heading', None)
+                    if heading is None:
+                        heading = getattr(vehicle, 'heading_theta', 0.0)
+                    agent_info['heading'] = float(heading)
+                except Exception:
+                    pass
+                try:
+                    lane = getattr(vehicle, 'lane', None)
+                    if lane is not None and hasattr(lane, 'local_coordinates'):
+                        s_l = lane.local_coordinates(getattr(vehicle, 'position', [0.0, 0.0]))
+                        lane_offset = float(s_l[1]) if isinstance(s_l, (list, tuple)) and len(s_l) > 1 else 0.0
+                        agent_info['lane_offset'] = lane_offset
+                        lw = getattr(lane, 'width', None)
+                        if lw is not None:
+                            agent_info['lane_width'] = float(lw)
+                except Exception:
+                    pass
+                agent_info['vehicle_state'] = {
+                    'speed': getattr(vehicle, 'speed_km_h', 0.0) / max(1e-6, getattr(vehicle, 'max_speed_km_h', 1.0)),
+                    'position': list(getattr(vehicle, 'position', [0.0, 0.0])),
+                    'on_road': bool(getattr(vehicle, 'on_lane', True)),
+                    'crashed': agent_info['crashed'],
+                }
+                infos[agent_id] = agent_info
+        except Exception:
+            pass
+
+        try:
+            agent_configs = self.config.get('agent_configs', {})
+            for agent_id in list(terminateds.keys()):
+                is_done = bool(terminateds.get(agent_id, False) or truncateds.get(agent_id, False))
+                info = infos.get(agent_id, {})
+                if is_done:
+                    should_respawn = bool(info.get('white_line_collision', False) or info.get('out_of_road', False))
+                    if should_respawn and agent_id in self.agents:
+                        vehicle = self.agents[agent_id]
+                        conf = vehicle.config.copy()
+                        conf.update(agent_configs.get(agent_id, {}))
+                        try:
+                            vehicle.reset(conf.copy())
+                            after_step_info = vehicle.after_step()
+                            info.update(after_step_info)
+                        except Exception:
+                            pass
+                        try:
+                            new_obs = self.observations[agent_id].observe(vehicle)
+                            observations[agent_id] = new_obs
+                        except Exception:
+                            pass
+                        rewards[agent_id] = 0.0
+                        terminateds[agent_id] = False
+                        truncateds[agent_id] = False
+                        infos[agent_id] = info
+                        try:
+                            if hasattr(self, 'dones'):
+                                self.dones[agent_id] = False
+                        except Exception:
+                            pass
+        except Exception:
+            pass
+
+        try:
+            truncateds["__all__"] = all(v for k, v in truncateds.items() if k != "__all__")
+            terminateds["__all__"] = all(v for k, v in terminateds.items() if k != "__all__")
+        except Exception:
+            pass
+        return observations, rewards, terminateds, truncateds, infos
     
     def done_function(self, vehicle_id: str):
-        # Override done function to check crashes and lane line collisions
-        vehicle = self.vehicles[vehicle_id]
-        
-        # Check for solid crashes
-        solid_crash = vehicle.crash_vehicle or vehicle.crash_object
-        
-        # Check for lane line collisions (both white continuous and yellow broken lines)
-        white_line_collision = vehicle.on_white_continuous_line
-        yellow_line_collision = vehicle.on_yellow_continuous_line or vehicle.on_broken_line
-        lane_line_collision = white_line_collision or yellow_line_collision
-        
-        # Episode ends if there's a solid crash OR lane line collision
-        done = solid_crash or lane_line_collision
-        
-        done_info = {
-            "crash_vehicle": vehicle.crash_vehicle,
-            "crash_object": vehicle.crash_object,
-            "crash_sidewalk": False,
-            "out_of_road": False,
-            "arrive_dest": False,
-            "max_step": False,
-            "lane_line_collision": lane_line_collision,
-            "white_line_collision": white_line_collision,
-            "yellow_line_collision": yellow_line_collision,
-        }
-        return done, done_info
+        """Respect config-driven termination (keep detection but avoid forced termination)."""
+        return super().done_function(vehicle_id)

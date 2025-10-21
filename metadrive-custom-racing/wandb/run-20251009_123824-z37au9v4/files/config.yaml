@@ -1,0 +1,253 @@
+_current_progress_remaining:
+    value: 0.0005760000000000209
+_custom_logger:
+    value: "False"
+_episode_num:
+    value: 0
+_last_episode_starts:
+    value: '[ True]'
+_last_obs:
+    value: |-
+        [[0.5555556  0.5555556  0.5        0.01234568 0.5        0.5
+          0.5        0.         0.5        0.55       0.5        0.
+          0.5        0.5        0.75       0.5        0.         0.5
+          0.5        1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.        ]]
+_last_original_obs:
+    value: None
+_logger:
+    value: <stable_baselines3.common.logger.Logger object at 0x00000203304802F0>
+_n_updates:
+    value: 1553
+_num_timesteps_at_start:
+    value: 500000
+_stats_window_size:
+    value: 100
+_total_timesteps:
+    value: 1000000
+_vec_normalize_env:
+    value: None
+_wandb:
+    value:
+        cli_version: 0.22.1
+        code_path: code/metadrive-custom-racing/examples/train_sb3.py
+        e:
+            25waijh9735wsd2j8tep7h6e8hx2gqwr:
+                args:
+                    - --track
+                    - right_oval
+                    - --timesteps
+                    - "500000"
+                    - --personality
+                    - conservative_cruiser
+                    - --resume-from
+                    - examples/results_agent_3/checkpoint_right_oval_500000_steps.zip
+                    - --results-dir
+                    - examples/results_agent_3
+                    - --checkpoint-freq
+                    - "25000"
+                    - --wandb
+                    - --wandb-project
+                    - metadrive-racing-continued
+                    - --wandb-name
+                    - Safe_Sam_500K_to_1M
+                    - --no-eval
+                codePath: metadrive-custom-racing\examples\train_sb3.py
+                codePathLocal: examples\train_sb3.py
+                cpu_count: 4
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "253615927296"
+                        used: "246116597760"
+                email: Baldemarguajardo20@gmail.com
+                executable: C:\Python313\python.exe
+                git:
+                    commit: daebfe8509d3e35876a686714ec1093bfa985ba6
+                    remote: https://github.com/Joshua-Handy/ApexAI.git
+                host: Balde
+                memory:
+                    total: "17005576192"
+                os: Windows-11-10.0.26100-SP0
+                program: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_sb3.py
+                python: CPython 3.13.1
+                root: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing
+                startedAt: "2025-10-09T17:38:24.004967Z"
+                writerId: 25waijh9735wsd2j8tep7h6e8hx2gqwr
+        m: []
+        python_version: 3.13.1
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 1
+                - 2
+                - 13
+                - 16
+                - 22
+                - 35
+                - 61
+            "4": 3.13.1
+            "5": 0.22.1
+            "8":
+                - 3
+            "12": 0.22.1
+            "13": windows-amd64
+action_noise:
+    value: None
+action_space:
+    value: Box(-1.0, 1.0, (2,), float32)
+algo:
+    value: PPO
+algorithm:
+    value: PPO
+batch_size:
+    value: 256
+checkpoint_freq:
+    value: 25000
+clip_range:
+    value: 0.2
+clip_range_vf:
+    value: None
+device:
+    value: cpu
+ent_coef:
+    value: 0.01
+env:
+    value: <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x0000020322806BA0>
+ep_info_buffer:
+    value: 'deque([{''r'': 10454.020135, ''l'': 2534, ''t'': 522.677908}, {''r'': 9058.296509, ''l'': 2200, ''t'': 528.642953}, {''r'': 8118.228508, ''l'': 1973, ''t'': 534.137218}, {''r'': 19688.995328, ''l'': 4784, ''t'': 544.297117}, {''r'': 20575.599058, ''l'': 5001, ''t'': 555.069327}, {''r'': 18284.100863, ''l'': 4456, ''t'': 565.208659}, {''r'': 16010.798298, ''l'': 3900, ''t'': 574.274709}, {''r'': 20541.387028, ''l'': 5001, ''t'': 586.042573}, {''r'': 17930.088688, ''l'': 4360, ''t'': 595.753491}, {''r'': 10909.271988, ''l'': 2654, ''t'': 602.303885}, {''r'': 12783.620223, ''l'': 3113, ''t'': 609.338565}, {''r'': 20510.196028, ''l'': 5001, ''t'': 619.769715}, {''r'': 20487.48027, ''l'': 5001, ''t'': 632.680338}, {''r'': 20492.09933, ''l'': 5001, ''t'': 647.655422}, {''r'': 15845.054637, ''l'': 3863, ''t'': 659.492539}, {''r'': 13617.66412, ''l'': 3313, ''t'': 668.63665}, {''r'': 20574.533175, ''l'': 5001, ''t'': 682.417216}, {''r'': 20595.434336, ''l'': 5001, ''t'': 693.266552}, {''r'': 20655.653415, ''l'': 5001, ''t'': 707.550043}, {''r'': 14396.24427, ''l'': 3484, ''t'': 715.649366}, {''r'': 8586.207147, ''l'': 2073, ''t'': 720.789509}, {''r'': 13160.348026, ''l'': 3172, ''t'': 729.664109}, {''r'': 4754.291539, ''l'': 1154, ''t'': 731.649621}, {''r'': 8954.36712, ''l'': 2165, ''t'': 737.990233}, {''r'': 13823.641898, ''l'': 3350, ''t'': 745.633095}, {''r'': 20592.479868, ''l'': 5001, ''t'': 758.420628}, {''r'': 12379.710518, ''l'': 2998, ''t'': 765.406968}, {''r'': 6698.753655, ''l'': 1621, ''t'': 768.85506}, {''r'': 8791.621018, ''l'': 2122, ''t'': 773.340071}, {''r'': 6824.493043, ''l'': 1647, ''t'': 778.803173}, {''r'': 6442.73712, ''l'': 1559, ''t'': 782.553249}, {''r'': 5416.350392, ''l'': 1313, ''t'': 786.340291}, {''r'': 5776.732273, ''l'': 1397, ''t'': 793.462422}, {''r'': 18463.494475, ''l'': 4450, ''t'': 809.562278}, {''r'': 15397.290007, ''l'': 3721, ''t'': 823.574578}, {''r'': 11975.170113, ''l'': 2896, ''t'': 832.64653}, {''r'': 20706.25934, ''l'': 5001, ''t'': 853.553238}, {''r'': 7874.747836, ''l'': 1910, ''t'': 859.677373}, {''r'': 14918.453721, ''l'': 3612, ''t'': 872.192695}, {''r'': 8100.706102, ''l'': 1966, ''t'': 879.96304}, {''r'': 16762.768672, ''l'': 4059, ''t'': 893.165894}, {''r'': 12115.78054, ''l'': 2934, ''t'': 898.974016}, {''r'': 13801.667881, ''l'': 3337, ''t'': 907.349998}, {''r'': 12916.503903, ''l'': 3116, ''t'': 915.241651}, {''r'': 19708.193352, ''l'': 4739, ''t'': 926.147835}, {''r'': 9454.497265, ''l'': 2277, ''t'': 932.48086}, {''r'': 20790.047994, ''l'': 5001, ''t'': 942.865278}, {''r'': 5535.49755, ''l'': 1340, ''t'': 945.077689}, {''r'': 6238.967153, ''l'': 1508, ''t'': 947.709294}, {''r'': 3708.563855, ''l'': 901, ''t'': 951.007255}, {''r'': 4768.219949, ''l'': 1156, ''t'': 952.961924}, {''r'': 4163.068939, ''l'': 1010, ''t'': 954.699924}, {''r'': 3154.299718, ''l'': 768, ''t'': 956.087203}, {''r'': 3197.175461, ''l'': 775, ''t'': 959.485807}, {''r'': 5504.534618, ''l'': 1336, ''t'': 961.78836}, {''r'': 3834.860562, ''l'': 934, ''t'': 963.420562}, {''r'': 4333.146526, ''l'': 1052, ''t'': 965.183842}, {''r'': 5317.280836, ''l'': 1292, ''t'': 969.289095}, {''r'': 8402.83796, ''l'': 2041, ''t'': 972.667484}, {''r'': 8640.736361, ''l'': 2099, ''t'': 978.509816}, {''r'': 8016.393549, ''l'': 1949, ''t'': 982.105223}, {''r'': 14222.946842, ''l'': 3457, ''t'': 990.248019}, {''r'': 20564.037456, ''l'': 5001, ''t'': 1001.148512}, {''r'': 20548.67843, ''l'': 5001, ''t'': 1012.410606}, {''r'': 20597.444788, ''l'': 5001, ''t'': 1022.706088}, {''r'': 16688.685003, ''l'': 4039, ''t'': 1032.431047}, {''r'': 20732.350815, ''l'': 5001, ''t'': 1043.892684}, {''r'': 15332.111525, ''l'': 3697, ''t'': 1052.514447}, {''r'': 7882.020578, ''l'': 1897, ''t'': 1055.678396}, {''r'': 9665.145831, ''l'': 2324, ''t'': 1061.865446}, {''r'': 20869.334009, ''l'': 5001, ''t'': 1072.859504}, {''r'': 4531.053828, ''l'': 1092, ''t'': 1074.917958}, {''r'': 3700.887916, ''l'': 892, ''t'': 1078.761089}, {''r'': 6544.411312, ''l'': 1569, ''t'': 1081.615653}, {''r'': 3295.714354, ''l'': 795, ''t'': 1083.158974}, {''r'': 10888.176209, ''l'': 2611, ''t'': 1090.25484}, {''r'': 4142.312452, ''l'': 996, ''t'': 1092.086588}, {''r'': 8095.198991, ''l'': 1939, ''t'': 1095.577504}, {''r'': 8803.422953, ''l'': 2114, ''t'': 1101.826989}, {''r'': 9007.958243, ''l'': 2165, ''t'': 1108.333016}, {''r'': 8012.457081, ''l'': 1918, ''t'': 1111.962958}, {''r'': 8995.955922, ''l'': 2155, ''t'': 1118.194037}, {''r'': 3458.029759, ''l'': 835, ''t'': 1119.962039}, {''r'': 8697.587289, ''l'': 2083, ''t'': 1123.612103}, {''r'': 4548.861732, ''l'': 1096, ''t'': 1125.507705}, {''r'': 8620.034726, ''l'': 2075, ''t'': 1131.943983}, {''r'': 3995.908808, ''l'': 966, ''t'': 1134.000725}, {''r'': 7800.792697, ''l'': 1879, ''t'': 1139.888528}, {''r'': 4868.247885, ''l'': 1176, ''t'': 1142.204853}, {''r'': 9344.800315, ''l'': 2246, ''t'': 1149.038471}, {''r'': 5302.508304, ''l'': 1280, ''t'': 1151.54703}, {''r'': 16576.079586, ''l'': 3993, ''t'': 1161.75261}, {''r'': 9110.097586, ''l'': 2192, ''t'': 1165.923739}, {''r'': 20775.301032, ''l'': 5001, ''t'': 1180.059568}, {''r'': 6769.897042, ''l'': 1634, ''t'': 1183.130025}, {''r'': 7758.93293, ''l'': 1877, ''t'': 1186.827361}, {''r'': 4786.921923, ''l'': 1158, ''t'': 1191.347512}, {''r'': 7600.631941, ''l'': 1830, ''t'': 1194.839754}, {''r'': 5244.172494, ''l'': 1265, ''t'': 1197.119159}, {''r'': 15116.386083, ''l'': 3638, ''t'': 1206.528281}], maxlen=100)'
+ep_success_buffer:
+    value: deque([], maxlen=100)
+eval_freq:
+    value: 5000
+gae_lambda:
+    value: 0.95
+gamma:
+    value: 0.99
+learning_rate:
+    value: 0.0003
+lr_schedule:
+    value: FloatSchedule(ConstantSchedule(val=0.0003))
+max_grad_norm:
+    value: 0.5
+n_envs:
+    value: 1
+n_epochs:
+    value: 15
+n_steps:
+    value: 4096
+normalize_advantage:
+    value: "True"
+num_envs:
+    value: 1
+num_timesteps:
+    value: 500000
+observation_space:
+    value: Box(-0.0, 1.0, (259,), float32)
+policy:
+    value: |-
+        ActorCriticPolicy(
+          (features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (pi_features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (vf_features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (mlp_extractor): MlpExtractor(
+            (policy_net): Sequential(
+              (0): Linear(in_features=259, out_features=256, bias=True)
+              (1): ReLU()
+              (2): Linear(in_features=256, out_features=256, bias=True)
+              (3): ReLU()
+              (4): Linear(in_features=256, out_features=128, bias=True)
+              (5): ReLU()
+            )
+            (value_net): Sequential(
+              (0): Linear(in_features=259, out_features=256, bias=True)
+              (1): ReLU()
+              (2): Linear(in_features=256, out_features=256, bias=True)
+              (3): ReLU()
+              (4): Linear(in_features=256, out_features=128, bias=True)
+              (5): ReLU()
+            )
+          )
+          (action_net): Linear(in_features=128, out_features=2, bias=True)
+          (value_net): Linear(in_features=128, out_features=1, bias=True)
+        )
+policy_class:
+    value: <class 'stable_baselines3.common.policies.ActorCriticPolicy'>
+policy_kwargs:
+    value: '{''net_arch'': [256, 256, 128], ''activation_fn'': <class ''torch.nn.modules.activation.ReLU''>, ''ortho_init'': True}'
+rollout_buffer:
+    value: <stable_baselines3.common.buffers.RolloutBuffer object at 0x00000203264EFA10>
+rollout_buffer_class:
+    value: <class 'stable_baselines3.common.buffers.RolloutBuffer'>
+rollout_buffer_kwargs:
+    value: '{}'
+sde_sample_freq:
+    value: -1
+seed:
+    value: 0
+start_time:
+    value: 1760031512178735100
+target_kl:
+    value: 0.01
+tensorboard_log:
+    value: results_agent_3\tensorboard
+timesteps:
+    value: 500000
+track:
+    value: right_oval
+use_sde:
+    value: "False"
+vecnorm:
+    value: false
+verbose:
+    value: 1
+vf_coef:
+    value: 0.5
