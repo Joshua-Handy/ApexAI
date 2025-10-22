@@ -100,7 +100,16 @@ class CurriculumProgressCallback(BaseCallback):
                 current_phase = self.curriculum_manager.get_current_phase()
                 phase_progress = self.curriculum_manager.get_phase_progress()
 
-                print(f"[TS={self.num_timesteps:,}] [agent={self.agent_id}] [phase={current_phase}] [progress={phase_progress:.1%}] [ep_r={episode_reward:.1f}] [ep_l={episode_length}] [recent10_r={recent_reward:.1f}] [recent10_l={recent_length:.1f}]")
+                print(
+                    f"timesteps={self.num_timesteps:,} "
+                    f"agent={self.agent_id} "
+                    f"phase={current_phase} "
+                    f"phase_progress={phase_progress:.1%} "
+                    f"episode_reward={episode_reward:.2f} "
+                    f"episode_length={int(episode_length)} "
+                    f"recent10_reward={recent_reward:.2f} "
+                    f"recent10_length={recent_length:.1f}"
+                )
                 
                 # Log to wandb if available
                 if hasattr(self.model, 'logger') and hasattr(self.model.logger, 'record'):
@@ -124,6 +133,156 @@ class EarlyStoppingCallback(BaseCallback):
 
     def _on_step(self) -> bool:
         return True
+
+
+class TrainingStatsCallback(BaseCallback):
+    """Print concise training stats: timesteps, entropy, recent rewards."""
+    def __init__(self, verbose: int = 0):
+        super().__init__(verbose)
+        self.last_print_ts = 0
+        self.last_logged_update = -1
+
+    def _on_step(self) -> bool:
+        try:
+            lv = getattr(self.model.logger, 'name_to_value', {})
+            upd = lv.get('train/n_updates', None)
+            if upd is not None:
+                try:
+                    upd_i = int(upd)
+                    if upd_i != self.last_logged_update:
+                        self._print_train_metrics(lv)
+                        self.last_logged_update = upd_i
+                except Exception:
+                    pass
+        except Exception:
+            pass
+        return True
+
+    def _on_rollout_end(self) -> None:
+        entropy_mean = float('nan')
+        try:
+            import torch
+            buf = getattr(self.model, 'rollout_buffer', None)
+            if buf is not None and hasattr(buf, 'observations'):
+                obs = buf.observations
+                if isinstance(obs, np.ndarray):
+                    flat = obs.reshape(-1, obs.shape[-1])
+                    obs_t = torch.as_tensor(flat, device=self.model.device)
+                else:
+                    obs_t = obs
+                dist = self.model.policy.get_distribution(obs_t)
+                ent = dist.entropy()
+                if hasattr(ent, 'mean'):
+                    entropy_mean = float(ent.mean().detach().cpu().numpy())
+        except Exception:
+            pass
+
+        ep_r = None
+        ep_l = None
+        recent_mean_r = None
+        try:
+            if len(self.model.ep_info_buffer) > 0:
+                ep_info = self.model.ep_info_buffer[-1]
+                ep_r = ep_info.get('r', None)
+                ep_l = ep_info.get('l', None)
+                recent = [ep.get('r', 0.0) for ep in list(self.model.ep_info_buffer)[-10:] if isinstance(ep, dict)]
+                if recent:
+                    recent_mean_r = float(np.mean(recent))
+        except Exception:
+            pass
+
+        lr = None
+        clip = None
+        try:
+            lr_sched = getattr(self.model, 'lr_schedule', None)
+            if callable(lr_sched):
+                lr = float(lr_sched(self.num_timesteps))
+            else:
+                lr = float(getattr(self.model, 'learning_rate', np.nan))
+        except Exception:
+            pass
+        try:
+            cr = getattr(self.model, 'clip_range', None)
+            if callable(cr):
+                clip = float(cr(self.num_timesteps))
+            elif cr is not None:
+                clip = float(cr)
+        except Exception:
+            pass
+
+        train_vals = {}
+        try:
+            lv = getattr(self.model.logger, 'name_to_value', {})
+            def g(k):
+                v = lv.get(k, None)
+                try:
+                    return float(v)
+                except Exception:
+                    return None
+            train_vals = {
+                'train_entropy_loss': g('train/entropy_loss'),
+                'train_policy_gradient_loss': g('train/policy_gradient_loss'),
+                'train_value_loss': g('train/value_loss'),
+                'approx_kl': g('train/approx_kl'),
+                'clip_fraction': g('train/clip_fraction'),
+                'train_loss': g('train/loss'),
+                'explained_variance': g('train/explained_variance'),
+                'policy_std': g('train/std'),
+                'n_updates': g('train/n_updates'),
+                'clip_range_train': g('train/clip_range'),
+            }
+        except Exception:
+            pass
+
+        try:
+            parts = [
+                f"timesteps={self.num_timesteps:,}",
+                f"policy_entropy={entropy_mean:.3f}",
+            ]
+            if lr is not None and not np.isnan(lr):
+                parts.append(f"learning_rate={lr:.6f}")
+            if clip is not None and not np.isnan(clip):
+                parts.append(f"clip_range={clip:.3f}")
+            if ep_r is not None:
+                parts.append(f"episode_reward={float(ep_r):.2f}")
+            if ep_l is not None:
+                parts.append(f"episode_length={int(ep_l)}")
+            if recent_mean_r is not None:
+                parts.append(f"recent10_reward={recent_mean_r:.2f}")
+            for k, v in train_vals.items():
+                if v is not None and not np.isnan(v):
+                    parts.append(f"{k}={v:.4f}")
+            print(" ".join(parts))
+        except Exception:
+            pass
+
+    def _print_train_metrics(self, lv: dict) -> None:
+        try:
+            keys = [
+                'train/entropy_loss',
+                'train/policy_gradient_loss',
+                'train/value_loss',
+                'train/approx_kl',
+                'train/clip_fraction',
+                'train/loss',
+                'train/explained_variance',
+                'train/std',
+                'train/n_updates',
+                'train/clip_range',
+            ]
+            parts = [f"timesteps={self.num_timesteps:,}"]
+            for k in keys:
+                v = lv.get(k, None)
+                if v is None:
+                    continue
+                try:
+                    fv = float(v)
+                    parts.append(f"{k.replace('train/', '')}={fv:.4f}")
+                except Exception:
+                    parts.append(f"{k.replace('train/', '')}={v}")
+            print(" ".join(parts))
+        except Exception:
+            pass
 
     def _on_rollout_end(self) -> bool:
         try:
@@ -801,6 +960,7 @@ def train_multi_agent_racing(
     
     # Create callbacks - use first agent for tracking since it's shared policy
     progress_callback = CurriculumProgressCallback(agent_ids[0], curriculum_manager, verbose=0)
+    stats_callback = TrainingStatsCallback(verbose=0)
     checkpoint_callback = CheckpointCallback(
         save_freq=50000,
         save_path=os.path.join(results_dir, "checkpoints"),
@@ -808,7 +968,7 @@ def train_multi_agent_racing(
         verbose=0,
     )
     
-    callbacks = [progress_callback, checkpoint_callback]
+    callbacks = [progress_callback, stats_callback, checkpoint_callback]
 
     if use_wandb and WANDB_AVAILABLE:
         wandb_callback = WandbCallback(

@@ -48,7 +48,9 @@ class MultiAgentOvalMap(PGMap):
         lane_width = self.config.get("lane_width", 20.0)  # Match config file lane width
 
         try:
-            print(f"[MapDebug] lane_num={lane_num}, lane_width={lane_width}")
+            eng_cfg = getattr(self.engine, 'global_config', {})
+            if bool(getattr(eng_cfg, 'get', lambda k, d=None: d)('debug', False)):
+                print(f"[MapDebug] lane_num={lane_num}, lane_width={lane_width}")
         except Exception:
             pass
 
@@ -183,26 +185,28 @@ class MultiAgentOvalEnv(MultiAgentMetaDrive):
         try:
             cfg = getattr(self, 'config', {}) or {}
             map_cfg = cfg.get('map_config', {}) or {}
-            lane_num = map_cfg.get('lane_num', None)
-            lane_width = map_cfg.get('lane_width', None)
-            agent_cfgs = cfg.get('agent_configs', {}) or {}
-            print(f"[SpawnDebug] lane_num={lane_num}, lane_width={lane_width}, agents={len(agent_cfgs)}")
-            for aid, ac in agent_cfgs.items():
-                sli = ac.get('spawn_lane_index', None)
-                slong = ac.get('spawn_longitude', None)
-                slat = ac.get('spawn_lateral', None)
-                lane_idx = None
-                if isinstance(sli, (list, tuple)) and len(sli) == 3:
-                    lane_idx = sli[2]
-                print(f"[SpawnDebug] {aid}: lane_index={lane_idx}, tuple={sli}, longitude={slong}, lateral={slat}")
-                if lane_num is not None and lane_idx is not None:
-                    try:
-                        ln = int(lane_num)
-                        li = int(lane_idx)
-                        if not (0 <= li < ln):
-                            print(f"[SpawnDebug] WARNING: {aid} lane_index {li} out of range [0,{ln-1}]")
-                    except Exception:
-                        pass
+            debug = bool(cfg.get('debug', False))
+            if debug:
+                lane_num = map_cfg.get('lane_num', None)
+                lane_width = map_cfg.get('lane_width', None)
+                agent_cfgs = cfg.get('agent_configs', {}) or {}
+                print(f"[SpawnDebug] lane_num={lane_num}, lane_width={lane_width}, agents={len(agent_cfgs)}")
+                for aid, ac in agent_cfgs.items():
+                    sli = ac.get('spawn_lane_index', None)
+                    slong = ac.get('spawn_longitude', None)
+                    slat = ac.get('spawn_lateral', None)
+                    lane_idx = None
+                    if isinstance(sli, (list, tuple)) and len(sli) == 3:
+                        lane_idx = sli[2]
+                    print(f"[SpawnDebug] {aid}: lane_index={lane_idx}, tuple={sli}, longitude={slong}, lateral={slat}")
+                    if lane_num is not None and lane_idx is not None:
+                        try:
+                            ln = int(lane_num)
+                            li = int(lane_idx)
+                            if not (0 <= li < ln):
+                                print(f"[SpawnDebug] WARNING: {aid} lane_index {li} out of range [0,{ln-1}]")
+                        except Exception:
+                            pass
         except Exception:
             pass
         return super().reset(**kwargs)
