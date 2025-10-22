@@ -47,6 +47,11 @@ class MultiAgentOvalMap(PGMap):
         lane_num = self.config.get("lane_num", 1)  # Default to single lane
         lane_width = self.config.get("lane_width", 20.0)  # Match config file lane width
 
+        try:
+            print(f"[MapDebug] lane_num={lane_num}, lane_width={lane_width}")
+        except Exception:
+            pass
+
         # Start with spawn block
         last_block = FirstPGBlock(
             self.road_network,
@@ -67,7 +72,7 @@ class MultiAgentOvalMap(PGMap):
                 block_index,
                 last_block.get_socket(0),
                 self.road_network,
-                1,
+                lane_num,
                 remove_negative_lanes=True,
                 side_lane_line_type=PGLineType.CONTINUOUS,
                 center_line_type=PGLineType.BROKEN,
@@ -118,12 +123,6 @@ class MultiAgentOvalEnv(MultiAgentMetaDrive):
         self.engine.update_manager("map_manager", MultiAgentOvalMapManager())
 
     def step(self, actions):
-        try:
-            if hasattr(self, 'agent_manager'):
-                self.agent_manager.set_allow_respawn(False)
-        except Exception:
-            pass
-
         observations, rewards, terminateds, truncateds, infos = super().step(actions)
 
         try:
@@ -167,39 +166,7 @@ class MultiAgentOvalEnv(MultiAgentMetaDrive):
         except Exception:
             pass
 
-        try:
-            agent_configs = self.config.get('agent_configs', {})
-            for agent_id in list(terminateds.keys()):
-                is_done = bool(terminateds.get(agent_id, False) or truncateds.get(agent_id, False))
-                info = infos.get(agent_id, {})
-                if is_done:
-                    should_respawn = bool(info.get('white_line_collision', False) or info.get('out_of_road', False))
-                    if should_respawn and agent_id in self.agents:
-                        vehicle = self.agents[agent_id]
-                        conf = vehicle.config.copy()
-                        conf.update(agent_configs.get(agent_id, {}))
-                        try:
-                            vehicle.reset(conf.copy())
-                            after_step_info = vehicle.after_step()
-                            info.update(after_step_info)
-                        except Exception:
-                            pass
-                        try:
-                            new_obs = self.observations[agent_id].observe(vehicle)
-                            observations[agent_id] = new_obs
-                        except Exception:
-                            pass
-                        rewards[agent_id] = 0.0
-                        terminateds[agent_id] = False
-                        truncateds[agent_id] = False
-                        infos[agent_id] = info
-                        try:
-                            if hasattr(self, 'dones'):
-                                self.dones[agent_id] = False
-                        except Exception:
-                            pass
-        except Exception:
-            pass
+        # Use MetaDrive's built-in respawn manager and termination handling.
 
         try:
             truncateds["__all__"] = all(v for k, v in truncateds.items() if k != "__all__")
@@ -211,3 +178,31 @@ class MultiAgentOvalEnv(MultiAgentMetaDrive):
     def done_function(self, vehicle_id: str):
         """Respect config-driven termination (keep detection but avoid forced termination)."""
         return super().done_function(vehicle_id)
+
+    def reset(self, **kwargs):
+        try:
+            cfg = getattr(self, 'config', {}) or {}
+            map_cfg = cfg.get('map_config', {}) or {}
+            lane_num = map_cfg.get('lane_num', None)
+            lane_width = map_cfg.get('lane_width', None)
+            agent_cfgs = cfg.get('agent_configs', {}) or {}
+            print(f"[SpawnDebug] lane_num={lane_num}, lane_width={lane_width}, agents={len(agent_cfgs)}")
+            for aid, ac in agent_cfgs.items():
+                sli = ac.get('spawn_lane_index', None)
+                slong = ac.get('spawn_longitude', None)
+                slat = ac.get('spawn_lateral', None)
+                lane_idx = None
+                if isinstance(sli, (list, tuple)) and len(sli) == 3:
+                    lane_idx = sli[2]
+                print(f"[SpawnDebug] {aid}: lane_index={lane_idx}, tuple={sli}, longitude={slong}, lateral={slat}")
+                if lane_num is not None and lane_idx is not None:
+                    try:
+                        ln = int(lane_num)
+                        li = int(lane_idx)
+                        if not (0 <= li < ln):
+                            print(f"[SpawnDebug] WARNING: {aid} lane_index {li} out of range [0,{ln-1}]")
+                    except Exception:
+                        pass
+        except Exception:
+            pass
+        return super().reset(**kwargs)

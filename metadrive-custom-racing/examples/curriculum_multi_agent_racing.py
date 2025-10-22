@@ -397,10 +397,15 @@ class MultiAgentRacingEnvironment(gym.Env):
         # Generate racing grid configurations
         racing_grid_configs = {}
         lane_width = 12.0
+        # Restore proper racing grid formation: each agent on its own lane, spaced laterally
         for i in range(self.num_agents):
-            longitude, lateral = get_horizontal_lane_position(i, self.num_agents, lane_width)
+            center = (self.num_agents - 1) / 2.0
+            lane_index = i
+            lane_width = 12.0
+            lateral = (i - center) * lane_width
+            longitude = -20.0
             racing_grid_configs[f"agent{i}"] = {
-                "spawn_lane_index": (FirstPGBlock.NODE_2, FirstPGBlock.NODE_3, i % self.num_agents),
+                "spawn_lane_index": (FirstPGBlock.NODE_2, FirstPGBlock.NODE_3, lane_index),
                 "spawn_longitude": float(longitude),
                 "spawn_lateral": float(lateral),
                 "spawn_velocity": [2.0, 0.0],
