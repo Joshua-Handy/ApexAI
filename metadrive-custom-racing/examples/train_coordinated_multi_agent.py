@@ -676,8 +676,10 @@ def create_coordinated_multi_agent_environment(num_agents: int = 4, track: str =
     
     # Fallback to standard multi-agent
     from metadrive.envs import MultiAgentMetaDrive
-    config["map"] = "O"  # Standard oval
-    env = MultiAgentMetaDrive(config)
+    config_fallback = dict(config)
+    config_fallback.pop("agent_configs", None)  # Remove custom spawns to avoid lane mismatches
+    config_fallback["map"] = "O"  # Standard oval
+    env = MultiAgentMetaDrive(config_fallback)
     print("🏁 Using standard oval track!")
     return env
 

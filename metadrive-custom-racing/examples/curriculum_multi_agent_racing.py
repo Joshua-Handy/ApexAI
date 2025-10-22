@@ -388,26 +388,14 @@ class MultiAgentRacingEnvironment(gym.Env):
         """Create the base MetaDrive environment with proper racing grid setup."""
         phase_config = self.curriculum_manager.get_phase_config()
         
-        def get_horizontal_lane_position(agent_index: int, total_agents: int, lane_width: float):
-            center = (total_agents - 1) / 2.0
-            lateral = (agent_index - center) * lane_width
-            longitude = -20.0
-            return longitude, lateral
-        
-        # Generate racing grid configurations
+        # Generate racing grid configurations: unique lane per agent, safe center positions
         racing_grid_configs = {}
         lane_width = 12.0
-        # Restore proper racing grid formation: each agent on its own lane, spaced laterally
         for i in range(self.num_agents):
-            center = (self.num_agents - 1) / 2.0
-            lane_index = i
-            lane_width = 12.0
-            lateral = (i - center) * lane_width
-            longitude = -20.0
             racing_grid_configs[f"agent{i}"] = {
-                "spawn_lane_index": (FirstPGBlock.NODE_2, FirstPGBlock.NODE_3, lane_index),
-                "spawn_longitude": float(longitude),
-                "spawn_lateral": float(lateral),
+                "spawn_lane_index": (FirstPGBlock.NODE_2, FirstPGBlock.NODE_3, i % self.num_agents),
+                "spawn_longitude": 4.0,
+                "spawn_lateral": 0.0,
                 "spawn_velocity": [2.0, 0.0],
             }
         

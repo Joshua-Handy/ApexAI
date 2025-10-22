@@ -1,0 +1,11 @@
+{"time":"2025-10-21T23:53:30.3965765-05:00","level":"INFO","msg":"stream: starting","core version":"0.22.1"}
+{"time":"2025-10-21T23:53:30.8917829-05:00","level":"INFO","msg":"stream: created new stream","id":"ga55iclq"}
+{"time":"2025-10-21T23:53:30.8923664-05:00","level":"INFO","msg":"handler: started","stream_id":"ga55iclq"}
+{"time":"2025-10-21T23:53:30.8953221-05:00","level":"INFO","msg":"stream: started","id":"ga55iclq"}
+{"time":"2025-10-21T23:53:30.8958757-05:00","level":"INFO","msg":"sender: started","stream_id":"ga55iclq"}
+{"time":"2025-10-21T23:53:30.8958757-05:00","level":"INFO","msg":"writer: started","stream_id":"ga55iclq"}
+{"time":"2025-10-21T23:53:32.3542864-05:00","level":"INFO","msg":"stream: closing","id":"ga55iclq"}
+{"time":"2025-10-21T23:53:32.9727239-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-21T23:53:33.2096944-05:00","level":"INFO","msg":"handler: closed","stream_id":"ga55iclq"}
+{"time":"2025-10-21T23:53:33.2163521-05:00","level":"INFO","msg":"sender: closed","stream_id":"ga55iclq"}
+{"time":"2025-10-21T23:53:33.2163521-05:00","level":"INFO","msg":"stream: closed","id":"ga55iclq"}
