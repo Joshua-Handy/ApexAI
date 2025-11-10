@@ -114,6 +114,15 @@ class MultiAgentOvalEnv(MultiAgentMetaDrive):
     def __init__(self, config=None):
         super().__init__(config)
 
+    @classmethod
+    def default_config(cls):
+        cfg = super().default_config()
+        try:
+            cfg['crash_only_done'] = False
+        except Exception:
+            pass
+        return cfg
+
     def setup_engine(self):
         """Ensure our custom map manager is registered with the engine so the custom
         MultiAgentOvalMap (which builds the oval in _generate) is used instead of
@@ -178,7 +187,24 @@ class MultiAgentOvalEnv(MultiAgentMetaDrive):
         return observations, rewards, terminateds, truncateds, infos
     
     def done_function(self, vehicle_id: str):
-        """Respect config-driven termination (keep detection but avoid forced termination)."""
+        cfg = getattr(self, 'config', {}) or {}
+        if bool(cfg.get('crash_only_done', False)):
+            vehicle = self.vehicles[vehicle_id]
+            crashed = bool(getattr(vehicle, 'crash_vehicle', False) or getattr(vehicle, 'crash_object', False)
+                           or getattr(vehicle, 'crash_building', False) or getattr(vehicle, 'crash_sidewalk', False)
+                           or getattr(vehicle, 'crash_human', False))
+            info = {
+                "crash_vehicle": bool(getattr(vehicle, 'crash_vehicle', False)),
+                "crash_object": bool(getattr(vehicle, 'crash_object', False)),
+                "crash_sidewalk": bool(getattr(vehicle, 'crash_sidewalk', False)),
+                "out_of_road": False,
+                "arrive_dest": False,
+                "max_step": False,
+                "lane_line_collision": False,
+                "white_line_collision": False,
+                "yellow_line_collision": False,
+            }
+            return crashed, info
         return super().done_function(vehicle_id)
 
     def reset(self, **kwargs):
