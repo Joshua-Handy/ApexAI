@@ -1,0 +1,226 @@
+_current_progress_remaining:
+    value: 0.00028799999999995496
+_custom_logger:
+    value: "False"
+_episode_num:
+    value: 0
+_last_episode_starts:
+    value: '[ True  True  True  True]'
+_last_obs:
+    value: |-
+        [[-2.6242032e+00  2.6242030e+00 -1.5573938e-01 ...  1.9314962e-06
+           1.9314962e-06  1.9314962e-06]
+         [-6.8480110e-01  6.8480086e-01 -1.5573938e-01 ...  1.9314962e-06
+           1.9314962e-06  1.9314962e-06]
+         [-2.6242032e+00  2.6242030e+00 -1.5573938e-01 ...  1.9314962e-06
+           1.9314962e-06  1.9314962e-06]
+         [-6.8480110e-01  6.8480086e-01 -1.5573938e-01 ...  1.9314962e-06
+           1.9314962e-06  1.9314962e-06]]
+_last_original_obs:
+    value: |-
+        [[0.09722222 0.4861111  0.5        ... 1.         1.         1.        ]
+         [0.29166666 0.29166666 0.5        ... 1.         1.         1.        ]
+         [0.09722222 0.4861111  0.5        ... 1.         1.         1.        ]
+         [0.29166666 0.29166666 0.5        ... 1.         1.         1.        ]]
+_logger:
+    value: <stable_baselines3.common.logger.Logger object at 0x000001BE2E948200>
+_n_updates:
+    value: 1220
+_num_timesteps_at_start:
+    value: 1000000
+_stats_window_size:
+    value: 100
+_total_timesteps:
+    value: 1500000
+_vec_normalize_env:
+    value: <stable_baselines3.common.vec_env.vec_normalize.VecNormalize object at 0x000001BE34A03380>
+_wandb:
+    value:
+        cli_version: 0.22.1
+        e:
+            nx37y5bfh06r9a2ymql5flbjxagf3qvt:
+                args:
+                    - --load-model
+                    - results_v2/checkpoint_right_oval_v3_1000000_steps.zip
+                    - --track
+                    - custom_speedway
+                    - --timesteps
+                    - "500000"
+                    - --num-envs
+                    - "4"
+                    - --wandb
+                    - --wandb-name
+                    - Custom_Speedway_v3
+                    - --wandb-project
+                    - metadrive-racingv2
+                    - --results-dir
+                    - results_v2
+                codePath: metadrive-custom-racing\examples\transfer_learn.py
+                codePathLocal: examples\transfer_learn.py
+                cpu_count: 8
+                cpu_count_logical: 12
+                cudaVersion: "12.9"
+                disk:
+                    /:
+                        total: "510838960128"
+                        used: "214916321280"
+                email: saeganafarias@gmail.com
+                executable: C:\Users\Acyla\AppData\Local\Programs\Python\Python312\python.exe
+                git:
+                    commit: 3fdb714cd9d76a880f21b141cec3cca2f7670b1d
+                    remote: https://github.com/Joshua-Handy/ApexAI.git
+                gpu: NVIDIA GeForce RTX 4050 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 2560
+                      memoryTotal: "6439305216"
+                      name: NVIDIA GeForce RTX 4050 Laptop GPU
+                      uuid: GPU-78df7398-ea8a-3534-371a-e3fd1838e1e0
+                host: Saegan
+                memory:
+                    total: "14710988800"
+                os: Windows-11-10.0.26100-SP0
+                program: C:\Senior Project\GroupBrew\ApexAI\metadrive-custom-racing\examples\transfer_learn.py
+                python: CPython 3.12.5
+                root: C:\Senior Project\GroupBrew\ApexAI\metadrive-custom-racing
+                startedAt: "2025-10-09T05:02:53.604958Z"
+                writerId: nx37y5bfh06r9a2ymql5flbjxagf3qvt
+        m: []
+        python_version: 3.12.5
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 1
+                - 2
+                - 13
+                - 16
+                - 22
+                - 35
+                - 61
+            "4": 3.12.5
+            "5": 0.22.1
+            "8":
+                - 3
+            "12": 0.22.1
+            "13": windows-amd64
+action_noise:
+    value: None
+action_space:
+    value: Box(-1.0, 1.0, (2,), float32)
+algo:
+    value: PPO
+batch_size:
+    value: 64
+checkpoint_freq:
+    value: 25000
+clip_range:
+    value: FloatSchedule(ConstantSchedule(val=0.2))
+clip_range_vf:
+    value: None
+device:
+    value: cpu
+ent_coef:
+    value: 0
+env:
+    value: <stable_baselines3.common.vec_env.vec_normalize.VecNormalize object at 0x000001BE34A03380>
+ep_info_buffer:
+    value: 'deque([{''r'': 1357.616633, ''l'': 632, ''t'': 1091.36995}, {''r'': 1356.918043, ''l'': 628, ''t'': 1091.676011}, {''r'': 1370.309351, ''l'': 632, ''t'': 1093.582102}, {''r'': 1354.847191, ''l'': 627, ''t'': 1094.032814}, {''r'': 1364.156408, ''l'': 634, ''t'': 1094.590946}, {''r'': 1360.957397, ''l'': 628, ''t'': 1094.881105}, {''r'': 1357.961796, ''l'': 627, ''t'': 1096.84842}, {''r'': 1358.335756, ''l'': 627, ''t'': 1097.365744}, {''r'': 1349.208391, ''l'': 625, ''t'': 1097.930542}, {''r'': 1357.150599, ''l'': 625, ''t'': 1098.209417}, {''r'': 1341.152078, ''l'': 620, ''t'': 1107.844309}, {''r'': 1366.016694, ''l'': 631, ''t'': 1108.166218}, {''r'': 1357.899354, ''l'': 627, ''t'': 1108.429698}, {''r'': 1370.333956, ''l'': 633, ''t'': 1108.59304}, {''r'': 1368.26624, ''l'': 628, ''t'': 1109.619766}, {''r'': 74.390996, ''l'': 80, ''t'': 1109.880241}, {''r'': 1358.756027, ''l'': 622, ''t'': 1109.980301}, {''r'': 1358.058052, ''l'': 631, ''t'': 1110.364981}, {''r'': 1369.781167, ''l'': 634, ''t'': 1110.538403}, {''r'': 1354.169852, ''l'': 626, ''t'': 1111.980328}, {''r'': 1369.36954, ''l'': 631, ''t'': 1112.096765}, {''r'': 1040.369578, ''l'': 489, ''t'': 1112.185585}, {''r'': 1379.45802, ''l'': 638, ''t'': 1112.559937}, {''r'': 1370.61162, ''l'': 636, ''t'': 1121.270775}, {''r'': 1378.317972, ''l'': 633, ''t'': 1121.46735}, {''r'': 1362.538247, ''l'': 628, ''t'': 1121.637849}, {''r'': 1370.642563, ''l'': 637, ''t'': 1122.32363}, {''r'': 51.911481, ''l'': 65, ''t'': 1122.720239}, {''r'': 54.056896, ''l'': 67, ''t'': 1123.154739}, {''r'': 81.298663, ''l'': 82, ''t'': 1123.668295}, {''r'': 1366.480391, ''l'': 627, ''t'': 1125.017245}, {''r'': 1367.072863, ''l'': 629, ''t'': 1125.255948}, {''r'': 1387.842207, ''l'': 638, ''t'': 1125.451106}, {''r'': 52.53064, ''l'': 63, ''t'': 1125.857919}, {''r'': 56.48403, ''l'': 67, ''t'': 1126.083879}, {''r'': 1370.708173, ''l'': 630, ''t'': 1127.37452}, {''r'': 398.781134, ''l'': 222, ''t'': 1128.504117}, {''r'': 1048.707814, ''l'': 499, ''t'': 1128.745835}, {''r'': 1377.91039, ''l'': 635, ''t'': 1129.151685}, {''r'': 1379.418091, ''l'': 635, ''t'': 1129.702592}, {''r'': 1382.525719, ''l'': 638, ''t'': 1131.975222}, {''r'': 1378.51651, ''l'': 635, ''t'': 1132.187859}, {''r'': 55.248681, ''l'': 68, ''t'': 1132.585368}, {''r'': 55.237959, ''l'': 65, ''t'': 1132.7959}, {''r'': 1370.404949, ''l'': 635, ''t'': 1132.771206}, {''r'': 1373.529022, ''l'': 634, ''t'': 1133.334578}, {''r'': 740.071717, ''l'': 362, ''t'': 1144.28169}, {''r'': 1376.560553, ''l'': 637, ''t'': 1145.625337}, {''r'': 1373.203186, ''l'': 631, ''t'': 1145.595345}, {''r'': 1370.349846, ''l'': 633, ''t'': 1146.132362}, {''r'': 1372.133359, ''l'': 627, ''t'': 1147.41187}, {''r'': 1046.440689, ''l'': 492, ''t'': 1148.489473}, {''r'': 1370.078774, ''l'': 631, ''t'': 1148.846323}, {''r'': 1384.345371, ''l'': 638, ''t'': 1148.993119}, {''r'': 57.301231, ''l'': 67, ''t'': 1149.370561}, {''r'': 1365.497116, ''l'': 623, ''t'': 1150.550063}, {''r'': 1353.464834, ''l'': 623, ''t'': 1151.551711}, {''r'': 1375.378719, ''l'': 635, ''t'': 1151.990689}, {''r'': 1382.522775, ''l'': 635, ''t'': 1152.430273}, {''r'': 409.664881, ''l'': 228, ''t'': 1153.294846}, {''r'': 1362.537246, ''l'': 625, ''t'': 1163.309659}, {''r'': 1375.226784, ''l'': 630, ''t'': 1164.381687}, {''r'': 1368.376107, ''l'': 626, ''t'': 1165.063664}, {''r'': 1383.060079, ''l'': 639, ''t'': 1165.923467}, {''r'': 1367.238706, ''l'': 626, ''t'': 1166.48256}, {''r'': 1377.596236, ''l'': 631, ''t'': 1167.519229}, {''r'': 1373.394844, ''l'': 632, ''t'': 1168.141442}, {''r'': 47.561299, ''l'': 60, ''t'': 1168.530581}, {''r'': 1393.969035, ''l'': 642, ''t'': 1169.132546}, {''r'': 1374.354959, ''l'': 632, ''t'': 1169.620251}, {''r'': 1377.750078, ''l'': 630, ''t'': 1170.578844}, {''r'': 1387.22125, ''l'': 636, ''t'': 1171.45893}, {''r'': 1365.641257, ''l'': 627, ''t'': 1171.997572}, {''r'': 1362.472311, ''l'': 627, ''t'': 1172.511999}, {''r'': 1365.716532, ''l'': 631, ''t'': 1181.732071}, {''r'': 1383.930026, ''l'': 638, ''t'': 1183.166412}, {''r'': 1370.53315, ''l'': 631, ''t'': 1184.0488}, {''r'': 1386.513564, ''l'': 641, ''t'': 1184.745392}, {''r'': 1375.565957, ''l'': 631, ''t'': 1185.86447}, {''r'': 1387.659404, ''l'': 638, ''t'': 1186.944849}, {''r'': 1379.413859, ''l'': 636, ''t'': 1187.512862}, {''r'': 1378.233066, ''l'': 633, ''t'': 1187.977174}, {''r'': 1378.797841, ''l'': 634, ''t'': 1188.980144}, {''r'': 1367.550424, ''l'': 630, ''t'': 1190.017664}, {''r'': 1387.632351, ''l'': 637, ''t'': 1190.635826}, {''r'': 1385.591295, ''l'': 635, ''t'': 1191.162256}, {''r'': 1389.854768, ''l'': 639, ''t'': 1200.325251}, {''r'': 1398.119289, ''l'': 646, ''t'': 1201.236456}, {''r'': 1392.801613, ''l'': 648, ''t'': 1201.791772}, {''r'': 1385.423435, ''l'': 635, ''t'': 1202.271552}, {''r'': 1085.868366, ''l'': 515, ''t'': 1202.81889}, {''r'': 1387.747829, ''l'': 638, ''t'': 1204.295052}, {''r'': 1397.145173, ''l'': 645, ''t'': 1204.895126}, {''r'': 1369.132174, ''l'': 630, ''t'': 1205.31045}, {''r'': 1380.161784, ''l'': 634, ''t'': 1205.954865}, {''r'': 1033.308168, ''l'': 491, ''t'': 1207.358284}, {''r'': 1386.351209, ''l'': 637, ''t'': 1207.541376}, {''r'': 1378.13355, ''l'': 631, ''t'': 1208.333171}, {''r'': 1377.25168, ''l'': 629, ''t'': 1208.843487}, {''r'': 1366.290562, ''l'': 634, ''t'': 1219.138117}], maxlen=100)'
+ep_success_buffer:
+    value: deque([], maxlen=100)
+gae_lambda:
+    value: 0.95
+gamma:
+    value: 0.99
+learning_rate:
+    value: 0.0003
+load_model:
+    value: results_v2/checkpoint_right_oval_v3_1000000_steps.zip
+lr_schedule:
+    value: FloatSchedule(ConstantSchedule(val=0.0003))
+max_grad_norm:
+    value: 0.5
+n_envs:
+    value: 4
+n_epochs:
+    value: 10
+n_steps:
+    value: 2048
+normalize_advantage:
+    value: "True"
+num_envs:
+    value: 4
+num_timesteps:
+    value: 1000000
+observation_space:
+    value: Box(-0.0, 1.0, (259,), float32)
+policy:
+    value: |-
+        ActorCriticPolicy(
+          (features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (pi_features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (vf_features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (mlp_extractor): MlpExtractor(
+            (policy_net): Sequential(
+              (0): Linear(in_features=259, out_features=64, bias=True)
+              (1): Tanh()
+              (2): Linear(in_features=64, out_features=64, bias=True)
+              (3): Tanh()
+            )
+            (value_net): Sequential(
+              (0): Linear(in_features=259, out_features=64, bias=True)
+              (1): Tanh()
+              (2): Linear(in_features=64, out_features=64, bias=True)
+              (3): Tanh()
+            )
+          )
+          (action_net): Linear(in_features=64, out_features=2, bias=True)
+          (value_net): Linear(in_features=64, out_features=1, bias=True)
+        )
+policy_class:
+    value: <class 'stable_baselines3.common.policies.ActorCriticPolicy'>
+policy_kwargs:
+    value: '{}'
+results_dir:
+    value: results_v2
+rollout_buffer:
+    value: <stable_baselines3.common.buffers.RolloutBuffer object at 0x000001BE2E250F80>
+rollout_buffer_class:
+    value: <class 'stable_baselines3.common.buffers.RolloutBuffer'>
+rollout_buffer_kwargs:
+    value: '{}'
+sde_sample_freq:
+    value: -1
+seed:
+    value: 0
+start_time:
+    value: 1759986184609546200
+target_kl:
+    value: None
+tensorboard_log:
+    value: results_v2\tensorboard
+timesteps:
+    value: 500000
+track:
+    value: custom_speedway
+use_sde:
+    value: "False"
+verbose:
+    value: 1
+vf_coef:
+    value: 0.5
+wandb:
+    value: true
+wandb_name:
+    value: Custom_Speedway_v3
+wandb_project:
+    value: metadrive-racingv2

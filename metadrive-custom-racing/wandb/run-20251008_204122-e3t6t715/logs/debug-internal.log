@@ -1,0 +1,24 @@
+{"time":"2025-10-08T20:41:25.3169329-05:00","level":"INFO","msg":"stream: starting","core version":"0.22.1"}
+{"time":"2025-10-08T20:41:25.7361121-05:00","level":"INFO","msg":"stream: created new stream","id":"e3t6t715"}
+{"time":"2025-10-08T20:41:25.7361121-05:00","level":"INFO","msg":"handler: started","stream_id":"e3t6t715"}
+{"time":"2025-10-08T20:41:25.740105-05:00","level":"INFO","msg":"stream: started","id":"e3t6t715"}
+{"time":"2025-10-08T20:41:25.740105-05:00","level":"INFO","msg":"writer: started","stream_id":"e3t6t715"}
+{"time":"2025-10-08T20:41:25.740105-05:00","level":"INFO","msg":"sender: started","stream_id":"e3t6t715"}
+{"time":"2025-10-08T20:41:25.9420578-05:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-10-08T20:41:47.0775602-05:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2025-10-08T20:41:47.0775602-05:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"C:\\\\Senior Project\\\\GroupBrew\\\\ApexAI\\\\metadrive-custom-racing\\\\results_v2\\\\tensorboard\\\\PPO_1\")","namespace":""}
+{"time":"2025-10-08T20:41:47.0780676-05:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"C:\\Senior Project\\GroupBrew\\ApexAI\\metadrive-custom-racing\\results_v2\\tensorboard\\PPO_1\\events.out.tfevents.1759974097.Saegan.21784.0","runPath":"results_v2/tensorboard/PPO_1/events.out.tfevents.1759974097.Saegan.21784.0"}
+{"time":"2025-10-08T20:41:47.0797693-05:00","level":"ERROR","msg":"tensorboard: error creating symlink","target":"C:\\Senior Project\\GroupBrew\\ApexAI\\metadrive-custom-racing\\results_v2\\tensorboard\\PPO_1\\events.out.tfevents.1759974097.Saegan.21784.0","symlink":"C:\\Senior Project\\GroupBrew\\ApexAI\\metadrive-custom-racing\\wandb\\run-20251008_204122-e3t6t715\\files\\results_v2\\tensorboard\\PPO_1\\events.out.tfevents.1759974097.Saegan.21784.0","error":"symlink C:\\Senior Project\\GroupBrew\\ApexAI\\metadrive-custom-racing\\results_v2\\tensorboard\\PPO_1\\events.out.tfevents.1759974097.Saegan.21784.0 C:\\Senior Project\\GroupBrew\\ApexAI\\metadrive-custom-racing\\wandb\\run-20251008_204122-e3t6t715\\files\\results_v2\\tensorboard\\PPO_1\\events.out.tfevents.1759974097.Saegan.21784.0: A required privilege is not held by the client."}
+{"time":"2025-10-08T20:41:57.1075414-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":78}
+{"time":"2025-10-08T20:41:57.1075414-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-10-08T20:42:27.1409455-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":170}
+{"time":"2025-10-08T20:42:27.1409455-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-10-08T20:43:02.1892337-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":306}
+{"time":"2025-10-08T20:43:02.1892337-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-10-08T20:43:22.2237996-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":396}
+{"time":"2025-10-08T20:43:22.2243242-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-10-08T20:44:17.1817581-05:00","level":"INFO","msg":"stream: closing","id":"e3t6t715"}
+{"time":"2025-10-08T20:44:17.6683576-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-08T20:44:17.9428065-05:00","level":"INFO","msg":"handler: closed","stream_id":"e3t6t715"}
+{"time":"2025-10-08T20:44:17.94331-05:00","level":"INFO","msg":"sender: closed","stream_id":"e3t6t715"}
+{"time":"2025-10-08T20:44:17.94331-05:00","level":"INFO","msg":"stream: closed","id":"e3t6t715"}

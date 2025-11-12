@@ -1,0 +1,12 @@
+{
+  "name": "Straight Track",
+  "type": "straight_pg",
+  "map": "SS",
+  "lane_width": 20.0,
+  "lane_num": 1,
+  "start_seed": 1234,
+  "description": "A simple straight track built via PGBlocks at runtime.",
+  "target_lap_time": 20.0,
+  "lap_distance": 1000,
+  "out_of_road_penalty": 0
+}

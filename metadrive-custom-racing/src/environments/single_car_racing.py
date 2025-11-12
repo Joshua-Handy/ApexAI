@@ -9,7 +9,8 @@ import os
 
 from utils.track_loader import load_track_config
 from environments.oval_right_env import SingleAgentOvalEnv
-
+from environments.straight_env import SingleAgentStraightEnv
+from environments.custom_speedway_env2 import SingleAgentRaceEnv
 
 def create_racing_environment(
     track_name: str = 'custom_speedway',
@@ -28,7 +29,37 @@ def create_racing_environment(
 
     # If this track specifies a special type, route to the corresponding env
     track_type = cfg.get("type")
-    if track_type == "oval_right_pg":
+    if track_type == "straight_pg":
+        env = SingleAgentStraightEnv({
+            'start_seed': start_seed if start_seed is not None else cfg.get('start_seed', 1000),
+            'traffic_density': 0.0,
+            'use_render': use_render,
+            '_render_mode': 'headless' if not use_render else 'onscreen',
+            'manual_control': manual_control,
+            'vehicle_config': {
+                'show_lidar': True,
+                'show_lane_line_detector': True,
+                'show_side_detector': True,
+            },
+            'image_observation': image_observation,
+            'num_scenarios': 1,
+            'out_of_road_penalty': 0,
+            'crash_vehicle_penalty': 0,
+            'crash_object_penalty': 0,
+            'crash_sidewalk_penalty': 0,
+            'out_of_road_done': False,
+            'crash_vehicle_done': False,
+            'crash_object_done': False,
+            'on_continuous_line_done': True,
+            'success_reward': 0,
+            'map_config': {
+                'lane_num': cfg.get('lane_num', 1),
+                'lane_width': cfg.get('lane_width', 4.0),
+                'exit_length': 30,
+            }
+        })
+        return env
+    elif track_type == "oval_right_pg":
         env = SingleAgentOvalEnv({
             'start_seed': start_seed if start_seed is not None else cfg.get('start_seed', 1000),
             'traffic_density': 0.0,
@@ -58,7 +89,38 @@ def create_racing_environment(
             }
         })
         return env
-
+    elif track_type == "oval":
+        print("making race env")
+        print(cfg.get("lane_width"))
+        env = SingleAgentRaceEnv({
+            'start_seed': start_seed if start_seed is not None else 42,
+            'traffic_density': 0.0,
+            'use_render': use_render,
+            '_render_mode': 'headless' if not use_render else 'onscreen',
+            'manual_control': manual_control,
+            'vehicle_config': {
+                'show_lidar': True,
+                'show_lane_line_detector': True,
+                'show_side_detector': True,
+            },
+            'image_observation': image_observation,
+            'num_scenarios': 1,
+            'out_of_road_penalty': 0,
+            'crash_vehicle_penalty': 0,
+            'crash_object_penalty': 0,
+            'crash_sidewalk_penalty': 0,
+            'out_of_road_done': False,
+            'crash_vehicle_done': False,
+            'crash_object_done': False,
+            'on_continuous_line_done': True,
+            'success_reward': 0,
+            'map_config': {
+                'lane_num': cfg.get('lane_num', 1),
+                'lane_width': cfg.get('lane_width', 4.0),
+                'exit_length': 30,
+            }
+        })
+        return env
     env_config: Dict[str, Any] = {
         # MetaDrive accepts a 'map' string and 'start_seed'
         'map': cfg.get('map'),
@@ -76,6 +138,16 @@ def create_racing_environment(
         },
         'image_observation': image_observation,
         'num_scenarios': 1,
+        # Match the reward/termination settings used by straight and oval tracks
+        'out_of_road_penalty': 0,
+        'crash_vehicle_penalty': 0,
+        'crash_object_penalty': 0,
+        'crash_sidewalk_penalty': 0,
+        'out_of_road_done': False,
+        'crash_vehicle_done': False,
+        'crash_object_done': False,
+        'on_continuous_line_done': True,
+        'success_reward': 0,
     }
 
     # Create the MetaDrive environment (lazy import with local fallback)

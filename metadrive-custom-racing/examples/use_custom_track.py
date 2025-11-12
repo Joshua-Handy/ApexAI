@@ -62,7 +62,7 @@ def run_demo(track_name: str = "custom_speedway", steps: int = 500):
     print(f"Started env on track: {track_name}")
 
     try:
-        agent = MyAgent(target_speed_kmh=80.0)
+        agent = MyAgent(target_speed_kmh=120.0)
 
         for i in range(steps):
             # Get action from our custom agent

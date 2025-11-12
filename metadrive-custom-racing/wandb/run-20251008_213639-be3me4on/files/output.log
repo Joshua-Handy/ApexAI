@@ -1,0 +1,9 @@
+Weights & Biases run: Straight_v2
+Using cpu device
+Traceback (most recent call last):
+  File "C:\Senior Project\GroupBrew\ApexAI\metadrive-custom-racing\examples\train_sb3.py", line 319, in <module>
+    main()
+  File "C:\Senior Project\GroupBrew\ApexAI\metadrive-custom-racing\examples\train_sb3.py", line 285, in main
+    racing_callback = RacingMetricsCallback(verbose=1)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: RacingMetricsCallback.__init__() missing 2 required positional arguments: 'results_dir' and 'track_name'

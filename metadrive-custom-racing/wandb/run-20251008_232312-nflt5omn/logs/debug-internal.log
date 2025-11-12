@@ -1,0 +1,27 @@
+{"time":"2025-10-08T23:23:14.8111816-05:00","level":"INFO","msg":"stream: starting","core version":"0.22.1"}
+{"time":"2025-10-08T23:23:15.2240905-05:00","level":"INFO","msg":"stream: created new stream","id":"nflt5omn"}
+{"time":"2025-10-08T23:23:15.2240905-05:00","level":"INFO","msg":"handler: started","stream_id":"nflt5omn"}
+{"time":"2025-10-08T23:23:15.2251654-05:00","level":"INFO","msg":"stream: started","id":"nflt5omn"}
+{"time":"2025-10-08T23:23:15.2257024-05:00","level":"INFO","msg":"sender: started","stream_id":"nflt5omn"}
+{"time":"2025-10-08T23:23:15.2257024-05:00","level":"INFO","msg":"writer: started","stream_id":"nflt5omn"}
+{"time":"2025-10-08T23:23:31.5917958-05:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2025-10-08T23:23:31.5917958-05:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"C:\\\\Senior Project\\\\GroupBrew\\\\ApexAI\\\\metadrive-custom-racing\\\\results_v2\\\\tensorboard\\\\PPO_1\")","namespace":""}
+{"time":"2025-10-08T23:23:31.5924044-05:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"C:\\Senior Project\\GroupBrew\\ApexAI\\metadrive-custom-racing\\results_v2\\tensorboard\\PPO_1\\events.out.tfevents.1759983801.Saegan.18260.0","runPath":"results_v2/tensorboard/PPO_1/events.out.tfevents.1759983801.Saegan.18260.0"}
+{"time":"2025-10-08T23:23:31.5934878-05:00","level":"ERROR","msg":"tensorboard: error creating symlink","target":"C:\\Senior Project\\GroupBrew\\ApexAI\\metadrive-custom-racing\\results_v2\\tensorboard\\PPO_1\\events.out.tfevents.1759983801.Saegan.18260.0","symlink":"C:\\Senior Project\\GroupBrew\\ApexAI\\metadrive-custom-racing\\wandb\\run-20251008_232312-nflt5omn\\files\\results_v2\\tensorboard\\PPO_1\\events.out.tfevents.1759983801.Saegan.18260.0","error":"symlink C:\\Senior Project\\GroupBrew\\ApexAI\\metadrive-custom-racing\\results_v2\\tensorboard\\PPO_1\\events.out.tfevents.1759983801.Saegan.18260.0 C:\\Senior Project\\GroupBrew\\ApexAI\\metadrive-custom-racing\\wandb\\run-20251008_232312-nflt5omn\\files\\results_v2\\tensorboard\\PPO_1\\events.out.tfevents.1759983801.Saegan.18260.0: A required privilege is not held by the client."}
+{"time":"2025-10-08T23:24:21.6983863-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":269}
+{"time":"2025-10-08T23:24:21.6983863-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":2}
+{"time":"2025-10-08T23:26:01.8200228-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":589}
+{"time":"2025-10-08T23:26:01.8205472-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-10-08T23:26:56.8649464-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":727}
+{"time":"2025-10-08T23:26:56.8649464-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-10-08T23:27:11.8827083-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":773}
+{"time":"2025-10-08T23:27:11.8832308-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-10-08T23:27:31.9008248-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":821}
+{"time":"2025-10-08T23:27:31.9008248-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-10-08T23:27:51.9169078-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":867}
+{"time":"2025-10-08T23:27:51.9169078-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2025-10-08T23:31:28.9879548-05:00","level":"INFO","msg":"stream: closing","id":"nflt5omn"}
+{"time":"2025-10-08T23:31:29.830176-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-08T23:31:30.5458851-05:00","level":"INFO","msg":"handler: closed","stream_id":"nflt5omn"}
+{"time":"2025-10-08T23:31:30.5458851-05:00","level":"INFO","msg":"sender: closed","stream_id":"nflt5omn"}
+{"time":"2025-10-08T23:31:30.5458851-05:00","level":"INFO","msg":"stream: closed","id":"nflt5omn"}

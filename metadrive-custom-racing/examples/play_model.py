@@ -50,9 +50,17 @@ def play(model_path: str, track: str = 'custom_speedway', episodes: int = 5):
         return obs, reward, done, info
 
     import numpy as _np
-
+    import time
+    
     # Optional: apply VecNormalize stats if present alongside the model
     vecnorm_path = os.path.join(os.path.dirname(model_path), f'vecnorm_{track}.pkl')
+    
+    # For v3 models in results_v2, try the v3 naming convention first
+    if 'results_v2' in model_path and '_v3_' in os.path.basename(model_path):
+        vecnorm_v3_path = os.path.join(os.path.dirname(model_path), f'vecnorm_{track}_v3.pkl')
+        if os.path.exists(vecnorm_v3_path):
+            vecnorm_path = vecnorm_v3_path
+    
     is_vec = False
     try:
         from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
@@ -93,12 +101,16 @@ def play(model_path: str, track: str = 'custom_speedway', episodes: int = 5):
 
     frames = [] if do_record else None
 
+    best_reward = float('-inf')
+    best_episode = 0
+    
     for ep in range(episodes):
         reset_ret = env.reset()
         obs = _unpack_reset(reset_ret)
         total_reward = 0.0
         done = False
         step_i = 0
+        start_time = time.time()
 
         while not done:
             # Prepare observation for model.predict
@@ -130,6 +142,15 @@ def play(model_path: str, track: str = 'custom_speedway', episodes: int = 5):
                 total_reward += float(reward)
 
             step_i += 1
+            
+        end_time = time.time()
+        episode_time = end_time - start_time
+        print(f'Episode {ep+1} time: {episode_time:.2f} seconds')
+            
+        # Track best episode
+        if total_reward > best_reward:
+            best_reward = total_reward
+            best_episode = ep + 1
 
             # Recording: grab screen buffer
             if do_record:
@@ -143,6 +164,9 @@ def play(model_path: str, track: str = 'custom_speedway', episodes: int = 5):
                     frames.append(img)
 
         print(f'Episode {ep+1} reward: {total_reward}')
+    
+    print(f'\nBest Performance:')
+    print(f'Episode {best_episode} had the highest reward: {best_reward:.2f}')
 
     try:
         env.close()

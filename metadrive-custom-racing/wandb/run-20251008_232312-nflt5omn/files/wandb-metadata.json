@@ -1,0 +1,57 @@
+{
+  "os": "Windows-11-10.0.26100-SP0",
+  "python": "CPython 3.12.5",
+  "startedAt": "2025-10-09T04:23:12.466009Z",
+  "args": [
+    "--load-model",
+    "results_v2/checkpoint_straight_500000_steps.zip",
+    "--track",
+    "right_oval",
+    "--timesteps",
+    "500000",
+    "--num-envs",
+    "4",
+    "--wandb",
+    "--wandb-name",
+    "Right_Oval_v3",
+    "--wandb-project",
+    "metadrive-racingv2",
+    "--results-dir",
+    "results_v2"
+  ],
+  "program": "C:\\Senior Project\\GroupBrew\\ApexAI\\metadrive-custom-racing\\examples\\transfer_learn.py",
+  "codePath": "metadrive-custom-racing\\examples\\transfer_learn.py",
+  "codePathLocal": "examples\\transfer_learn.py",
+  "git": {
+    "remote": "https://github.com/Joshua-Handy/ApexAI.git",
+    "commit": "3fdb714cd9d76a880f21b141cec3cca2f7670b1d"
+  },
+  "email": "saeganafarias@gmail.com",
+  "root": "C:\\Senior Project\\GroupBrew\\ApexAI\\metadrive-custom-racing",
+  "host": "Saegan",
+  "executable": "C:\\Users\\Acyla\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "cpu_count": 8,
+  "cpu_count_logical": 12,
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "510838960128",
+      "used": "214863441920"
+    }
+  },
+  "memory": {
+    "total": "14710988800"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+      "memoryTotal": "6439305216",
+      "cudaCores": 2560,
+      "architecture": "Ada",
+      "uuid": "GPU-78df7398-ea8a-3534-371a-e3fd1838e1e0"
+    }
+  ],
+  "cudaVersion": "12.9",
+  "writerId": "n12wh9tlk47kp5er6684fnj8azk01aq1"
+}

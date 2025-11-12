@@ -1,0 +1,9 @@
+Weights & Biases run: Straight_v2
+Using cpu device
+Traceback (most recent call last):
+  File "C:\Senior Project\GroupBrew\ApexAI\metadrive-custom-racing\examples\train_sb3.py", line 305, in <module>
+    main()
+  File "C:\Senior Project\GroupBrew\ApexAI\metadrive-custom-racing\examples\train_sb3.py", line 264, in main
+    wandb_callback = WandbCallback(
+                     ^^^^^^^^^^^^^^
+TypeError: WandbCallback.__init__() got an unexpected keyword argument 'update_model_step'
