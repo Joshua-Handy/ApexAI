@@ -1,0 +1,189 @@
+[38;20m[INFO] Environment: MultiAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 8000[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+🏁 Using custom right-turn oval track!
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+🏎️  Training agents: ['agent0', 'agent1']
+🏎️  Setting up agent0...
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+🏎️  Setting up agent1...
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+
+🚀 Starting coordinated training...
+💡 Agents will train in coordination with shared experience!
+🎯 Using EXACT SAME config as successful single-agent training!
+   - Conservative learning rate: 5e-6
+   - Horizon: 8000 steps
+   - Success reward: 30.0
+
+
+🏁 Training Round 1/5
+--------------------------------------------------
+🏎️  Training agent0 (Round 1)...
+   📊 Starting training with detailed progress tracking...
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+Logging to test_wandb_logging\tensorboard_agent0\PPO_0
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 2,048
+         Episode: 1 | Reward: 48.2 | Length: 1403
+         Mean (10ep): Reward 48.2 | Length 1403.0 | Best: 48.2
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 48.2     |
+|    episode_length   | 1403     |
+|    episode_reward   | 48.2     |
+|    mean_reward_10ep | 48.2     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1.4e+03  |
+|    ep_rew_mean     | 48.2     |
+| time/              |          |
+|    fps             | 206      |
+|    iterations      | 1        |
+|    time_elapsed    | 9        |
+|    total_timesteps | 2048     |
+---------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 4,096
+         Episode: 2 | Reward: 39.6 | Length: 1161
+         Mean (10ep): Reward 43.9 | Length 1282.0 | Best: 48.2
+------------------------------------------
+| agent0/                 |              |
+|    best_mean_reward     | 48.2         |
+|    episode_length       | 1161         |
+|    episode_reward       | 39.6         |
+|    mean_reward_10ep     | 43.9         |
+| train/                  |              |
+|    approx_kl            | 0.0010670456 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | -0.00597     |
+|    learning_rate        | 5e-06        |
+|    loss                 | 0.248        |
+|    n_updates            | 10           |
+|    policy_gradient_loss | -0.00293     |
+|    std                  | 1            |
+|    value_loss           | 1.3          |
+------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1.28e+03 |
+|    ep_rew_mean     | 43.9     |
+| time/              |          |
+|    fps             | 233      |
+|    iterations      | 2        |
+|    time_elapsed    | 17       |
+|    total_timesteps | 4096     |
+---------------------------------
+      👥 agent0 - Timesteps: 6,144
+         Episode: 3 | Reward: 39.6 | Length: 1161
+         Mean (10ep): Reward 42.5 | Length 1241.7 | Best: 48.2
+------------------------------------------
+| agent0/                 |              |
+|    best_mean_reward     | 48.2         |
+|    episode_length       | 1161         |
+|    episode_reward       | 39.6         |
+|    mean_reward_10ep     | 42.5         |
+| train/                  |              |
+|    approx_kl            | 0.0012333398 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | 0.024        |
+|    learning_rate        | 5e-06        |
+|    loss                 | 0.0645       |
+|    n_updates            | 20           |
+|    policy_gradient_loss | -0.00343     |
+|    std                  | 1            |
+|    value_loss           | 1.39         |
+------------------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1.28e+03 |
+|    ep_rew_mean     | 43.9     |
+| time/              |          |
+|    fps             | 254      |
+|    iterations      | 3        |
+|    time_elapsed    | 24       |
+|    total_timesteps | 6144     |
+---------------------------------
+
+❌ Training failed: [WinError 1314] A required privilege is not held by the client: 'C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\test_wandb_logging\\wandb_agent0\\model.zip' -> 'C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\wandb\\run-20251013_222858-k86613w5\\files\\model.zip'
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_coordinated_multi_agent.py", line 527, in train_coordinated_multi_agent_racing
+    model.learn(
+    ~~~~~~~~~~~^
+        total_timesteps=steps_per_agent,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        reset_num_timesteps=False,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        callback=callbacks[agent_id],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ~~~~~~~~~~~~~^
+        total_timesteps=total_timesteps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        progress_bar=progress_bar,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 339, in learn
+    callback.on_training_end()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\callbacks.py", line 117, in on_training_end
+    self._on_training_end()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\callbacks.py", line 232, in _on_training_end
+    callback.on_training_end()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\callbacks.py", line 117, in on_training_end
+    self._on_training_end()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\integration\sb3\sb3.py", line 141, in _on_training_end
+    self.save_model()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\integration\sb3\sb3.py", line 145, in save_model
+    wandb.save(self.path, base_path=self.model_save_path)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 444, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 2126, in save
+    return self._save(
+           ~~~~~~~~~~^
+        resolved_glob_path,
+        ^^^^^^^^^^^^^^^^^^^
+        resolved_base_path,
+        ^^^^^^^^^^^^^^^^^^^
+        policy,
+        ^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 2185, in _save
+    target_path.symlink_to(source_path)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Python313\Lib\pathlib\_local.py", line 789, in symlink_to
+    os.symlink(target, self, target_is_directory)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 1314] A required privilege is not held by the client: 'C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\test_wandb_logging\\wandb_agent0\\model.zip' -> 'C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\wandb\\run-20251013_222858-k86613w5\\files\\model.zip'
+✅ agent0 final model saved: test_wandb_logging\final_models\agent0_final.zip
+✅ agent1 final model saved: test_wandb_logging\final_models\agent1_final.zip

@@ -1,0 +1,331 @@
+📁 Loading: results_agent_0/checkpoint_right_oval_500000_steps.zip
+[38;20m[INFO] Environment: MetaDriveEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 2000[0m
+WARNING:root:BaseEngine is not launched, fail to sync seed to engine!
+🔄 Loading pre-trained model...
+Wrapping the env in a DummyVecEnv.
+✅ Model loaded successfully!
+🚀 Starting training for 500,000 additional steps...
+📊 Training metrics will be logged to wandb...
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1000[0m
+Logging to results_agent_0\tensorboard\PPO_agent_0_continued_0
+[2K---------------------------------━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4,092/500,000 [0m [ [33m0:00:26[0m < [36m0:54:16[0m , [31m152 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 81.6     |
+|    ep_rew_mean     | 32.7     |
+| time/              |          |
+|    fps             | 150      |
+|    iterations      | 1        |
+|    time_elapsed    | 27       |
+|    total_timesteps | 504096   |
+---------------------------------
+[2KEarly stopping at step 1 due to reaching max kl: 0.02━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4,092/500,000 [0m [ [33m0:00:27[0m < [36m0:54:16[0m , [31m152 it/s[0m ]
+[2K-----------------------------------------8;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m8,173/500,000 [0m [ [33m0:00:55[0m < [36m0:56:11[0m , [31m146 it/s[0m ]
+| rollout/                |             |
+|    ep_len_mean          | 58.6        |
+|    ep_rew_mean          | 11.6        |
+| time/                   |             |
+|    fps                  | 146         |
+|    iterations           | 2           |
+|    time_elapsed         | 55          |
+|    total_timesteps      | 508192      |
+| train/                  |             |
+|    approx_kl            | 0.015666423 |
+|    clip_fraction        | 0.0542      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.83       |
+|    explained_variance   | 0.144       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 43.3        |
+|    n_updates            | 338         |
+|    policy_gradient_loss | 0.00169     |
+|    std                  | 0.995       |
+|    value_loss           | 116         |
+-----------------------------------------
+[2KEarly stopping at step 1 due to reaching max kl: 0.02━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m8,173/500,000 [0m [ [33m0:00:55[0m < [36m0:56:11[0m , [31m146 it/s[0m ]
+[2K-----------------------------------------8;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m12,267/500,000 [0m [ [33m0:01:21[0m < [36m0:50:58[0m , [31m160 it/s[0m ]
+| rollout/                |             |
+|    ep_len_mean          | 58.3        |
+|    ep_rew_mean          | 11.6        |
+| time/                   |             |
+|    fps                  | 150         |
+|    iterations           | 3           |
+|    time_elapsed         | 81          |
+|    total_timesteps      | 512288      |
+| train/                  |             |
+|    approx_kl            | 0.009911348 |
+|    clip_fraction        | 0.0352      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.83       |
+|    explained_variance   | 0.0807      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 24          |
+|    n_updates            | 340         |
+|    policy_gradient_loss | -4.54e-05   |
+|    std                  | 0.995       |
+|    value_loss           | 60.9        |
+-----------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.02m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m12,267/500,000 [0m [ [33m0:01:21[0m < [36m0:50:58[0m , [31m160 it/s[0m ]
+[2K-----------------------------------------8;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m16,349/500,000 [0m [ [33m0:01:48[0m < [36m0:50:54[0m , [31m158 it/s[0m ]
+| rollout/                |             |
+|    ep_len_mean          | 61.6        |
+|    ep_rew_mean          | 13.6        |
+| time/                   |             |
+|    fps                  | 151         |
+|    iterations           | 4           |
+|    time_elapsed         | 108         |
+|    total_timesteps      | 516384      |
+| train/                  |             |
+|    approx_kl            | 0.007824731 |
+|    clip_fraction        | 0.12        |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.83       |
+|    explained_variance   | 0.0635      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 20.8        |
+|    n_updates            | 341         |
+|    policy_gradient_loss | 0.0042      |
+|    std                  | 0.995       |
+|    value_loss           | 43.7        |
+-----------------------------------------
+[2KEarly stopping at step 1 due to reaching max kl: 0.0214m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m16,349/500,000 [0m [ [33m0:01:48[0m < [36m0:50:54[0m , [31m158 it/s[0m ]
+[2K---------------------------------------[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m20,453/500,000 [0m [ [33m0:02:14[0m < [36m0:50:30[0m , [31m158 it/s[0m ]s[0m ]
+| rollout/                |           |
+|    ep_len_mean          | 60.4      |
+|    ep_rew_mean          | 12.8      |
+| time/                   |           |
+|    fps                  | 152       |
+|    iterations           | 5         |
+|    time_elapsed         | 134       |
+|    total_timesteps      | 520480    |
+| train/                  |           |
+|    approx_kl            | 0.0066283 |
+|    clip_fraction        | 0.0425    |
+|    clip_range           | 0.2       |
+|    entropy_loss         | -2.82     |
+|    explained_variance   | 0.115     |
+|    learning_rate        | 0.0003    |
+|    loss                 | 13        |
+|    n_updates            | 343       |
+|    policy_gradient_loss | 0.00312   |
+|    std                  | 0.991     |
+|    value_loss           | 27.6      |
+---------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.030m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m20,453/500,000 [0m [ [33m0:02:14[0m < [36m0:50:30[0m , [31m158 it/s[0m ]
+[2K-----------------------------------------38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m24,554/500,000 [0m [ [33m0:02:40[0m < [36m0:50:41[0m , [31m156 it/s[0m ]
+| rollout/                |             |
+|    ep_len_mean          | 51.6        |
+|    ep_rew_mean          | 9.48        |
+| time/                   |             |
+|    fps                  | 153         |
+|    iterations           | 6           |
+|    time_elapsed         | 160         |
+|    total_timesteps      | 524576      |
+| train/                  |             |
+|    approx_kl            | 0.008331678 |
+|    clip_fraction        | 0.112       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.82       |
+|    explained_variance   | 0.0798      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 12.5        |
+|    n_updates            | 344         |
+|    policy_gradient_loss | 0.00524     |
+|    std                  | 0.99        |
+|    value_loss           | 26.3        |
+-----------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.02114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m24,554/500,000 [0m [ [33m0:02:40[0m < [36m0:50:41[0m , [31m156 it/s[0m ]
+[2K-----------------------------------------[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m28,662/500,000 [0m [ [33m0:03:40[0m < [36m2:13:38[0m , [31m59 it/s[0m ]s[0m ]
+| rollout/                |             |
+|    ep_len_mean          | 42.5        |
+|    ep_rew_mean          | 4.51        |
+| time/                   |             |
+|    fps                  | 129         |
+|    iterations           | 7           |
+|    time_elapsed         | 220         |
+|    total_timesteps      | 528672      |
+| train/                  |             |
+|    approx_kl            | 0.007839005 |
+|    clip_fraction        | 0.133       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.82       |
+|    explained_variance   | 0.19        |
+|    learning_rate        | 0.0003      |
+|    loss                 | 13.2        |
+|    n_updates            | 345         |
+|    policy_gradient_loss | 0.0147      |
+|    std                  | 0.99        |
+|    value_loss           | 24.7        |
+-----------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.03[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m28,662/500,000 [0m [ [33m0:03:40[0m < [36m2:13:38[0m , [31m59 it/s[0m ]
+[2KTraceback (most recent call last):━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+[2K  File [0m [38;2;249;38;114m━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\quick_continue_training_wand
+b.py", line 215, in train_agent
+    model.learn(
+    ~~~~~~~~~~~^
+        total_timesteps=additional_steps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        tb_log_name=f"PPO_agent_{agent_num}_continued"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+[2K  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\ppo\ppo.py", line 311,━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+in learn
+    return super().learn(
+           ~~~~~~~~~~~~~^
+        total_timesteps=total_timesteps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        progress_bar=progress_bar,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+[2K  File [0m [38;2;249;38;114m━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algorithm.py
+", line 324, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer,
+n_rollout_steps=self.n_steps)
+[2K  File [0m [38;2;249;38;114m━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algorithm.py
+", line 218, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(clipped_actions)
+                                     ~~~~~~~~^^^^^^^^^^^^^^^^^
+[2K  File [0m [38;2;249;38;114m━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\base_vec_env.p
+y", line 222, in step
+    return self.step_wait()
+           ~~~~~~~~~~~~~~^^
+[2K  File [0m [38;2;249;38;114m━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.
+py", line 71, in step_wait
+    obs, self.reset_infos[env_idx] = self.envs[env_idx].reset()
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~^^
+[2K  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\monitor.py", ━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+line 83, in reset
+    return self.env.reset(**kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py", line 532, in ━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+reset
+    reset_info = self.engine.reset()
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\engine\base_engine.py", line 365, ━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+in reset
+    new_step_infos = manager.reset()
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\manager\pg_map_manager.py", line ━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+60, in reset
+    map = self.spawn_object(PGMap, map_config=map_config, random_seed=None)
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\manager\pg_map_manager.py", line ━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+27, in spawn_object
+    map = self.engine.spawn_object(object_class, auto_fill_random_seed=False, force_spawn=True, *args,
+**kwargs)
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\engine\base_engine.py", line 140, ━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+in spawn_object
+    obj = object_class(**kwargs)
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\map\base_map.py", line ━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+63, in __init__
+    self._generate()
+    ~~~~~~~~~~~~~~^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\map\pg_map.py", line 55,━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+in _generate
+    self._big_generate(parent_node_path, physics_world)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\map\pg_map.py", line 77,━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+in _big_generate
+    big_map.generate(self._config[self.GENERATE_TYPE], self._config[self.GENERATE_CONFIG])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\algorithm\BIG.py", line ━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+88, in generate
+    if self.big_helper_func():
+       ~~~~~~~~~~~~~~~~~~~~^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\algorithm\BIG.py", line ━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+96, in big_helper_func
+    self._forward()
+    ~~~~~~~~~~~~~^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\algorithm\BIG.py", line ━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+145, in _forward
+    success = self.construct(block)
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\algorithm\BIG.py", line ━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+135, in construct
+    success = block.construct_block(self._render_node_path, self._physics_world)
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\block\base_block.py", ━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+line 124, in construct_block
+    self._create_in_world()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\block\base_block.py", ━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+line 228, in _create_in_world
+    self.lane_line_node_path.flattenStrong()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+[2KKeyboardInterrupt;249;38;114m━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+[2Km   6%[0m [38;2;249;38;114m━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+During handling of the above exception, another exception occurred:
+
+[2KTraceback (most recent call last):0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+[2K  File [0m [38;2;249;38;114m━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\quick_continue_training_wand
+b.py", line 360, in <module>
+    main()
+    ~~~~^^
+[2K  File [0m [38;2;249;38;114m━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\quick_continue_training_wand
+b.py", line 323, in main
+    success = train_agent(agent_num, additional_steps)
+[2K  File [0m [38;2;249;38;114m━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\quick_continue_training_wand
+b.py", line 266, in train_agent
+    env.close()
+    ~~~~~~~~~^^
+[2K  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\monitor.py", ━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+line 117, in close
+    super().close()
+    ~~~~~~~~~~~~~^^
+[2K  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\gymnasium\core.py", line 341, in close━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+    return self.env.close()
+           ~~~~~~~~~~~~~~^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py", line 647, in ━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+close
+    close_engine()
+    ~~~~~~~~~~~~^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\engine\engine_utils.py", line 58, ━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+in close_engine
+    BaseEngine.singleton.close()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\engine\base_engine.py", line 513, ━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+in close
+    manager.destroy()
+    ~~~~~~~~~~~~~~~^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\manager\pg_map_manager.py", line ━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+43, in destroy
+    self.clear_stored_maps()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\manager\pg_map_manager.py", line ━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+142, in clear_stored_maps
+    m.destroy()
+    ~~~~~~~~~^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\map\base_map.py", line ━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+116, in destroy
+    block.destroy()
+    ~~~~~~~~~~~~~^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\block\base_block.py", ━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+line 352, in destroy
+    super(BaseBlock, self).destroy()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\base_class\base_object.py", line ━━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+280, in destroy
+    clear_node_list(self._node_path_list)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\base_class\base_object.py", line ━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+53, in clear_node_list
+    node_path.destroy()
+    ~~~~~~~~~~~~~~~~~^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\engine\physics_node.py", line 49, ━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+in destroy
+    self.clearPythonTag(self.getName())
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+[2KKeyboardInterrupt;249;38;114m━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]
+[35m   6%[0m [38;2;249;38;114m━━━[0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m30,474/500,000 [0m [ [33m0:04:15[0m < [36m2:31:17[0m , [31m52 it/s[0m ]

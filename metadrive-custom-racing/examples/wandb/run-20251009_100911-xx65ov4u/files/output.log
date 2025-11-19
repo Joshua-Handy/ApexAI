@@ -1,0 +1,629 @@
+📁 Loading: results_agent_0/checkpoint_right_oval_500000_steps.zip
+[38;20m[INFO] Environment: MetaDriveEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 2000[0m
+WARNING:root:BaseEngine is not launched, fail to sync seed to engine!
+🔄 Loading pre-trained model...
+Wrapping the env in a DummyVecEnv.
+✅ Model loaded successfully!
+🚀 Starting training for 500,000 additional steps...
+📊 Training metrics will be logged to wandb...
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1000[0m
+Logging to results_agent_0\tensorboard\PPO_agent_0_continued_0
+[2K---------------------------------━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4,069/500,000 [0m [ [33m0:00:31[0m < [36m1:03:29[0m , [31m130 it/s[0m ]
+| rollout/           |          |
+|    ep_len_mean     | 76.5     |
+|    ep_rew_mean     | 28.9     |
+| time/              |          |
+|    fps             | 127      |
+|    iterations      | 1        |
+|    time_elapsed    | 32       |
+|    total_timesteps | 504096   |
+---------------------------------
+[2KEarly stopping at step 1 due to reaching max kl: 0.02━━━━━━━━━━━━━━━━━━━━━━━[0m [32m4,069/500,000 [0m [ [33m0:00:32[0m < [36m1:03:29[0m , [31m130 it/s[0m ]
+[2K-----------------------------------------8;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m8,166/500,000 [0m [ [33m0:00:56[0m < [36m0:48:08[0m , [31m170 it/s[0m ]
+| rollout/                |             |
+|    ep_len_mean          | 65.8        |
+|    ep_rew_mean          | 13.6        |
+| time/                   |             |
+|    fps                  | 144         |
+|    iterations           | 2           |
+|    time_elapsed         | 56          |
+|    total_timesteps      | 508192      |
+| train/                  |             |
+|    approx_kl            | 0.015434158 |
+|    clip_fraction        | 0.0473      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.83       |
+|    explained_variance   | 0.15        |
+|    learning_rate        | 0.0003      |
+|    loss                 | 41.4        |
+|    n_updates            | 338         |
+|    policy_gradient_loss | -0.000159   |
+|    std                  | 0.995       |
+|    value_loss           | 116         |
+-----------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.02━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m8,166/500,000 [0m [ [33m0:00:56[0m < [36m0:48:08[0m , [31m170 it/s[0m ]
+[2K------------------------------------------;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m12,249/500,000 [0m [ [33m0:01:21[0m < [36m0:50:50[0m , [31m160 it/s[0m ]
+| rollout/                |              |
+|    ep_len_mean          | 58.1         |
+|    ep_rew_mean          | 10.9         |
+| time/                   |              |
+|    fps                  | 149          |
+|    iterations           | 3            |
+|    time_elapsed         | 82           |
+|    total_timesteps      | 512288       |
+| train/                  |              |
+|    approx_kl            | 0.0065149684 |
+|    clip_fraction        | 0.0879       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.83        |
+|    explained_variance   | 0.0846       |
+|    learning_rate        | 0.0003       |
+|    loss                 | 47.7         |
+|    n_updates            | 339          |
+|    policy_gradient_loss | -0.000432    |
+|    std                  | 0.995        |
+|    value_loss           | 90.3         |
+------------------------------------------
+[2KEarly stopping at step 1 due to reaching max kl: 0.02m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m12,278/500,000 [0m [ [33m0:01:22[0m < [36m0:50:53[0m , [31m160 it/s[0m ]
+[2K------------------------------------------;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m16,333/500,000 [0m [ [33m0:01:45[0m < [36m0:47:15[0m , [31m171 it/s[0m ]
+| rollout/                |              |
+|    ep_len_mean          | 56.9         |
+|    ep_rew_mean          | 9.61         |
+| time/                   |              |
+|    fps                  | 155          |
+|    iterations           | 4            |
+|    time_elapsed         | 105          |
+|    total_timesteps      | 516384       |
+| train/                  |              |
+|    approx_kl            | 0.0075597167 |
+|    clip_fraction        | 0.107        |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.83        |
+|    explained_variance   | 0.0206       |
+|    learning_rate        | 0.0003       |
+|    loss                 | 28.1         |
+|    n_updates            | 341          |
+|    policy_gradient_loss | 0.00423      |
+|    std                  | 0.995        |
+|    value_loss           | 72           |
+------------------------------------------
+[2KEarly stopping at step 1 due to reaching max kl: 0.0214m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m16,365/500,000 [0m [ [33m0:01:45[0m < [36m0:47:24[0m , [31m170 it/s[0m ]
+[2K------------------------------------------8;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m20,456/500,000 [0m [ [33m0:02:07[0m < [36m0:43:31[0m , [31m184 it/s[0m ]s[0m ]
+| rollout/                |              |
+|    ep_len_mean          | 61.2         |
+|    ep_rew_mean          | 11.8         |
+| time/                   |              |
+|    fps                  | 160          |
+|    iterations           | 5            |
+|    time_elapsed         | 127          |
+|    total_timesteps      | 520480       |
+| train/                  |              |
+|    approx_kl            | 0.0066499226 |
+|    clip_fraction        | 0.0985       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.83        |
+|    explained_variance   | 0.141        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 20           |
+|    n_updates            | 343          |
+|    policy_gradient_loss | 0.00303      |
+|    std                  | 0.997        |
+|    value_loss           | 44           |
+------------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.020m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m20,456/500,000 [0m [ [33m0:02:07[0m < [36m0:43:31[0m , [31m184 it/s[0m ]
+[2K-----------------------------------------38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m24,571/500,000 [0m [ [33m0:02:30[0m < [36m0:45:16[0m , [31m175 it/s[0m ]
+| rollout/                |             |
+|    ep_len_mean          | 63.8        |
+|    ep_rew_mean          | 13.2        |
+| time/                   |             |
+|    fps                  | 162         |
+|    iterations           | 6           |
+|    time_elapsed         | 151         |
+|    total_timesteps      | 524576      |
+| train/                  |             |
+|    approx_kl            | 0.004854297 |
+|    clip_fraction        | 0.0513      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.83       |
+|    explained_variance   | 0.0427      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 16.8        |
+|    n_updates            | 344         |
+|    policy_gradient_loss | 0.00218     |
+|    std                  | 0.997       |
+|    value_loss           | 34.4        |
+-----------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.0238;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m24,571/500,000 [0m [ [33m0:02:30[0m < [36m0:45:16[0m , [31m175 it/s[0m ]
+[2K------------------------------------------8;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m28,645/500,000 [0m [ [33m0:02:53[0m < [36m0:44:10[0m , [31m178 it/s[0m ]
+| rollout/                |              |
+|    ep_len_mean          | 60.5         |
+|    ep_rew_mean          | 11.8         |
+| time/                   |              |
+|    fps                  | 164          |
+|    iterations           | 7            |
+|    time_elapsed         | 174          |
+|    total_timesteps      | 528672       |
+| train/                  |              |
+|    approx_kl            | 0.0057801604 |
+|    clip_fraction        | 0.0828       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.83        |
+|    explained_variance   | 0.071        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 14.5         |
+|    n_updates            | 345          |
+|    policy_gradient_loss | -0.0014      |
+|    std                  | 0.997        |
+|    value_loss           | 27.6         |
+------------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.05114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m28,645/500,000 [0m [ [33m0:02:53[0m < [36m0:44:10[0m , [31m178 it/s[0m ]
+[2K-----------------------------------------[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m32,755/500,000 [0m [ [33m0:03:15[0m < [36m0:41:14[0m , [31m189 it/s[0m ]s[0m ]
+| rollout/                |             |
+|    ep_len_mean          | 62.7        |
+|    ep_rew_mean          | 13.2        |
+| time/                   |             |
+|    fps                  | 167         |
+|    iterations           | 8           |
+|    time_elapsed         | 195         |
+|    total_timesteps      | 532768      |
+| train/                  |             |
+|    approx_kl            | 0.008021525 |
+|    clip_fraction        | 0.084       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.83       |
+|    explained_variance   | 0.179       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 9.5         |
+|    n_updates            | 346         |
+|    policy_gradient_loss | 0.00318     |
+|    std                  | 0.996       |
+|    value_loss           | 20.5        |
+-----------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.02[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m32,755/500,000 [0m [ [33m0:03:15[0m < [36m0:41:14[0m , [31m189 it/s[0m ]
+[2K----------------------------------------[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m36,833/500,000 [0m [ [33m0:03:36[0m < [36m0:39:43[0m , [31m194 it/s[0m ]
+| rollout/                |            |
+|    ep_len_mean          | 60.9       |
+|    ep_rew_mean          | 12.6       |
+| time/                   |            |
+|    fps                  | 170        |
+|    iterations           | 9          |
+|    time_elapsed         | 216        |
+|    total_timesteps      | 536864     |
+| train/                  |            |
+|    approx_kl            | 0.01162568 |
+|    clip_fraction        | 0.171      |
+|    clip_range           | 0.2        |
+|    entropy_loss         | -2.83      |
+|    explained_variance   | 0.113      |
+|    learning_rate        | 0.0003     |
+|    loss                 | 10.7       |
+|    n_updates            | 347        |
+|    policy_gradient_loss | 0.00488    |
+|    std                  | 0.996      |
+|    value_loss           | 24.2       |
+----------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.02m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m36,833/500,000 [0m [ [33m0:03:36[0m < [36m0:39:43[0m , [31m194 it/s[0m ]
+[2K-----------------------------------------[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m40,957/500,000 [0m [ [33m0:03:55[0m < [36m0:37:05[0m , [31m206 it/s[0m ]s[0m ]
+| rollout/                |             |
+|    ep_len_mean          | 60.5        |
+|    ep_rew_mean          | 13.6        |
+| time/                   |             |
+|    fps                  | 173         |
+|    iterations           | 10          |
+|    time_elapsed         | 235         |
+|    total_timesteps      | 540960      |
+| train/                  |             |
+|    approx_kl            | 0.007472489 |
+|    clip_fraction        | 0.107       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.83       |
+|    explained_variance   | 0.0123      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 10.6        |
+|    n_updates            | 348         |
+|    policy_gradient_loss | -0.00378    |
+|    std                  | 0.996       |
+|    value_loss           | 22.6        |
+-----------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.02[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m40,957/500,000 [0m [ [33m0:03:55[0m < [36m0:37:05[0m , [31m206 it/s[0m ]
+[2K-----------------------------------------[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m45,027/500,000 [0m [ [33m0:04:15[0m < [36m0:37:51[0m , [31m200 it/s[0m ]
+| rollout/                |             |
+|    ep_len_mean          | 56.5        |
+|    ep_rew_mean          | 11.7        |
+| time/                   |             |
+|    fps                  | 175         |
+|    iterations           | 11          |
+|    time_elapsed         | 256         |
+|    total_timesteps      | 545056      |
+| train/                  |             |
+|    approx_kl            | 0.009832812 |
+|    clip_fraction        | 0.141       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.83       |
+|    explained_variance   | 0.121       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 11.1        |
+|    n_updates            | 349         |
+|    policy_gradient_loss | 0.00844     |
+|    std                  | 0.996       |
+|    value_loss           | 21.2        |
+-----------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.02[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m45,027/500,000 [0m [ [33m0:04:15[0m < [36m0:37:51[0m , [31m200 it/s[0m ]
+[2K-----------------------------------------[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m49,152/500,000 [0m [ [33m0:04:36[0m < [36m0:37:22[0m , [31m201 it/s[0m ]
+| rollout/                |             |
+|    ep_len_mean          | 61.2        |
+|    ep_rew_mean          | 13.1        |
+| time/                   |             |
+|    fps                  | 177         |
+|    iterations           | 12          |
+|    time_elapsed         | 277         |
+|    total_timesteps      | 549152      |
+| train/                  |             |
+|    approx_kl            | 0.006730432 |
+|    clip_fraction        | 0.109       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.83       |
+|    explained_variance   | 0.0167      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 11.9        |
+|    n_updates            | 350         |
+|    policy_gradient_loss | -0.000668   |
+|    std                  | 0.996       |
+|    value_loss           | 23.2        |
+-----------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.028;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m49,152/500,000 [0m [ [33m0:04:36[0m < [36m0:37:22[0m , [31m201 it/s[0m ]
+[2K------------------------------------------[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m53,211/500,000 [0m [ [33m0:05:10[0m < [36m0:59:55[0m , [31m124 it/s[0m ]s[0m ]
+| rollout/                |              |
+|    ep_len_mean          | 63.2         |
+|    ep_rew_mean          | 14.1         |
+| time/                   |              |
+|    fps                  | 171          |
+|    iterations           | 13           |
+|    time_elapsed         | 311          |
+|    total_timesteps      | 553248       |
+| train/                  |              |
+|    approx_kl            | 0.0075107957 |
+|    clip_fraction        | 0.109        |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.83        |
+|    explained_variance   | 0.059        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 10.3         |
+|    n_updates            | 351          |
+|    policy_gradient_loss | -0.000482    |
+|    std                  | 0.996        |
+|    value_loss           | 22.1         |
+------------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.02╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m53,211/500,000 [0m [ [33m0:05:11[0m < [36m0:59:55[0m , [31m124 it/s[0m ]
+[2K-----------------------------------------m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m57,319/500,000 [0m [ [33m0:05:31[0m < [36m0:36:47[0m , [31m201 it/s[0m ]
+| rollout/                |             |
+|    ep_len_mean          | 61          |
+|    ep_rew_mean          | 12.7        |
+| time/                   |             |
+|    fps                  | 172         |
+|    iterations           | 14          |
+|    time_elapsed         | 332         |
+|    total_timesteps      | 557344      |
+| train/                  |             |
+|    approx_kl            | 0.008354207 |
+|    clip_fraction        | 0.133       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.83       |
+|    explained_variance   | 0.0649      |
+|    learning_rate        | 0.0003      |
+|    loss                 | 10.4        |
+|    n_updates            | 352         |
+|    policy_gradient_loss | 0.00481     |
+|    std                  | 0.995       |
+|    value_loss           | 23          |
+-----------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.0238;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m57,344/500,000 [0m [ [33m0:05:31[0m < [36m0:36:48[0m , [31m201 it/s[0m ]
+[2K-----------------------------------------0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m61,437/500,000 [0m [ [33m0:05:48[0m < [36m0:33:17[0m , [31m220 it/s[0m ]s[0m ]
+| rollout/                |             |
+|    ep_len_mean          | 56.5        |
+|    ep_rew_mean          | 10.7        |
+| time/                   |             |
+|    fps                  | 176         |
+|    iterations           | 15          |
+|    time_elapsed         | 348         |
+|    total_timesteps      | 561440      |
+| train/                  |             |
+|    approx_kl            | 0.007591183 |
+|    clip_fraction        | 0.104       |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.83       |
+|    explained_variance   | 0.056       |
+|    learning_rate        | 0.0003      |
+|    loss                 | 10.2        |
+|    n_updates            | 353         |
+|    policy_gradient_loss | 2.92e-05    |
+|    std                  | 0.994       |
+|    value_loss           | 21.9        |
+-----------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.02m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m61,437/500,000 [0m [ [33m0:05:48[0m < [36m0:33:17[0m , [31m220 it/s[0m ]
+[2K-----------------------------------------0m[38;5;237m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m65,515/500,000 [0m [ [33m0:06:06[0m < [36m0:30:40[0m , [31m236 it/s[0m ]
+| rollout/                |             |
+|    ep_len_mean          | 50.8        |
+|    ep_rew_mean          | 8.23        |
+| time/                   |             |
+|    fps                  | 178         |
+|    iterations           | 16          |
+|    time_elapsed         | 367         |
+|    total_timesteps      | 565536      |
+| train/                  |             |
+|    approx_kl            | 0.005388727 |
+|    clip_fraction        | 0.0671      |
+|    clip_range           | 0.2         |
+|    entropy_loss         | -2.82       |
+|    explained_variance   | -0.00977    |
+|    learning_rate        | 0.0003      |
+|    loss                 | 11.6        |
+|    n_updates            | 354         |
+|    policy_gradient_loss | 0.00275     |
+|    std                  | 0.992       |
+|    value_loss           | 25.5        |
+-----------------------------------------
+[2KEarly stopping at step 0 due to reaching max kl: 0.02m╺[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m65,515/500,000 [0m [ [33m0:06:06[0m < [36m0:30:40[0m , [31m236 it/s[0m ]
+[2KTraceback (most recent call last):━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:19[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:19[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\quick_continue_trainin
+g_wandb.py", line 197, in train_agent
+    model.learn(
+    ~~~~~~~~~~~^
+        total_timesteps=additional_steps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        tb_log_name=f"PPO_agent_{agent_num}_continued"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+[2K  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\ppo\ppo.py", ━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:19[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+line 311, in learn
+    return super().learn(
+           ~~~~~~~~~~~~~^
+        total_timesteps=total_timesteps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        progress_bar=progress_bar,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:19[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algori
+thm.py", line 324, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer,
+n_rollout_steps=self.n_steps)
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:19[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algori
+thm.py", line 218, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(clipped_actions)
+                                     ~~~~~~~~^^^^^^^^^^^^^^^^^
+[2K  File 14%[0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:19[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\base_vec
+_env.py", line 222, in step
+    return self.step_wait()
+           ~~~~~~~~~~~~~~^^
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:19[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\dummy_ve
+c_env.py", line 71, in step_wait
+    obs, self.reset_infos[env_idx] = self.envs[env_idx].reset()
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~^^
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:19[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\monitor.py",
+line 83, in reset
+    return self.env.reset(**kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py", line 524,━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:19[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+in reset
+    self._reset_global_seed(seed)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py", line 928,━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:19[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+in _reset_global_seed
+    self.seed(current_seed)
+    ~~~~~~~~~^^^^^^^^^^^^^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py", line 686,━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:19[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+in seed
+    set_global_random_seed(seed)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\engine\engine_utils.py", ━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:19[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+line 82, in set_global_random_seed
+    engine.seed(random_seed)
+    ~~~~~~~~~~~^^^^^^^^^^^^^
+[2K  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\engine\base_engine.py", line━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:19[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+569, in seed
+    mgr.seed(random_seed)
+    ~~~~~~~~^^^^^^^^^^^^^
+[2KError in sys.excepthook:;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:19[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[2KTraceback (most recent call last):━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[2K  File [35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\exit_hooks.py"[0m, line━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m52[0m, in [35mexc_handler[0m
+    [31mtraceback.print_exception[0m[1;31m(exc_type, exc, tb)[0m
+    [31m~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^[0m
+[2K  File [35m"C:\Python313\Lib\traceback.py"[0m, line [35m130[0m, in [35mprint_exception[0m━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+    [31mte.print[0m[1;31m(file=file, chain=chain, colorize=colorize)[0m
+    [31m~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[2K  File [35m"C:\Python313\Lib\traceback.py"[0m, line [35m1455[0m, in [35mprint[0m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+    [31mprint[0m[1;31m(line, file=file, end="")[0m
+    [31m~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[2K  File [35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\rich\file_proxy.py"[0m, line [35m43[0m, in [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35mwrite[0m
+    with [1;31mconsole[0m:
+         [1;31m^^^^^^^[0m
+[2K  File [35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\rich\console.py"[0m, line [35m870[0m, in  [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m__exit__[0m
+    [31mself._exit_buffer[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\rich\console.py"[0m, line [35m826[0m, in  [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m_exit_buffer[0m
+    [31mself._check_buffer[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\rich\console.py"[0m, line [35m2038[0m, in [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m_check_buffer[0m
+    [31mself._write_buffer[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\rich\console.py"[0m, line [35m2086[0m, in [0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m_write_buffer[0m
+    [31mwrite[0m[1;31m(text)[0m
+    [31m~~~~~[0m[1;31m^^^^^^[0m
+[2K  File [35m"C:\Python313\Lib\contextlib.py"[0m, line [35m85[0m, in [35minner[0m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+    return func(*args, **kwds)
+[2K  File [35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\console_capture.py"[0m,━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+line [35m168[0m, in [35mwrite_with_callbacks[0m
+    n = orig_write(s)
+[2K[1;35mKeyboardInterrupt[0mm━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[2Km  14%[0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+Original exception was:
+[2KTraceback (most recent call last):━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\quick_continue_trainin[0m
+[35mg_wandb.py"[0m, line [35m197[0m, in [35mtrain_agent[0m
+    [31mmodel.learn[0m[1;31m([0m
+    [31m~~~~~~~~~~~[0m[1;31m^[0m
+        [1;31mtotal_timesteps=additional_steps,[0m
+        [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    ...<3 lines>...
+        [1;31mtb_log_name=f"PPO_agent_{agent_num}_continued"[0m
+        [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1;31m)[0m
+    [1;31m^[0m
+[2K  File [35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\ppo\ppo.py"[0m, ━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+line [35m311[0m, in [35mlearn[0m
+    return [31msuper().learn[0m[1;31m([0m
+           [31m~~~~~~~~~~~~~[0m[1;31m^[0m
+        [1;31mtotal_timesteps=total_timesteps,[0m
+        [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    ...<4 lines>...
+        [1;31mprogress_bar=progress_bar,[0m
+        [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1;31m)[0m
+    [1;31m^[0m
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algori[0m
+[35mthm.py"[0m, line [35m324[0m, in [35mlearn[0m
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer,
+n_rollout_steps=self.n_steps)
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algori[0m
+[35mthm.py"[0m, line [35m218[0m, in [35mcollect_rollouts[0m
+    new_obs, rewards, dones, infos = [31menv.step[0m[1;31m(clipped_actions)[0m
+                                     [31m~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^[0m
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\base_vec[0m
+[35m_env.py"[0m, line [35m222[0m, in [35mstep[0m
+    return [31mself.step_wait[0m[1;31m()[0m
+           [31m~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\dummy_ve[0m
+[35mc_env.py"[0m, line [35m71[0m, in [35mstep_wait[0m
+    obs, self.reset_infos[env_idx] = [31mself.envs[env_idx].reset[0m[1;31m()[0m
+                                     [31m~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\monitor.py"[0m,
+line [35m83[0m, in [35mreset[0m
+    return [31mself.env.reset[0m[1;31m(**kwargs)[0m
+           [31m~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^[0m
+[2K  File [35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py"[0m, line [35m524[0m,32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+in [35mreset[0m
+    [31mself._reset_global_seed[0m[1;31m(seed)[0m
+    [31m~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[2K  File [35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py"[0m, line [35m928[0m,32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+in [35m_reset_global_seed[0m
+    [31mself.seed[0m[1;31m(current_seed)[0m
+    [31m~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^[0m
+[2K  File [35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py"[0m, line [35m686[0m,32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+in [35mseed[0m
+    [31mset_global_random_seed[0m[1;31m(seed)[0m
+    [31m~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^[0m
+[2K  File [35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\engine\engine_utils.py"[0m, ━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+line [35m82[0m, in [35mset_global_random_seed[0m
+    [31mengine.seed[0m[1;31m(random_seed)[0m
+    [31m~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^[0m
+[2K  File [35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\engine\base_engine.py"[0m, line━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m569[0m, in [35mseed[0m
+    [31mmgr.seed[0m[1;31m(random_seed)[0m
+    [31m~~~~~~~~[0m[1;31m^^^^^^^^^^^^^[0m
+[2K  File [35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\base_class\randomizable.py"[0m,━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+line [35m18[0m, in [35mseed[0m
+    self.np_random = [31mget_np_random[0m[1;31m(random_seed)[0m
+                     [31m~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^[0m
+[2K  File [35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\utils\random_utils.py"[0m, line━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m29[0m, in [35mget_np_random[0m
+    rng = np.random.RandomState()
+[2K  File [35m"numpy\\random\\mtrand.pyx"[0m, line [35m183[0m, in [35mnumpy.random.mtrand.RandomState.__init__[0m[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[2K  File [35m"_mt19937.pyx"[0m, line [35m132[0m, in [35mnumpy.random._mt19937.MT19937.__init__[0m━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[2K  File [35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\numpy\_core\_ufunc_config.py"[0m, ━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+line [35m479[0m, in [35minner[0m
+    return func(*args, **kwargs)
+[2K[1;35mKeyboardInterrupt[0mm━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[2Km  14%[0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+During handling of the above exception, another exception occurred:
+
+[2KTraceback (most recent call last):━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\quick_continue_trainin[0m
+[35mg_wandb.py"[0m, line [35m332[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\quick_continue_trainin[0m
+[35mg_wandb.py"[0m, line [35m295[0m, in [35mmain[0m
+    success = train_agent(agent_num, additional_steps)
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\quick_continue_trainin[0m
+[35mg_wandb.py"[0m, line [35m238[0m, in [35mtrain_agent[0m
+    [31menv.close[0m[1;31m()[0m
+    [31m~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\monitor.py"[0m,
+line [35m117[0m, in [35mclose[0m
+    [31msuper().close[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [35m"C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\gymnasium\core.py"[0m, line [35m341[0m, in [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35mclose[0m
+    return [31mself.env.close[0m[1;31m()[0m
+           [31m~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py"[0m, line [35m647[0m,32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+in [35mclose[0m
+    [31mclose_engine[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\engine\engine_utils.py"[0m, ━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+line [35m58[0m, in [35mclose_engine[0m
+    [31mBaseEngine.singleton.close[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\engine\base_engine.py"[0m, line━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m513[0m, in [35mclose[0m
+    [31mmanager.destroy[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\manager\pg_map_manager.py"[0m, ━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+line [35m43[0m, in [35mdestroy[0m
+    [31mself.clear_stored_maps[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\manager\pg_map_manager.py"[0m, ━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+line [35m142[0m, in [35mclear_stored_maps[0m
+    [31mm.destroy[0m[1;31m()[0m
+    [31m~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\map\base_map.py"[0m, ━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+line [35m116[0m, in [35mdestroy[0m
+    [31mblock.destroy[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\block\base_block.py"[0m,
+line [35m352[0m, in [35mdestroy[0m
+    [31msuper(BaseBlock, self).destroy[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\base_class\base_object.py"[0m, ━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+line [35m278[0m, in [35mdestroy[0m
+    [31mself.static_nodes.destroy_node_list[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[2K  File [35m"C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\base_class\base_object.py"[0m, ━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+line [35m99[0m, in [35mdestroy_node_list[0m
+    [31mnode.removeAllChildren[0m[1;31m()[0m
+    [31m~~~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^[0m
+[2K[1;35mKeyboardInterrupt[0mm━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]
+[2K[35m  14%[0m [38;2;249;38;114m━━━━━━[0m[38;2;249;38;114m╸[0m[38;5;237m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m68,107/500,000 [0m [ [33m0:06:20[0m < [36m0:33:02[0m , [31m218 it/s[0m ]

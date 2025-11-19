@@ -1,0 +1,1267 @@
+[38;20m[INFO] Environment: MultiAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 8000[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+🏁 Using custom right-turn oval track!
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+🏎️  Training agents: ['agent0', 'agent1']
+🏎️  Setting up agent0...
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+🏎️  Setting up agent1...
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+
+🚀 Starting coordinated training...
+💡 Using HYPER-CONSERVATIVE training to prevent ANY performance degradation!
+🎯 Key changes from your degrading training:
+   - Learning rate: 2e-7 (was 5e-6) - 25x more conservative
+   - Batch size: 16 (was 64) - 4x smaller for maximum stability
+   - Clip range: 0.05 (was 0.2) - Prevent ANY large policy changes
+   - Training steps: 20 tiny rounds instead of 10 small
+   - Early stopping: Halt immediately if ANY degradation (patience=2)
+   - Max grad norm: 0.05 - Extremely conservative gradient clipping
+
+
+🏁 Training Round 1/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 1)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 512
+         Episode: 1 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 323      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 512      |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 2.7 avg reward
+   📈 Shared experiences: 512
+
+🏎️  Training agent1 (Round 1)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+----------------------------
+| time/              |     |
+|    fps             | 364 |
+|    iterations      | 1   |
+|    time_elapsed    | 1   |
+|    total_timesteps | 512 |
+----------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 2.7 avg reward
+   📈 Shared experiences: 1,024
+
+✅ Round 1 complete. Checkpoints saved to test_hyper_conservative\round_1
+
+🏁 Training Round 2/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 2)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 1,024
+         Episode: 2 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 417      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 1024     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 2.7 avg reward
+   📈 Shared experiences: 1,536
+
+🏎️  Training agent1 (Round 2)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+-----------------------------
+| time/              |      |
+|    fps             | 434  |
+|    iterations      | 1    |
+|    time_elapsed    | 1    |
+|    total_timesteps | 1024 |
+-----------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 2.7 avg reward
+   📈 Shared experiences: 2,048
+
+✅ Round 2 complete. Checkpoints saved to test_hyper_conservative\round_2
+
+🏁 Training Round 3/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 3)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 1,536
+         Episode: 3 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 402      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 1536     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 2.7 avg reward
+   📈 Shared experiences: 2,560
+
+🏎️  Training agent1 (Round 3)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+-----------------------------
+| time/              |      |
+|    fps             | 416  |
+|    iterations      | 1    |
+|    time_elapsed    | 1    |
+|    total_timesteps | 1536 |
+-----------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 2.7 avg reward
+   📈 Shared experiences: 3,072
+
+✅ Round 3 complete. Checkpoints saved to test_hyper_conservative\round_3
+
+🏁 Training Round 4/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 4)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 2,048
+         Episode: 4 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 415      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 2048     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 2.7 avg reward
+   📈 Shared experiences: 3,584
+
+🏎️  Training agent1 (Round 4)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+-----------------------------
+| time/              |      |
+|    fps             | 459  |
+|    iterations      | 1    |
+|    time_elapsed    | 1    |
+|    total_timesteps | 2048 |
+-----------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 2.7 avg reward
+   📈 Shared experiences: 4,096
+
+✅ Round 4 complete. Checkpoints saved to test_hyper_conservative\round_4
+
+🏁 Training Round 5/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 5)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 2,560
+         Episode: 5 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 367      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 2560     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 2.7 avg reward
+   📈 Shared experiences: 4,608
+
+🏎️  Training agent1 (Round 5)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+-----------------------------
+| time/              |      |
+|    fps             | 437  |
+|    iterations      | 1    |
+|    time_elapsed    | 1    |
+|    total_timesteps | 2560 |
+-----------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 2.7 avg reward
+   📈 Shared experiences: 5,120
+
+✅ Round 5 complete. Checkpoints saved to test_hyper_conservative\round_5
+
+🏁 Training Round 6/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 6)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 3,072
+         Episode: 6 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 399      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 3072     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 2.7 avg reward
+   📈 Shared experiences: 5,632
+
+🏎️  Training agent1 (Round 6)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+-----------------------------
+| time/              |      |
+|    fps             | 399  |
+|    iterations      | 1    |
+|    time_elapsed    | 1    |
+|    total_timesteps | 3072 |
+-----------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 2.7 avg reward
+   📈 Shared experiences: 6,144
+
+✅ Round 6 complete. Checkpoints saved to test_hyper_conservative\round_6
+
+🏁 Training Round 7/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 7)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 3,584
+         Episode: 7 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 337      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 3584     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 2.7 avg reward
+   📈 Shared experiences: 6,656
+
+🏎️  Training agent1 (Round 7)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent1 - Timesteps: 3,584
+         Episode: 1 | Reward: 140.5 | Length: 3122
+         Mean (10ep): Reward 140.5 | Length 3122.0 | Best: 140.5
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | 140      |
+|    episode_length   | 3122     |
+|    episode_reward   | 140      |
+|    mean_reward_10ep | 140      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 3.12e+03 |
+|    ep_rew_mean     | 140      |
+| time/              |          |
+|    fps             | 344      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 3584     |
+---------------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 7,168
+
+✅ Round 7 complete. Checkpoints saved to test_hyper_conservative\round_7
+
+🏁 Training Round 8/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 8)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 4,096
+         Episode: 8 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 384      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 4096     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 7,680
+
+🏎️  Training agent1 (Round 8)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+      👥 agent1 - Timesteps: 4,096
+         Episode: 2 | Reward: 140.5 | Length: 3122
+         Mean (10ep): Reward 140.5 | Length 3122.0 | Best: 140.5
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | 140      |
+|    episode_length   | 3122     |
+|    episode_reward   | 140      |
+|    mean_reward_10ep | 140      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 3.12e+03 |
+|    ep_rew_mean     | 140      |
+| time/              |          |
+|    fps             | 413      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 4096     |
+---------------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 8,192
+
+✅ Round 8 complete. Checkpoints saved to test_hyper_conservative\round_8
+
+🏁 Training Round 9/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 9)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 4,608
+         Episode: 9 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 404      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 4608     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 8,704
+
+🏎️  Training agent1 (Round 9)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+      👥 agent1 - Timesteps: 4,608
+         Episode: 3 | Reward: 140.5 | Length: 3122
+         Mean (10ep): Reward 140.5 | Length 3122.0 | Best: 140.5
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | 140      |
+|    episode_length   | 3122     |
+|    episode_reward   | 140      |
+|    mean_reward_10ep | 140      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 3.12e+03 |
+|    ep_rew_mean     | 140      |
+| time/              |          |
+|    fps             | 376      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 4608     |
+---------------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 9,216
+
+✅ Round 9 complete. Checkpoints saved to test_hyper_conservative\round_9
+
+🏁 Training Round 10/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 10)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 5,120
+         Episode: 10 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 391      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 5120     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 9,728
+
+🏎️  Training agent1 (Round 10)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+      👥 agent1 - Timesteps: 5,120
+         Episode: 4 | Reward: 140.5 | Length: 3122
+         Mean (10ep): Reward 140.5 | Length 3122.0 | Best: 140.5
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | 140      |
+|    episode_length   | 3122     |
+|    episode_reward   | 140      |
+|    mean_reward_10ep | 140      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 3.12e+03 |
+|    ep_rew_mean     | 140      |
+| time/              |          |
+|    fps             | 324      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 5120     |
+---------------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 10,240
+
+✅ Round 10 complete. Checkpoints saved to test_hyper_conservative\round_10
+
+🏁 Training Round 11/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 11)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 5,632
+         Episode: 11 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 259      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 5632     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 10,752
+
+🏎️  Training agent1 (Round 11)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+      👥 agent1 - Timesteps: 5,632
+         Episode: 5 | Reward: 140.5 | Length: 3122
+         Mean (10ep): Reward 140.5 | Length 3122.0 | Best: 140.5
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | 140      |
+|    episode_length   | 3122     |
+|    episode_reward   | 140      |
+|    mean_reward_10ep | 140      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 3.12e+03 |
+|    ep_rew_mean     | 140      |
+| time/              |          |
+|    fps             | 377      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 5632     |
+---------------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 11,264
+
+✅ Round 11 complete. Checkpoints saved to test_hyper_conservative\round_11
+
+🏁 Training Round 12/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 12)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 6,144
+         Episode: 12 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 376      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 6144     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 11,776
+
+🏎️  Training agent1 (Round 12)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+      👥 agent1 - Timesteps: 6,144
+         Episode: 6 | Reward: 140.5 | Length: 3122
+         Mean (10ep): Reward 140.5 | Length 3122.0 | Best: 140.5
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | 140      |
+|    episode_length   | 3122     |
+|    episode_reward   | 140      |
+|    mean_reward_10ep | 140      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 3.12e+03 |
+|    ep_rew_mean     | 140      |
+| time/              |          |
+|    fps             | 415      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 6144     |
+---------------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 12,288
+
+✅ Round 12 complete. Checkpoints saved to test_hyper_conservative\round_12
+
+🏁 Training Round 13/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 13)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 6,656
+         Episode: 13 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 370      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 6656     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 12,800
+
+🏎️  Training agent1 (Round 13)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+      👥 agent1 - Timesteps: 6,656
+         Episode: 7 | Reward: 140.5 | Length: 3122
+         Mean (10ep): Reward 140.5 | Length 3122.0 | Best: 140.5
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | 140      |
+|    episode_length   | 3122     |
+|    episode_reward   | 140      |
+|    mean_reward_10ep | 140      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 3.12e+03 |
+|    ep_rew_mean     | 140      |
+| time/              |          |
+|    fps             | 392      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 6656     |
+---------------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 13,312
+
+✅ Round 13 complete. Checkpoints saved to test_hyper_conservative\round_13
+
+🏁 Training Round 14/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 14)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 7,168
+         Episode: 14 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 380      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 7168     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 13,824
+
+🏎️  Training agent1 (Round 14)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+      👥 agent1 - Timesteps: 7,168
+         Episode: 8 | Reward: 140.5 | Length: 3122
+         Mean (10ep): Reward 140.5 | Length 3122.0 | Best: 140.5
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | 140      |
+|    episode_length   | 3122     |
+|    episode_reward   | 140      |
+|    mean_reward_10ep | 140      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 3.12e+03 |
+|    ep_rew_mean     | 140      |
+| time/              |          |
+|    fps             | 395      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 7168     |
+---------------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 14,336
+
+✅ Round 14 complete. Checkpoints saved to test_hyper_conservative\round_14
+
+🏁 Training Round 15/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 15)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 7,680
+         Episode: 15 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 319      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 7680     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 14,848
+
+🏎️  Training agent1 (Round 15)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+      👥 agent1 - Timesteps: 7,680
+         Episode: 9 | Reward: 140.5 | Length: 3122
+         Mean (10ep): Reward 140.5 | Length 3122.0 | Best: 140.5
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | 140      |
+|    episode_length   | 3122     |
+|    episode_reward   | 140      |
+|    mean_reward_10ep | 140      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 3.12e+03 |
+|    ep_rew_mean     | 140      |
+| time/              |          |
+|    fps             | 220      |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 7680     |
+---------------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 15,360
+
+✅ Round 15 complete. Checkpoints saved to test_hyper_conservative\round_15
+
+🏁 Training Round 16/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 16)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 8,192
+         Episode: 16 | Reward: 2.7 | Length: 345
+         Mean (10ep): Reward 2.7 | Length 345.0 | Best: 2.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 2.67     |
+|    episode_length   | 345      |
+|    episode_reward   | 2.67     |
+|    mean_reward_10ep | 2.67     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 345      |
+|    ep_rew_mean     | 2.67     |
+| time/              |          |
+|    fps             | 163      |
+|    iterations      | 1        |
+|    time_elapsed    | 3        |
+|    total_timesteps | 8192     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 15,872
+
+🏎️  Training agent1 (Round 16)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+      👥 agent1 - Timesteps: 8,192
+         Episode: 10 | Reward: 140.5 | Length: 3122
+         Mean (10ep): Reward 140.5 | Length 3122.0 | Best: 140.5
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | 140      |
+|    episode_length   | 3122     |
+|    episode_reward   | 140      |
+|    mean_reward_10ep | 140      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 3.12e+03 |
+|    ep_rew_mean     | 140      |
+| time/              |          |
+|    fps             | 171      |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 8192     |
+---------------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent1: 140.5 avg reward
+      2. agent0: 2.7 avg reward
+   📈 Shared experiences: 16,384
+
+✅ Round 16 complete. Checkpoints saved to test_hyper_conservative\round_16
+
+🏁 Training Round 17/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 17)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+      👥 agent0 - Timesteps: 8,704
+         Episode: 17 | Reward: 352.7 | Length: 8177
+         Mean (10ep): Reward 37.7 | Length 1128.2 | Best: 37.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 37.7     |
+|    episode_length   | 8177     |
+|    episode_reward   | 353      |
+|    mean_reward_10ep | 37.7     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 4.26e+03 |
+|    ep_rew_mean     | 178      |
+| time/              |          |
+|    fps             | 158      |
+|    iterations      | 1        |
+|    time_elapsed    | 3        |
+|    total_timesteps | 8704     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 177.7 avg reward
+      2. agent1: 140.5 avg reward
+   📈 Shared experiences: 16,896
+
+🏎️  Training agent1 (Round 17)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+      👥 agent1 - Timesteps: 8,704
+         Episode: 11 | Reward: 140.5 | Length: 3122
+         Mean (10ep): Reward 140.5 | Length 3122.0 | Best: 140.5
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | 140      |
+|    episode_length   | 3122     |
+|    episode_reward   | 140      |
+|    mean_reward_10ep | 140      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 3.12e+03 |
+|    ep_rew_mean     | 140      |
+| time/              |          |
+|    fps             | 171      |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 8704     |
+---------------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 177.7 avg reward
+      2. agent1: 140.5 avg reward
+   📈 Shared experiences: 17,408
+
+✅ Round 17 complete. Checkpoints saved to test_hyper_conservative\round_17
+
+🏁 Training Round 18/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 18)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 9,216
+         Episode: 18 | Reward: 352.7 | Length: 8177
+         Mean (10ep): Reward 72.7 | Length 1911.4 | Best: 72.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 72.7     |
+|    episode_length   | 8177     |
+|    episode_reward   | 353      |
+|    mean_reward_10ep | 72.7     |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 4.26e+03 |
+|    ep_rew_mean     | 178      |
+| time/              |          |
+|    fps             | 209      |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 9216     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 177.7 avg reward
+      2. agent1: 140.5 avg reward
+   📈 Shared experiences: 17,920
+
+🏎️  Training agent1 (Round 18)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+      👥 agent1 - Timesteps: 9,216
+         Episode: 12 | Reward: 140.5 | Length: 3122
+         Mean (10ep): Reward 140.5 | Length 3122.0 | Best: 140.5
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | 140      |
+|    episode_length   | 3122     |
+|    episode_reward   | 140      |
+|    mean_reward_10ep | 140      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 3.12e+03 |
+|    ep_rew_mean     | 140      |
+| time/              |          |
+|    fps             | 204      |
+|    iterations      | 1        |
+|    time_elapsed    | 2        |
+|    total_timesteps | 9216     |
+---------------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 177.7 avg reward
+      2. agent1: 140.5 avg reward
+   📈 Shared experiences: 18,432
+
+✅ Round 18 complete. Checkpoints saved to test_hyper_conservative\round_18
+
+🏁 Training Round 19/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 19)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 9,728
+         Episode: 19 | Reward: 352.7 | Length: 8177
+         Mean (10ep): Reward 107.7 | Length 2694.6 | Best: 107.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 108      |
+|    episode_length   | 8177     |
+|    episode_reward   | 353      |
+|    mean_reward_10ep | 108      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 4.26e+03 |
+|    ep_rew_mean     | 178      |
+| time/              |          |
+|    fps             | 396      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 9728     |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 177.7 avg reward
+      2. agent1: 140.5 avg reward
+   📈 Shared experiences: 18,944
+
+🏎️  Training agent1 (Round 19)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+      👥 agent1 - Timesteps: 9,728
+         Episode: 13 | Reward: 140.5 | Length: 3122
+         Mean (10ep): Reward 140.5 | Length 3122.0 | Best: 140.5
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | 140      |
+|    episode_length   | 3122     |
+|    episode_reward   | 140      |
+|    mean_reward_10ep | 140      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 3.12e+03 |
+|    ep_rew_mean     | 140      |
+| time/              |          |
+|    fps             | 425      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 9728     |
+---------------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 177.7 avg reward
+      2. agent1: 140.5 avg reward
+   📈 Shared experiences: 19,456
+
+✅ Round 19 complete. Checkpoints saved to test_hyper_conservative\round_19
+
+🏁 Training Round 20/20
+--------------------------------------------------
+🏎️  Training agent0 (Round 20)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent0\PPO_0
+      👥 agent0 - Timesteps: 10,240
+         Episode: 20 | Reward: 352.7 | Length: 8177
+         Mean (10ep): Reward 142.7 | Length 3477.8 | Best: 142.7
+----------------------------------
+| agent0/             |          |
+|    best_mean_reward | 143      |
+|    episode_length   | 8177     |
+|    episode_reward   | 353      |
+|    mean_reward_10ep | 143      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 4.26e+03 |
+|    ep_rew_mean     | 178      |
+| time/              |          |
+|    fps             | 393      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 10240    |
+---------------------------------
+   ✅ agent0 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 177.7 avg reward
+      2. agent1: 140.5 avg reward
+   📈 Shared experiences: 19,968
+
+🏎️  Training agent1 (Round 20)...
+   📊 Training with HYPER-CONSERVATIVE settings to prevent ANY performance degradation...
+   🔧 Learning Rate: 2e-7 | Batch Size: 16 | Clip Range: 0.05
+   🛡️  Ultra-sensitive early stopping enabled (patience=2)...
+Logging to test_hyper_conservative\tensorboard_agent1\PPO_0
+      👥 agent1 - Timesteps: 10,240
+         Episode: 14 | Reward: 140.5 | Length: 3122
+         Mean (10ep): Reward 140.5 | Length 3122.0 | Best: 140.5
+----------------------------------
+| agent1/             |          |
+|    best_mean_reward | 140      |
+|    episode_length   | 3122     |
+|    episode_reward   | 140      |
+|    mean_reward_10ep | 140      |
+----------------------------------
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 3.12e+03 |
+|    ep_rew_mean     | 140      |
+| time/              |          |
+|    fps             | 381      |
+|    iterations      | 1        |
+|    time_elapsed    | 1        |
+|    total_timesteps | 10240    |
+---------------------------------
+   ✅ agent1 training completed for this round!
+   🏆 Current Rankings:
+      1. agent0: 177.7 avg reward
+      2. agent1: 140.5 avg reward
+   📈 Shared experiences: 20,480
+
+✅ Round 20 complete. Checkpoints saved to test_hyper_conservative\round_20
+✅ agent0 final model saved: test_hyper_conservative\final_models\agent0_final.zip
+✅ agent1 final model saved: test_hyper_conservative\final_models\agent1_final.zip

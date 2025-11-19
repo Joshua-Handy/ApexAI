@@ -1,0 +1,51 @@
+2025-10-09 14:29:56,939 INFO    MainThread:4580 [wandb_setup.py:_flush():81] Current SDK version is 0.22.1
+2025-10-09 14:29:56,940 INFO    MainThread:4580 [wandb_setup.py:_flush():81] Configure stats pid to 4580
+2025-10-09 14:29:56,940 INFO    MainThread:4580 [wandb_setup.py:_flush():81] Loading settings from C:\Users\balde\.config\wandb\settings
+2025-10-09 14:29:56,941 INFO    MainThread:4580 [wandb_setup.py:_flush():81] Loading settings from C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\wandb\settings
+2025-10-09 14:29:56,941 INFO    MainThread:4580 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-10-09 14:29:56,942 INFO    MainThread:4580 [wandb_init.py:setup_run_log_directory():705] Logging user logs to C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\wandb\run-20251009_142956-laqyzyx5\logs\debug.log
+2025-10-09 14:29:56,948 INFO    MainThread:4580 [wandb_init.py:setup_run_log_directory():706] Logging internal logs to C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\wandb\run-20251009_142956-laqyzyx5\logs\debug-internal.log
+2025-10-09 14:29:56,970 INFO    MainThread:4580 [wandb_init.py:init():832] calling init triggers
+2025-10-09 14:29:56,970 INFO    MainThread:4580 [wandb_init.py:init():837] wandb.init called with sweep_config: {}
+config: {'algorithm': 'PPO', 'track': 'right_oval', 'timesteps': 1000000, 'num_envs': 1, 'learning_rate': 5e-06, 'batch_size': 64, 'n_steps': 1024, 'gamma': 0.995, 'gae_lambda': 0.98, 'clip_range': 0.05, 'vecnorm': True, 'seed': 0, 'eval_freq': 5000, 'checkpoint_freq': 5000, '_wandb': {'code_path': 'code/metadrive-custom-racing/examples/train_sb3.py'}}
+2025-10-09 14:29:56,970 INFO    MainThread:4580 [wandb_init.py:init():880] starting backend
+2025-10-09 14:29:59,266 INFO    MainThread:4580 [wandb_init.py:init():883] sending inform_init request
+2025-10-09 14:29:59,819 INFO    MainThread:4580 [wandb_init.py:init():891] backend started and connected
+2025-10-09 14:29:59,822 INFO    MainThread:4580 [wandb_init.py:init():961] updated telemetry
+2025-10-09 14:29:59,910 INFO    MainThread:4580 [wandb_init.py:init():985] communicating run to backend with 90.0 second timeout
+2025-10-09 14:30:00,668 WARNING MainThread:4580 [wandb_init.py:init():1591] [no run ID] interrupted
+Traceback (most recent call last):
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_init.py", line 1582, in init
+    run = wi.init(run_settings, run_config, run_printer)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_init.py", line 1004, in init
+    result = wait_with_progress(
+        run_init_handle,
+        timeout=timeout,
+        display_progress=display_init_message,
+    )
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\mailbox\wait_with_progress.py", line 23, in wait_with_progress
+    return wait_all_with_progress(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        [handle],
+        ^^^^^^^^^
+        timeout=timeout,
+        ^^^^^^^^^^^^^^^^
+        display_progress=display_progress,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )[0]
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\mailbox\wait_with_progress.py", line 77, in wait_all_with_progress
+    return asyncer.run(progress_loop_with_timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\asyncio_manager.py", line 136, in run
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\concurrent\futures\_base.py", line 451, in result
+    self._condition.wait(timeout)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python313\Lib\threading.py", line 359, in wait
+    waiter.acquire()
+    ~~~~~~~~~~~~~~^^
+KeyboardInterrupt
+2025-10-09 14:30:00,778 INFO    wandb-AsyncioManager-main:4580 [service_client.py:_forward_responses():80] Reached EOF.
+2025-10-09 14:30:00,778 INFO    wandb-AsyncioManager-main:4580 [mailbox.py:close():137] Closing mailbox, abandoning 0 handles.

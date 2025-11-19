@@ -1,0 +1,201 @@
+_current_progress_remaining:
+    value: 1
+_custom_logger:
+    value: "False"
+_episode_num:
+    value: 0
+_last_episode_starts:
+    value: '[ True]'
+_last_obs:
+    value: |-
+        [[0.8231751  0.8434916  0.47022802 0.01234568 0.5        0.5
+          0.5        0.         0.45936686 0.8425717  0.13579586 1.
+          1.         0.8333333  0.71277034 0.04753033 0.         0.5
+          0.5        1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         0.10724107 0.10539069
+          0.10418611 0.10378968 0.10418614 1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.        ]]
+_last_original_obs:
+    value: None
+_logger:
+    value: <stable_baselines3.common.logger.Logger object at 0x000001F0BFFAD7F0>
+_n_updates:
+    value: 0
+_num_timesteps_at_start:
+    value: 0
+_stats_window_size:
+    value: 100
+_total_timesteps:
+    value: 15000
+_vec_normalize_env:
+    value: None
+_wandb:
+    value:
+        cli_version: 0.22.1
+        e:
+            b6gxohteq9ewra8xi647a9o1yz0bgm8y:
+                args:
+                    - --agents
+                    - "4"
+                    - --timesteps
+                    - "300000"
+                    - --results-dir
+                    - coordinated_v3_fixed
+                    - --wandb
+                codePath: metadrive-custom-racing\examples\train_coordinated_multi_agent.py
+                codePathLocal: train_coordinated_multi_agent.py
+                cpu_count: 4
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "253615927296"
+                        used: "249284489216"
+                email: Baldemarguajardo20@gmail.com
+                executable: C:\Python313\python.exe
+                git:
+                    commit: daebfe8509d3e35876a686714ec1093bfa985ba6
+                    remote: https://github.com/Joshua-Handy/ApexAI.git
+                host: Balde
+                memory:
+                    total: "17005576192"
+                os: Windows-11-10.0.26100-SP0
+                program: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_coordinated_multi_agent.py
+                python: CPython 3.13.1
+                root: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples
+                startedAt: "2025-10-14T04:09:24.760844Z"
+                writerId: b6gxohteq9ewra8xi647a9o1yz0bgm8y
+        m: []
+        python_version: 3.13.1
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 1
+                - 13
+                - 16
+                - 22
+                - 61
+            "4": 3.13.1
+            "5": 0.22.1
+            "8":
+                - 3
+            "12": 0.22.1
+            "13": windows-amd64
+action_noise:
+    value: None
+action_space:
+    value: Box(-1.0, 1.0, (2,), float32)
+algo:
+    value: PPO
+algorithm:
+    value: Coordinated PPO
+batch_size:
+    value: 64
+clip_range:
+    value: FloatSchedule(ConstantSchedule(val=0.2))
+clip_range_vf:
+    value: None
+device:
+    value: cpu
+ent_coef:
+    value: 0.01
+env:
+    value: <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x000001F0BC66C980>
+ep_info_buffer:
+    value: deque([], maxlen=100)
+ep_success_buffer:
+    value: deque([], maxlen=100)
+gae_lambda:
+    value: 0.95
+gamma:
+    value: 0.99
+learning_rate:
+    value: 5e-06
+lr_schedule:
+    value: FloatSchedule(ConstantSchedule(val=5e-06))
+max_grad_norm:
+    value: 0.5
+n_envs:
+    value: 1
+n_epochs:
+    value: 10
+n_steps:
+    value: 2048
+normalize_advantage:
+    value: "True"
+num_agents:
+    value: 4
+num_timesteps:
+    value: 0
+observation_space:
+    value: Box(-0.0, 1.0, (91,), float32)
+policy:
+    value: |-
+        ActorCriticPolicy(
+          (features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (pi_features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (vf_features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (mlp_extractor): MlpExtractor(
+            (policy_net): Sequential(
+              (0): Linear(in_features=91, out_features=64, bias=True)
+              (1): Tanh()
+              (2): Linear(in_features=64, out_features=64, bias=True)
+              (3): Tanh()
+            )
+            (value_net): Sequential(
+              (0): Linear(in_features=91, out_features=64, bias=True)
+              (1): Tanh()
+              (2): Linear(in_features=64, out_features=64, bias=True)
+              (3): Tanh()
+            )
+          )
+          (action_net): Linear(in_features=64, out_features=2, bias=True)
+          (value_net): Linear(in_features=64, out_features=1, bias=True)
+        )
+policy_class:
+    value: <class 'stable_baselines3.common.policies.ActorCriticPolicy'>
+policy_kwargs:
+    value: '{}'
+rollout_buffer:
+    value: <stable_baselines3.common.buffers.RolloutBuffer object at 0x000001F0BC66CD70>
+rollout_buffer_class:
+    value: <class 'stable_baselines3.common.buffers.RolloutBuffer'>
+rollout_buffer_kwargs:
+    value: '{}'
+sde_sample_freq:
+    value: -1
+seed:
+    value: None
+start_time:
+    value: 1760414975210759100
+target_kl:
+    value: None
+tensorboard_log:
+    value: coordinated_v3_fixed\tensorboard_agent0
+timesteps:
+    value: 300000
+track:
+    value: right_oval
+use_sde:
+    value: "False"
+verbose:
+    value: 1
+vf_coef:
+    value: 0.5

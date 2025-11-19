@@ -1,0 +1,11 @@
+{"time":"2025-10-22T00:01:24.9329693-05:00","level":"INFO","msg":"stream: starting","core version":"0.22.1"}
+{"time":"2025-10-22T00:01:25.4652162-05:00","level":"INFO","msg":"stream: created new stream","id":"gewtenfa"}
+{"time":"2025-10-22T00:01:25.4652162-05:00","level":"INFO","msg":"handler: started","stream_id":"gewtenfa"}
+{"time":"2025-10-22T00:01:25.4686382-05:00","level":"INFO","msg":"stream: started","id":"gewtenfa"}
+{"time":"2025-10-22T00:01:25.4686382-05:00","level":"INFO","msg":"writer: started","stream_id":"gewtenfa"}
+{"time":"2025-10-22T00:01:25.4691655-05:00","level":"INFO","msg":"sender: started","stream_id":"gewtenfa"}
+{"time":"2025-10-22T00:01:36.1091145-05:00","level":"INFO","msg":"stream: closing","id":"gewtenfa"}
+{"time":"2025-10-22T00:01:36.5113336-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-22T00:01:36.883632-05:00","level":"INFO","msg":"handler: closed","stream_id":"gewtenfa"}
+{"time":"2025-10-22T00:01:36.8902229-05:00","level":"INFO","msg":"sender: closed","stream_id":"gewtenfa"}
+{"time":"2025-10-22T00:01:36.8902229-05:00","level":"INFO","msg":"stream: closed","id":"gewtenfa"}

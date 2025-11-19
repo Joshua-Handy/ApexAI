@@ -1,0 +1,43 @@
+_wandb:
+    value:
+        cli_version: 0.22.1
+        e:
+            z8llqrrlzkgc9bqfufljlq35jwxpjyw0:
+                codePath: metadrive-custom-racing\examples\test_wandb.py
+                codePathLocal: test_wandb.py
+                cpu_count: 4
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "253615927296"
+                        used: "249248567296"
+                email: Baldemarguajardo20@gmail.com
+                executable: C:\Python313\python.exe
+                git:
+                    commit: daebfe8509d3e35876a686714ec1093bfa985ba6
+                    remote: https://github.com/Joshua-Handy/ApexAI.git
+                host: Balde
+                memory:
+                    total: "17005576192"
+                os: Windows-11-10.0.26100-SP0
+                program: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\test_wandb.py
+                python: CPython 3.13.1
+                root: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples
+                startedAt: "2025-10-14T03:28:33.707537Z"
+                writerId: z8llqrrlzkgc9bqfufljlq35jwxpjyw0
+        m: []
+        python_version: 3.13.1
+        t:
+            "3":
+                - 2
+                - 13
+                - 16
+                - 61
+            "4": 3.13.1
+            "5": 0.22.1
+            "8":
+                - 3
+            "12": 0.22.1
+            "13": windows-amd64
+test:
+    value: true

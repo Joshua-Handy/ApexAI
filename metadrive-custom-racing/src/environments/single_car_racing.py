@@ -7,9 +7,14 @@ assets/track_configs.
 from typing import Optional, Dict, Any
 import os
 
+import sys
+_here = os.path.dirname(__file__)
+_src_root = os.path.abspath(os.path.join(_here, ".."))
+if _src_root not in sys.path:
+    sys.path.insert(0, _src_root)
 from utils.track_loader import load_track_config
 from environments.oval_right_env import SingleAgentOvalEnv
-
+from environments.custom_speedway_env import SingleAgentRaceEnv
 
 def create_racing_environment(
     track_name: str = 'custom_speedway',
@@ -28,9 +33,42 @@ def create_racing_environment(
 
     # If this track specifies a special type, route to the corresponding env
     track_type = cfg.get("type")
+    print(track_type)
     if track_type == "oval_right_pg":
+        print(cfg.get("lane_width"))
         env = SingleAgentOvalEnv({
             'start_seed': start_seed if start_seed is not None else cfg.get('start_seed', 1000),
+            'traffic_density': 0.0,
+            'use_render': use_render,
+            '_render_mode': 'headless' if not use_render else 'onscreen',
+            'manual_control': manual_control,
+            'vehicle_config': {
+                'show_lidar': True,
+                'show_lane_line_detector': True,
+                'show_side_detector': True,
+            },
+            'image_observation': image_observation,
+            'num_scenarios': 1,
+            'out_of_road_penalty': 0,
+            'crash_vehicle_penalty': 0,
+            'crash_object_penalty': 0,
+            'crash_sidewalk_penalty': 0,
+            'out_of_road_done': False,
+            'crash_vehicle_done': False,
+            'crash_object_done': False,
+            'on_continuous_line_done': True,
+            'success_reward': 0,
+            'map_config': {
+                'lane_num': cfg.get('lane_num', 1),
+                'lane_width': cfg.get('lane_width', 4.0),
+                'exit_length': 30,
+            }
+        })
+    if track_type == "oval":
+        print("making race env")
+        print(cfg.get("lane_width"))
+        env = SingleAgentRaceEnv({
+            'start_seed': start_seed if start_seed is not None else 42,
             'traffic_density': 0.0,
             'use_render': use_render,
             '_render_mode': 'headless' if not use_render else 'onscreen',
@@ -77,6 +115,9 @@ def create_racing_environment(
         'image_observation': image_observation,
         'num_scenarios': 1,
     }
+    # If the track provided explicit block geometry, forward it to MetaDrive
+    if cfg.get('map_config') is not None:
+        env_config['map_config'] = cfg.get('map_config')
 
     # Create the MetaDrive environment (lazy import with local fallback)
     try:

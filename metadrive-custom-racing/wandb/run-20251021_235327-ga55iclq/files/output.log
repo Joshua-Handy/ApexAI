@@ -1,0 +1,65 @@
+[38;20m[INFO] Environment: MultiAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 2000[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+Using custom right-turn oval track!
+[SpawnDebug] lane_num=4, lane_width=12.0, agents=4
+[SpawnDebug] agent0: lane_index=0, tuple=('>>', '>>>', 0), longitude=-20.0, lateral=-18.0
+[SpawnDebug] agent1: lane_index=0, tuple=('>>', '>>>', 0), longitude=-20.0, lateral=-6.0
+[SpawnDebug] agent2: lane_index=0, tuple=('>>', '>>>', 0), longitude=-20.0, lateral=6.0
+[SpawnDebug] agent3: lane_index=0, tuple=('>>', '>>>', 0), longitude=-20.0, lateral=18.0
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1[0m
+[MapDebug] lane_num=4, lane_width=12.0
+
+Training failed:
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\curriculum_multi_agent_racing.py", line 913, in main
+    train_multi_agent_racing(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        num_agents=args.agents,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        use_wandb=args.wandb
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\curriculum_multi_agent_racing.py", line 782, in train_multi_agent_racing
+    racing_env = MultiAgentRacingEnvironment(num_agents, curriculum_manager)
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\curriculum_multi_agent_racing.py", line 350, in __init__
+    reset_result = self.base_env.reset()
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\..\src\environments\multi_agent_oval_right_env.py", line 208, in reset
+    return super().reset(**kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py", line 532, in reset
+    reset_info = self.engine.reset()
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\engine\base_engine.py", line 365, in reset
+    new_step_infos = manager.reset()
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\manager\agent_manager.py", line 103, in reset
+    super(VehicleAgentManager, self).reset()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\manager\base_manager.py", line 243, in reset
+    self.episode_created_agents = self._create_agents(config_dict=self.engine.global_config["agent_configs"])
+                                  ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\manager\agent_manager.py", line 45, in _create_agents
+    obj = self.spawn_object(v_type, vehicle_config=v_config, name=obj_name)
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\manager\base_manager.py", line 80, in spawn_object
+    object = self.engine.spawn_object(object_class, **kwargs)
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\engine\base_engine.py", line 140, in spawn_object
+    obj = object_class(**kwargs)
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\vehicle\base_vehicle.py", line 195, in __init__
+    self.reset(position=position, heading=heading, vehicle_config=vehicle_config)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\vehicle\base_vehicle.py", line 365, in reset
+    self.reset_navigation()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\vehicle\base_vehicle.py", line 748, in reset_navigation
+    self.navigation.reset(self)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\component\navigation_module\node_network_navigation.py", line 56, in reset
+    assert len(possible_lanes) > 0
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
