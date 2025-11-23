@@ -1,0 +1,209 @@
+{"time":"2025-11-22T15:02:47.1632808-06:00","level":"INFO","msg":"stream: starting","core version":"0.22.1"}
+{"time":"2025-11-22T15:02:47.5233783-06:00","level":"INFO","msg":"stream: created new stream","id":"z1nw1vbj"}
+{"time":"2025-11-22T15:02:47.5233783-06:00","level":"INFO","msg":"handler: started","stream_id":"z1nw1vbj"}
+{"time":"2025-11-22T15:02:47.5255079-06:00","level":"INFO","msg":"stream: started","id":"z1nw1vbj"}
+{"time":"2025-11-22T15:02:47.5255079-06:00","level":"INFO","msg":"writer: started","stream_id":"z1nw1vbj"}
+{"time":"2025-11-22T15:02:47.5255079-06:00","level":"INFO","msg":"sender: started","stream_id":"z1nw1vbj"}
+{"time":"2025-11-22T15:02:47.734731-06:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-11-22T15:03:01.3405038-06:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2025-11-22T15:03:01.3405038-06:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"C:\\\\Users\\\\balde\\\\OneDrive\\\\Documents\\\\SeniorProject\\\\metadrive-custom-racing\\\\results\\\\results_agent_Alek\\\\tensorboard\\\\PPO_7\")","namespace":""}
+{"time":"2025-11-22T15:03:01.3410267-06:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results\\results_agent_Alek\\tensorboard\\PPO_7\\events.out.tfevents.1763845371.Balde.7988.0","runPath":"results/results_agent_Alek/tensorboard/PPO_7/events.out.tfevents.1763845371.Balde.7988.0"}
+{"time":"2025-11-22T15:03:01.3488207-06:00","level":"ERROR","msg":"tensorboard: error creating symlink","target":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results\\results_agent_Alek\\tensorboard\\PPO_7\\events.out.tfevents.1763845371.Balde.7988.0","symlink":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\wandb\\run-20251122_150244-z1nw1vbj\\files\\results\\results_agent_Alek\\tensorboard\\PPO_7\\events.out.tfevents.1763845371.Balde.7988.0","error":"symlink C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results\\results_agent_Alek\\tensorboard\\PPO_7\\events.out.tfevents.1763845371.Balde.7988.0 C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\wandb\\run-20251122_150244-z1nw1vbj\\files\\results\\results_agent_Alek\\tensorboard\\PPO_7\\events.out.tfevents.1763845371.Balde.7988.0: A required privilege is not held by the client."}
+{"time":"2025-11-22T15:03:26.3813165-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":74}
+{"time":"2025-11-22T15:03:26.385718-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":5}
+{"time":"2025-11-22T15:04:11.4268056-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":162}
+{"time":"2025-11-22T15:04:11.4273368-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:04:31.4633257-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":205}
+{"time":"2025-11-22T15:04:31.4704675-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:05:36.5143893-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":336}
+{"time":"2025-11-22T15:05:36.5149361-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:06:16.5539692-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":421}
+{"time":"2025-11-22T15:06:16.5549647-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:07:26.6329914-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":552}
+{"time":"2025-11-22T15:07:26.6329914-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:08:06.6703715-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":639}
+{"time":"2025-11-22T15:08:06.6709243-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:09:11.7416518-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":768}
+{"time":"2025-11-22T15:09:11.7427077-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:09:51.7799431-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":855}
+{"time":"2025-11-22T15:09:51.7804845-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:10:31.8203395-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":940}
+{"time":"2025-11-22T15:10:31.8215044-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:10:51.8406084-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":984}
+{"time":"2025-11-22T15:10:51.8410604-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:11:36.8787098-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1071}
+{"time":"2025-11-22T15:11:36.8792309-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:13:01.9646195-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1244}
+{"time":"2025-11-22T15:13:01.9651648-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:13:21.9869042-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1288}
+{"time":"2025-11-22T15:13:21.9874112-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:13:47.0187945-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1331}
+{"time":"2025-11-22T15:13:47.0193279-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:14:07.0421989-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1375}
+{"time":"2025-11-22T15:14:07.042829-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:14:42.0888022-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1460}
+{"time":"2025-11-22T15:14:42.0888022-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:15:02.1057604-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1503}
+{"time":"2025-11-22T15:15:02.1068611-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:15:27.1276945-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1550}
+{"time":"2025-11-22T15:15:27.1282142-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":2}
+{"time":"2025-11-22T15:15:47.1483771-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1591}
+{"time":"2025-11-22T15:15:47.1494228-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:16:42.2163008-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1720}
+{"time":"2025-11-22T15:16:42.2173798-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:18:32.321426-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1937}
+{"time":"2025-11-22T15:18:32.3226526-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:21:22.486109-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2282}
+{"time":"2025-11-22T15:21:23.6427481-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":8}
+{"time":"2025-11-22T15:21:57.5231923-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2371}
+{"time":"2025-11-22T15:21:57.5237156-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:22:17.5430955-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2414}
+{"time":"2025-11-22T15:22:17.5436204-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:22:33.6705083-06:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-11-22T15:23:02.585576-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2502}
+{"time":"2025-11-22T15:23:02.5867057-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":5}
+{"time":"2025-11-22T15:23:37.631215-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2589}
+{"time":"2025-11-22T15:23:37.6327299-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:23:43.6771049-06:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-11-22T15:23:56.9681942-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-11-22T15:23:57.653859-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2628}
+{"time":"2025-11-22T15:24:00.0768784-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":8}
+{"time":"2025-11-22T15:26:37.845054-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2769}
+{"time":"2025-11-22T15:26:37.8461647-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:28:47.9844676-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2863}
+{"time":"2025-11-22T15:28:47.9861716-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:29:43.0487036-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2909}
+{"time":"2025-11-22T15:29:43.0493703-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:30:43.1210105-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2958}
+{"time":"2025-11-22T15:30:43.1221424-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:31:43.1796684-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3006}
+{"time":"2025-11-22T15:31:43.1807588-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":2}
+{"time":"2025-11-22T15:32:38.2561661-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3050}
+{"time":"2025-11-22T15:32:38.2597035-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:33:43.3314465-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3100}
+{"time":"2025-11-22T15:33:43.3325933-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:35:28.453988-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3194}
+{"time":"2025-11-22T15:35:28.4571578-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:35:31.0539333-06:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-11-22T15:37:23.591386-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3287}
+{"time":"2025-11-22T15:37:23.5930754-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":3}
+{"time":"2025-11-22T15:38:23.6580681-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3332}
+{"time":"2025-11-22T15:38:23.658574-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:39:23.7267332-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3379}
+{"time":"2025-11-22T15:39:23.7273627-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:40:18.7922853-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3424}
+{"time":"2025-11-22T15:40:18.7943489-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":5}
+{"time":"2025-11-22T15:41:08.8626959-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3470}
+{"time":"2025-11-22T15:41:08.8667434-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:42:13.9322134-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3519}
+{"time":"2025-11-22T15:42:13.9343178-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:43:03.9918239-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3564}
+{"time":"2025-11-22T15:43:03.992993-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:43:38.7610285-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.1.18:64243->35.186.228.49:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-11-22T15:43:43.7065287-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": read tcp 192.168.1.18:53450->35.186.228.49:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-11-22T15:44:01.9997409-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp 35.186.228.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-11-22T15:44:09.0861946-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3603}
+{"time":"2025-11-22T15:44:18.1193942-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":12}
+{"time":"2025-11-22T15:45:14.1901058-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3657}
+{"time":"2025-11-22T15:45:14.1911175-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":3}
+{"time":"2025-11-22T15:47:14.3225493-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3752}
+{"time":"2025-11-22T15:47:14.3236818-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:51:19.6078763-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3936}
+{"time":"2025-11-22T15:51:19.6087055-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:52:24.686009-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3982}
+{"time":"2025-11-22T15:52:24.6865767-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:54:24.8087962-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4073}
+{"time":"2025-11-22T15:54:24.810112-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:55:29.8788592-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4121}
+{"time":"2025-11-22T15:55:29.8819197-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T15:56:34.9527772-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4171}
+{"time":"2025-11-22T15:56:34.9543743-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":5}
+{"time":"2025-11-22T15:58:20.1022412-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4264}
+{"time":"2025-11-22T15:58:20.1911454-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-11-22T16:00:01.6662227-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": read tcp 192.168.1.18:62477->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-11-22T16:01:20.2931061-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4402}
+{"time":"2025-11-22T16:01:20.3272181-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-11-22T16:02:20.3536605-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4449}
+{"time":"2025-11-22T16:02:20.529644-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-11-22T16:04:10.0403298-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": EOF"}
+{"time":"2025-11-22T16:09:00.8411862-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4778}
+{"time":"2025-11-22T16:09:00.8416986-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T16:11:05.9721007-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4869}
+{"time":"2025-11-22T16:11:06.3088374-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-11-22T16:11:31.4218736-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": EOF"}
+{"time":"2025-11-22T16:11:44.9479365-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": EOF"}
+{"time":"2025-11-22T16:12:11.0454233-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4917}
+{"time":"2025-11-22T16:12:11.0472751-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T16:13:11.1176267-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4962}
+{"time":"2025-11-22T16:13:11.1188759-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T16:14:06.193029-06:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-11-22T16:14:28.5063441-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": EOF"}
+{"time":"2025-11-22T16:15:09.4311858-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": dial tcp 35.186.228.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-11-22T16:15:11.2645514-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":5054}
+{"time":"2025-11-22T16:15:11.265061-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T16:16:06.3309631-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":5100}
+{"time":"2025-11-22T16:16:06.331864-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T16:16:56.3920987-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":5145}
+{"time":"2025-11-22T16:16:56.3931198-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T16:17:42.4984006-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": dial tcp 35.186.228.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-11-22T16:17:50.7513896-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-11-22T16:18:00.945038-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.1.18:63802->35.186.228.49:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-11-22T16:18:06.4664138-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":5184}
+{"time":"2025-11-22T16:18:14.8475651-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": EOF"}
+{"time":"2025-11-22T16:18:21.7964995-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": unexpected EOF"}
+{"time":"2025-11-22T16:18:40.615491-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": dial tcp 35.186.228.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-11-22T16:18:51.5494362-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp 35.186.228.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-11-22T16:19:10.4906211-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": dial tcp 35.186.228.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-11-22T16:19:28.8439404-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp 35.186.228.49:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-11-22T16:20:09.1201491-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":62}
+{"time":"2025-11-22T16:21:26.6810595-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":5331}
+{"time":"2025-11-22T16:21:26.6821561-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T16:22:21.7413357-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":5378}
+{"time":"2025-11-22T16:22:22.3723256-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-11-22T16:23:21.8237056-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":5426}
+{"time":"2025-11-22T16:23:22.2236123-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-11-22T16:25:11.9447707-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":5520}
+{"time":"2025-11-22T16:25:11.9458415-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":5}
+{"time":"2025-11-22T16:25:18.3792429-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": EOF"}
+{"time":"2025-11-22T16:25:34.0841749-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": EOF"}
+{"time":"2025-11-22T16:27:12.0709777-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":5613}
+{"time":"2025-11-22T16:27:12.0721975-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T16:27:41.4104836-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": unexpected EOF"}
+{"time":"2025-11-22T16:28:15.141454-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": read tcp 192.168.1.18:60571->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-11-22T16:29:17.2156569-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":5704}
+{"time":"2025-11-22T16:29:17.2190121-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":5}
+{"time":"2025-11-22T16:29:27.1556974-06:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-11-22T16:30:21.3694736-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-11-22T16:30:22.2867351-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":5745}
+{"time":"2025-11-22T16:30:31.4947475-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 192.168.1.18:54849->35.186.228.49:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond."}
+{"time":"2025-11-22T16:30:38.7203335-06:00","level":"INFO","msg":"api: retrying HTTP error","status":408,"url":"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>408 Request Timeout</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Request Timeout</h1>\n<h2>Your client has taken too long to issue its request.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-11-22T16:30:46.8134145-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": EOF"}
+{"time":"2025-11-22T16:31:20.3255407-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": EOF"}
+{"time":"2025-11-22T16:31:26.3760915-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-11-22T16:32:14.7200212-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-11-22T16:33:01.9682771-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-11-22T16:34:13.3480356-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-11-22T16:34:16.662318-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": read tcp 192.168.1.18:61002->35.186.228.49:443: wsarecv: An existing connection was forcibly closed by the remote host."}
+{"time":"2025-11-22T16:35:18.5169205-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":245}
+{"time":"2025-11-22T16:36:17.7442964-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":6118}
+{"time":"2025-11-22T16:36:17.7448303-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T16:36:27.7989042-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": EOF"}
+{"time":"2025-11-22T16:37:30.0901819-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": unexpected EOF"}
+{"time":"2025-11-22T16:37:51.0484412-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": EOF"}
+{"time":"2025-11-22T16:38:02.9001731-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":6336}
+{"time":"2025-11-22T16:38:02.9001731-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T16:38:09.8885629-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": EOF"}
+{"time":"2025-11-22T16:39:19.4021911-06:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-custom-speedway/z1nw1vbj/file_stream\": EOF"}
+{"time":"2025-11-22T16:39:38.0077766-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":6469}
+{"time":"2025-11-22T16:39:38.0083156-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T16:40:40.6706005-06:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact Alek_model","runtime_seconds":0.4337559}],"total_operations":1}}
+{"time":"2025-11-22T16:41:41.1340648-06:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact Alek_model","runtime_seconds":60.8982653,"subtasks":[{"desc":"model.zip","runtime_seconds":59.5206417,"progress":"816.0KB/2.8MB"}]},{"desc":"uploading data","runtime_seconds":15.2747886}],"total_operations":2}}
+{"time":"2025-11-22T16:42:41.6181115-06:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact Alek_model","runtime_seconds":121.382312,"subtasks":[{"desc":"model.zip","runtime_seconds":120.0046884,"progress":"1.2MB/2.8MB"}]}],"total_operations":1}}
+{"time":"2025-11-22T16:43:42.0211664-06:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact Alek_model","runtime_seconds":181.7853669,"subtasks":[{"desc":"model.zip","runtime_seconds":180.4077433,"progress":"1.7MB/2.8MB"}]}],"total_operations":1}}
+{"time":"2025-11-22T16:44:42.5305701-06:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact Alek_model","runtime_seconds":242.2947706,"subtasks":[{"desc":"model.zip","runtime_seconds":240.917147,"progress":"1.8MB/2.8MB"}]}],"total_operations":1}}
+{"time":"2025-11-22T16:45:43.3714627-06:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact Alek_model","runtime_seconds":303.1356632,"subtasks":[{"desc":"model.zip","runtime_seconds":301.7580396,"progress":"2.7MB/2.8MB"}]}],"total_operations":1}}
+{"time":"2025-11-22T16:45:54.4969687-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-11-22T16:45:55.1744239-06:00","level":"INFO","msg":"stream: closing","id":"z1nw1vbj"}
+{"time":"2025-11-22T16:45:55.1744239-06:00","level":"INFO","msg":"handler: closed","stream_id":"z1nw1vbj"}
+{"time":"2025-11-22T16:45:55.1763773-06:00","level":"INFO","msg":"sender: closed","stream_id":"z1nw1vbj"}
+{"time":"2025-11-22T16:45:55.1763773-06:00","level":"INFO","msg":"stream: closed","id":"z1nw1vbj"}

@@ -1,0 +1,81 @@
+_wandb:
+    value:
+        cli_version: 0.22.1
+        code_path: code/metadrive-custom-racing/examples/train_multi_custom_speedway.py
+        e:
+            6729kuakndd7fznqiyb1b06l64vutm25:
+                args:
+                    - --agent-names
+                    - Alek
+                    - --timesteps
+                    - "600000"
+                    - --vecnorm
+                    - --wandb
+                codePath: metadrive-custom-racing\examples\train_multi_custom_speedway.py
+                codePathLocal: examples\train_multi_custom_speedway.py
+                cpu_count: 4
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "253615927296"
+                        used: "253092143104"
+                email: Baldemarguajardo20@gmail.com
+                executable: C:\Python313\python.exe
+                git:
+                    commit: 6839efd2f76a04c6dd96256cef4e1059dc20b502
+                    remote: https://github.com/Joshua-Handy/ApexAI.git
+                host: Balde
+                memory:
+                    total: "17005576192"
+                os: Windows-11-10.0.26100-SP0
+                program: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_multi_custom_speedway.py
+                python: CPython 3.13.1
+                root: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing
+                startedAt: "2025-11-23T00:40:44.576245Z"
+                writerId: 6729kuakndd7fznqiyb1b06l64vutm25
+        m: []
+        python_version: 3.13.1
+        t:
+            "1":
+                - 1
+                - 105
+            "2":
+                - 1
+                - 105
+            "3":
+                - 13
+                - 16
+                - 22
+                - 35
+            "4": 3.13.1
+            "5": 0.22.1
+            "8":
+                - 3
+            "12": 0.22.1
+            "13": windows-amd64
+agent_id:
+    value: 0
+agent_name:
+    value: Alek
+algorithm:
+    value: PPO
+batch_size:
+    value: 256
+clip_range:
+    value: 0.2
+gae_lambda:
+    value: 0.95
+gamma:
+    value: 0.99
+learning_rate:
+    value: 0.0003
+n_steps:
+    value: 4096
+seed:
+    value: 0
+timesteps:
+    value: 600000
+track:
+    value: custom_speedway
+vecnorm:
+    value: true

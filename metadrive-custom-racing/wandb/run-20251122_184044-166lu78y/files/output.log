@@ -1,0 +1,83 @@
+✅ Weights & Biases initialized for Alek
+[38;20m[INFO] Environment: MultiAgentCustomSpeedwayEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 1500[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+Using cpu device
+🚀 Training Alek for 600,000 timesteps...
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 42, Num Scenarios : 1[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+
+❌ Error training Alek: name 'crashed_to_ground' is not defined
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_multi_custom_speedway.py", line 256, in train_single_agent
+    model.learn(total_timesteps=timesteps, callback=callbacks)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ~~~~~~~~~~~~~^
+        total_timesteps=total_timesteps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        progress_bar=progress_bar,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 311, in learn
+    total_timesteps, callback = self._setup_learn(
+                                ~~~~~~~~~~~~~~~~~^
+        total_timesteps,
+        ^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        progress_bar,
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\base_class.py", line 423, in _setup_learn
+    self._last_obs = self.env.reset()  # type: ignore[assignment]
+                     ~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\vec_normalize.py", line 297, in reset
+    obs = self.venv.reset()
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 78, in reset
+    obs, self.reset_infos[env_idx] = self.envs[env_idx].reset(seed=self._seeds[env_idx], **maybe_options)
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\monitor.py", line 83, in reset
+    return self.env.reset(**kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_multi_custom_speedway.py", line 90, in reset
+    return self.env.reset()
+           ~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_multi_custom_speedway.py", line 60, in reset
+    obs_dict, info_dict = self.env.reset(**kwargs)
+                          ~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\src\environments\multi_agent_custom_speedway_env.py", line 376, in reset
+    return super().reset(**kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py", line 547, in reset
+    return self._get_reset_return(reset_info)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py", line 588, in _get_reset_return
+    _, done_infos[v_id] = self.done_function(v_id)
+                          ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\src\environments\multi_agent_custom_speedway_env.py", line 348, in done_function
+    "crash_ground": crashed_to_ground,
+                    ^^^^^^^^^^^^^^^^^
+NameError: name 'crashed_to_ground' is not defined
+
+❌ Failed to train Alek: name 'crashed_to_ground' is not defined
+
+======================================================================
+🏁 SEQUENTIAL TRAINING COMPLETE
+======================================================================
+
+⏱️  Total training time: 0h 0m 8s
+
+======================================================================
+🎉 All agents trained! You can now:
+   1. Watch agents: python examples/play_model.py --model results/results_agent_<name>/<name>_custom_speedway.zip
+   2. Race them in multi-agent env (create custom script)
+======================================================================

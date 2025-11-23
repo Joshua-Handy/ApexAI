@@ -1,0 +1,22 @@
+{"time":"2025-11-22T18:42:32.6948971-06:00","level":"INFO","msg":"stream: starting","core version":"0.22.1"}
+{"time":"2025-11-22T18:42:33.0930831-06:00","level":"INFO","msg":"stream: created new stream","id":"vq1t122m"}
+{"time":"2025-11-22T18:42:33.0937858-06:00","level":"INFO","msg":"handler: started","stream_id":"vq1t122m"}
+{"time":"2025-11-22T18:42:33.0955405-06:00","level":"INFO","msg":"stream: started","id":"vq1t122m"}
+{"time":"2025-11-22T18:42:33.0955405-06:00","level":"INFO","msg":"writer: started","stream_id":"vq1t122m"}
+{"time":"2025-11-22T18:42:33.0955405-06:00","level":"INFO","msg":"sender: started","stream_id":"vq1t122m"}
+{"time":"2025-11-22T18:42:33.318747-06:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-11-22T18:42:46.0129183-06:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2025-11-22T18:42:46.0129183-06:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"C:\\\\Users\\\\balde\\\\OneDrive\\\\Documents\\\\SeniorProject\\\\metadrive-custom-racing\\\\results\\\\results_agent_Alek\\\\tensorboard\\\\PPO_10\")","namespace":""}
+{"time":"2025-11-22T18:42:46.0135681-06:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results\\results_agent_Alek\\tensorboard\\PPO_10\\events.out.tfevents.1763858556.Balde.38632.0","runPath":"results/results_agent_Alek/tensorboard/PPO_10/events.out.tfevents.1763858556.Balde.38632.0"}
+{"time":"2025-11-22T18:42:46.0166281-06:00","level":"ERROR","msg":"tensorboard: error creating symlink","target":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results\\results_agent_Alek\\tensorboard\\PPO_10\\events.out.tfevents.1763858556.Balde.38632.0","symlink":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\wandb\\run-20251122_184230-vq1t122m\\files\\results\\results_agent_Alek\\tensorboard\\PPO_10\\events.out.tfevents.1763858556.Balde.38632.0","error":"symlink C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results\\results_agent_Alek\\tensorboard\\PPO_10\\events.out.tfevents.1763858556.Balde.38632.0 C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\wandb\\run-20251122_184230-vq1t122m\\files\\results\\results_agent_Alek\\tensorboard\\PPO_10\\events.out.tfevents.1763858556.Balde.38632.0: A required privilege is not held by the client."}
+{"time":"2025-11-22T18:43:06.0588461-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":81}
+{"time":"2025-11-22T18:43:06.0593703-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T18:44:01.1240791-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":251}
+{"time":"2025-11-22T18:44:01.1246028-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-11-22T18:44:16.1422855-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":292}
+{"time":"2025-11-22T18:44:16.1450073-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-11-22T18:44:54.6210802-06:00","level":"INFO","msg":"stream: closing","id":"vq1t122m"}
+{"time":"2025-11-22T18:44:55.0239492-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-11-22T18:44:55.4873067-06:00","level":"INFO","msg":"handler: closed","stream_id":"vq1t122m"}
+{"time":"2025-11-22T18:44:55.4878774-06:00","level":"INFO","msg":"sender: closed","stream_id":"vq1t122m"}
+{"time":"2025-11-22T18:44:55.4878774-06:00","level":"INFO","msg":"stream: closed","id":"vq1t122m"}

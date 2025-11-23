@@ -1,0 +1,78 @@
+✅ Weights & Biases initialized for Alek
+
+❌ Error training Alek: TypeError: target_vehicle_configs:{'default': {'max_speed_km_h': 120}}
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_multi_custom_speedway.py", line 188, in train_single_agent
+    vec_env = DummyVecEnv([make_env(track, seed=seed + agent_id, agent_id=agent_id, num_agents=2)])
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                            ~~^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_multi_custom_speedway.py", line 115, in _init
+    base = MultiAgentCustomSpeedwayEnv(env_config)
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\src\environments\multi_agent_custom_speedway_env.py", line 153, in __init__
+    super().__init__(config)
+    ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\metadrive_env.py", line 108, in __init__
+    super(MetaDriveEnv, self).__init__(config)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py", line 293, in __init__
+    merged_config = self.default_config().update(config, False, ["agent_configs", "sensors"])
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\utils\config.py", line 157, in update
+    success = self._update_dict_item(k, v, allow_add_new_key)
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\utils\config.py", line 178, in _update_dict_item
+    self._set_item(k, Config(self[k]), allow_overwrite)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\utils\config.py", line 258, in _set_item
+    assert type_correct, "TypeError: {}:{}".format(key, value)
+           ^^^^^^^^^^^^
+AssertionError: TypeError: target_vehicle_configs:{'default': {'max_speed_km_h': 120}}
+
+❌ Failed to train Alek: TypeError: target_vehicle_configs:{'default': {'max_speed_km_h': 120}}
+
+============================================================
+🏁 Starting training for Saegan (Agent 1)
+============================================================
+[34m[1mwandb[0m: wandb.init() called while a run is active and reinit is set to 'default', so returning the previous run.
+
+✅ Weights & Biases initialized for Saegan
+
+❌ Error training Saegan: TypeError: target_vehicle_configs:{'default': {'max_speed_km_h': 120}}
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_multi_custom_speedway.py", line 188, in train_single_agent
+    vec_env = DummyVecEnv([make_env(track, seed=seed + agent_id, agent_id=agent_id, num_agents=2)])
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 31, in __init__
+    self.envs = [_patch_env(fn()) for fn in env_fns]
+                            ~~^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_multi_custom_speedway.py", line 115, in _init
+    base = MultiAgentCustomSpeedwayEnv(env_config)
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\src\environments\multi_agent_custom_speedway_env.py", line 153, in __init__
+    super().__init__(config)
+    ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\metadrive_env.py", line 108, in __init__
+    super(MetaDriveEnv, self).__init__(config)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\envs\base_env.py", line 293, in __init__
+    merged_config = self.default_config().update(config, False, ["agent_configs", "sensors"])
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\utils\config.py", line 157, in update
+    success = self._update_dict_item(k, v, allow_add_new_key)
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\utils\config.py", line 178, in _update_dict_item
+    self._set_item(k, Config(self[k]), allow_overwrite)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\utils\config.py", line 258, in _set_item
+    assert type_correct, "TypeError: {}:{}".format(key, value)
+           ^^^^^^^^^^^^
+AssertionError: TypeError: target_vehicle_configs:{'default': {'max_speed_km_h': 120}}
+
+❌ Failed to train Saegan: TypeError: target_vehicle_configs:{'default': {'max_speed_km_h': 120}}
+
+======================================================================
+🏁 SEQUENTIAL TRAINING COMPLETE
+======================================================================
+
+⏱️  Total training time: 0h 0m 11s
+
+======================================================================
+🎉 All agents trained! You can now:
+   1. Watch agents: python examples/play_model.py --model results/results_agent_<name>/<name>_custom_speedway.zip
+   2. Race them in multi-agent env (create custom script)
+======================================================================
