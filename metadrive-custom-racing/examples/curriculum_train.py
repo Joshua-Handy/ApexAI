@@ -31,9 +31,11 @@ from environments.multi_agent_custom_speedway_env import MultiAgentCustomSpeedwa
 
 try:
     import wandb
+    from wandb.integration.sb3 import WandbCallback
     WANDB_AVAILABLE = True
 except:
     WANDB_AVAILABLE = False
+    WandbCallback = None
 
 
 class SingleAgentWrapper(gym.Wrapper):
@@ -221,12 +223,22 @@ def train_phase(phase_num, phase_name, make_env_fn, timesteps,
         name_prefix=f"{agent_name}_phase{phase_num}",
     )
 
+    # Setup wandb callback
+    callbacks = [checkpoint_callback]
+    if WANDB_AVAILABLE and WandbCallback:
+        wandb_callback = WandbCallback(
+            model_save_path=phase_checkpoint_dir,
+            verbose=2,
+        )
+        callbacks.append(wandb_callback)
+        print("[OK] Wandb logging enabled")
+
     print(f"[TRAIN] Starting Phase {phase_num} training...")
 
     # Train
     model.learn(
         total_timesteps=timesteps,
-        callback=[checkpoint_callback],
+        callback=callbacks,
         reset_num_timesteps=(previous_model is None),  # Reset if starting fresh
         progress_bar=True,
     )
