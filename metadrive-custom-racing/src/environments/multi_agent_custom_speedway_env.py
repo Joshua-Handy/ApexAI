@@ -249,20 +249,20 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
 
                 total_reward = 0.0
 
-                # 1. SPEED REWARD - POSITIVE for good driving!
-                # Driving at 60+ km/h on track = POSITIVE reward!
-                if speed_kmh >= 80:  # 80+ km/h - EXCELLENT!
-                    total_reward += 10.0
-                elif speed_kmh >= 60:  # 60-80 km/h - GOOD!
-                    total_reward += 5.0
-                elif speed_kmh >= 40:  # 40-60 km/h - OKAY
-                    total_reward += 2.0
-                elif speed_kmh >= 20:  # 20-40 km/h - MEH
-                    total_reward += 0.5
-                elif speed_kmh >= 5:  # 5-20 km/h - BAD
-                    total_reward -= 5.0
-                else:  # < 5 km/h - TERRIBLE (standing still)
-                    total_reward -= 30.0
+                # 1. SPEED REWARD - MAKE GOING FAST **EXTREMELY** REWARDING!
+                # The agent needs STRONG incentive to go fast
+                if speed_kmh >= 80:  # 80+ km/h - EXCELLENT! HUGE REWARD!
+                    total_reward += 50.0  # Increased from 10 -> 50
+                elif speed_kmh >= 60:  # 60-80 km/h - GOOD! BIG REWARD!
+                    total_reward += 25.0  # Increased from 5 -> 25
+                elif speed_kmh >= 40:  # 40-60 km/h - OKAY, positive
+                    total_reward += 10.0  # Increased from 2 -> 10
+                elif speed_kmh >= 20:  # 20-40 km/h - Neutral
+                    total_reward += 0.0   # Changed from +0.5 -> 0 (neutral)
+                elif speed_kmh >= 5:   # 5-20 km/h - Small penalty
+                    total_reward -= 2.0   # Reduced from -5 -> -2 (less harsh)
+                else:  # < 5 km/h - Standing still is bad
+                    total_reward -= 10.0  # Reduced from -30 -> -10 (less harsh)
 
                 # 2. OUT OF BOUNDS = EPISODE ENDS (solid yellow/white ONLY!)
                 # Broken lines (lane dividers) are OK - no penalty!
