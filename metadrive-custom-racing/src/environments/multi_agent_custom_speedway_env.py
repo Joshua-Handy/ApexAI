@@ -347,14 +347,23 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
         object_crash = (vehicle.crash_object or vehicle.crash_sidewalk) if crash_object_done else False
 
         # 3. OUT OF BOUNDS = TERMINATE (solid yellow/white lines ONLY!)
+        # BUT during training, give penalty without terminating (let agent learn to recover)
         out_of_bounds = False
         if lane_line_done:
             try:
                 # ONLY solid/continuous lines = track boundaries
                 yellow_continuous = getattr(vehicle, 'on_yellow_continuous_line', False)
                 white_continuous = getattr(vehicle, 'on_white_continuous_line', False)
+
+                # Check if we're in training mode (lenient) or evaluation mode (strict)
+                training_mode = cfg.get('boundary_training_mode', True)  # Default: lenient during training
+
                 if yellow_continuous or white_continuous:
-                    out_of_bounds = True  # TERMINATE!
+                    if not training_mode:
+                        # STRICT MODE: Terminate immediately (for racing/evaluation)
+                        out_of_bounds = True
+                    # else: TRAINING MODE: Penalty already applied in reward, don't terminate
+                    #       Let agent learn to recover from mistakes
             except:
                 pass
 

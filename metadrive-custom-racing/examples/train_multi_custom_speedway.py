@@ -111,9 +111,10 @@ def make_env(track_name: str = 'custom_speedway', seed: int = None, agent_id: in
             
             # TRAINING: Allow crashes so agents learn to avoid them
             'crash_vehicle_done': False,  # Don't end episode - let them learn
-            'crash_object_done': False,    
-            'out_of_road_done': False,    
-            
+            'crash_object_done': False,
+            'out_of_road_done': False,
+            'boundary_training_mode': True,  # Don't terminate on boundaries during training - big penalty but let agent recover
+
             'horizon': 1500,  # Racing duration
             
             # Max speed configuration for racing

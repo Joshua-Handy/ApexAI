@@ -140,10 +140,11 @@ def race_agents_synchronized(agent_data: List[Tuple[str, str, str]],
             'lane_width': 8.0,
         },
         'start_seed': 42,
-        # Match training environment settings
+        # RACING MODE: Stricter termination than training
         'crash_vehicle_done': False,  # Same as training
         'crash_object_done': False,
         'out_of_road_done': False,
+        'boundary_training_mode': False,  # STRICT: Terminate immediately on boundary crossing during races
         'horizon': 1500,
     }
     
