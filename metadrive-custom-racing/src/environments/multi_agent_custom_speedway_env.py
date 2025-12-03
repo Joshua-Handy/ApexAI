@@ -254,6 +254,11 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
 
                 total_reward = 0.0
 
+                # 0. STAY ON TRACK BONUS - Learn this FIRST before speed!
+                # This helps agent learn to avoid boundaries before optimizing speed
+                if not yellow_continuous and not white_continuous and on_road:
+                    total_reward += 5.0  # BIG bonus for staying on track!
+
                 # 1. SPEED REWARD - MAKE GOING FAST **EXTREMELY** REWARDING!
                 # The agent needs STRONG incentive to go fast
                 if speed_kmh >= 80:  # 80+ km/h - EXCELLENT! HUGE REWARD!
@@ -309,6 +314,9 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
                 else:
                     speed_reward = -10.0
 
+                # Calculate on-track bonus
+                on_track_bonus = 5.0 if (not yellow_continuous and not white_continuous and on_road) else 0.0
+
                 # Calculate boundary violation penalty (ONLY continuous lines!)
                 boundary_penalty = 0.0
                 if yellow_continuous:
@@ -317,11 +325,20 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
                     boundary_penalty -= 200.0
 
                 agent_info['reward_components'] = {
+                    'on_track_bonus': on_track_bonus,
                     'speed_reward': speed_reward,
                     'boundary_penalty': boundary_penalty,
                     'off_road_penalty': -5.0 if not on_road else 0.0,
                     'crash_penalty': -10.0 if agent_info['crashed'] else 0.0,
                     'total': rewards[agent_id]
+                }
+
+                # Add detailed metrics for wandb
+                agent_info['metrics'] = {
+                    'speed_kmh': speed_kmh,
+                    'on_road': on_road,
+                    'on_boundary': yellow_continuous or white_continuous,
+                    'crashed': agent_info['crashed'],
                 }
                 
                 infos[agent_id] = agent_info
