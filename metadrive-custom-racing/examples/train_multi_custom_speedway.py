@@ -272,7 +272,9 @@ def train_single_agent(
                                          ghost_mode=ghost_mode, other_agent_models=other_agent_models)])
 
         if vecnorm:
-            vec_env = VecNormalize(vec_env, norm_obs=True, norm_reward=True, clip_reward=10.0)
+            # IMPORTANT: Disable obs normalization - MetaDrive already normalizes to [0,1]
+            # Normalizing pre-normalized data destroys the signal!
+            vec_env = VecNormalize(vec_env, norm_obs=False, norm_reward=True, clip_reward=10.0)
 
         # Disable evaluation for multi-agent training (causes issues)
         eval_callback = None
@@ -296,7 +298,7 @@ def train_single_agent(
             gae_lambda=gae_lambda,
             clip_range=clip_range,
             seed=seed + agent_id,
-            ent_coef=0.05,  # Entropy coefficient for exploration (increased from 0.01 to encourage more exploration)
+            ent_coef=0.1,  # INCREASED: Force much more exploration so agent learns to move!
             vf_coef=0.5,    # Value function coefficient
             max_grad_norm=0.5,
             n_epochs=10,     # Reduced from 15 to prevent overfitting
