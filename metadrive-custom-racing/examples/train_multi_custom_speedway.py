@@ -109,12 +109,15 @@ def make_env(track_name: str = 'custom_speedway', seed: int = None, agent_id: in
                 'lane_width': 8.0,
             },
             'start_seed': seed if seed else 42,
-            
+
             # TRAINING: Allow crashes so agents learn to avoid them
             'crash_vehicle_done': False,  # Don't end episode - let them learn
             'crash_object_done': False,
             'out_of_road_done': False,
             'boundary_training_mode': True,  # Don't terminate on boundaries during training - big penalty but let agent recover
+
+            # IMPORTANT: Spawn agents far apart so stationary agent doesn't block learning agent
+            'random_spawn_lane_index': True,  # Each agent spawns in different lane
 
             'horizon': 1500,  # Racing duration
             
@@ -229,7 +232,7 @@ def train_single_agent(
             gae_lambda=gae_lambda,
             clip_range=clip_range,
             seed=seed + agent_id,
-            ent_coef=0.01,  # Entropy coefficient for exploration
+            ent_coef=0.05,  # Entropy coefficient for exploration (increased from 0.01 to encourage more exploration)
             vf_coef=0.5,    # Value function coefficient
             max_grad_norm=0.5,
             n_epochs=10,     # Reduced from 15 to prevent overfitting
