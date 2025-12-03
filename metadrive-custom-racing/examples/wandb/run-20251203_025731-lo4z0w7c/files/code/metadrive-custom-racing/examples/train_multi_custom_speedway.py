@@ -43,25 +43,13 @@ from environments.multi_agent_custom_speedway_env import MultiAgentCustomSpeedwa
 
 
 class SingleAgentWrapper(gym.Wrapper):
-    """Wrap multi-agent env to expose single agent for training.
+    """Wrap multi-agent env to expose single agent for training."""
 
-    Supports ghost mode where other agents use loaded models instead of staying stationary.
-    """
-
-    def __init__(self, env, agent_id: str, other_agent_models=None):
-        """
-        Args:
-            env: Multi-agent environment
-            agent_id: ID of the agent being trained
-            other_agent_models: Dict of {agent_id: model} for other agents (ghost mode)
-                               If None, other agents stay stationary
-        """
+    def __init__(self, env, agent_id: str):
         super().__init__(env)
         self.agent_id = agent_id
         self._episode_step = 0
         self._horizon = env.config.get('horizon', 1500)
-        self.other_agent_models = other_agent_models or {}
-        self._other_obs_cache = {}
 
         # Get observation and action spaces for this specific agent
         sample_obs_space = list(env.observation_space.spaces.values())[0]
@@ -72,14 +60,7 @@ class SingleAgentWrapper(gym.Wrapper):
 
     def reset(self, **kwargs):
         self._episode_step = 0
-        self._other_obs_cache = {}
         obs_dict, info_dict = self.env.reset(**kwargs)
-
-        # Cache observations for other agents
-        for aid in obs_dict.keys():
-            if aid != self.agent_id:
-                self._other_obs_cache[aid] = obs_dict[aid]
-
         return obs_dict[self.agent_id], info_dict.get(self.agent_id, {})
 
     def step(self, action):
@@ -93,26 +74,13 @@ class SingleAgentWrapper(gym.Wrapper):
 
         for aid in actual_agent_ids:
             if aid == self.agent_id:
-                # Our agent uses the provided action
                 actions[aid] = action
-            elif aid in self.other_agent_models:
-                # Other agent uses its loaded model (ghost mode)
-                obs = self._other_obs_cache.get(aid)
-                if obs is not None:
-                    other_action, _ = self.other_agent_models[aid].predict(obs, deterministic=False)
-                    actions[aid] = other_action
-                else:
-                    actions[aid] = [0.0, 0.0]
             else:
-                # Make other agents STATIONARY (default behavior)
+                # Make other agents STATIONARY (don't interfere with training)
+                # Action = [steering, throttle] where 0,0 = stay still
                 actions[aid] = [0.0, 0.0]
 
         obs_dict, reward_dict, terminated_dict, truncated_dict, info_dict = self.env.step(actions)
-
-        # Update observation cache for other agents
-        for aid in obs_dict.keys():
-            if aid != self.agent_id:
-                self._other_obs_cache[aid] = obs_dict[aid]
 
         obs = obs_dict[self.agent_id]
         reward = reward_dict[self.agent_id]
@@ -137,13 +105,12 @@ class _ResetNoKwargs(gym.Wrapper):
         return self.env.reset()
 
 
-def make_env(track_name: str = 'custom_speedway', seed: int = None, agent_id: int = 0, num_agents: int = 2,
-             ghost_mode: bool = False, other_agent_models=None) -> Callable[[], object]:
+def make_env(track_name: str = 'custom_speedway', seed: int = None, agent_id: int = 0, num_agents: int = 2) -> Callable[[], object]:
     def _init():
         # Create multi-agent environment with REAL RACETRACK settings
         # Always create at least 2 agents for multi-agent env (MetaDrive requirement)
         actual_num_agents = max(num_agents, 2)
-
+        
         env_config = {
             'num_agents': actual_num_agents,
             'use_render': False,
@@ -162,11 +129,8 @@ def make_env(track_name: str = 'custom_speedway', seed: int = None, agent_id: in
             # IMPORTANT: Spawn agents far apart so stationary agent doesn't block learning agent
             'random_spawn_lane_index': True,  # Each agent spawns in different lane
 
-            # Ghost mode for multi-agent racing
-            'ghost_mode': ghost_mode,  # Small crash penalty if True
-
             'horizon': 1500,  # Racing duration
-
+            
             # Max speed configuration for racing
             'vehicle_config': {
                 'max_speed_km_h': 120,
@@ -174,8 +138,7 @@ def make_env(track_name: str = 'custom_speedway', seed: int = None, agent_id: in
         }
         base = MultiAgentCustomSpeedwayEnv(env_config)
         # Wrap to expose single agent for PPO training
-        # Pass other agent models if ghost mode is enabled
-        env = SingleAgentWrapper(base, f"agent{agent_id}", other_agent_models=other_agent_models)
+        env = SingleAgentWrapper(base, f"agent{agent_id}")
         env = _ResetNoKwargs(env)
         env = Monitor(env)
         return env
@@ -202,8 +165,6 @@ def train_single_agent(
     wandb_enabled: bool,
     wandb_project: str,
     wandb_entity: str,
-    ghost_mode: bool = False,
-    other_agent_model_path: str = None,
     result_queue: Queue = None
 ):
     """Train a single agent. Can be run in parallel."""
@@ -253,25 +214,9 @@ def train_single_agent(
         os.makedirs(agent_results_dir, exist_ok=True)
         os.makedirs(agent_tb_log, exist_ok=True)
 
-        # Load other agent model if ghost mode is enabled
-        other_agent_models = None
-        if ghost_mode and other_agent_model_path:
-            try:
-                print(f"[Ghost Mode] Loading other agent model from {other_agent_model_path}")
-                from stable_baselines3 import PPO
-                other_model = PPO.load(other_agent_model_path)
-                # Assuming 2 agents: agent0 and agent1
-                other_agent_id = 1 if agent_id == 0 else 0
-                other_agent_models = {f"agent{other_agent_id}": other_model}
-                print(f"[Ghost Mode] Loaded model for agent{other_agent_id}")
-            except Exception as e:
-                print(f"[Warning] Failed to load other agent model: {e}")
-                print("[Warning] Continuing with stationary other agent")
-
         # Create vectorized environment
-        vec_env = DummyVecEnv([make_env(track, seed=seed + agent_id, agent_id=agent_id, num_agents=2,
-                                         ghost_mode=ghost_mode, other_agent_models=other_agent_models)])
-
+        vec_env = DummyVecEnv([make_env(track, seed=seed + agent_id, agent_id=agent_id, num_agents=2)])
+        
         if vecnorm:
             vec_env = VecNormalize(vec_env, norm_obs=True, norm_reward=True, clip_reward=10.0)
 
@@ -420,12 +365,6 @@ def main():
     parser.add_argument('--eval-freq', type=int, default=5000, help='Eval frequency')
     parser.add_argument('--checkpoint-freq', type=int, default=50000, help='Checkpoint frequency')
     parser.add_argument('--no-eval', action='store_true', help='Disable evaluation')
-
-    # Ghost mode for multi-agent training
-    parser.add_argument('--ghost-mode', action='store_true',
-                       help='Enable ghost mode: small crash penalty (-5) so agents can race together during training')
-    parser.add_argument('--other-agent-model', type=str, default=None,
-                       help='Path to other agent model for ghost racing (optional)')
     
     # Weights & Biases (enabled by default)
     parser.add_argument('--wandb', action='store_true', default=True, help='Enable wandb logging (default: True)')
@@ -483,8 +422,7 @@ def main():
                     args.vecnorm, args.learning_rate, args.batch_size, args.n_steps,
                     args.gamma, args.gae_lambda, args.clip_range, args.seed,
                     args.eval_freq, args.checkpoint_freq, args.no_eval,
-                    args.wandb, args.wandb_project, args.wandb_entity,
-                    args.ghost_mode, args.other_agent_model, result_queue
+                    args.wandb, args.wandb_project, args.wandb_entity, result_queue
                 )
             )
             processes.append(p)
@@ -519,8 +457,7 @@ def main():
                     args.vecnorm, args.learning_rate, args.batch_size, args.n_steps,
                     args.gamma, args.gae_lambda, args.clip_range, args.seed,
                     args.eval_freq, args.checkpoint_freq, args.no_eval,
-                    args.wandb, args.wandb_project, args.wandb_entity,
-                    args.ghost_mode, args.other_agent_model, None
+                    args.wandb, args.wandb_project, args.wandb_entity, None
                 )
                 trained_models.append((agent_name, save_path))
             except KeyboardInterrupt:

@@ -88,6 +88,8 @@ class SingleAgentWrapper(gym.Wrapper):
     def __init__(self, env, agent_id: str = "agent0"):
         super().__init__(env)
         self.agent_id = agent_id
+        self._episode_step = 0
+        self._horizon = env.config.get('horizon', 1500)
 
         sample_obs_space = list(env.observation_space.spaces.values())[0]
         sample_act_space = list(env.action_space.spaces.values())[0]
@@ -96,6 +98,7 @@ class SingleAgentWrapper(gym.Wrapper):
         self.action_space = sample_act_space
 
     def reset(self, **kwargs):
+        self._episode_step = 0
         obs_dict = self.env.reset(**kwargs)
         if isinstance(obs_dict, tuple):
             obs_dict, info = obs_dict
@@ -103,6 +106,7 @@ class SingleAgentWrapper(gym.Wrapper):
         return obs_dict[self.agent_id], {}
 
     def step(self, action):
+        self._episode_step += 1
         actions = {}
         actual_agent_ids = list(self.env.action_space.spaces.keys())
 
@@ -120,6 +124,11 @@ class SingleAgentWrapper(gym.Wrapper):
         terminated = terminated_dict[self.agent_id]
         truncated = truncated_dict[self.agent_id]
         info = info_dict[self.agent_id]
+
+        # CRITICAL FIX: Manually enforce horizon since MetaDrive doesn't do it properly
+        if self._episode_step >= self._horizon:
+            truncated = True
+            info['TimeLimit.truncated'] = True
 
         return obs, reward, terminated, truncated, info
 
