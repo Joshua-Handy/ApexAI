@@ -258,7 +258,6 @@ def train_single_agent(
         if ghost_mode and other_agent_model_path:
             try:
                 print(f"[Ghost Mode] Loading other agent model from {other_agent_model_path}")
-                from stable_baselines3 import PPO
                 other_model = PPO.load(other_agent_model_path)
                 # Assuming 2 agents: agent0 and agent1
                 other_agent_id = 1 if agent_id == 0 else 0
