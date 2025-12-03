@@ -1,0 +1,28 @@
+{
+  "os": "Windows-11-10.0.26100-SP0",
+  "python": "CPython 3.13.1",
+  "startedAt": "2025-12-03T05:58:10.377003Z",
+  "program": "C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\quick_train_test.py",
+  "codePath": "metadrive-custom-racing\\examples\\quick_train_test.py",
+  "codePathLocal": "quick_train_test.py",
+  "git": {
+    "remote": "https://github.com/Joshua-Handy/ApexAI.git",
+    "commit": "47e3e7790971ff126f1561fa0153cf39767e7c36"
+  },
+  "email": "Baldemarguajardo20@gmail.com",
+  "root": "C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples",
+  "host": "Balde",
+  "executable": "C:\\Python313\\python.exe",
+  "cpu_count": 4,
+  "cpu_count_logical": 8,
+  "disk": {
+    "/": {
+      "total": "253615927296",
+      "used": "252428132352"
+    }
+  },
+  "memory": {
+    "total": "17005576192"
+  },
+  "writerId": "1q0znxm6p6lw6s7jjqwc5kk26s3wu2zp"
+}
