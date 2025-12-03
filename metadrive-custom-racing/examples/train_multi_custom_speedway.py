@@ -71,8 +71,9 @@ class SingleAgentWrapper(gym.Wrapper):
             if aid == self.agent_id:
                 actions[aid] = action
             else:
-                # Random action for other agents (they exist in action_space)
-                actions[aid] = self.env.action_space.spaces[aid].sample()
+                # Make other agents STATIONARY (don't interfere with training)
+                # Action = [steering, throttle] where 0,0 = stay still
+                actions[aid] = [0.0, 0.0]
         
         obs_dict, reward_dict, terminated_dict, truncated_dict, info_dict = self.env.step(actions)
         
