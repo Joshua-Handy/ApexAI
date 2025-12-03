@@ -174,7 +174,10 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
             # Success reward for staying on track
             cfg['success_reward'] = 10.0
             cfg['out_of_road_penalty'] = 5.0  # Heavy penalty for leaving track
-            
+
+            # Boundary handling mode (True = training/lenient, False = racing/strict)
+            cfg['boundary_training_mode'] = True  # Default to training mode
+
         except Exception:
             pass
         return cfg
