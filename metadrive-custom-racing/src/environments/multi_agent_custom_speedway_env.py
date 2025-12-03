@@ -171,9 +171,14 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
             # Reasonable episode length for racing
             cfg['horizon'] = 1500  # ~1-2 minutes of racing at 60fps
             
-            # Success reward for staying on track
-            cfg['success_reward'] = 10.0
-            cfg['out_of_road_penalty'] = 5.0  # Heavy penalty for leaving track
+            # DISABLE ALL MetaDrive built-in rewards - we use 100% custom rewards
+            cfg['success_reward'] = 0.0          # Disabled
+            cfg['out_of_road_penalty'] = 0.0     # Disabled
+            cfg['crash_vehicle_penalty'] = 0.0   # Disabled
+            cfg['crash_object_penalty'] = 0.0    # Disabled
+            cfg['crash_sidewalk_penalty'] = 0.0  # Disabled
+            cfg['driving_reward'] = 0.0          # Disabled
+            cfg['speed_reward'] = 0.0            # Disabled
 
             # Boundary handling mode (True = training/lenient, False = racing/strict)
             cfg['boundary_training_mode'] = True  # Default to training mode
@@ -289,20 +294,20 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
                     'on_road': on_road,
                     'crashed': agent_info['crashed'],
                 }
-                # Calculate individual reward components for logging
+                # Calculate individual reward components for logging (match actual rewards!)
                 speed_reward = 0.0
                 if speed_kmh >= 80:
-                    speed_reward = 10.0
+                    speed_reward = 50.0
                 elif speed_kmh >= 60:
-                    speed_reward = 5.0
+                    speed_reward = 25.0
                 elif speed_kmh >= 40:
-                    speed_reward = 2.0
+                    speed_reward = 10.0
                 elif speed_kmh >= 20:
-                    speed_reward = 0.5
+                    speed_reward = 0.0
                 elif speed_kmh >= 5:
-                    speed_reward = -5.0
+                    speed_reward = -2.0
                 else:
-                    speed_reward = -30.0
+                    speed_reward = -10.0
 
                 # Calculate boundary violation penalty (ONLY continuous lines!)
                 boundary_penalty = 0.0
@@ -320,8 +325,11 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
                 }
                 
                 infos[agent_id] = agent_info
-        except Exception:
-            pass
+        except Exception as e:
+            # DON'T SILENTLY FAIL! Print errors so we can debug!
+            print(f"⚠️  ERROR in custom reward calculation: {e}")
+            import traceback
+            traceback.print_exc()
 
         # Ensure __all__ keys are properly set
         try:
