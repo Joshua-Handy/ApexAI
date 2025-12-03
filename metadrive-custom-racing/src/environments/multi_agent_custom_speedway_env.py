@@ -233,42 +233,50 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
                 except Exception:
                     pass
                 
-                # RACING REWARD SYSTEM - POSITIVE REWARDS FOR RACING!
+                # AGGRESSIVE RACING REWARD SYSTEM - SPEED IS EVERYTHING!
                 current_reward = rewards.get(agent_id, 0.0)
-                
-                # MetaDrive base reward is driving_reward = speed * cos(heading_diff)
-                # This can be negative if going backwards. We'll override it completely.
-                
+
                 speed_kmh = getattr(vehicle, 'speed_km_h', 0.0)
                 max_speed = getattr(vehicle, 'max_speed_km_h', 120.0)
                 on_road = bool(getattr(vehicle, 'on_lane', True))
-                
-                # START FRESH - Build positive reward from scratch
+
+                # Check ONLY continuous lines (boundaries) - broken lines are OK!
+                yellow_continuous = bool(getattr(vehicle, 'on_yellow_continuous_line', False))
+                white_continuous = bool(getattr(vehicle, 'on_white_continuous_line', False))
+
                 total_reward = 0.0
-                
-                # 1. MOVEMENT REWARD: Just moving forward is good! (0 to 5.0)
-                speed_ratio = min(speed_kmh / max_speed, 1.0)
-                movement_reward = speed_ratio * 5.0  # HUGE reward for speed!
-                total_reward += movement_reward
-                
-                # 2. STANDING STILL PENALTY: Not moving = BAD!
-                if speed_kmh < 1.0:  # Basically stopped
-                    total_reward -= 2.0  # Big penalty for not moving
-                
-                # 3. ON ROAD BONUS: Stay on track (+1.0)
-                if on_road:
-                    total_reward += 1.0
-                else:
-                    # Off road = lose most bonuses
-                    total_reward = -2.0
-                
-                # 4. CRASH = penalty but can recover
-                crash_penalty = 0.0
+
+                # 1. SPEED REWARD - POSITIVE for good driving!
+                # Driving at 60+ km/h on track = POSITIVE reward!
+                if speed_kmh >= 80:  # 80+ km/h - EXCELLENT!
+                    total_reward += 10.0
+                elif speed_kmh >= 60:  # 60-80 km/h - GOOD!
+                    total_reward += 5.0
+                elif speed_kmh >= 40:  # 40-60 km/h - OKAY
+                    total_reward += 2.0
+                elif speed_kmh >= 20:  # 20-40 km/h - MEH
+                    total_reward += 0.5
+                elif speed_kmh >= 5:  # 5-20 km/h - BAD
+                    total_reward -= 5.0
+                else:  # < 5 km/h - TERRIBLE (standing still)
+                    total_reward -= 30.0
+
+                # 2. OUT OF BOUNDS = EPISODE ENDS (solid yellow/white ONLY!)
+                # Broken lines (lane dividers) are OK - no penalty!
+                if yellow_continuous:  # Solid yellow = track boundary
+                    total_reward -= 200.0  # Episode will terminate
+                if white_continuous:   # Solid white = track edge
+                    total_reward -= 200.0  # Episode will terminate
+
+                # 3. OFF ROAD = bad
+                if not on_road:
+                    total_reward -= 5.0
+
+                # 4. CRASH = bad
                 if agent_info['crashed']:
-                    crash_penalty = -3.0
-                    total_reward += crash_penalty
-                
-                # Use our total reward instead of MetaDrive's
+                    total_reward -= 10.0
+
+                # Use our total reward
                 rewards[agent_id] = total_reward
                 
                 # Vehicle state summary
@@ -278,11 +286,33 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
                     'on_road': on_road,
                     'crashed': agent_info['crashed'],
                 }
+                # Calculate individual reward components for logging
+                speed_reward = 0.0
+                if speed_kmh >= 80:
+                    speed_reward = 10.0
+                elif speed_kmh >= 60:
+                    speed_reward = 5.0
+                elif speed_kmh >= 40:
+                    speed_reward = 2.0
+                elif speed_kmh >= 20:
+                    speed_reward = 0.5
+                elif speed_kmh >= 5:
+                    speed_reward = -5.0
+                else:
+                    speed_reward = -30.0
+
+                # Calculate boundary violation penalty (ONLY continuous lines!)
+                boundary_penalty = 0.0
+                if yellow_continuous:
+                    boundary_penalty -= 200.0
+                if white_continuous:
+                    boundary_penalty -= 200.0
+
                 agent_info['reward_components'] = {
-                    'movement': movement_reward,
-                    'standing_penalty': -2.0 if speed_kmh < 1.0 else 0.0,
-                    'on_road': 1.0 if on_road else -2.0,
-                    'crash': crash_penalty,
+                    'speed_reward': speed_reward,
+                    'boundary_penalty': boundary_penalty,
+                    'off_road_penalty': -5.0 if not on_road else 0.0,
+                    'crash_penalty': -10.0 if agent_info['crashed'] else 0.0,
                     'total': rewards[agent_id]
                 }
                 
@@ -300,35 +330,52 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
         return observations, rewards, terminateds, truncateds, infos
     
     def done_function(self, vehicle_id: str):
-        """Check if an agent is done - REAL RACETRACK rules."""
+        """Check if an agent is done - respects config settings for training vs racing."""
         cfg = getattr(self, 'config', {}) or {}
         vehicle = self.vehicles[vehicle_id]
-        
-        # REAL RACETRACK TERMINATION CONDITIONS:
-        
-        # 1. Crashed into another vehicle (racing incident)
-        vehicle_crash = vehicle.crash_vehicle
-        
-        # 2. Crashed into barriers/objects (off-track crash)
-        object_crash = vehicle.crash_object or vehicle.crash_sidewalk
-        
-        # 3. Severely off-road (completely left the track area)
+
+        # Respect config settings for crash termination
+        crash_vehicle_done = cfg.get('crash_vehicle_done', False)
+        crash_object_done = cfg.get('crash_object_done', False)
+        out_of_road_done = cfg.get('out_of_road_done', False)
+        lane_line_done = cfg.get('lane_line_done', True)  # Terminate on boundary crossing
+
+        # 1. Crashed into another vehicle (only if enabled)
+        vehicle_crash = vehicle.crash_vehicle if crash_vehicle_done else False
+
+        # 2. Crashed into barriers/objects (only if enabled)
+        object_crash = (vehicle.crash_object or vehicle.crash_sidewalk) if crash_object_done else False
+
+        # 3. OUT OF BOUNDS = TERMINATE (solid yellow/white lines ONLY!)
+        out_of_bounds = False
+        if lane_line_done:
+            try:
+                # ONLY solid/continuous lines = track boundaries
+                yellow_continuous = getattr(vehicle, 'on_yellow_continuous_line', False)
+                white_continuous = getattr(vehicle, 'on_white_continuous_line', False)
+                if yellow_continuous or white_continuous:
+                    out_of_bounds = True  # TERMINATE!
+            except:
+                pass
+
+        # 4. Severely off-road (only if enabled)
         severely_off_road = False
-        try:
-            # If way off the lane (>2x lane width), consider it off-track
-            lane = getattr(vehicle, 'lane', None)
-            if lane is not None and hasattr(lane, 'local_coordinates'):
-                s_l = lane.local_coordinates(getattr(vehicle, 'position', [0.0, 0.0]))
-                lane_offset = abs(float(s_l[1])) if isinstance(s_l, (list, tuple)) and len(s_l) > 1 else 0.0
-                lane_width = getattr(lane, 'width', 8.0)
-                # If more than 2x lane width off center = completely off track
-                if lane_offset > lane_width * 2.0:
-                    severely_off_road = True
-        except:
-            pass
+        if out_of_road_done:
+            try:
+                # If way off the lane (>2x lane width), consider it off-track
+                lane = getattr(vehicle, 'lane', None)
+                if lane is not None and hasattr(lane, 'local_coordinates'):
+                    s_l = lane.local_coordinates(getattr(vehicle, 'position', [0.0, 0.0]))
+                    lane_offset = abs(float(s_l[1])) if isinstance(s_l, (list, tuple)) and len(s_l) > 1 else 0.0
+                    lane_width = getattr(lane, 'width', 8.0)
+                    # If more than 2x lane width off center = completely off track
+                    if lane_offset > lane_width * 2.0:
+                        severely_off_road = True
+            except:
+                pass
         
-        # Episode ends on: crashes OR going completely off-track
-        done = vehicle_crash or object_crash or severely_off_road
+        # Episode ends on: crashes OR out of bounds OR going completely off-track
+        done = vehicle_crash or object_crash or out_of_bounds or severely_off_road
         
         done_info = {
             "crash_vehicle": vehicle.crash_vehicle,

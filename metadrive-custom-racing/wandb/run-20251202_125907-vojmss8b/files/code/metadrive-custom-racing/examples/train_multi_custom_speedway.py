@@ -351,10 +351,9 @@ def main():
     parser.add_argument('--checkpoint-freq', type=int, default=50000, help='Checkpoint frequency')
     parser.add_argument('--no-eval', action='store_true', help='Disable evaluation')
     
-    # Weights & Biases (enabled by default)
-    parser.add_argument('--wandb', action='store_true', default=True, help='Enable wandb logging (default: True)')
-    parser.add_argument('--no-wandb', action='store_false', dest='wandb', help='Disable wandb logging')
-    parser.add_argument('--wandb-project', type=str, default='metadrive-speedway', help='Wandb project')
+    # Weights & Biases
+    parser.add_argument('--wandb', action='store_true', help='Enable wandb logging')
+    parser.add_argument('--wandb-project', type=str, default='metadrive-custom-speedway', help='Wandb project')
     parser.add_argument('--wandb-entity', type=str, default=None, help='Wandb entity')
     
     args = parser.parse_args()

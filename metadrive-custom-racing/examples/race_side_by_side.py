@@ -25,17 +25,29 @@ from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
 from environments.multi_agent_custom_speedway_env import MultiAgentCustomSpeedwayEnv
 
 
-def load_agent_model(model_path: str, vecnorm_path: str = None, skip_vecnorm: bool = False) -> Tuple[PPO, None]:
-    """Load a trained agent model."""
+def load_agent_model(model_path: str, vecnorm_path: str = None, skip_vecnorm: bool = False) -> Tuple[PPO, object]:
+    """Load a trained agent model and VecNormalize stats."""
     print(f"📦 Loading model from: {model_path}")
-    
+
     if not os.path.exists(model_path):
         raise FileNotFoundError(f"Model not found: {model_path}")
-    
+
     model = PPO.load(model_path)
-    
-    # Skip VecNormalize for now - too many compatibility issues
-    return model, None
+
+    # Load VecNormalize stats if available
+    vecnorm_stats = None
+    if vecnorm_path and os.path.exists(vecnorm_path) and not skip_vecnorm:
+        try:
+            print(f"   Loading VecNormalize from: {os.path.basename(vecnorm_path)}")
+            import pickle
+            with open(vecnorm_path, 'rb') as f:
+                vecnorm_stats = pickle.load(f)
+            print(f"   ✅ VecNormalize loaded (obs_rms available: {hasattr(vecnorm_stats, 'obs_rms')})")
+        except Exception as e:
+            print(f"   ⚠️  Failed to load VecNormalize: {e}")
+            vecnorm_stats = None
+
+    return model, vecnorm_stats
 
 
 def find_agent_models(results_dir: str, track_name: str = 'custom_speedway') -> List[Tuple[str, str, str]]:
@@ -119,6 +131,7 @@ def race_agents_synchronized(agent_data: List[Tuple[str, str, str]],
     
     # Create multi-agent environment with wide track
     print(f"\n🏗️  Creating multi-agent environment...")
+
     env_config = {
         'num_agents': len(agent_data),
         'use_render': render,
@@ -127,13 +140,11 @@ def race_agents_synchronized(agent_data: List[Tuple[str, str, str]],
             'lane_width': 8.0,
         },
         'start_seed': 42,
-        'crash_vehicle_done': True,
+        # Match training environment settings
+        'crash_vehicle_done': False,  # Same as training
         'crash_object_done': False,
         'out_of_road_done': False,
-        # Max speed for racing
-        'vehicle_config': {
-            'max_speed_km_h': 120,
-        }
+        'horizon': 1500,
     }
     
     env = MultiAgentCustomSpeedwayEnv(env_config)
@@ -188,9 +199,17 @@ def race_agents_synchronized(agent_data: List[Tuple[str, str, str]],
                     # This agent doesn't have a model, use random action
                     actions[env_agent_id] = env.action_space.spaces[env_agent_id].sample()
                     continue
-                
+
                 model = agent_models[model_agent_id]
-                
+                vecnorm = agent_vecnorms[model_agent_id]
+
+                # Apply VecNormalize if available (CRITICAL!)
+                if vecnorm is not None and hasattr(vecnorm, 'obs_rms'):
+                    obs_rms = vecnorm.obs_rms
+                    epsilon = 1e-8
+                    # Normalize: (obs - mean) / sqrt(var + epsilon), then clip
+                    obs = np.clip((obs - obs_rms.mean) / np.sqrt(obs_rms.var + epsilon), -10, 10)
+
                 # Add batch dimension for prediction
                 obs = obs.reshape(1, -1)
                 action, _ = model.predict(obs, deterministic=True)
@@ -201,14 +220,33 @@ def race_agents_synchronized(agent_data: List[Tuple[str, str, str]],
                 
                 if step == 1:  # Debug first step
                     obs_stats = f"min={obs.min():.3f}, max={obs.max():.3f}, mean={obs.mean():.3f}"
-                    print(f"   DEBUG {env_agent_id}->{model_agent_id}: obs_shape={obs.shape}, {obs_stats}")
+                    vecnorm_status = "WITH VecNorm" if vecnorm is not None else "NO VecNorm"
+                    print(f"   DEBUG {env_agent_id}->{model_agent_id} ({vecnorm_status}): obs_shape={obs.shape}, {obs_stats}")
                     print(f"   DEBUG {env_agent_id}->{model_agent_id}: action_shape={action.shape}, action={action}")
-                
+
                 actions[env_agent_id] = action
             
             # Step environment
             obs_dict, reward_dict, terminated_dict, truncated_dict, info_dict = env.step(actions)
-            
+
+            # Debug vehicle states on first few steps
+            if step <= 3:
+                for env_agent_id in obs_dict.keys():
+                    model_agent_id = agent_id_map.get(env_agent_id)
+                    if model_agent_id is None:
+                        continue
+                    agent_idx = int(model_agent_id.replace('agent', ''))
+                    if agent_idx >= len(agent_names):
+                        continue
+                    name = agent_names[agent_idx]
+                    info = info_dict.get(env_agent_id, {})
+                    vehicle_state = info.get('vehicle_state', {})
+                    reward_components = info.get('reward_components', {})
+                    print(f"   [{step}] {name}: speed={vehicle_state.get('speed', 0)*120:.1f}km/h, "
+                          f"on_road={vehicle_state.get('on_road', False)}, "
+                          f"crashed={vehicle_state.get('crashed', False)}, "
+                          f"reward={reward_dict.get(env_agent_id, 0):.1f}")
+
             # Update stats using the mapping
             for env_agent_id in obs_dict.keys():
                 model_agent_id = agent_id_map.get(env_agent_id)
@@ -223,10 +261,13 @@ def race_agents_synchronized(agent_data: List[Tuple[str, str, str]],
                 name = agent_names[agent_idx]
                 episode_stats[name]['reward'] += float(reward_dict[env_agent_id])
                 episode_stats[name]['steps'] = step
-                
+
                 info = info_dict.get(env_agent_id, {})
-                speed = info.get('speed', 0.0)
-                episode_stats[name]['speeds'].append(speed)
+                # Extract speed from vehicle_state (it's normalized 0-1, multiply by max_speed)
+                vehicle_state = info.get('vehicle_state', {})
+                speed_normalized = vehicle_state.get('speed', 0.0)
+                speed_kmh = speed_normalized * 120.0  # max_speed_km_h is 120
+                episode_stats[name]['speeds'].append(speed_kmh)
                 
                 # Only report crash once
                 if (info.get('crash', False) or info.get('crashed', False)) and not episode_stats[name]['crash_reported']:
