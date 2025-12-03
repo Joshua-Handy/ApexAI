@@ -1,0 +1,217 @@
+_current_progress_remaining:
+    value: 1
+_custom_logger:
+    value: "False"
+_episode_num:
+    value: 0
+_last_episode_starts:
+    value: '[ True]'
+_last_obs:
+    value: |-
+        [[7.0707141e-03 2.1097416e-03 4.4717784e-03 8.2633538e-05 4.4717784e-03
+          4.4717784e-03 4.4717784e-03 0.0000000e+00 4.6512624e-03 4.9633505e-03
+          5.0242194e-03 0.0000000e+00 4.4717784e-03 4.4717784e-03 7.0698345e-03
+          4.5835362e-03 0.0000000e+00 4.4717784e-03 4.4717784e-03 7.0707141e-03
+          7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03
+          7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03
+          7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03
+          7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03
+          7.0707141e-03 3.8187848e-03 3.8198482e-03 3.9700428e-03 7.0707141e-03
+          7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03
+          7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03
+          7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03
+          7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03
+          7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03
+          7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03
+          7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03
+          7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03
+          7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03
+          7.0707141e-03]]
+_last_original_obs:
+    value: |-
+        [[1.         0.21585377 0.5        0.00826446 0.5        0.5
+          0.5        0.         0.52547383 0.57178545 0.5811463  0.
+          0.5        0.5        0.99975127 0.5157684  0.         0.5
+          0.5        1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         0.41323468
+          0.4133694  0.43259615 1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.        ]]
+_logger:
+    value: <stable_baselines3.common.logger.Logger object at 0x000002648DCCFCB0>
+_n_updates:
+    value: 0
+_num_timesteps_at_start:
+    value: 0
+_stats_window_size:
+    value: 100
+_total_timesteps:
+    value: 50000
+_vec_normalize_env:
+    value: <stable_baselines3.common.vec_env.vec_normalize.VecNormalize object at 0x0000026484BCD6A0>
+_wandb:
+    value:
+        cli_version: 0.22.1
+        e:
+            64sdu2h8k1na9dq5uq02orpaftj9ih6f:
+                args:
+                    - --agent_name
+                    - Alek_v3
+                    - --wandb
+                codePath: metadrive-custom-racing\examples\curriculum_train.py
+                codePathLocal: curriculum_train.py
+                cpu_count: 4
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "253615927296"
+                        used: "252440440832"
+                email: Baldemarguajardo20@gmail.com
+                executable: C:\Python313\python.exe
+                git:
+                    commit: d719b8c87dd95d59f88c5f68a39e6bb613589c5d
+                    remote: https://github.com/Joshua-Handy/ApexAI.git
+                host: Balde
+                memory:
+                    total: "17005576192"
+                os: Windows-11-10.0.26100-SP0
+                program: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\curriculum_train.py
+                python: CPython 3.13.1
+                root: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples
+                startedAt: "2025-12-03T06:58:02.284998Z"
+                writerId: 64sdu2h8k1na9dq5uq02orpaftj9ih6f
+        m: []
+        python_version: 3.13.1
+        t:
+            "1":
+                - 1
+                - 105
+            "2":
+                - 1
+                - 105
+            "3":
+                - 3
+                - 13
+                - 16
+                - 22
+            "4": 3.13.1
+            "5": 0.22.1
+            "8":
+                - 3
+            "12": 0.22.1
+            "13": windows-amd64
+action_noise:
+    value: None
+action_space:
+    value: Box(-1.0, 1.0, (2,), float32)
+agent:
+    value: Alek_v3
+algo:
+    value: PPO
+batch_size:
+    value: 256
+clip_range:
+    value: FloatSchedule(ConstantSchedule(val=0.2))
+clip_range_vf:
+    value: None
+curriculum:
+    value: true
+device:
+    value: cpu
+ent_coef:
+    value: 0.05
+env:
+    value: <stable_baselines3.common.vec_env.vec_normalize.VecNormalize object at 0x0000026484BCD6A0>
+ep_info_buffer:
+    value: deque([], maxlen=100)
+ep_success_buffer:
+    value: deque([], maxlen=100)
+gae_lambda:
+    value: 0.95
+gamma:
+    value: 0.99
+learning_rate:
+    value: 0.0003
+lr_schedule:
+    value: FloatSchedule(ConstantSchedule(val=0.0003))
+max_grad_norm:
+    value: 0.5
+n_envs:
+    value: 1
+n_epochs:
+    value: 10
+n_steps:
+    value: 2048
+normalize_advantage:
+    value: "True"
+num_timesteps:
+    value: 0
+observation_space:
+    value: Box(-0.0, 1.0, (91,), float32)
+policy:
+    value: |-
+        ActorCriticPolicy(
+          (features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (pi_features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (vf_features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (mlp_extractor): MlpExtractor(
+            (policy_net): Sequential(
+              (0): Linear(in_features=91, out_features=256, bias=True)
+              (1): ReLU()
+              (2): Linear(in_features=256, out_features=256, bias=True)
+              (3): ReLU()
+              (4): Linear(in_features=256, out_features=128, bias=True)
+              (5): ReLU()
+            )
+            (value_net): Sequential(
+              (0): Linear(in_features=91, out_features=256, bias=True)
+              (1): ReLU()
+              (2): Linear(in_features=256, out_features=256, bias=True)
+              (3): ReLU()
+              (4): Linear(in_features=256, out_features=128, bias=True)
+              (5): ReLU()
+            )
+          )
+          (action_net): Linear(in_features=128, out_features=2, bias=True)
+          (value_net): Linear(in_features=128, out_features=1, bias=True)
+        )
+policy_class:
+    value: <class 'stable_baselines3.common.policies.ActorCriticPolicy'>
+policy_kwargs:
+    value: '{''net_arch'': [256, 256, 128], ''activation_fn'': <class ''torch.nn.modules.activation.ReLU''>}'
+rollout_buffer:
+    value: <stable_baselines3.common.buffers.RolloutBuffer object at 0x0000026484BCDD30>
+rollout_buffer_class:
+    value: <class 'stable_baselines3.common.buffers.RolloutBuffer'>
+rollout_buffer_kwargs:
+    value: '{}'
+sde_sample_freq:
+    value: -1
+seed:
+    value: None
+start_time:
+    value: 1764745090057089700
+target_kl:
+    value: None
+tensorboard_log:
+    value: None
+use_sde:
+    value: "False"
+verbose:
+    value: 1
+vf_coef:
+    value: 0.5

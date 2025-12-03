@@ -1,0 +1,33 @@
+{
+  "os": "Windows-11-10.0.26100-SP0",
+  "python": "CPython 3.13.1",
+  "startedAt": "2025-12-03T06:58:02.284998Z",
+  "args": [
+    "--agent_name",
+    "Alek_v3",
+    "--wandb"
+  ],
+  "program": "C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\curriculum_train.py",
+  "codePath": "metadrive-custom-racing\\examples\\curriculum_train.py",
+  "codePathLocal": "curriculum_train.py",
+  "git": {
+    "remote": "https://github.com/Joshua-Handy/ApexAI.git",
+    "commit": "d719b8c87dd95d59f88c5f68a39e6bb613589c5d"
+  },
+  "email": "Baldemarguajardo20@gmail.com",
+  "root": "C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples",
+  "host": "Balde",
+  "executable": "C:\\Python313\\python.exe",
+  "cpu_count": 4,
+  "cpu_count_logical": 8,
+  "disk": {
+    "/": {
+      "total": "253615927296",
+      "used": "252440440832"
+    }
+  },
+  "memory": {
+    "total": "17005576192"
+  },
+  "writerId": "64sdu2h8k1na9dq5uq02orpaftj9ih6f"
+}

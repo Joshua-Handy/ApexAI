@@ -23,9 +23,10 @@ if SRC not in sys.path:
 import torch as th
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
-from stable_baselines3.common.callbacks import CheckpointCallback
+from stable_baselines3.common.callbacks import CheckpointCallback, BaseCallback
 from stable_baselines3.common.monitor import Monitor
 import gymnasium as gym
+import numpy as np
 
 from environments.multi_agent_custom_speedway_env import MultiAgentCustomSpeedwayEnv
 
@@ -36,6 +37,49 @@ try:
 except:
     WANDB_AVAILABLE = False
     WandbCallback = None
+
+
+class CustomWandbCallback(BaseCallback):
+    """Enhanced wandb logging with episode stats."""
+
+    def __init__(self, phase_num, verbose=0):
+        super().__init__(verbose)
+        self.phase_num = phase_num
+        self.episode_rewards = []
+        self.episode_lengths = []
+
+    def _on_step(self) -> bool:
+        # Log episode info when available
+        for info in self.locals.get('infos', []):
+            if 'episode' in info:
+                ep_reward = info['episode']['r']
+                ep_length = info['episode']['l']
+
+                self.episode_rewards.append(ep_reward)
+                self.episode_lengths.append(ep_length)
+
+                # Log to wandb
+                if WANDB_AVAILABLE and wandb.run:
+                    wandb.log({
+                        f'phase{self.phase_num}/episode_reward': ep_reward,
+                        f'phase{self.phase_num}/episode_length': ep_length,
+                        f'phase{self.phase_num}/episode_count': len(self.episode_rewards),
+                    }, step=self.num_timesteps)
+
+                    # Log running stats every 10 episodes
+                    if len(self.episode_rewards) % 10 == 0:
+                        recent_rewards = self.episode_rewards[-10:]
+                        recent_lengths = self.episode_lengths[-10:]
+
+                        wandb.log({
+                            f'phase{self.phase_num}/reward_mean_10ep': np.mean(recent_rewards),
+                            f'phase{self.phase_num}/reward_std_10ep': np.std(recent_rewards),
+                            f'phase{self.phase_num}/reward_min_10ep': np.min(recent_rewards),
+                            f'phase{self.phase_num}/reward_max_10ep': np.max(recent_rewards),
+                            f'phase{self.phase_num}/length_mean_10ep': np.mean(recent_lengths),
+                        }, step=self.num_timesteps)
+
+        return True
 
 
 class SingleAgentWrapper(gym.Wrapper):
@@ -225,12 +269,19 @@ def train_phase(phase_num, phase_name, make_env_fn, timesteps,
 
     # Setup wandb callback
     callbacks = [checkpoint_callback]
-    if WANDB_AVAILABLE and WandbCallback:
-        wandb_callback = WandbCallback(
-            model_save_path=phase_checkpoint_dir,
-            verbose=2,
-        )
-        callbacks.append(wandb_callback)
+    if WANDB_AVAILABLE:
+        # Use custom callback for better episode tracking
+        custom_wandb_callback = CustomWandbCallback(phase_num=phase_num)
+        callbacks.append(custom_wandb_callback)
+
+        # Also add SB3 wandb callback for training metrics (without model saving)
+        if WandbCallback:
+            sb3_wandb_callback = WandbCallback(
+                model_save_path=None,  # Disable model upload to avoid Windows symlink issues
+                verbose=2,
+            )
+            callbacks.append(sb3_wandb_callback)
+
         print("[OK] Wandb logging enabled")
 
     print(f"[TRAIN] Starting Phase {phase_num} training...")
