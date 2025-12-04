@@ -1,0 +1,1 @@
+{"_step":2,"config/additional_steps":500000,"_runtime":259,"training/step":0,"_wandb":{"runtime":259},"config/model_path":"results_agent_0/checkpoint_right_oval_500000_steps.zip","training/model_loaded":true,"training/status_code":3,"_timestamp":1.760023518853724e+09,"training/training_started":true}

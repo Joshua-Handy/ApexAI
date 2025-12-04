@@ -1,0 +1,232 @@
+[38;20m[INFO] Environment: MultiAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 2000[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+Using custom right-turn oval track!
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1[0m
+Multi-Agent Racing Environment Created!
+   Agents: 4
+   Curriculum: SAFETY
+   Observation space: (107,)
+   Action space: Box(-1.0, 1.0, (2,), float32)
+Environment created successfully!
+   Current phase: SAFETY
+PPO model created with shared policy.
+
+Starting fast-safe training in final phase...
+
+    Episode complete: 0 agents still active, step 40
+    Episode complete: 0 agents still active, step 50
+    Episode complete: 0 agents still active, step 46
+    Episode complete: 0 agents still active, step 41
+    Episode complete: 0 agents still active, step 37
+    Episode complete: 0 agents still active, step 43
+    Episode complete: 0 agents still active, step 35
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 43
+    Episode complete: 0 agents still active, step 34
+    Episode complete: 0 agents still active, step 39
+    Episode complete: 0 agents still active, step 42
+    Episode complete: 0 agents still active, step 35
+    Episode complete: 0 agents still active, step 34
+    Episode complete: 0 agents still active, step 39
+    Episode complete: 0 agents still active, step 37
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 37
+    Episode complete: 0 agents still active, step 44
+    Episode complete: 0 agents still active, step 37
+    Episode complete: 0 agents still active, step 43
+    Episode complete: 0 agents still active, step 40
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 43
+    Episode complete: 0 agents still active, step 40
+    Episode complete: 0 agents still active, step 39
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 40
+    Episode complete: 0 agents still active, step 34
+    Episode complete: 0 agents still active, step 34
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 39
+    Episode complete: 0 agents still active, step 40
+    Episode complete: 0 agents still active, step 35
+    Episode complete: 0 agents still active, step 40
+    Episode complete: 0 agents still active, step 40
+    Episode complete: 0 agents still active, step 40
+    Episode complete: 0 agents still active, step 41
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 39
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 39
+    Episode complete: 0 agents still active, step 42
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 34
+    Episode complete: 0 agents still active, step 34
+    Episode complete: 0 agents still active, step 41
+    Episode complete: 0 agents still active, step 44
+    Episode complete: 0 agents still active, step 45
+    Episode complete: 0 agents still active, step 36
+TS=2,048 agent=agent0 phase=safety progress=10.0% ep_r=208.0 ep_l=37 recent10_r=208.0 recent10_l=37.0
+         🎯 agent0 new best performance: 204.3
+    Episode complete: 0 agents still active, step 39
+    Episode complete: 0 agents still active, step 37
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 39
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 41
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 34
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 35
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 34
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 34
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 40
+    Episode complete: 0 agents still active, step 40
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 37
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 30
+    Episode complete: 0 agents still active, step 34
+    Episode complete: 0 agents still active, step 35
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 35
+    Episode complete: 0 agents still active, step 30
+    Episode complete: 0 agents still active, step 39
+    Episode complete: 0 agents still active, step 37
+    Episode complete: 0 agents still active, step 37
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 29
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 40
+    Episode complete: 0 agents still active, step 41
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 37
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 37
+    Episode complete: 0 agents still active, step 37
+    Episode complete: 0 agents still active, step 31
+TS=4,096 agent=agent0 phase=safety progress=20.0% ep_r=206.9 ep_l=32 recent10_r=206.9 recent10_l=32.0
+         ⚠️  agent0 no improvement for 1/10 checks
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 34
+    Episode complete: 0 agents still active, step 37
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 41
+    Episode complete: 0 agents still active, step 29
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 35
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 39
+    Episode complete: 0 agents still active, step 30
+    Episode complete: 0 agents still active, step 34
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 34
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 40
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 35
+    Episode complete: 0 agents still active, step 37
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 29
+    Episode complete: 0 agents still active, step 37
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 39
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 29
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 34
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 29
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 35
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 34
+TS=6,144 agent=agent0 phase=safety progress=30.0% ep_r=209.5 ep_l=35 recent10_r=209.5 recent10_l=35.0
+         ⚠️  agent0 no improvement for 2/10 checks
+    Episode complete: 0 agents still active, step 34
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 33
+    Episode complete: 0 agents still active, step 38
+    Episode complete: 0 agents still active, step 35
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 30
+    Episode complete: 0 agents still active, step 36
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 30
+    Episode complete: 0 agents still active, step 37
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 31
+    Episode complete: 0 agents still active, step 32
+    Episode complete: 0 agents still active, step 47
+    Episode complete: 0 agents still active, step 35
+    Episode complete: 0 agents still active, step 30
+    Episode complete: 0 agents still active, step 31
+
+Training interrupted by user
+Exception ignored in: <function BaseGhostBodyNode.__del__ at 0x00000175C470AAC0>
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive\metadrive\engine\physics_node.py", line 53, in __del__
+    assert self._clear_python_tag, "You should call destroy() of BaseRigidBodyNode!"
+AttributeError: 'BaseGhostBodyNode' object has no attribute '_clear_python_tag'
+Shared policy saved: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\multi_agent_racing_results\final_models\shared_policy.zip
+Saved agent0 model: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\multi_agent_racing_results\final_models\agent0_final.zip
+Saved agent1 model: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\multi_agent_racing_results\final_models\agent1_final.zip
+Saved agent2 model: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\multi_agent_racing_results\final_models\agent2_final.zip
+Saved agent3 model: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\multi_agent_racing_results\final_models\agent3_final.zip
+Exception ignored in: <function WeakSet.__init__.<locals>._remove at 0x00000175A64D05E0>
+Traceback (most recent call last):
+  File "C:\Python313\Lib\_weakrefset.py", line 39, in _remove
+    def _remove(item, selfref=ref(self)):
+KeyboardInterrupt:

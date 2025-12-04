@@ -142,7 +142,7 @@ class SingleAgentOvalEnv(MetaDriveEnv):
             "arrive_dest": False,
             "max_step": False,
             "lane_line_collision": lane_line_collision,
-            "white_line_collision": white_line_collision,
+            "white_line_col!!lision": white_line_collision,
             "yellow_line_collision": yellow_line_collision,
         }
         return done, done_info

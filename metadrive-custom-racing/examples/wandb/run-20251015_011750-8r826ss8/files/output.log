@@ -1,0 +1,79 @@
+[38;20m[INFO] Environment: MultiAgentOvalEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 2000[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+🏁 Using custom right-turn oval track!
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 0, Num Scenarios : 1[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+🏁 Multi-Agent Racing Environment Created!
+   Agents: 4
+   Curriculum: SAFETY
+   Observation space: (107,)
+   Action space: Box(-1.0, 1.0, (2,), float32)
+🏁 Environment created successfully!
+   Current phase: SAFETY
+Using cpu device
+Wrapping the env with a `Monitor` wrapper
+Wrapping the env in a DummyVecEnv.
+✅ PPO model created with shared policy!
+
+🚀 Starting curriculum-based training...
+🎯 Training will automatically progress through phases:
+   Safety → Control → Speed → Racing
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+
+Logging to multi_agent_racing_results\tensorboard\PPO_23
+Step 0: Actions sent to env: {'agent0': array([ 0.32733497, -0.32667136], dtype=float32), 'agent1': [np.float32(0.32733497), np.float32(-0.34667137)], 'agent2': [np.float32(0.37733498), np.float32(-0.32667136)], 'agent3': [np.float32(0.27733496), np.float32(-0.30667135)]}
+
+❌ Training failed: cannot access local variable 'info_dict' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\curriculum_multi_agent_racing.py", line 726, in train_multi_agent_racing
+    model.learn(
+    ~~~~~~~~~~~^
+        total_timesteps=total_timesteps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        callback=callbacks,
+        ^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ~~~~~~~~~~~~~^
+        total_timesteps=total_timesteps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        progress_bar=progress_bar,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 324, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 218, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(clipped_actions)
+                                     ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\base_vec_env.py", line 222, in step
+    return self.step_wait()
+           ~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 59, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(  # type: ignore[assignment]
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.actions[env_idx]
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+                                                       ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\curriculum_multi_agent_racing.py", line 540, in step
+    agent_info = info_dict.get(agent_id, {})
+                 ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'info_dict' where it is not associated with a value
+✅ Shared policy saved: multi_agent_racing_results\final_models\shared_policy.zip
+✅ agent0 model saved: multi_agent_racing_results\final_models\agent0_final.zip
+✅ agent1 model saved: multi_agent_racing_results\final_models\agent1_final.zip
+✅ agent2 model saved: multi_agent_racing_results\final_models\agent2_final.zip
+✅ agent3 model saved: multi_agent_racing_results\final_models\agent3_final.zip

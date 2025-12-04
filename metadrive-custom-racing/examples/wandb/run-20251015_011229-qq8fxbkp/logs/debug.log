@@ -1,0 +1,67 @@
+2025-10-15 01:12:29,127 INFO    MainThread:5488 [wandb_setup.py:_flush():81] Current SDK version is 0.22.1
+2025-10-15 01:12:29,128 INFO    MainThread:5488 [wandb_setup.py:_flush():81] Configure stats pid to 5488
+2025-10-15 01:12:29,128 INFO    MainThread:5488 [wandb_setup.py:_flush():81] Loading settings from C:\Users\balde\.config\wandb\settings
+2025-10-15 01:12:29,129 INFO    MainThread:5488 [wandb_setup.py:_flush():81] Loading settings from C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\wandb\settings
+2025-10-15 01:12:29,129 INFO    MainThread:5488 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-10-15 01:12:29,129 INFO    MainThread:5488 [wandb_init.py:setup_run_log_directory():705] Logging user logs to C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\wandb\run-20251015_011229-qq8fxbkp\logs\debug.log
+2025-10-15 01:12:29,130 INFO    MainThread:5488 [wandb_init.py:setup_run_log_directory():706] Logging internal logs to C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\wandb\run-20251015_011229-qq8fxbkp\logs\debug-internal.log
+2025-10-15 01:12:29,130 INFO    MainThread:5488 [wandb_init.py:init():832] calling init triggers
+2025-10-15 01:12:29,130 INFO    MainThread:5488 [wandb_init.py:init():837] wandb.init called with sweep_config: {}
+config: {'num_agents': 4, 'total_timesteps': 200000, 'algorithm': 'PPO_Shared_Policy_Curriculum', 'curriculum_phases': 4, 'racing_track': 'right_turn_oval', 'perception': 'lidar', 'done_logic': 'per_agent', '_wandb': {}}
+2025-10-15 01:12:29,131 INFO    MainThread:5488 [wandb_init.py:init():880] starting backend
+2025-10-15 01:12:31,843 INFO    MainThread:5488 [wandb_init.py:init():883] sending inform_init request
+2025-10-15 01:12:32,278 INFO    MainThread:5488 [wandb_init.py:init():891] backend started and connected
+2025-10-15 01:12:32,280 INFO    MainThread:5488 [wandb_init.py:init():961] updated telemetry
+2025-10-15 01:12:32,340 INFO    MainThread:5488 [wandb_init.py:init():985] communicating run to backend with 90.0 second timeout
+2025-10-15 01:12:33,774 INFO    MainThread:5488 [wandb_init.py:init():1036] starting run threads in backend
+2025-10-15 01:12:38,097 INFO    MainThread:5488 [wandb_run.py:_console_start():2506] atexit reg
+2025-10-15 01:12:38,098 INFO    MainThread:5488 [wandb_run.py:_redirect():2354] redirect: wrap_raw
+2025-10-15 01:12:38,098 INFO    MainThread:5488 [wandb_run.py:_redirect():2423] Wrapping output streams.
+2025-10-15 01:12:38,098 INFO    MainThread:5488 [wandb_run.py:_redirect():2446] Redirects installed.
+2025-10-15 01:12:38,110 INFO    MainThread:5488 [wandb_init.py:init():1076] run started, returning control to user process
+2025-10-15 01:12:38,452 INFO    wandb-AsyncioManager-main:5488 [service_client.py:_forward_responses():80] Reached EOF.
+2025-10-15 01:12:38,452 INFO    wandb-AsyncioManager-main:5488 [mailbox.py:close():137] Closing mailbox, abandoning 1 handles.
+2025-10-15 01:12:39,396 ERROR   MainThread:5488 [redirect.py:_on_write():664] [all runs] error in stdout callback
+Traceback (most recent call last):
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\redirect.py", line 662, in _on_write
+    cb(written_data)
+    ~~^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 2427, in <lambda>
+    lambda data: self._console_raw_callback("stdout", data),
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 1595, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\interface\interface.py", line 802, in publish_output_raw
+    self._publish_output_raw(o)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\interface\interface_shared.py", line 37, in _publish_output_raw
+    self._publish(rec)
+    ~~~~~~~~~~~~~^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\interface\interface_sock.py", line 43, in _publish
+    self._asyncer.run(lambda: self._client.publish(request))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\asyncio_manager.py", line 136, in run
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\concurrent\futures\_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\asyncio_manager.py", line 219, in _wrap
+    return await fn()
+           ^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Python313\Lib\asyncio\streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "C:\Python313\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost

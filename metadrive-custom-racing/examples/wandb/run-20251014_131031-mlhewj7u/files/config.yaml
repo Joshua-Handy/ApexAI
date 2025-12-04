@@ -1,0 +1,79 @@
+_wandb:
+    value:
+        cli_version: 0.22.1
+        e:
+            xok3620m07ve2z2b82c6umhfr1c1di1h:
+                args:
+                    - --agents
+                    - "4"
+                    - --timesteps
+                    - "500000"
+                    - --track
+                    - right_oval
+                    - --results-dir
+                    - curriculum_racing_v1
+                    - --wandb
+                codePath: metadrive-custom-racing\examples\train_coordinated_multi_agent.py
+                codePathLocal: train_coordinated_multi_agent.py
+                cpu_count: 4
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "253615927296"
+                        used: "249634963456"
+                email: Baldemarguajardo20@gmail.com
+                executable: C:\Python313\python.exe
+                git:
+                    commit: daebfe8509d3e35876a686714ec1093bfa985ba6
+                    remote: https://github.com/Joshua-Handy/ApexAI.git
+                host: Balde
+                memory:
+                    total: "17005576192"
+                os: Windows-11-10.0.26100-SP0
+                program: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_coordinated_multi_agent.py
+                python: CPython 3.13.1
+                root: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples
+                startedAt: "2025-10-14T18:10:31.656479Z"
+                writerId: xok3620m07ve2z2b82c6umhfr1c1di1h
+        m: []
+        python_version: 3.13.1
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 13
+                - 16
+            "4": 3.13.1
+            "5": 0.22.1
+            "8":
+                - 3
+            "12": 0.22.1
+            "13": windows-amd64
+algorithm:
+    value: Coordinated PPO Consequence-Learning
+crash_done:
+    value: true
+crash_penalty:
+    value: 40
+driving_reward:
+    value: 3
+focus:
+    value: CONSEQUENCE_BASED_RACING
+horizon:
+    value: 3000
+num_agents:
+    value: 4
+out_of_road_penalty:
+    value: 30
+speed_reward:
+    value: 4
+success_reward:
+    value: 50
+timesteps:
+    value: 500000
+track:
+    value: right_oval
+use_lateral_reward:
+    value: true

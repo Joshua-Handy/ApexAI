@@ -1,0 +1,14 @@
+{"time":"2025-11-21T18:59:32.8413119-06:00","level":"INFO","msg":"stream: starting","core version":"0.22.1"}
+{"time":"2025-11-21T18:59:34.1087652-06:00","level":"INFO","msg":"stream: created new stream","id":"sjxnnyyg"}
+{"time":"2025-11-21T18:59:34.1087652-06:00","level":"INFO","msg":"handler: started","stream_id":"sjxnnyyg"}
+{"time":"2025-11-21T18:59:34.1182381-06:00","level":"INFO","msg":"stream: started","id":"sjxnnyyg"}
+{"time":"2025-11-21T18:59:34.1182381-06:00","level":"INFO","msg":"writer: started","stream_id":"sjxnnyyg"}
+{"time":"2025-11-21T18:59:34.1182381-06:00","level":"INFO","msg":"sender: started","stream_id":"sjxnnyyg"}
+{"time":"2025-11-21T18:59:34.4664303-06:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-11-21T18:59:41.3718988-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":39}
+{"time":"2025-11-21T18:59:41.4214292-06:00","level":"INFO","msg":"stream: closing","id":"sjxnnyyg"}
+{"time":"2025-11-21T18:59:41.456871-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":49}
+{"time":"2025-11-21T18:59:41.8895486-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-11-21T18:59:42.2151061-06:00","level":"INFO","msg":"handler: closed","stream_id":"sjxnnyyg"}
+{"time":"2025-11-21T18:59:42.2156156-06:00","level":"INFO","msg":"sender: closed","stream_id":"sjxnnyyg"}
+{"time":"2025-11-21T18:59:42.2156156-06:00","level":"INFO","msg":"stream: closed","id":"sjxnnyyg"}

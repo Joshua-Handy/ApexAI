@@ -1,0 +1,114 @@
+2025-11-22 21:03:49,981 INFO    MainThread:9728 [wandb_setup.py:_flush():81] Current SDK version is 0.22.1
+2025-11-22 21:03:49,982 INFO    MainThread:9728 [wandb_setup.py:_flush():81] Configure stats pid to 9728
+2025-11-22 21:03:49,982 INFO    MainThread:9728 [wandb_setup.py:_flush():81] Loading settings from C:\Users\balde\.config\wandb\settings
+2025-11-22 21:03:49,982 INFO    MainThread:9728 [wandb_setup.py:_flush():81] Loading settings from C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\wandb\settings
+2025-11-22 21:03:49,983 INFO    MainThread:9728 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-11-22 21:03:49,983 INFO    MainThread:9728 [wandb_init.py:setup_run_log_directory():705] Logging user logs to C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\wandb\run-20251122_210349-p11s7r46\logs\debug.log
+2025-11-22 21:03:49,983 INFO    MainThread:9728 [wandb_init.py:setup_run_log_directory():706] Logging internal logs to C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\wandb\run-20251122_210349-p11s7r46\logs\debug-internal.log
+2025-11-22 21:03:49,993 INFO    MainThread:9728 [wandb_init.py:init():832] calling init triggers
+2025-11-22 21:03:49,993 INFO    MainThread:9728 [wandb_init.py:init():837] wandb.init called with sweep_config: {}
+config: {'algorithm': 'PPO', 'agent_name': 'Saegan', 'agent_id': 0, 'track': 'custom_speedway', 'timesteps': 600000, 'learning_rate': 0.0003, 'batch_size': 256, 'n_steps': 4096, 'gamma': 0.99, 'gae_lambda': 0.95, 'clip_range': 0.2, 'vecnorm': True, 'seed': 0, '_wandb': {'code_path': 'code/metadrive-custom-racing/examples/train_multi_custom_speedway.py'}}
+2025-11-22 21:03:49,993 INFO    MainThread:9728 [wandb_init.py:init():880] starting backend
+2025-11-22 21:03:52,272 INFO    MainThread:9728 [wandb_init.py:init():883] sending inform_init request
+2025-11-22 21:03:52,582 INFO    MainThread:9728 [wandb_init.py:init():891] backend started and connected
+2025-11-22 21:03:52,583 INFO    MainThread:9728 [wandb_init.py:init():961] updated telemetry
+2025-11-22 21:03:52,635 INFO    MainThread:9728 [wandb_init.py:init():985] communicating run to backend with 90.0 second timeout
+2025-11-22 21:03:53,266 INFO    MainThread:9728 [wandb_init.py:init():1036] starting run threads in backend
+2025-11-22 21:03:53,682 INFO    MainThread:9728 [wandb_run.py:_console_start():2506] atexit reg
+2025-11-22 21:03:53,682 INFO    MainThread:9728 [wandb_run.py:_redirect():2354] redirect: wrap_raw
+2025-11-22 21:03:53,683 INFO    MainThread:9728 [wandb_run.py:_redirect():2423] Wrapping output streams.
+2025-11-22 21:03:53,683 INFO    MainThread:9728 [wandb_run.py:_redirect():2446] Redirects installed.
+2025-11-22 21:03:53,693 INFO    MainThread:9728 [wandb_init.py:init():1076] run started, returning control to user process
+2025-11-22 21:03:56,636 INFO    MainThread:9728 [wandb_run.py:_tensorboard_callback():1601] tensorboard callback: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\..\results\results_agent_Saegan\tensorboard\PPO_6, True
+2025-11-22 21:03:56,643 INFO    MainThread:9728 [wandb_watch.py:_watch():68] Watching
+2025-11-22 21:03:56,644 INFO    MainThread:9728 [wandb_run.py:_config_callback():1392] config_cb None None {'algo': 'PPO', 'policy_class': "<class 'stable_baselines3.common.policies.ActorCriticPolicy'>", 'device': 'cpu', 'verbose': 1, 'policy_kwargs': "{'net_arch': [256, 256, 128], 'activation_fn': <class 'torch.nn.modules.activation.ReLU'>, 'ortho_init': True}", 'num_timesteps': 0, '_total_timesteps': 600000, '_num_timesteps_at_start': 0, 'action_noise': 'None', 'start_time': 1763867035739470200, 'tensorboard_log': 'C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\..\\results\\results_agent_Saegan\\tensorboard', '_last_obs': '[[5.5259094e-03 5.5672238e-03 4.4717784e-03 8.2633538e-05 4.4717784e-03\n  4.4717784e-03 4.4717784e-03 0.0000000e+00 4.3682582e-03 7.0707141e-03\n  4.4708215e-03 0.0000000e+00 4.4717784e-03 4.4717784e-03 6.9419993e-03\n  3.0050406e-03 5.5466183e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03\n  7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03\n  7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03\n  7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03\n  7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03\n  7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03\n  7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03\n  7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03\n  1.8024145e-03 1.8090741e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03\n  7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03\n  7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03\n  7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03\n  7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03\n  7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03\n  7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03 7.0707141e-03\n  7.0707141e-03]]', '_last_episode_starts': '[ True]', '_last_original_obs': '[[0.6630805  0.6702528  0.5        0.00826446 0.5        0.5\n  0.5        0.         0.48565546 1.         0.4998663  0.\n  0.5        0.5        0.9645548  0.31509775 0.6666667  1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         0.18326086 0.18396083 1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.         1.         1.         1.         1.         1.\n  1.        ]]', '_episode_num': 0, 'use_sde': 'False', 'sde_sample_freq': -1, '_current_progress_remaining': 1.0, '_stats_window_size': 100, 'ep_info_buffer': 'deque([], maxlen=100)', 'ep_success_buffer': 'deque([], maxlen=100)', '_n_updates': 0, '_custom_logger': 'False', 'env': '<stable_baselines3.common.vec_env.vec_normalize.VecNormalize object at 0x000002210E691A90>', '_vec_normalize_env': '<stable_baselines3.common.vec_env.vec_normalize.VecNormalize object at 0x000002210E691A90>', 'observation_space': 'Box(-0.0, 1.0, (91,), float32)', 'action_space': 'Box(-1.0, 1.0, (2,), float32)', 'n_envs': 1, 'ent_coef': 0.01, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'rollout_buffer_class': "<class 'stable_baselines3.common.buffers.RolloutBuffer'>", 'rollout_buffer_kwargs': '{}', 'n_epochs': 10, 'clip_range_vf': 'None', 'normalize_advantage': 'True', 'target_kl': 0.03, 'lr_schedule': 'FloatSchedule(ConstantSchedule(val=0.0003))', 'rollout_buffer': '<stable_baselines3.common.buffers.RolloutBuffer object at 0x000002210E692270>', 'policy': 'ActorCriticPolicy(\n  (features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (pi_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (vf_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (mlp_extractor): MlpExtractor(\n    (policy_net): Sequential(\n      (0): Linear(in_features=91, out_features=256, bias=True)\n      (1): ReLU()\n      (2): Linear(in_features=256, out_features=256, bias=True)\n      (3): ReLU()\n      (4): Linear(in_features=256, out_features=128, bias=True)\n      (5): ReLU()\n    )\n    (value_net): Sequential(\n      (0): Linear(in_features=91, out_features=256, bias=True)\n      (1): ReLU()\n      (2): Linear(in_features=256, out_features=256, bias=True)\n      (3): ReLU()\n      (4): Linear(in_features=256, out_features=128, bias=True)\n      (5): ReLU()\n    )\n  )\n  (action_net): Linear(in_features=128, out_features=2, bias=True)\n  (value_net): Linear(in_features=128, out_features=1, bias=True)\n)', '_logger': '<stable_baselines3.common.logger.Logger object at 0x0000022118E88C20>'}
+2025-11-22 21:34:37,025 INFO    wandb-AsyncioManager-main:9728 [service_client.py:_forward_responses():80] Reached EOF.
+2025-11-22 21:34:37,025 INFO    wandb-AsyncioManager-main:9728 [mailbox.py:close():137] Closing mailbox, abandoning 1 handles.
+2025-11-22 21:34:38,423 ERROR   MainThread:9728 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\redirect.py", line 662, in _on_write
+    cb(written_data)
+    ~~^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 2433, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 1595, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\interface\interface.py", line 802, in publish_output_raw
+    self._publish_output_raw(o)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\interface\interface_shared.py", line 37, in _publish_output_raw
+    self._publish(rec)
+    ~~~~~~~~~~~~~^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\interface\interface_sock.py", line 43, in _publish
+    self._asyncer.run(lambda: self._client.publish(request))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\asyncio_manager.py", line 136, in run
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\asyncio_manager.py", line 219, in _wrap
+    return await fn()
+           ^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Python313\Lib\asyncio\streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "C:\Python313\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+2025-11-22 21:34:38,437 ERROR   MainThread:9728 [redirect.py:_on_write():664] [all runs] error in stderr callback
+Traceback (most recent call last):
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\redirect.py", line 662, in _on_write
+    cb(written_data)
+    ~~^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 2433, in <lambda>
+    lambda data: self._console_raw_callback("stderr", data),
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\wandb_run.py", line 1595, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\interface\interface.py", line 802, in publish_output_raw
+    self._publish_output_raw(o)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\interface\interface_shared.py", line 37, in _publish_output_raw
+    self._publish(rec)
+    ~~~~~~~~~~~~~^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\interface\interface_sock.py", line 43, in _publish
+    self._asyncer.run(lambda: self._client.publish(request))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\asyncio_manager.py", line 136, in run
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\concurrent\futures\_base.py", line 456, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Python313\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\asyncio_manager.py", line 219, in _wrap
+    return await fn()
+           ^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "C:\Python313\Lib\asyncio\streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "C:\Python313\Lib\asyncio\streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost

@@ -1,0 +1,30 @@
+{"time":"2025-10-09T13:27:10.7103925-05:00","level":"INFO","msg":"stream: starting","core version":"0.22.1"}
+{"time":"2025-10-09T13:27:11.6606933-05:00","level":"INFO","msg":"stream: created new stream","id":"hi390mr9"}
+{"time":"2025-10-09T13:27:11.6606933-05:00","level":"INFO","msg":"handler: started","stream_id":"hi390mr9"}
+{"time":"2025-10-09T13:27:11.6658999-05:00","level":"INFO","msg":"stream: started","id":"hi390mr9"}
+{"time":"2025-10-09T13:27:11.6658999-05:00","level":"INFO","msg":"writer: started","stream_id":"hi390mr9"}
+{"time":"2025-10-09T13:27:11.6658999-05:00","level":"INFO","msg":"sender: started","stream_id":"hi390mr9"}
+{"time":"2025-10-09T13:27:11.8668783-05:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-10-09T13:27:28.3747564-05:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2025-10-09T13:27:28.3747564-05:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"C:\\\\Users\\\\balde\\\\OneDrive\\\\Documents\\\\SeniorProject\\\\metadrive-custom-racing\\\\results_agent_0\\\\tensorboard\\\\PPO_12\")","namespace":""}
+{"time":"2025-10-09T13:27:28.3759286-05:00","level":"INFO","msg":"tensorboard: saving file","fileLocation":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results_agent_0\\tensorboard\\PPO_12\\events.out.tfevents.1760034438.Balde.20560.0","runPath":"results_agent_0/tensorboard/PPO_12/events.out.tfevents.1760034438.Balde.20560.0"}
+{"time":"2025-10-09T13:27:28.3787632-05:00","level":"ERROR","msg":"tensorboard: error creating symlink","target":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results_agent_0\\tensorboard\\PPO_12\\events.out.tfevents.1760034438.Balde.20560.0","symlink":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\wandb\\run-20251009_132707-hi390mr9\\files\\results_agent_0\\tensorboard\\PPO_12\\events.out.tfevents.1760034438.Balde.20560.0","error":"symlink C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results_agent_0\\tensorboard\\PPO_12\\events.out.tfevents.1760034438.Balde.20560.0 C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\wandb\\run-20251009_132707-hi390mr9\\files\\results_agent_0\\tensorboard\\PPO_12\\events.out.tfevents.1760034438.Balde.20560.0: A required privilege is not held by the client."}
+{"time":"2025-10-09T13:28:48.5089219-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":411}
+{"time":"2025-10-09T13:28:48.5099672-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-10-09T13:28:58.5292887-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":476}
+{"time":"2025-10-09T13:28:58.5303005-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-10-09T13:29:13.557148-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":560}
+{"time":"2025-10-09T13:29:13.5581485-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-10-09T13:29:43.5971103-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":715}
+{"time":"2025-10-09T13:29:43.5971103-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":2}
+{"time":"2025-10-09T13:30:33.6458983-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":961}
+{"time":"2025-10-09T13:30:33.6458983-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":3}
+{"time":"2025-10-09T13:31:03.7076106-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1116}
+{"time":"2025-10-09T13:31:03.7086199-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-10-09T13:31:43.7551143-05:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1325}
+{"time":"2025-10-09T13:31:43.7551143-05:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":2}
+{"time":"2025-10-09T13:32:21.939083-05:00","level":"INFO","msg":"stream: closing","id":"hi390mr9"}
+{"time":"2025-10-09T13:32:22.6383787-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-10-09T13:32:23.0480464-05:00","level":"INFO","msg":"handler: closed","stream_id":"hi390mr9"}
+{"time":"2025-10-09T13:32:23.048551-05:00","level":"INFO","msg":"sender: closed","stream_id":"hi390mr9"}
+{"time":"2025-10-09T13:32:23.048551-05:00","level":"INFO","msg":"stream: closed","id":"hi390mr9"}

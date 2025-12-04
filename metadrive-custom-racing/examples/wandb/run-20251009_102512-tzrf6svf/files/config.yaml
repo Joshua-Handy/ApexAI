@@ -1,0 +1,74 @@
+_wandb:
+    value:
+        cli_version: 0.22.1
+        e:
+            ddmg6vxubknfs770u4jqq38s4qmv00ne:
+                codePath: metadrive-custom-racing\examples\quick_continue_training_wandb.py
+                codePathLocal: quick_continue_training_wandb.py
+                cpu_count: 4
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "253615927296"
+                        used: "245323268096"
+                email: Baldemarguajardo20@gmail.com
+                executable: C:\Python313\python.exe
+                git:
+                    commit: daebfe8509d3e35876a686714ec1093bfa985ba6
+                    remote: https://github.com/Joshua-Handy/ApexAI.git
+                host: Balde
+                memory:
+                    total: "17005576192"
+                os: Windows-11-10.0.26100-SP0
+                program: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\quick_continue_training_wandb.py
+                python: CPython 3.13.1
+                root: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples
+                startedAt: "2025-10-09T15:25:12.442074Z"
+                writerId: ddmg6vxubknfs770u4jqq38s4qmv00ne
+        m: []
+        python_version: 3.13.1
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 13
+                - 15
+                - 16
+            "4": 3.13.1
+            "5": 0.22.1
+            "8":
+                - 3
+            "10":
+                - 20
+            "12": 0.22.1
+            "13": windows-amd64
+additional_timesteps:
+    value: 500000
+agent_id:
+    value: 0
+agent_name:
+    value: Careful_Carl_cautious_speedster
+algorithm:
+    value: PPO
+batch_size:
+    value: 256
+clip_range:
+    value: FloatSchedule(ConstantSchedule(val=0.2))
+environment:
+    value: right_oval_track
+learning_rate:
+    value: 0.0003
+n_epochs:
+    value: 15
+n_steps:
+    value: 4096
+policy_type:
+    value: <class 'stable_baselines3.common.policies.ActorCriticPolicy'>
+starting_timesteps:
+    value: 500000
+total_target_timesteps:
+    value: 1000000
+training_type:
+    value: continued_training

@@ -1,0 +1,38 @@
+{
+  "os": "Windows-11-10.0.26100-SP0",
+  "python": "CPython 3.13.1",
+  "startedAt": "2025-12-04T02:59:47.756816Z",
+  "args": [
+    "--agent-names",
+    "Alek_v3",
+    "--timesteps",
+    "100000",
+    "--wandb",
+    "--vecnorm",
+    "--checkpoint-freq",
+    "25000"
+  ],
+  "program": "C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\train_multi_custom_speedway.py",
+  "codePath": "metadrive-custom-racing\\examples\\train_multi_custom_speedway.py",
+  "codePathLocal": "train_multi_custom_speedway.py",
+  "git": {
+    "remote": "https://github.com/Joshua-Handy/ApexAI.git",
+    "commit": "b3f1d971eabd1cf6755daeedfc6314447cbbc435"
+  },
+  "email": "Baldemarguajardo20@gmail.com",
+  "root": "C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples",
+  "host": "Balde",
+  "executable": "C:\\Python313\\python.exe",
+  "cpu_count": 4,
+  "cpu_count_logical": 8,
+  "disk": {
+    "/": {
+      "total": "253615927296",
+      "used": "247936569344"
+    }
+  },
+  "memory": {
+    "total": "17005576192"
+  },
+  "writerId": "w5qwa8o3elcw7fr9bozda6vzoyzrxtvx"
+}

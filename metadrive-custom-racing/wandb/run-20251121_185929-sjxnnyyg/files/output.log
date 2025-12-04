@@ -1,0 +1,104 @@
+✅ Weights & Biases initialized for Alek
+[38;20m[INFO] Environment: MultiAgentCustomSpeedwayEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 1000[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+Using cpu device
+
+❌ Error training Alek: The algorithm only supports (<class 'gymnasium.spaces.box.Box'>, <class 'gymnasium.spaces.discrete.Discrete'>, <class 'gymnasium.spaces.multi_discrete.MultiDiscrete'>, <class 'gymnasium.spaces.multi_binary.MultiBinary'>) as action spaces but Dict('agent0': Box(-1.0, 1.0, (2,), float32), 'agent1': Box(-1.0, 1.0, (2,), float32)) was provided
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_multi_custom_speedway.py", line 156, in train_single_agent
+    model = PPO(
+        'MlpPolicy',
+    ...<19 lines>...
+        )
+    )
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\ppo\ppo.py", line 109, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        policy,
+        ^^^^^^^
+    ...<24 lines>...
+        ),
+        ^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 86, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        policy=policy,
+        ^^^^^^^^^^^^^^
+    ...<12 lines>...
+        supported_action_spaces=supported_action_spaces,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\base_class.py", line 181, in __init__
+    assert isinstance(self.action_space, supported_action_spaces), (
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: The algorithm only supports (<class 'gymnasium.spaces.box.Box'>, <class 'gymnasium.spaces.discrete.Discrete'>, <class 'gymnasium.spaces.multi_discrete.MultiDiscrete'>, <class 'gymnasium.spaces.multi_binary.MultiBinary'>) as action spaces but Dict('agent0': Box(-1.0, 1.0, (2,), float32), 'agent1': Box(-1.0, 1.0, (2,), float32)) was provided
+
+❌ Failed to train Alek: The algorithm only supports (<class 'gymnasium.spaces.box.Box'>, <class 'gymnasium.spaces.discrete.Discrete'>, <class 'gymnasium.spaces.multi_discrete.MultiDiscrete'>, <class 'gymnasium.spaces.multi_binary.MultiBinary'>) as action spaces but Dict('agent0': Box(-1.0, 1.0, (2,), float32), 'agent1': Box(-1.0, 1.0, (2,), float32)) was provided
+
+============================================================
+🏁 Starting training for Saegan (Agent 1)
+============================================================
+[34m[1mwandb[0m: wandb.init() called while a run is active and reinit is set to 'default', so returning the previous run.
+
+✅ Weights & Biases initialized for Saegan
+[38;20m[INFO] Environment: MultiAgentCustomSpeedwayEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 1000[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+Using cpu device
+
+❌ Error training Saegan: The algorithm only supports (<class 'gymnasium.spaces.box.Box'>, <class 'gymnasium.spaces.discrete.Discrete'>, <class 'gymnasium.spaces.multi_discrete.MultiDiscrete'>, <class 'gymnasium.spaces.multi_binary.MultiBinary'>) as action spaces but Dict('agent0': Box(-1.0, 1.0, (2,), float32), 'agent1': Box(-1.0, 1.0, (2,), float32)) was provided
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_multi_custom_speedway.py", line 156, in train_single_agent
+    model = PPO(
+        'MlpPolicy',
+    ...<19 lines>...
+        )
+    )
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\ppo\ppo.py", line 109, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        policy,
+        ^^^^^^^
+    ...<24 lines>...
+        ),
+        ^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 86, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        policy=policy,
+        ^^^^^^^^^^^^^^
+    ...<12 lines>...
+        supported_action_spaces=supported_action_spaces,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\base_class.py", line 181, in __init__
+    assert isinstance(self.action_space, supported_action_spaces), (
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: The algorithm only supports (<class 'gymnasium.spaces.box.Box'>, <class 'gymnasium.spaces.discrete.Discrete'>, <class 'gymnasium.spaces.multi_discrete.MultiDiscrete'>, <class 'gymnasium.spaces.multi_binary.MultiBinary'>) as action spaces but Dict('agent0': Box(-1.0, 1.0, (2,), float32), 'agent1': Box(-1.0, 1.0, (2,), float32)) was provided
+
+❌ Failed to train Saegan: The algorithm only supports (<class 'gymnasium.spaces.box.Box'>, <class 'gymnasium.spaces.discrete.Discrete'>, <class 'gymnasium.spaces.multi_discrete.MultiDiscrete'>, <class 'gymnasium.spaces.multi_binary.MultiBinary'>) as action spaces but Dict('agent0': Box(-1.0, 1.0, (2,), float32), 'agent1': Box(-1.0, 1.0, (2,), float32)) was provided
+
+======================================================================
+🏁 SEQUENTIAL TRAINING COMPLETE
+======================================================================
+
+⏱️  Total training time: 0h 0m 12s
+
+======================================================================
+🎉 All agents trained! You can now:
+   1. Watch agents: python examples/play_model.py --model results/results_agent_<name>/<name>_custom_speedway.zip
+   2. Race them in multi-agent env (create custom script)
+======================================================================

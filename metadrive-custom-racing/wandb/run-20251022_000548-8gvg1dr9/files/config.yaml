@@ -1,0 +1,211 @@
+_current_progress_remaining:
+    value: 1
+_custom_logger:
+    value: "False"
+_episode_num:
+    value: 0
+_last_episode_starts:
+    value: '[ True]'
+_last_obs:
+    value: |-
+        [[0.33333334 1.         0.5        0.10123457 0.5        0.5
+          0.5        0.         0.5        0.66       0.32       0.
+          0.5        0.5        0.85126513 0.14417301 1.         1.
+          0.8333333  0.5        0.38       0.5        0.5        0.5
+          0.26       0.5        0.5        0.5        0.14       0.5
+          0.5        0.         0.         0.         0.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         0.2248967  0.22232603 0.22147997
+          0.22232597 0.22489667 1.         1.         1.         1.
+          1.         1.         1.         1.         1.         1.
+          1.         1.         1.         1.         1.        ]]
+_last_original_obs:
+    value: None
+_logger:
+    value: <stable_baselines3.common.logger.Logger object at 0x000001304C8A8050>
+_n_updates:
+    value: 0
+_num_timesteps_at_start:
+    value: 0
+_stats_window_size:
+    value: 100
+_total_timesteps:
+    value: 100000
+_vec_normalize_env:
+    value: None
+_wandb:
+    value:
+        cli_version: 0.22.1
+        e:
+            by1xjyeiezrvpwocrr0m2v0mbpopx0lz:
+                args:
+                    - --agents
+                    - "4"
+                    - --timesteps
+                    - "100000"
+                    - --results-dir
+                    - multi_agent_racing_results
+                    - --wandb
+                codePath: metadrive-custom-racing\examples\curriculum_multi_agent_racing.py
+                codePathLocal: examples\curriculum_multi_agent_racing.py
+                cpu_count: 4
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "253615927296"
+                        used: "252248190976"
+                email: Baldemarguajardo20@gmail.com
+                executable: C:\Python313\python.exe
+                git:
+                    commit: 190ca3730c7735fb18f9072220534f8d9ca07604
+                    remote: https://github.com/Joshua-Handy/ApexAI.git
+                host: Balde
+                memory:
+                    total: "17005576192"
+                os: Windows-11-10.0.26100-SP0
+                program: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\curriculum_multi_agent_racing.py
+                python: CPython 3.13.1
+                root: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing
+                startedAt: "2025-10-22T05:05:48.783926Z"
+                writerId: by1xjyeiezrvpwocrr0m2v0mbpopx0lz
+        m: []
+        python_version: 3.13.1
+        t:
+            "1":
+                - 1
+                - 105
+            "2":
+                - 1
+                - 105
+            "3":
+                - 1
+                - 2
+                - 13
+                - 16
+                - 22
+            "4": 3.13.1
+            "5": 0.22.1
+            "8":
+                - 3
+            "12": 0.22.1
+            "13": windows-amd64
+action_noise:
+    value: None
+action_space:
+    value: Box(-1.0, 1.0, (2,), float32)
+algo:
+    value: PPO
+algorithm:
+    value: PPO_Shared_Policy_Curriculum
+batch_size:
+    value: 64
+clip_range:
+    value: FloatSchedule(ConstantSchedule(val=0.2))
+clip_range_vf:
+    value: None
+curriculum_phases:
+    value: 1
+device:
+    value: cpu
+done_logic:
+    value: per_agent
+ent_coef:
+    value: 0.02
+env:
+    value: <stable_baselines3.common.vec_env.dummy_vec_env.DummyVecEnv object at 0x000001304C7EB0E0>
+ep_info_buffer:
+    value: deque([], maxlen=100)
+ep_success_buffer:
+    value: deque([], maxlen=100)
+gae_lambda:
+    value: 0.95
+gamma:
+    value: 0.99
+learning_rate:
+    value: 0.0003
+lr_schedule:
+    value: FloatSchedule(ConstantSchedule(val=0.0003))
+max_grad_norm:
+    value: 0.5
+n_envs:
+    value: 1
+n_epochs:
+    value: 10
+n_steps:
+    value: 2048
+normalize_advantage:
+    value: "True"
+num_agents:
+    value: 4
+num_timesteps:
+    value: 0
+observation_space:
+    value: Box(-inf, inf, (107,), float32)
+perception:
+    value: lidar
+policy:
+    value: |-
+        ActorCriticPolicy(
+          (features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (pi_features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (vf_features_extractor): FlattenExtractor(
+            (flatten): Flatten(start_dim=1, end_dim=-1)
+          )
+          (mlp_extractor): MlpExtractor(
+            (policy_net): Sequential(
+              (0): Linear(in_features=107, out_features=64, bias=True)
+              (1): Tanh()
+              (2): Linear(in_features=64, out_features=64, bias=True)
+              (3): Tanh()
+            )
+            (value_net): Sequential(
+              (0): Linear(in_features=107, out_features=64, bias=True)
+              (1): Tanh()
+              (2): Linear(in_features=64, out_features=64, bias=True)
+              (3): Tanh()
+            )
+          )
+          (action_net): Linear(in_features=64, out_features=2, bias=True)
+          (value_net): Linear(in_features=64, out_features=1, bias=True)
+        )
+policy_class:
+    value: <class 'stable_baselines3.common.policies.ActorCriticPolicy'>
+policy_kwargs:
+    value: '{''net_arch'': [64, 64], ''activation_fn'': <class ''torch.nn.modules.activation.Tanh''>, ''ortho_init'': False}'
+racing_track:
+    value: right_turn_oval
+rollout_buffer:
+    value: <stable_baselines3.common.buffers.RolloutBuffer object at 0x000001304C7EB4D0>
+rollout_buffer_class:
+    value: <class 'stable_baselines3.common.buffers.RolloutBuffer'>
+rollout_buffer_kwargs:
+    value: '{}'
+sde_sample_freq:
+    value: -1
+seed:
+    value: None
+start_time:
+    value: 1761109557901602800
+target_kl:
+    value: None
+tensorboard_log:
+    value: C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\multi_agent_racing_results\tensorboard
+total_timesteps:
+    value: 100000
+use_sde:
+    value: "False"
+verbose:
+    value: 0
+vf_coef:
+    value: 0.5

@@ -1,0 +1,26 @@
+2025-12-02 23:58:10,387 INFO    MainThread:22452 [wandb_setup.py:_flush():81] Current SDK version is 0.22.1
+2025-12-02 23:58:10,388 INFO    MainThread:22452 [wandb_setup.py:_flush():81] Configure stats pid to 22452
+2025-12-02 23:58:10,388 INFO    MainThread:22452 [wandb_setup.py:_flush():81] Loading settings from C:\Users\balde\.config\wandb\settings
+2025-12-02 23:58:10,388 INFO    MainThread:22452 [wandb_setup.py:_flush():81] Loading settings from C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\wandb\settings
+2025-12-02 23:58:10,388 INFO    MainThread:22452 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-12-02 23:58:10,389 INFO    MainThread:22452 [wandb_init.py:setup_run_log_directory():705] Logging user logs to C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\wandb\run-20251202_235810-69tvsxdg\logs\debug.log
+2025-12-02 23:58:10,390 INFO    MainThread:22452 [wandb_init.py:setup_run_log_directory():706] Logging internal logs to C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\wandb\run-20251202_235810-69tvsxdg\logs\debug-internal.log
+2025-12-02 23:58:10,391 INFO    MainThread:22452 [wandb_init.py:init():832] calling init triggers
+2025-12-02 23:58:10,391 INFO    MainThread:22452 [wandb_init.py:init():837] wandb.init called with sweep_config: {}
+config: {'timesteps': 70000, 'test': True, '_wandb': {}}
+2025-12-02 23:58:10,391 INFO    MainThread:22452 [wandb_init.py:init():880] starting backend
+2025-12-02 23:58:12,925 INFO    MainThread:22452 [wandb_init.py:init():883] sending inform_init request
+2025-12-02 23:58:13,325 INFO    MainThread:22452 [wandb_init.py:init():891] backend started and connected
+2025-12-02 23:58:13,327 INFO    MainThread:22452 [wandb_init.py:init():961] updated telemetry
+2025-12-02 23:58:13,369 INFO    MainThread:22452 [wandb_init.py:init():985] communicating run to backend with 90.0 second timeout
+2025-12-02 23:58:14,427 INFO    MainThread:22452 [wandb_init.py:init():1036] starting run threads in backend
+2025-12-02 23:58:20,135 INFO    MainThread:22452 [wandb_run.py:_console_start():2506] atexit reg
+2025-12-02 23:58:20,135 INFO    MainThread:22452 [wandb_run.py:_redirect():2354] redirect: wrap_raw
+2025-12-02 23:58:20,136 INFO    MainThread:22452 [wandb_run.py:_redirect():2423] Wrapping output streams.
+2025-12-02 23:58:20,136 INFO    MainThread:22452 [wandb_run.py:_redirect():2446] Redirects installed.
+2025-12-02 23:58:20,147 INFO    MainThread:22452 [wandb_init.py:init():1076] run started, returning control to user process
+2025-12-03 00:01:33,892 INFO    MainThread:22452 [wandb_run.py:_finish():2272] finishing run baldemarguajardo20-utrgv-the-university-of-texas-rio-gra/metadrive-speedway/69tvsxdg
+2025-12-03 00:01:33,892 INFO    MainThread:22452 [wandb_run.py:_atexit_cleanup():2471] got exitcode: 0
+2025-12-03 00:01:33,893 INFO    MainThread:22452 [wandb_run.py:_restore():2453] restore
+2025-12-03 00:01:33,893 INFO    MainThread:22452 [wandb_run.py:_restore():2459] restore done
+2025-12-03 00:01:34,923 INFO    MainThread:22452 [wandb_run.py:_footer_sync_info():3869] logging synced files

@@ -1,0 +1,33 @@
+{
+  "os": "Windows-11-10.0.26100-SP0",
+  "python": "CPython 3.13.1",
+  "startedAt": "2025-10-15T06:14:56.871010Z",
+  "args": [
+    "--timesteps",
+    "200000",
+    "--wandb"
+  ],
+  "program": "C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\curriculum_multi_agent_racing.py",
+  "codePath": "metadrive-custom-racing\\examples\\curriculum_multi_agent_racing.py",
+  "codePathLocal": "curriculum_multi_agent_racing.py",
+  "git": {
+    "remote": "https://github.com/Joshua-Handy/ApexAI.git",
+    "commit": "daebfe8509d3e35876a686714ec1093bfa985ba6"
+  },
+  "email": "Baldemarguajardo20@gmail.com",
+  "root": "C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples",
+  "host": "Balde",
+  "executable": "C:\\Python313\\python.exe",
+  "cpu_count": 4,
+  "cpu_count_logical": 8,
+  "disk": {
+    "/": {
+      "total": "253615927296",
+      "used": "249899606016"
+    }
+  },
+  "memory": {
+    "total": "17005576192"
+  },
+  "writerId": "9g4lw45jaxe1tv10xhlqva9wu95sb95c"
+}

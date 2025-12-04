@@ -1,0 +1,264 @@
+✅ Weights & Biases initialized for Alek
+[38;20m[INFO] Environment: MultiAgentCustomSpeedwayEnv[0m
+[38;20m[INFO] MetaDrive version: 0.4.3[0m
+[38;20m[INFO] Sensors: [lidar: Lidar(), side_detector: SideDetector(), lane_line_detector: LaneLineDetector()][0m
+[38;20m[INFO] Render Mode: none[0m
+[38;20m[INFO] Horizon (Max steps per agent): 1500[0m
+[33;20m[WARNING] When reaching max steps, both 'terminate' and 'truncate will be True.Generally, only the `truncate` should be `True`. (base_env.py:395)[0m
+Using cpu device
+🚀 Training Alek for 600,000 timesteps...
+[38;20m[INFO] Assets version: 0.4.3[0m
+[38;20m[INFO] Known Pipes: wglGraphicsPipe[0m
+[38;20m[INFO] Start Scenario Index: 42, Num Scenarios : 1[0m
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+Logging to C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\..\results\results_agent_Alek\tensorboard\PPO_10
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 1.94e+03 |
+|    ep_rew_mean     | -84.5    |
+| time/              |          |
+|    fps             | 269      |
+|    iterations      | 1        |
+|    time_elapsed    | 15       |
+|    total_timesteps | 4096     |
+---------------------------------
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 1.94e+03     |
+|    ep_rew_mean          | -84.5        |
+| time/                   |              |
+|    fps                  | 283          |
+|    iterations           | 2            |
+|    time_elapsed         | 28           |
+|    total_timesteps      | 8192         |
+| train/                  |              |
+|    approx_kl            | 0.0012605677 |
+|    clip_fraction        | 0.00757      |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.83        |
+|    explained_variance   | -0.000455    |
+|    learning_rate        | 0.0003       |
+|    loss                 | 729          |
+|    n_updates            | 10           |
+|    policy_gradient_loss | -0.00161     |
+|    std                  | 0.995        |
+|    value_loss           | 2.74e+03     |
+------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 4.72e+03     |
+|    ep_rew_mean          | -1.53e+04    |
+| time/                   |              |
+|    fps                  | 280          |
+|    iterations           | 3            |
+|    time_elapsed         | 43           |
+|    total_timesteps      | 12288        |
+| train/                  |              |
+|    approx_kl            | 0.0039371992 |
+|    clip_fraction        | 0.0151       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.83        |
+|    explained_variance   | -0.0973      |
+|    learning_rate        | 0.0003       |
+|    loss                 | 81.5         |
+|    n_updates            | 20           |
+|    policy_gradient_loss | -0.00245     |
+|    std                  | 1.01         |
+|    value_loss           | 3.67e+03     |
+------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+----------------------------------------
+| rollout/                |            |
+|    ep_len_mean          | 5.41e+03   |
+|    ep_rew_mean          | -2.32e+04  |
+| time/                   |            |
+|    fps                  | 284        |
+|    iterations           | 4          |
+|    time_elapsed         | 57         |
+|    total_timesteps      | 16384      |
+| train/                  |            |
+|    approx_kl            | 0.00432894 |
+|    clip_fraction        | 0.0178     |
+|    clip_range           | 0.2        |
+|    entropy_loss         | -2.85      |
+|    explained_variance   | 0.483      |
+|    learning_rate        | 0.0003     |
+|    loss                 | 103        |
+|    n_updates            | 30         |
+|    policy_gradient_loss | -0.00324   |
+|    std                  | 1.01       |
+|    value_loss           | 862        |
+----------------------------------------
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 5.41e+03     |
+|    ep_rew_mean          | -2.32e+04    |
+| time/                   |              |
+|    fps                  | 291          |
+|    iterations           | 5            |
+|    time_elapsed         | 70           |
+|    total_timesteps      | 20480        |
+| train/                  |              |
+|    approx_kl            | 0.0028625093 |
+|    clip_fraction        | 0.00859      |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.86        |
+|    explained_variance   | 0.691        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 25.6         |
+|    n_updates            | 40           |
+|    policy_gradient_loss | -0.00106     |
+|    std                  | 1.01         |
+|    value_loss           | 1.5e+03      |
+------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 5.93e+03     |
+|    ep_rew_mean          | -1.91e+04    |
+| time/                   |              |
+|    fps                  | 290          |
+|    iterations           | 6            |
+|    time_elapsed         | 84           |
+|    total_timesteps      | 24576        |
+| train/                  |              |
+|    approx_kl            | 0.0040141325 |
+|    clip_fraction        | 0.0281       |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.85        |
+|    explained_variance   | 0.943        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 8.69         |
+|    n_updates            | 50           |
+|    policy_gradient_loss | -0.00344     |
+|    std                  | 1            |
+|    value_loss           | 43.1         |
+------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 5.65e+03     |
+|    ep_rew_mean          | -1.96e+04    |
+| time/                   |              |
+|    fps                  | 291          |
+|    iterations           | 7            |
+|    time_elapsed         | 98           |
+|    total_timesteps      | 28672        |
+| train/                  |              |
+|    approx_kl            | 0.0017095034 |
+|    clip_fraction        | 0.00215      |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | 0.784        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 730          |
+|    n_updates            | 60           |
+|    policy_gradient_loss | -0.00153     |
+|    std                  | 1            |
+|    value_loss           | 1.46e+03     |
+------------------------------------------
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 5.65e+03     |
+|    ep_rew_mean          | -1.96e+04    |
+| time/                   |              |
+|    fps                  | 288          |
+|    iterations           | 8            |
+|    time_elapsed         | 113          |
+|    total_timesteps      | 32768        |
+| train/                  |              |
+|    approx_kl            | 0.0027834363 |
+|    clip_fraction        | 0.00769      |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | 0.911        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 93.4         |
+|    n_updates            | 70           |
+|    policy_gradient_loss | -0.00238     |
+|    std                  | 1            |
+|    value_loss           | 1.03e+03     |
+------------------------------------------
+[33;20m[WARNING] env.vehicles will be deprecated soon. Use env.agents instead (base_env.py:735)[0m
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 5.96e+03     |
+|    ep_rew_mean          | -2.2e+04     |
+| time/                   |              |
+|    fps                  | 285          |
+|    iterations           | 9            |
+|    time_elapsed         | 129          |
+|    total_timesteps      | 36864        |
+| train/                  |              |
+|    approx_kl            | 0.0017408294 |
+|    clip_fraction        | 0.00608      |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -2.84        |
+|    explained_variance   | 0.912        |
+|    learning_rate        | 0.0003       |
+|    loss                 | 71.2         |
+|    n_updates            | 80           |
+|    policy_gradient_loss | -0.00234     |
+|    std                  | 1            |
+|    value_loss           | 179          |
+------------------------------------------
+
+❌ Error training Alek: 'agent1'
+Traceback (most recent call last):
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_multi_custom_speedway.py", line 256, in train_single_agent
+    model.learn(total_timesteps=timesteps, callback=callbacks)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\ppo\ppo.py", line 311, in learn
+    return super().learn(
+           ~~~~~~~~~~~~~^
+        total_timesteps=total_timesteps,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        progress_bar=progress_bar,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 324, in learn
+    continue_training = self.collect_rollouts(self.env, callback, self.rollout_buffer, n_rollout_steps=self.n_steps)
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\on_policy_algorithm.py", line 218, in collect_rollouts
+    new_obs, rewards, dones, infos = env.step(clipped_actions)
+                                     ~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\base_vec_env.py", line 222, in step
+    return self.step_wait()
+           ~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\vec_normalize.py", line 181, in step_wait
+    obs, rewards, dones, infos = self.venv.step_wait()
+                                 ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\vec_env\dummy_vec_env.py", line 59, in step_wait
+    obs, self.buf_rews[env_idx], terminated, truncated, self.buf_infos[env_idx] = self.envs[env_idx].step(  # type: ignore[assignment]
+                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.actions[env_idx]
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\stable_baselines3\common\monitor.py", line 94, in step
+    observation, reward, terminated, truncated, info = self.env.step(action)
+                                                       ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\balde\AppData\Roaming\Python\Python313\site-packages\gymnasium\core.py", line 327, in step
+    return self.env.step(action)
+           ~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\balde\OneDrive\Documents\SeniorProject\metadrive-custom-racing\examples\train_multi_custom_speedway.py", line 71, in step
+    actions[aid] = self.env.action_space.spaces[aid].sample()
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+KeyError: 'agent1'
+
+❌ Failed to train Alek: 'agent1'
+
+======================================================================
+🏁 SEQUENTIAL TRAINING COMPLETE
+======================================================================
+
+⏱️  Total training time: 0h 2m 24s
+
+======================================================================
+🎉 All agents trained! You can now:
+   1. Watch agents: python examples/play_model.py --model results/results_agent_<name>/<name>_custom_speedway.zip
+   2. Race them in multi-agent env (create custom script)
+======================================================================
