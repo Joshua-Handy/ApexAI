@@ -151,8 +151,8 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
 
     def __init__(self, config=None):
         super().__init__(config)
-        # Track forward progress for each agent (for reward calculation)
-        self._previous_lane_progress = {}
+        # Track route completion for each agent (better than lane progress!)
+        self._last_completion = {}
 
     @classmethod
     def default_config(cls):
@@ -202,6 +202,9 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
 
     def step(self, actions):
         observations, rewards, terminateds, truncateds, infos = super().step(actions)
+
+        # Get config for this environment
+        cfg = self.config
 
         # Add detailed info and improve rewards for each agent
         try:
@@ -259,65 +262,41 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
                 yellow_continuous = bool(getattr(vehicle, 'on_yellow_continuous_line', False))
                 white_continuous = bool(getattr(vehicle, 'on_white_continuous_line', False))
 
-                # Calculate forward progress along track (CRITICAL FOR RACING!)
-                lane = getattr(vehicle, 'lane', None)
-                progress_reward = 0.0
-                if lane is not None and hasattr(lane, 'local_coordinates'):
-                    try:
-                        current_progress = float(lane.local_coordinates(getattr(vehicle, 'position', [0.0, 0.0]))[0])
-                        previous_progress = self._previous_lane_progress.get(agent_id, current_progress)
-                        progress_delta = current_progress - previous_progress
-                        self._previous_lane_progress[agent_id] = current_progress
-
-                        # Reward forward movement (even if slow!)
-                        if progress_delta > 0:
-                            progress_reward = progress_delta * 2.0  # 2 points per meter forward
-                    except:
-                        pass
+                # Use route_completion (0.0 to 1.0 along entire track) - BETTER than lane progress!
+                try:
+                    completion = vehicle.navigation.route_completion
+                    last_completion = self._last_completion.get(agent_id, 0.0)
+                    progress = completion - last_completion
+                    self._last_completion[agent_id] = completion
+                except:
+                    progress = 0.0
+                    completion = 0.0
 
                 total_reward = 0.0
 
-                # 0. FORWARD PROGRESS - MOST IMPORTANT!
-                total_reward += progress_reward
+                # 1. PROGRESS REWARD - reward for new progress (20x multiplier = strong signal!)
+                total_reward += progress * 20.0
 
-                # 1. STAY ON TRACK BONUS
-                if not yellow_continuous and not white_continuous and on_road:
-                    total_reward += 1.0  # Bonus for staying on track
+                # 2. COMPLETION BONUS - bonus for being farther along the track
+                total_reward += completion * 1.0
 
-                # 2. SPEED REWARD - Gentler at low speeds, big rewards for fast!
-                if speed_kmh >= 60:
-                    total_reward += 10.0  # Excellent speed
-                elif speed_kmh >= 40:
-                    total_reward += 5.0   # Good speed
-                elif speed_kmh >= 20:
-                    total_reward += 2.0   # OK speed - POSITIVE!
-                elif speed_kmh >= 10:
-                    total_reward += 0.5   # Slow but moving - POSITIVE!
-                elif speed_kmh >= 5:
-                    total_reward += 0.0   # Very slow - neutral
-                else:
-                    total_reward -= 1.0   # Stationary - small penalty (was -10!)
+                # 3. SPEED BONUS - small bonus for moving fast (not dominant)
+                total_reward += 1.0 * (speed_kmh / max_speed)
 
-                # 3. OUT OF BOUNDS penalties (solid yellow/white ONLY!)
-                # Broken lines (lane dividers) are OK - no penalty!
-                if yellow_continuous:  # Solid yellow = track boundary
-                    total_reward -= 100.0  # Reduced from 200
-                if white_continuous:   # Solid white = track edge
-                    total_reward -= 100.0  # Reduced from 200
+                # 4. TIME PENALTY - constant penalty so stopping = bad
+                total_reward -= 0.02
 
-                # 3. OFF ROAD = bad
+                # 5. MAJOR NEGATIVE EVENTS
                 if not on_road:
-                    total_reward -= 5.0
-
-                # 4. CRASH = depends on mode
+                    total_reward -= 20.0
                 if agent_info['crashed']:
                     ghost_mode = cfg.get('ghost_mode', False)
                     if ghost_mode:
-                        # Ghost mode: small penalty, agents learning to race together
-                        total_reward -= 5.0
+                        total_reward -= 5.0  # Small penalty in ghost mode
                     else:
-                        # Competitive mode: large penalty, real racing
-                        total_reward -= 50.0
+                        total_reward -= 20.0  # Standard penalty
+                if white_continuous:
+                    total_reward -= 20.0
 
                 # Use our total reward
                 rewards[agent_id] = total_reward
@@ -329,44 +308,27 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
                     'on_road': on_road,
                     'crashed': agent_info['crashed'],
                 }
-                # Calculate individual reward components for logging (match actual rewards!)
-                speed_reward = 0.0
-                if speed_kmh >= 60:
-                    speed_reward = 10.0
-                elif speed_kmh >= 40:
-                    speed_reward = 5.0
-                elif speed_kmh >= 20:
-                    speed_reward = 2.0
-                elif speed_kmh >= 10:
-                    speed_reward = 0.5
-                elif speed_kmh >= 5:
-                    speed_reward = 0.0
-                else:
-                    speed_reward = -1.0
+                # Calculate individual reward components for logging (match actual)
+                progress_reward_calc = progress * 20.0
+                completion_bonus = completion * 1.0
+                speed_bonus = 1.0 * (speed_kmh / max_speed)
+                time_penalty = -0.02
 
-                # Calculate on-track bonus
-                on_track_bonus = 1.0 if (not yellow_continuous and not white_continuous and on_road) else 0.0
-
-                # Calculate boundary violation penalty (ONLY continuous lines!)
-                boundary_penalty = 0.0
-                if yellow_continuous:
-                    boundary_penalty -= 100.0
-                if white_continuous:
-                    boundary_penalty -= 100.0
-
-                # Calculate crash penalty for logging (match actual)
+                off_road_penalty = -20.0 if not on_road else 0.0
                 crash_penalty = 0.0
                 if agent_info['crashed']:
                     ghost_mode = cfg.get('ghost_mode', False)
-                    crash_penalty = -5.0 if ghost_mode else -50.0
+                    crash_penalty = -5.0 if ghost_mode else -20.0
+                boundary_penalty = -20.0 if white_continuous else 0.0
 
                 agent_info['reward_components'] = {
-                    'forward_progress': progress_reward,
-                    'on_track_bonus': on_track_bonus,
-                    'speed_reward': speed_reward,
-                    'boundary_penalty': boundary_penalty,
-                    'off_road_penalty': -5.0 if not on_road else 0.0,
+                    'progress': progress_reward_calc,
+                    'completion_bonus': completion_bonus,
+                    'speed_bonus': speed_bonus,
+                    'time_penalty': time_penalty,
+                    'off_road_penalty': off_road_penalty,
                     'crash_penalty': crash_penalty,
+                    'boundary_penalty': boundary_penalty,
                     'total': rewards[agent_id]
                 }
 
@@ -467,8 +429,8 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
 
     def reset(self, **kwargs):
         """Reset the environment with optional debug logging."""
-        # Reset progress tracking
-        self._previous_lane_progress = {}
+        # Reset route completion tracking
+        self._last_completion = {}
 
         try:
             cfg = getattr(self, 'config', {}) or {}
