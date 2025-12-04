@@ -283,6 +283,10 @@ class MultiAgentCustomSpeedwayEnv(MultiAgentMetaDrive):
                 # 3. SPEED BONUS - small bonus for moving fast (not dominant)
                 total_reward += 1.0 * (speed_kmh / max_speed)
 
+                # 3.5. MOVEMENT KICKSTART - extra reward for ANY movement at all!
+                if speed_kmh > 1.0:  # Moving at all = good!
+                    total_reward += 5.0
+
                 # 4. TIME PENALTY - constant penalty so stopping = bad
                 total_reward -= 0.02
 

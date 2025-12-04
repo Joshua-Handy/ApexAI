@@ -1,0 +1,30 @@
+{"time":"2025-12-03T20:59:50.4892567-06:00","level":"INFO","msg":"stream: starting","core version":"0.22.1"}
+{"time":"2025-12-03T20:59:51.0571615-06:00","level":"INFO","msg":"stream: created new stream","id":"s73jqs8y"}
+{"time":"2025-12-03T20:59:51.0571615-06:00","level":"INFO","msg":"handler: started","stream_id":"s73jqs8y"}
+{"time":"2025-12-03T20:59:51.0804643-06:00","level":"INFO","msg":"writer: started","stream_id":"s73jqs8y"}
+{"time":"2025-12-03T20:59:51.0804643-06:00","level":"INFO","msg":"stream: started","id":"s73jqs8y"}
+{"time":"2025-12-03T20:59:51.0804643-06:00","level":"INFO","msg":"sender: started","stream_id":"s73jqs8y"}
+{"time":"2025-12-03T20:59:51.4682855-06:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-12-03T21:00:07.1870784-06:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2025-12-03T21:00:07.1874068-06:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"C:\\\\Users\\\\balde\\\\OneDrive\\\\Documents\\\\SeniorProject\\\\metadrive-custom-racing\\\\results\\\\results_agent_Alek_v3\\\\tensorboard\\\\PPO_1\")","namespace":""}
+{"time":"2025-12-03T21:00:07.1896025-06:00","level":"ERROR","msg":"tensorboard: failed to infer path where to save file","file":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results\\results_agent_Alek_v3\\tensorboard\\PPO_1\\events.out.tfevents.1764817197.Balde.4400.0","error":"\"C:/Users/balde/OneDrive/Documents/SeniorProject/metadrive-custom-racing/results/results_agent_Alek_v3/tensorboard/PPO_1/events.out.tfevents.1764817197.Balde.4400.0\" does not start with \"C:/Users/balde/OneDrive/Documents/SeniorProject/metadrive-custom-racing/examples\""}
+{"time":"2025-12-03T21:01:37.482319-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":179}
+{"time":"2025-12-03T21:01:37.4893111-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-12-03T21:03:37.6292195-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":361}
+{"time":"2025-12-03T21:03:37.630262-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-12-03T21:06:22.8089625-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":678}
+{"time":"2025-12-03T21:06:22.8089625-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-12-03T21:08:32.9885235-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":904}
+{"time":"2025-12-03T21:08:32.9910463-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":5}
+{"time":"2025-12-03T21:09:18.0456145-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":996}
+{"time":"2025-12-03T21:09:18.0461453-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-12-03T21:10:08.1253939-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1087}
+{"time":"2025-12-03T21:10:08.1295762-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-12-03T21:10:48.1785019-06:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1137}
+{"time":"2025-12-03T21:10:48.1790596-06:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":4}
+{"time":"2025-12-03T21:10:48.3163329-06:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact Alek_v3_model","runtime_seconds":0.5234781},{"desc":"updating run metadata","runtime_seconds":0.004999}],"total_operations":2}}
+{"time":"2025-12-03T21:10:52.1427825-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-12-03T21:10:53.0052448-06:00","level":"INFO","msg":"stream: closing","id":"s73jqs8y"}
+{"time":"2025-12-03T21:10:53.0056053-06:00","level":"INFO","msg":"handler: closed","stream_id":"s73jqs8y"}
+{"time":"2025-12-03T21:10:53.0061156-06:00","level":"INFO","msg":"sender: closed","stream_id":"s73jqs8y"}
+{"time":"2025-12-03T21:10:53.0061156-06:00","level":"INFO","msg":"stream: closed","id":"s73jqs8y"}

@@ -1,0 +1,15 @@
+{"time":"2025-12-03T20:57:19.3536625-06:00","level":"INFO","msg":"stream: starting","core version":"0.22.1"}
+{"time":"2025-12-03T20:57:20.6256154-06:00","level":"INFO","msg":"stream: created new stream","id":"0bv7oco4"}
+{"time":"2025-12-03T20:57:20.6256154-06:00","level":"INFO","msg":"handler: started","stream_id":"0bv7oco4"}
+{"time":"2025-12-03T20:57:20.6567124-06:00","level":"INFO","msg":"stream: started","id":"0bv7oco4"}
+{"time":"2025-12-03T20:57:20.6567124-06:00","level":"INFO","msg":"writer: started","stream_id":"0bv7oco4"}
+{"time":"2025-12-03T20:57:20.6567124-06:00","level":"INFO","msg":"sender: started","stream_id":"0bv7oco4"}
+{"time":"2025-12-03T20:57:20.9776674-06:00","level":"ERROR","msg":"git repo not found","error":"repository does not exist"}
+{"time":"2025-12-03T20:57:48.2556858-06:00","level":"INFO","msg":"stream: closing","id":"0bv7oco4"}
+{"time":"2025-12-03T20:57:53.0513692-06:00","level":"WARN","msg":"tensorboard: no root directory","error":"timed out after 10s"}
+{"time":"2025-12-03T20:57:53.0513692-06:00","level":"INFO","msg":"tensorboard: tracking new log directory","rootDir":{},"logDir":"LocalOrCloudPath(LocalPath=\"C:\\\\Users\\\\balde\\\\OneDrive\\\\Documents\\\\SeniorProject\\\\metadrive-custom-racing\\\\results\\\\results_agent_Alek\\\\tensorboard\\\\PPO_16\")","namespace":""}
+{"time":"2025-12-03T20:57:53.0626177-06:00","level":"ERROR","msg":"tensorboard: failed to infer path where to save file","file":"C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\results\\results_agent_Alek\\tensorboard\\PPO_16\\events.out.tfevents.1764817063.Balde.38340.0","error":"\"C:/Users/balde/OneDrive/Documents/SeniorProject/metadrive-custom-racing/results/results_agent_Alek/tensorboard/PPO_16/events.out.tfevents.1764817063.Balde.38340.0\" does not start with \"C:/Users/balde/OneDrive/Documents/SeniorProject/metadrive-custom-racing/examples\""}
+{"time":"2025-12-03T20:57:53.4333451-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-12-03T20:57:53.7292503-06:00","level":"INFO","msg":"handler: closed","stream_id":"0bv7oco4"}
+{"time":"2025-12-03T20:57:53.7342554-06:00","level":"INFO","msg":"sender: closed","stream_id":"0bv7oco4"}
+{"time":"2025-12-03T20:57:53.7342554-06:00","level":"INFO","msg":"stream: closed","id":"0bv7oco4"}

@@ -298,7 +298,7 @@ def train_single_agent(
             gae_lambda=gae_lambda,
             clip_range=clip_range,
             seed=seed + agent_id,
-            ent_coef=0.3,  # VERY HIGH: Force extreme exploration so agent discovers movement!
+            ent_coef=0.1,  # INCREASED: Force much more exploration so agent learns to move!
             vf_coef=0.5,    # Value function coefficient
             max_grad_norm=0.5,
             n_epochs=10,     # Reduced from 15 to prevent overfitting
