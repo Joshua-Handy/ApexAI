@@ -1,0 +1,128 @@
+{
+  "name": "F1 Grand Prix Circuit",
+  "type": "f1_style",
+  "description": "Formula 1-style circuit inspired by legendary corners from Spa, Silverstone, Monza, and Monaco. Features long straights for overtaking, technical chicanes, fast sweepers, and a challenging hairpin.",
+  "designer": "Claude (MetaDrive PGBlock)",
+  "version": "1.0",
+  "date_created": "2025-12-08",
+
+  "track_characteristics": {
+    "total_length_approx_meters": 1900,
+    "estimated_lap_time_seconds": 50,
+    "number_of_corners": 13,
+    "longest_straight_meters": 250,
+    "overtaking_zones": 3,
+    "difficulty": "challenging",
+    "suitable_for": ["multi-agent racing", "AI training", "competitive racing"]
+  },
+
+  "corners": {
+    "turn_1_2": {
+      "name": "Monaco Hairpin",
+      "type": "hairpin",
+      "angle": 180,
+      "direction": "right",
+      "radius": 25,
+      "speed": "slow",
+      "description": "Heavy braking from 250m straight into tight hairpin. Key overtaking opportunity."
+    },
+    "turn_3_4": {
+      "name": "Lesmo Chicane",
+      "type": "chicane",
+      "angles": [60, 60],
+      "directions": ["left", "right"],
+      "radius": 35,
+      "speed": "medium",
+      "description": "Quick left-right flick inspired by Monza. Tests precision and car balance."
+    },
+    "turn_5_6_7": {
+      "name": "Maggotts-Becketts Complex",
+      "type": "fast_esses",
+      "angles": [50, 50, 40],
+      "directions": ["left", "right", "left"],
+      "radius": [70, 60, 55],
+      "speed": "fast",
+      "description": "High-speed flowing sequence like Silverstone. High commitment, high reward."
+    },
+    "turn_8": {
+      "name": "Spoon Curve",
+      "type": "long_sweeper",
+      "angle": 110,
+      "direction": "right",
+      "radius": 50,
+      "speed": "medium",
+      "description": "Long right-hander with double apex, inspired by Suzuka."
+    },
+    "turn_9_10_11": {
+      "name": "Bus Stop Chicane",
+      "type": "tight_chicane",
+      "angles": [60, 50, 40],
+      "directions": ["left", "right", "left"],
+      "radius": 30,
+      "speed": "slow",
+      "description": "Tight technical sequence like Spa. Requires precision and momentum management."
+    },
+    "turn_12_13": {
+      "name": "Final Complex",
+      "type": "double_corner",
+      "angles": [70, 90],
+      "directions": ["right", "right"],
+      "radius": [50, 45],
+      "speed": "medium",
+      "description": "Critical for overtaking setup into Turn 1. Exit speed crucial for main straight."
+    }
+  },
+
+  "sectors": {
+    "sector_1": {
+      "description": "Speed sector with long straight and technical chicane",
+      "corners": ["Turn 1-2", "Turn 3-4"],
+      "characteristics": ["High speed", "Heavy braking", "Overtaking"]
+    },
+    "sector_2": {
+      "description": "Technical sector with fast esses and long sweeper",
+      "corners": ["Turn 5-6-7", "Turn 8"],
+      "characteristics": ["Fast corners", "Commitment", "Flow"]
+    },
+    "sector_3": {
+      "description": "Precision sector with tight chicane and final complex",
+      "corners": ["Turn 9-10-11", "Turn 12-13"],
+      "characteristics": ["Technical", "Precision", "Setup for lap"]
+    }
+  },
+
+  "map_config": {
+    "lane_width": 8.0,
+    "lane_num": 3,
+    "start_seed": 1000,
+    "notes": "Wider lanes (8m) and 3 lanes total for multi-agent side-by-side racing"
+  },
+
+  "racing_notes": {
+    "overtaking_opportunities": [
+      "Into Turn 1 (Monaco Hairpin) after main straight - PRIMARY",
+      "Into Turn 8 (Spoon Curve) after Hangar Straight - SECONDARY",
+      "Into Bus Stop Chicane after straight - TERTIARY"
+    ],
+    "key_corners_for_laptime": [
+      "Turn 1-2: Get close to inside, late apex, maximize exit onto straight",
+      "Turn 5-6-7: Maintain speed through esses, smooth inputs critical",
+      "Turn 12-13: Exit speed crucial for main straight speed"
+    ],
+    "ai_training_notes": [
+      "Hairpin teaches heavy braking and slow-speed control",
+      "Chicanes teach precision and quick direction changes",
+      "Fast esses teach commitment and smooth inputs",
+      "Multiple sectors test different aspects of driving",
+      "Wide enough for 2-3 agents to race side-by-side"
+    ]
+  },
+
+  "geometry_verification": {
+    "total_right_turns_degrees": 610,
+    "total_left_turns_degrees": 250,
+    "net_rotation_degrees": 360,
+    "closure_status": "verified",
+    "note": "Track closes perfectly with 360° net clockwise rotation"
+  }
+}

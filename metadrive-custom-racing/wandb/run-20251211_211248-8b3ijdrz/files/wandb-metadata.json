@@ -1,0 +1,35 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "CPython 3.10.11",
+  "startedAt":  "2025-12-12T03:12:48.766035Z",
+  "args":  [
+    "--agent-names",
+    "F12",
+    "--timesteps",
+    "500000",
+    "--vecnorm",
+    "--yes"
+  ],
+  "program":  "C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing\\examples\\train_multi_custom_speedway_curve.py",
+  "codePath":  "metadrive-custom-racing\\examples\\train_multi_custom_speedway_curve.py",
+  "codePathLocal":  "examples\\train_multi_custom_speedway_curve.py",
+  "git":  {
+    "remote":  "https://github.com/Joshua-Handy/ApexAI.git",
+    "commit":  "11718e69198968cfb1ce038571e6fc965cb81eaa"
+  },
+  "root":  "C:\\Users\\balde\\OneDrive\\Documents\\SeniorProject\\metadrive-custom-racing",
+  "host":  "Balde",
+  "executable":  "C:\\Users\\balde\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+  "cpu_count":  4,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "253615927296",
+      "used":  "247847485440"
+    }
+  },
+  "memory":  {
+    "total":  "17005576192"
+  },
+  "writerId":  "zcqf85n88txvjxzbyj6z4ou7uwyjb693"
+}
